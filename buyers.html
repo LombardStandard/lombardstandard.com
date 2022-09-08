@@ -2,13 +2,15 @@
 <html lang="en-gb">
   <head>
     <meta charset="utf-8">
-    <title>For real estate buyers | Lombard Standard</title>
+    <title>CRE buyers | Lombard Standard</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index">
-    <meta name="description" content="For real estate buyers. Access the database, review deals and connect with verified sellers in just a few clicks.">
-    <meta property="og:title" content="Lombard Standard | Buyers">
-    <meta property="og:description" content="For real estate buyers. Access the database, review deals and connect with verified sellers in just a few clicks.">
+    <meta name="description" content="Deal sourcing, automated for CRE buyers. 
+      Just provide your key investment criteria, we'll send you the best matching deals.">
+    <meta property="og:title" content="CRE buyers | Lombard Standard">
+    <meta property="og:description" content="Deal sourcing, automated for CRE buyers. 
+      Just provide your key investment criteria, we'll send you the best matching deals.">
     <meta property="og:image" content="https://cdn.lomb.st/social/share-buyers-ld.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1280">
@@ -16,8 +18,9 @@
     <meta property="og:url" content="https://lombardstandard.com/buyers">
     <meta property="og:site_name" content="Lombard Standard">
     <meta property="og:type" content="website">
-    <meta name="twitter:title" content="Lombard Standard | Buyers">
-    <meta name="twitter:description" content="For real estate buyers. Access the database, review deals and connect with verified sellers in just a few clicks.">
+    <meta name="twitter:title" content="CRE buyers | Lombard Standard">
+    <meta name="twitter:description" content="Deal sourcing, automated for CRE buyers. 
+      Just provide your key investment criteria, we'll send you the best matching deals.">
     <meta name="twitter:image" content="https://cdn.lomb.st/social/share-buyers-ld.png">
     <meta name="twitter:image:alt" content="Lombard Standard">
     <meta name="twitter:card" content="summary_large_image">
@@ -51,30 +54,42 @@
         }]
       }
     </script>
-         <!-- Global site tag (gtag.js) - Google Analytics -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-
-       function gtag() {
-         dataLayer.push(arguments);
-       }
-       gtag('js', new Date());
-       gtag('config', 'G-CYEZFH8RRT');
-     </script>
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-CYEZFH8RRT');
+    </script>
+    <script>
+      (function () {
+      var div = document.createElement('div'),
+          ref = document.getElementsByTagName('base')[0] || 
+                document.getElementsByTagName('script')[0];
+      div.innerHTML = '&shy;<style> iframe { visibility: hidden; } </style>';   
+      ref.parentNode.insertBefore(div, ref);
+      window.onload = function() {
+          div.parentNode.removeChild(div);
+      }
+      })();
+    </script> 
+    <!-- Google Fonts --> 
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
     <!-- CSS -->
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="https://www.unpkg.com/tailwindcss@2.2/dist/tailwind.min.css">
-    <style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> 
+    <style> 
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+      html{scroll-behavior:smooth}
       body {
       font-family: 'Roboto', sans-serif;
       }  
-      iframe {
-      background: transparent !important;
-      }
       .font-mono {
       font-family: "Roboto Mono", monospace;
       }
@@ -86,7 +101,7 @@
       transition: 0.4s;
       }     
       .active {
-      background-color: #E5E7EB;
+      background-color: #ffffff; 
       }      
       .accordion:after {
       content: "\002B";
@@ -99,7 +114,7 @@
       .active:after {
       content: "\2212";
       }
-      .panel {
+      .panel { 
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
@@ -110,7 +125,7 @@
     <!-- Header -->
     <div class="relative z-50 px-4 sm:px-8 md:px-12 bg-gray-50">
       <div class=" flex flex-row justify-between items-center py-8 relative max-w-full md:max-w-5xl lg:max-w-7xl mx-auto ">
-        <div class="flex">
+        <div   class="flex">
           <a href="/" target="_self">
             <svg class="h-8 w-28">
               <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark"></use>
@@ -123,9 +138,12 @@
     <div class="py-24 px-4 sm:px-8 md:px-12 bg-gray-50">
       <div class="relative max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
         <div class="w-full">
-          <h1 class="text-5xl font-light text-gray-900 tracking-tight">Off-market <span class="text-blue-700 font-extrabold">unlocked</span>
+          <h1 class="text-5xl font-light text-gray-900 tracking-tight">Deal sourcing <span class="text-blue-700 font-extrabold">automated</span>
           </h1>
-          <p class="mt-2 text-xl text-gray-400">Access the database, review deals and connect with verified sellers in just a few clicks.</p>
+          <p class="mt-2 text-xl text-gray-500">Just provide your key investment criteria, we'll send you the best matching deals.</p>
+          <div class="mt-6">
+            <a href="#register" class="inline-flex px-3 py-2 text-sm font-bold rounded-lg text-white bg-blue-700 hover:bg-blue-800 tracking-tight transition-all"> REGISTER </a>
+          </div>
         </div>
       </div>
     </div>
@@ -134,30 +152,142 @@
       <div class="relative max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
         <div class="text-left">
           <span class=" rounded-full bg-blue-100 px-3 py-1 text-sm font-light text-blue-700 align-middle font-mono ">DATABASE</span>
-          <h2 class="text-3xl font-bold text-gray-900 tracking-tight mt-3 mb-12">Your source of deals</h2>
+          <h2 class="text-3xl font-bold text-gray-900 tracking-tight mt-3 mb-12">An off-market listing</h2>
         </div>
         <div class="relative rounded-xl overflow-hidden shadow-md">
           <div class=" text-center sm:grid sm:grid-cols-3 bg-white rounded-xl px-8 py-0 sm:py-8 sm:px-0 sm:divide-x divide-y sm:divide-y-0 divide-gray-300 ">
             <div class="flex flex-col py-8 sm:py-0">
-              <div class="text-sm leading-6 font-bold text-gray-400">ASSETS</div>
-              <div id="stat1" class="text-3xl font-extrabold text-gray-900">0</div>
+              <div class="text-sm leading-6 font-bold text-gray-500">ASSETS</div>
+              <div id="statx" class="text-3xl font-extrabold text-gray-900">0</div>
               <div>
-                <span id="delta1" class=" text-xs font-extrabold text-gray-900 px-2 py-0.5 rounded-full bg-gray-100">0</span>
+                <span id="deltax" class=" text-xs font-extrabold text-gray-900 px-2 py-0.5 rounded-full bg-gray-100">0</span>
               </div>
             </div>
             <div class="flex flex-col py-8 sm:py-0">
-              <div class="text-sm leading-6 font-bold text-gray-400">AVG PRICE</div>
-              <div id="stat2" class="text-3xl font-extrabold text-gray-900">0</div>
+              <div class="text-sm leading-6 font-bold text-gray-500">AVG PRICE</div>
+              <div id="staty" class="text-3xl font-extrabold text-gray-900">0</div>
               <div>
-                <span id="delta2" class=" text-xs font-extrabold text-gray-900 px-2 py-0.5 rounded-full bg-gray-100">0</span>
+                <span id="deltay" class=" text-xs font-extrabold text-gray-900 px-2 py-0.5 rounded-full bg-gray-100">0</span>
               </div>
             </div>
             <div class="flex flex-col py-8 sm:py-0">
-              <div class="text-sm leading-6 font-bold text-gray-400">AVG YIELD</div>
-              <div id="stat3" class="text-3xl font-extrabold text-gray-900">0</div>
+              <div class="text-sm leading-6 font-bold text-gray-500">AVG YIELD</div>
+              <div id="statz" class="text-3xl font-extrabold text-gray-900">0</div>
               <div>
-                <span id="delta3" class=" text-xs font-extrabold text-gray-900 px-2 py-0.5 rounded-full bg-gray-100">0</span>
+                <span id="deltaz" class=" text-xs font-extrabold text-gray-900 px-2 py-0.5 rounded-full bg-gray-100">0</span>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel mt-8 bg-transparent" data-flickity='{ "contain": true, "prevNextButtons": false, "pageDots": false, "wrapAround": true, "autoPlay": 5000 }' >
+          <div class="flex carousel-item">
+            <div class="space-x-3 flex flex-row items-top w-40">
+              <div class="h-8 w-8 rounded-md ">
+                <img class="rounded-md" src="https://cdn.lomb.st/social/flags/au.png" alt="home-city-sydney">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">SYD</br>
+                <span class="text-gray-500 text-sm font-light" id="stat_sydney"></span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-3 flex flex-row items-top w-40">
+              <div class="h-8 w-8 rounded-md">
+                <img class="rounded-md" src="https://cdn.lomb.st/social/flags/jp.png" alt="home-city-tokyo">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">TYO</br>
+                <span class="text-gray-500 text-sm font-light" id="stat_tokyo"></span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8 rounded-md ">
+                <img class="rounded-md" src="https://cdn.lomb.st/social/flags/de.png" alt="home-city-berlin">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">BER <br>
+                <span class="text-gray-500 text-sm font-light" id="stat_berlin"></span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8 rounded-md ">
+                <img class="rounded-md" src="https://cdn.lomb.st/social/flags/gb.png" alt="home-city-london">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">LND <br>
+                <span class="text-gray-500 text-sm font-light" id="stat_london"></span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8 rounded-md ">
+                <img class="rounded-md" src="https://cdn.lomb.st/social/flags/sg.png" alt="home-city-singapore">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">SIN <br>
+                <span class="text-gray-500 text-sm font-light" id="stat_singapore"></span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8">
+                <img  src="https://cdn.lomb.st/social/types/off.png" alt="home-type-office">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">OFF <br>
+                <span class="text-gray-500 text-sm font-light" id="stat1">&nbsp;</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8">
+                <img  src="https://cdn.lomb.st/social/types/resi.png" alt="home-type-residential">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">RESI <br>
+                <span class="text-gray-500 text-sm font-light" id="stat3">&nbsp;</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8">
+                <img  src="https://cdn.lomb.st/social/types/hotl.png" alt="home-type-hotel">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">HOTL <br>
+                <span class="text-gray-500 text-sm font-light" id="stat2">&nbsp;</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8">
+                <img  src="https://cdn.lomb.st/social/types/rtl.png" alt="home-type-retail">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">RET<br>
+                <span class="text-gray-500 text-sm font-light" id="stat4">&nbsp;</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8">
+                <img  src="https://cdn.lomb.st/social/types/ind.png" alt="home-type-industrial">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">IND <br>
+                <span class="text-gray-500 text-sm font-light" id="stat5">&nbsp;</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex carousel-item">
+            <div class="space-x-4 flex flex-row items-top w-40">
+              <div class="h-8 w-8">
+                <img  src="https://cdn.lomb.st/social/types/mix.png" alt="home-type-mixed">
+              </div>
+              <p class="text-base leading-4 font-bold text-blue-700">MIX <br>
+                <span class="text-gray-500 text-sm font-light" id="stat6">&nbsp;</span>
+              </p>
             </div>
           </div>
         </div>
@@ -167,20 +297,20 @@
     <div class="py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
       <div class=" relative max-w-full md:max-w-5xl lg:max-w-7xl mx-auto rounded-xl space-y-8 ">
         <div class="flex flex-col sm:grid sm:grid-cols-2 gap-x-12">
-          <div class=" rounded-xl overflow-hidden sm:order-none order-2 mt-16 sm:mt-0 shadow-lg">
-            <img src="https://cdn.lomb.st/website/buyers-app.png" alt="buyers-app" class="w-full h-full object-cover object-left">
+          <div class="rounded-xl overflow-hidden sm:order-none order-2 mt-16 sm:mt-0 shadow-lg">
+            <iframe class="bg-white rounded-xl w-full p-6" src="https://app.lombardstandard.com/buyer_request/"  frameborder="0" width="100%" style="height: 620px"></iframe>
           </div>
           <div class="space-y-6 sm:order-none order-first">
             <div>
-              <span class=" rounded-full bg-blue-100 px-3 py-1 text-sm font-light text-blue-700 align-middle font-mono ">WORKFLOW</span>
-              <h2 class=" text-3xl font-bold text-gray-900 tracking-tight w-full mb-12 mt-3 ">3 steps away from sellers</h2>
+              <span id="register" class=" rounded-full bg-blue-100 px-3 py-1 text-sm font-light text-blue-700 align-middle font-mono ">REGISTER</span>
+              <h2 class="text-3xl font-bold text-gray-900 tracking-tight w-full mb-12 mt-3 ">A simple process</h2>
             </div>
             <div>
               <div class=" relative col-span-1 col-start-2 flex flex-row space-x-6 sm:space-x-8 ">
                 <div class="font-bold text-xl text-gray-900 bg-white border border-gray-300 rounded-full w-10 h-10 text-center align-middle inline-block pt-1.5 flex-shrink-0 ">1</div>
                 <div>
-                  <h3 class="text-2xl font-light text-gray-900 tracking-tight">Search</h3>
-                  <p class="mt-2 text-base text-gray-400">Start by exploring the database and the dynamic comp sets. Apply filters to narrow the options. Bookmark favourite assets for multiple inquiries.</p>
+                  <h3 class="text-2xl font-light text-gray-900 tracking-tight">Submit</h3>
+                  <p class="mt-2 text-base text-gray-500">The form with your key information and criteria.</p>
                 </div>
               </div>
             </div>
@@ -189,7 +319,7 @@
                 <div class="font-bold text-xl text-gray-900 bg-white border border-gray-300 rounded-full w-10 h-10 text-center align-middle inline-block pt-1.5 flex-shrink-0 ">2</div>
                 <div>
                   <h3 class="text-2xl font-light text-gray-900 tracking-tight">Review</h3>
-                  <p class="mt-2 text-base text-gray-400">Once you’ve found a suitable property, learn more about its features such as size, tenure, key dates and operations. When public, get also details of the seller.</p>
+                  <p class="mt-2 text-base text-gray-500">The deals that our algorithm will send you by email.</p>
                 </div>
               </div>
             </div>
@@ -198,86 +328,16 @@
                 <div class="font-bold text-xl text-gray-900 bg-white border border-gray-300 rounded-full w-10 h-10 text-center align-middle inline-block pt-1.5 flex-shrink-0 ">3</div>
                 <div>
                   <h3 class="text-2xl font-light text-gray-900 tracking-tight">Connect</h3>
-                  <p class="mt-2 text-base text-gray-400">Send a direct inquiry to the seller in just a few clicks. Use the bookmarks to inquire all your favourite assets with a single form.</p>
+                  <p class="mt-2 text-base text-gray-500">With the seller directly using contact details.</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Features -->
-    <div class="py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
-      <div class="relative max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
-        <span class=" rounded-full bg-blue-100 px-3 py-1 text-sm font-light text-blue-700 align-middle font-mono ">FEATURES</span>
-        <h2 class="text-3xl font-bold text-gray-900 mt-3 mb-12">Fast by design</h2>
-        <div class=" sm:grid sm:grid-cols-2 sm:gap-x-12 sm:gap-y-10 sm:space-y-0 flex flex-col space-y-10 ">
-          <div>
-            <div>
-              <div class="flex items-center justify-center h-12 w-12">
-                <svg class="h-10 w-10 text-gray-900">
-                  <use xlink:href="img/svgs/outline-login.svg#outline-login"></use>
-                </svg>
+            <div class=" col-span-1 col-start-2 flex flex-row space-x-6 sm:space-x-8 ">
+              <div class="font-bold text-xl text-gray-900 rounded-full w-10 h-10 text-center align-middle inline-block pt-1.5 flex-shrink-0 ">&nbsp;</div>
+              <div>
+                <p class="text-sm font-light text-gray-500 mt-5">By submitting the form you consent the data processing according to our <a href="legal" target="_blank" class="font-bold "> Privacy Policy </a>. All data is encrypted into an AWS datacenter in the Northern Virginia (US) region.</p>
               </div>
-              <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Instant access</p>
             </div>
-            <div class="mt-2 text-base text-gray-400">Forget about login and registration. The app and all deals are fully accessible in one click at no costs. Minimum effort, maximum privacy.</div>
-          </div>
-          <div>
-            <div>
-              <div class="flex items-center justify-center h-12 w-12">
-                <svg class="h-10 w-10 text-gray-900">
-                  <use xlink:href="img/svgs/outline-badge-check.svg#outline-badge-check"></use>
-                </svg>
-              </div>
-              <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Verified sellers</p>
-            </div>
-            <div class="mt-2 text-base text-gray-400">Only licensed brokers, firms with capital invested in real estate, RICS certified entities or advisors with executed mandates can register as a seller.</div>
-          </div>
-          <div>
-            <div>
-              <div class="flex items-center justify-center h-12 w-12">
-                <svg class="h-10 w-10 text-gray-900">
-                  <use xlink:href="img/svgs/outline-variable.svg#outline-variable"></use>
-                </svg>
-              </div>
-              <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Automated search <span class=" ml-2 rounded-full px-2 py-0.5 text-center text-xs font-bold text-yellow-700 align-middle bg-white border border-yellow-700 ">soon</span>
-              </p>
-            </div>
-            <div class="mt-2 text-base text-gray-400">Just provide your email and investment criteria. We'll send you a weekly digest and notifications of best matching deals.</div>
-          </div>
-          <div>
-            <div>
-              <div class="flex items-center justify-center h-12 w-12">
-                <svg class="h-10 w-10 text-gray-900">
-                  <use xlink:href="img/svgs/outline-view-grid.svg#outline-view-grid"></use>
-                </svg>
-              </div>
-              <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Dynamic comp sets</p>
-            </div>
-            <div class="mt-2 text-base text-gray-400">Leverage on super intuitive, powerful analytics to quickly evaluate your best options while  you move around the map view.</div>
-          </div>
-          <div>
-            <div>
-              <div class="flex items-center justify-center h-12 w-12">
-                <svg class="h-10 w-10 text-gray-900">
-                  <use xlink:href="img/svgs/outline-collection.svg#outline-collection"></use>
-                </svg>
-              </div>
-              <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Multiple inquiries</p>
-            </div>
-            <div class="mt-2 text-base text-gray-400">The ultimate tool to speed up your workflow. Bookmark your favourite deals then send unlimted inquiries with a single form.</div>
-          </div>
-          <div>
-            <div>
-              <div class="flex items-center justify-center h-12 w-12">
-                <svg class="h-10 w-10 text-gray-900">
-                  <use xlink:href="img/svgs/outline-book-open.svg#outline-book-open"></use>
-                </svg>
-              </div>
-              <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Single Page App</p>
-            </div>
-            <div class="mt-2 text-base text-gray-400">No more endless tabs and messy interfaces on your screen. All data fits into one page and can be reached in a couple of clicks.</div>
           </div>
         </div>
       </div>
@@ -285,18 +345,15 @@
     <!-- CTA -->
     <div class="py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
       <div class="relative max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
-        <div class="relative pt-24 pb-20 px-12 m:px-16 rounded-xl overflow-hidden">
+        <div class="relative pt-24 pb-20 px-12 md:px-16 rounded-xl overflow-hidden">
           <div class="absolute inset-0">
-            <div class=" absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-700 via-gray-500 mix-blend-multiply "></div>
+            <div class=" absolute inset-0 bg-gradient-to-r from-gray-500 to-gray-900 via-gray-700 mix-blend-multiply "></div>
             <img src="https://cdn.lomb.st/website/buyers-CTA.jpg" alt="buyers-CTA" class="w-full h-full object-cover object-top">
           </div>
           <div class="relative grid justify-items-end">
             <div class="relative grid justify-items-end">
-              <h2 class="text-white text-3xl font-extrabold text-right">Get our monthly report</h2>
-              <p class=" text-gray-400 mt-1 text-xl font-medium text-right max-w-md ">New deals, regional opportunities and market insights.</p>
-            </div>
-            <div class=" relative mt-6 h-20 sm:max-w-lg w-full flex justify-end -mr-2 ">
-              <iframe class="w-full" src="https://app.lombardstandard.com/subscribeForm/"></iframe>
+              <h2 class="text-white text-3xl font-extrabold text-right">We are building a Market Network</h2>
+              <p class=" text-gray-500 mt-1 text-xl font-medium text-right max-w-sm ">A marketplace with communication and workflow tools. Stay tuned.</p>
             </div>
           </div>
         </div>
@@ -308,44 +365,24 @@
         <div class=" flex flex-col sm:space-y-0 space-y-4 sm:grid sm:grid-cols-3 sm:gap-8 ">
           <div class="col-span-1">
             <span class=" rounded-full bg-blue-100 px-3 py-1 text-sm font-light text-blue-700 align-middle font-mono ">FAQ</span>
-            <h2 class="text-3xl font-bold text-gray-900 mt-3 mb-12">Still questions?</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mt-3 mb-12">Questions?</h2>
           </div>
           <div class="flex flex-col space-y-1 col-span-2">
-            <button class=" accordion bg-white hover:bg-gray-200 shadow-md rounded-lg py-2 px-6 text-base text-gray-900 text-left">How do I contact a seller?</button>
-            <div class="panel text-gray-400 px-6 py-1 text-sm leading-5">
-              <p>Once you have identified a suitable asset:<br><br>1. Open the information card<br>2. Click Inquire<br>3. Fill and submit the form<br><br>The seller will receive a direct inquiry and eventually respond (by email).</p>
+            <button class=" accordion bg-white  shadow-md rounded-lg py-2 px-6 text-base text-gray-900 text-left ">Is there any cost?</button>
+            <div class="panel text-gray-500 px-6 py-1 text-base leading-6">
+              <p>No. You will not incur in any cost.</p>
               <div class="h-3"></div>
             </div>
-            <button class=" accordion bg-white hover:bg-gray-200 shadow-md rounded-lg py-2 px-6 text-base text-gray-900 text-left ">Can I send multi inquiries at once?</button>
-            <div class="panel text-gray-400 px-6 py-1 text-sm leading-5">
-              <p>Yes. Once you have bookmarked all suitable assets:<br><br>1. Open the bookmark list<br>2. Click Inquire All<br>3. Fill and submit the form<br><br>This function will save you a lot of time as you can inquire unlimited assets in one form. Each seller will receive a direct inquiry and eventually respond (by email).</p>
+            <button class=" accordion bg-white  shadow-md rounded-lg py-2 px-6 text-base text-gray-900 text-left ">Are you a brokerage firm?</button>
+            <div class="panel text-gray-500 px-6 py-1 text-base leading-6">
+              <p>No. We don't endorse  deals and are not involved into the transaction between you and the seller.</p>
               <div class="h-3"></div>
             </div>
-            <button class=" accordion bg-white hover:bg-gray-200 shadow-md rounded-lg py-2 px-6 text-base text-gray-900 text-left ">Is there any cost to use the app?</button>
-            <div class="panel text-gray-400 px-6 py-1 text-sm leading-5">
-              <p>No. As a buyer you can inquire unlimted assets free of charge.</p>
+            <button class=" accordion bg-white  shadow-md rounded-lg py-2 px-6 text-base text-gray-900 text-left">How do you onboard sellers?</button>
+            <div class="panel text-gray-500 px-6 py-1 text-base leading-6">
+              <p>Deliverability matters. Accounts are granted to sellers only after screenings and interviews.</p>
               <div class="h-3"></div>
             </div>
-            <button class=" accordion bg-white hover:bg-gray-200 shadow-md rounded-lg py-2 px-6 text-base text-gray-900 text-left ">Are you a brokerage firm?</button>
-            <div class="panel text-gray-400 px-6 py-1 text-sm leading-5">
-              <p>No. We don't endorse any specific deal and we are not involved into any transaction. As such we are not receiveing any success or introduction fee.</p>
-              <div class="h-3"></div>
-            </div>
-            <button class=" accordion bg-white hover:bg-gray-200 shadow-md rounded-lg py-2 px-6 text-base text-gray-900 text-left ">How do you onboard sellers?</button>
-            <div class="panel text-gray-400 px-6 py-1 text-sm leading-5">
-              <p>Deliverability matters and the platform is not open to just any seller. A seller account is granted only to licensed brokers, firms with capital invested in real estate, RICS certified entities or advisors with executed mandates. We also assess sellers through a series of soft evaluations to make sure we onboard only the most reliable sources.</p>
-              <div class="h-3"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Header 2 -->
-    <div class="fixed inset-x-0" id="header2" style="display:block; transition: top 0.5s;">
-      <div class="bg-white border-b border-gray-300">
-        <div class=" flex flex-row max-w-7xl mx-auto py-3 px-4 sm:px-8 md:px-12 justify-end ">
-          <div class="flex">
-            <a href="https://app.lombardstandard.com" target="_self" class=" tracking-tight transition-all rounded-lg text-sm font-extrabold text-blue-700 border border-blue-700 hover:text-white hover:bg-blue-700 px-3 py-2 uppercase ">Start your search</a>
           </div>
         </div>
       </div>
@@ -366,7 +403,7 @@
           <div class="col-span-1">
             <div class="grid grid-cols-2 gap-8 sm:grid sm:grid-cols-2 sm:gap-8">
               <div>
-                <ul class="mt-4 space-y-4 transition-all text-base text-gray-400">
+                <ul class="mt-4 space-y-4 transition-all text-base text-gray-500">
                   <li>
                     <a href="buyers" target="_self" class="hover:text-blue-700">Buyers</a>
                   </li>
@@ -379,17 +416,12 @@
                 </ul>
               </div>
               <div>
-                <ul class="mt-4 space-y-4 text-gray-400 text-base transition-all">
-                  <li>
-                    <a href="https://app.lombardstandard.com/" target="_self" class="hover:text-blue-700">Marketplace</a>
-                  </li>
-                  <li>
-                    <a href="https://coda.io/@lombard-standard/blog" target="_blank" class="hover:text-blue-700"
-                      >Blog
-                    </a>
-                  </li>
+                <ul class="mt-4 space-y-4 text-gray-500 text-base transition-all">
                   <li>
                     <a href="contact" target="_self" class="hover:text-blue-700">Contact</a>
+                  </li>
+                  <li>
+                    <a href="legal" target="_self" class="hover:text-blue-700">Legal</a>
                   </li>
                 </ul>
               </div>
@@ -399,20 +431,18 @@
         <div class="mt-8 pt-8 md:flex md:items-center md:justify-between">
           <div class="flex space-x-6 md:order-2">
             <a href="https://linkedin.com/company/lombard-standard" target="_blank">
-              <svg class="h-6 w-6 text-gray-400 hover:text-blue-700 transition-all">
+              <svg class="h-6 w-6 text-gray-500 hover:text-blue-700 transition-all">
                 <use xlink:href="img/svgs/icon-linkedin.svg#icon-linkedin"></use>
               </svg>
             </a>
             <a href="https://twitter.com/lombardstandard" target="_blank">
-              <svg class="h-6 w-6 text-gray-400 hover:text-blue-700 transition-all">
+              <svg class="h-6 w-6 text-gray-500 hover:text-blue-700 transition-all">
                 <use xlink:href="img/svgs/icon-twitter.svg#icon-twitter"></use>
               </svg>
             </a>
           </div>
-          <div class=" flex sm:flex-row flex-col space-y-2 space-x-0 sm:space-y-0 sm:space-x-3 mt-8 md:mt-0 cursor-default md:order-1 text-gray-400 text-xs ">
+          <div class=" flex sm:flex-row flex-col space-y-2 space-x-0 sm:space-y-0 sm:space-x-3 mt-8 md:mt-0 cursor-default md:order-1 text-gray-500 text-xs ">
             <p>&copy; <span id="copyright"></span> Lombard Standard </p>
-            <p class="hidden sm:block">|</p>
-            <a href="legal" target="_self" class="hover:text-blue-700 cursor-pointer transition-all">Legal</a>
           </div>
         </div>
       </div>
@@ -420,18 +450,6 @@
     <!-- JavaScript -->
     <script src="js/script.js"></script>
     <script>
-      document.addEventListener("scroll", onScroll);
-      
-      function onScroll() {
-        var scrollPosition = window.scrollY,
-          showHeaderPosition = 150;
-        // Determine if position is at a certain point
-        if (scrollPosition >= showHeaderPosition) {
-          document.getElementById("header2").style.top = "0px";
-        } else {
-          document.getElementById("header2").style.top = "-100px";
-        }
-      }
       var acc = document.getElementsByClassName("accordion");
       var i;
       for (i = 0; i < acc.length; i++) {
@@ -484,8 +502,8 @@
               var new1 = curr.assets;
               var old1 = prev.assets;
               var value1 = ((new1 - old1) / old1) * 100;
-              var delta1 = document.getElementById("delta1");
-              document.getElementById("stat1").innerHTML = new1;
+              var delta1 = document.getElementById("deltax");
+              document.getElementById("statx").innerHTML = new1;
               delta1.innerHTML = value1.toFixed(1);
               if (value1 > 0) {
                 delta1.style.color = "#0D9488";
@@ -505,8 +523,8 @@
               var new2 = curr.avgPrice.substring(1,curr.avgPrice.length -1);
               var old2 = prev.avgPrice.substring(1,prev.avgPrice.length -1);
               var value2 = ((new2 - old2) / old2) * 100;
-              var delta2 = document.getElementById("delta2");
-              document.getElementById("stat2").innerHTML = "$" + new2 + "m";
+              var delta2 = document.getElementById("deltay");
+              document.getElementById("staty").innerHTML = "$" + new2 + "m";
               delta2.innerHTML = value2.toFixed(1);
               if (value2 > 0) {
                 delta2.style.color = "#0D9488";
@@ -526,8 +544,8 @@
               var new3 = curr.avgYield.substring(0,curr.avgYield.length -1);
               var old3 = prev.avgYield.substring(0,prev.avgYield.length -1);
               var value3 = ((new3 - old3) / old3) * 100;
-              var delta3 = document.getElementById("delta3");
-              document.getElementById("stat3").innerHTML = new3 + "%";
+              var delta3 = document.getElementById("deltaz");
+              document.getElementById("statz").innerHTML = new3 + "%";
               delta3.innerHTML = value3.toFixed(1);
               if (value3 > 0) {
                 delta3.style.color = "#0D9488";
@@ -545,7 +563,55 @@
           );
         }
       );
-    </script>  
+    </script>
+    <script>
+      function loadJSON(url, callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open("GET", url, true); // Replace 'appDataServices' with the path to your file
+        xobj.onreadystatechange = function() {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open
+            //will NOT return a value but simply returns undefined in asynchronous mode
+            callback(JSON.parse(xobj.responseText));
+          }
+        };
+        xobj.send(null);
+      }
+    </script>
+    <script async>
+      loadJSON("https://lombst.s3.amazonaws.com/export/mtd/buyers/website_analytics_curr.json", function(dataCurr) {
+        loadJSON("https://lombst.s3.amazonaws.com/export/mtd/buyers/website_analytics_prev.json", function(dataPrev) {
+          const prev = dataPrev;
+          const curr = dataCurr;
+          // by type
+          var new1 = curr.totalsClass.office;
+          document.getElementById("stat1").innerHTML = new1 + " assets";
+          var new2 = curr.totalsClass.hotel;
+          document.getElementById("stat2").innerHTML = new2 + " assets";
+          var new3 = curr.totalsClass.residential;
+          document.getElementById("stat3").innerHTML = new3 + " assets";
+          var new4 = curr.totalsClass.retail;
+          document.getElementById("stat4").innerHTML = new4 + " assets";
+          var new5 = curr.totalsClass.industrial;
+          document.getElementById("stat5").innerHTML = new5 + " assets";
+          var new6 = curr.totalsClass.mixed;
+          document.getElementById("stat6").innerHTML = new6 + " assets";
+          // hot markets
+          // add more cities by using id stat_<cityname> (remove all spaces in <cityname> i.e. stat_newyork instead of stat_new_york)
+          const totalsCity = curr.totalsCity || {};
+          Object.entries(totalsCity).forEach(kv => {
+            const newData = kv[1];
+            const city = kv[0].replace(/\s/g, '').toLowerCase();
+            // remove spaces i.e. new york => newyork
+            const element = document.getElementById("stat_" + city);
+            if (element) {
+              element.innerHTML = newData + " assets";
+            }
+          });
+        })
+      })
+    </script>
     <!-- Cookie Consent -->
     <script src="https://cookieinfoscript.com/js/cookieinfo.min.js" id="cookieinfo" data-close-text="OK" data-font-size="14px" data-message="<svg class='inline h-5 w-5 text-gray-900 mr-2'><use href='img/svgs/solid-eye.svg#solid-eye'></svg>By viewing this website you agree with our" data-link="#111827" data-linkmsg="<strong>privacy policy</strong>" data-moreinfo="https://lombardstandard.com/legal" data-text-align="left" data-bg="#FEF3C7" data-cookie="Lombard Standard Analytics"></script>
   </body>
