@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <title>You have unsubscribed | Lombard Standard</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="You have now unsubscribed. Your email has been removed from our database, thank you for your patience.">
+    <meta property="og:title" content="Lombard Standard | Unsubscribed">
+    <meta property="og:description" content="You have now unsubscribed. Your email has been removed from our database, thank you for your patience.">
+    <meta property="og:image" content="https://cdn.lomb.st/social/share-main.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="640">
+    <meta property="og:url" content="https://lombardstandard.com/unsubscribed">
+    <meta property="og:site_name" content="Lombard Standard">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="Lombard Standard | Unsubscribed">
+    <meta name="twitter:description" content="You have now unsubscribed. Your email has been removed from our database, thank you for your patience.">
+    <meta name="twitter:image" content="https://cdn.lomb.st/social/share-main.png">
+    <meta name="twitter:image:alt" content="Lombard Standard">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lombardstandard">
+    <meta name="author" content="Lombard Standard">
+    <meta name='msvalidate.01' content='A8E1A39B5E98578C41404F0A112D95C9'>
+    <meta name="keywords" content="PropTech,Information,Marketplace,Commercial,Real,Estate">
+    <meta name="theme-color" content="#1D4ED8">
+    <meta name="msapplication-TileColor" content="#1d4ed8">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://www.unpkg.com/tailwindcss@2.2/dist/tailwind.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+      body {
+      font-family: 'Roboto', sans-serif;
+      }  
+      .font-mono {
+      font-family: 'Roboto Mono', monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Unsubscribed -->
+    <div class="bg-white min-h-screen px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
+      <div class="max-w-max mx-auto">
+        <main class="sm:flex">
+          <svg class="h-16 w-16 text-blue-700 inline self-top">
+            <use xlink:href="img/svgs/solid-check.svg#solid-check"></use>
+          </svg>
+          <div class="sm:ml-6">
+            <div class="sm:border-l sm:border-gray-300 sm:pl-6">
+              <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">Unsubscribed</h1>
+              <p class="mt-1 text-base text-gray-400">Your email has been removed from our database.</p>
+            </div>
+            <div class="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
+              <a href="/" target="_self" class="inline-flex items-center px-3 py-2 uppercase tracking-tight transition-all text-sm font-extrabold rounded-lg text-white bg-blue-700 hover:bg-blue-800">
+              GO TO HOMEPAGE
+              </a>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
