@@ -181,11 +181,10 @@ textarea {
 .cookieinfo-close {
     display: block !important;
     min-width: 40px !important;
-    background:  !important;
-    color: #111827 !important;
+    color: #A16207 !important;
     cursor: pointer !important;
-    font-weight: 700 !important;
-    background: #FBBF24 !important;
+    font-weight: 900 !important;
+    background: #FACC15 !important;
     letter-spacing: -0.025em !important;
     margin-left: 24px !important;
     user-select: none !important;
