@@ -1,11 +1,6 @@
 User-agent: *
 Disallow: /404/
-Disallow: /unsubscribed/
-Disallow: /legal/
-Disallow: /offices/
-Disallow: /img/svgs/icon-investhk.svg
-Disallow: /img/svgs/icon-builtworld.svg
-Disallow: /img/svgs/icon-rics.svg
+Disallow: /privacy-policy/
 Sitemap: https://lombardstandard.com/sitemap.xml
 
 
