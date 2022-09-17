@@ -46,10 +46,20 @@ function nFormatter(num) {
 
 // fetch and populate site(leads) data
 (async function fetchAndPopulateData() {
+  const regionMap = {
+    Asia: 'APAC',
+    Australia: 'APAC',
+    Europe: 'EMEA',
+    America: 'America',
+    Africa: 'EMEA',
+    Atlantic: 'EMEA',
+    Indian: 'EMEA',
+  };
   const totalIndividualsDiv = document.getElementById('total-individuals');
   const totalCompaniesDiv = document.getElementById('total-companies');
   const regionPercentageDiv = document.getElementById('region-percentage');
   const regionTextDiv = document.getElementById('region-text');
+  const regionGlobeDiv = document.getElementById('region-globe');
   const region = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[0];
 
   try {
@@ -61,19 +71,32 @@ function nFormatter(num) {
     totalIndividualsDiv.innerHTML = nFormatter(totalIndividuals);
     totalCompaniesDiv.innerHTML = nFormatter(totalCompanies);
 
-    if (region.includes('Asia'))
+    if (region.includes('Asia') || region.includes('Australia')) {
       regionPercentageDiv.innerHTML =
         regionWisePercentage['Asia Pacific'] + '%';
-    if (region.includes('America'))
+      regionGlobeDiv.innerHTML = '🌏';
+    }
+
+    if (region.includes('America')) {
       regionPercentageDiv.innerHTML =
         regionWisePercentage['North America'] + '%';
-    if (region.includes('Europe') || region.includes('Africa'))
+      regionGlobeDiv.innerHTML = '🌎';
+    }
+
+    if (
+      region.includes('Europe') ||
+      region.includes('Africa') ||
+      region.includes('Atlantic') ||
+      region.includes('Indian')
+    ) {
       regionPercentageDiv.innerHTML =
         String(
           parseFloat(regionWisePercentage['Europe']) +
             parseFloat(regionWisePercentage['Africa']) +
             parseFloat(regionWisePercentage['Middle East'])
         ) + '%';
+      regionGlobeDiv.innerHTML = '🌍';
+    }
   } catch (err) {
     console.log('error fetching site data:', err.message);
     totalIndividualsDiv.innerHTML = '3.6k';
@@ -81,5 +104,5 @@ function nFormatter(num) {
     regionPercentageDiv.innerHTML = '34%';
   }
 
-  regionTextDiv.innerHTML = `in your region (${region})`;
+  regionTextDiv.innerHTML = `in your region (${regionMap[region]})`;
 })();
