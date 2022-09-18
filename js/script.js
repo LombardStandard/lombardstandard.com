@@ -104,5 +104,5 @@ function nFormatter(num) {
     regionPercentageDiv.innerHTML = '34%';
   }
 
-  regionTextDiv.innerHTML = `in your region (${regionMap[region]})`;
+  regionTextDiv.innerHTML = `In your region (${regionMap[region]})`;
 })();
