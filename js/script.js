@@ -50,7 +50,7 @@ function nFormatter(num) {
     Asia: 'APAC',
     Australia: 'APAC',
     Europe: 'EMEA',
-    America: 'America',
+    America: 'Americas',
     Africa: 'EMEA',
     Atlantic: 'EMEA',
     Indian: 'EMEA',
@@ -77,7 +77,7 @@ function nFormatter(num) {
       regionGlobeDiv.innerHTML = '🌏';
     }
 
-    if (region.includes('America')) {
+    if (region.includes('Americas')) {
       regionPercentageDiv.innerHTML =
         regionWisePercentage['North America'] + '%';
       regionGlobeDiv.innerHTML = '🌎';
