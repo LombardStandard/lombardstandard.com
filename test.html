@@ -178,8 +178,11 @@
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
             <div class="flex flex-col grid grid-cols-4 gap-x-12 ">
                <div class="col-span-3 w-full">
-                  <p class="text-sm text-gray-900 uppercase">TECH ENABLED BROKERAGE</p>
-                  <h1 class="mt-2 text-4xl font-bold text-gray-900 tracking-tight">Use AI to find buyers for commercial real estate assets.</h1>
+                  <p class="text-sm text-gray-900 uppercase">COMMERCIAL REAL ESTATE BROKERAGE</p>
+                  <h1 class="mt-2 text-4xl font-bold text-gray-900 tracking-tight">Use AI to find buyers in&nbsp;<span class="typewrite" data-period="2000" data-type='[ "Japan.", "EMEA.", "Asia Pacific." ]'> 
+                     <span class="wrap"></span>
+                     </span>
+                  </h1>
                   <p class="mt-2 text-lg font-light text-gray-500 leading-6">Our algorithm searches, profiles and ranks investors in all asset classes across the largest markets globally.</p>
                   <div class="mt-6 flex flex-row">
                      <div>
@@ -439,6 +442,64 @@
              }
            });
          }
+      </script>
+      <script>
+         var TxtType = function(el, toRotate, period) {
+         this.toRotate = toRotate;
+         this.el = el;
+         this.loopNum = 0;
+         this.period = parseInt(period, 10) || 2000;
+         this.txt = '';
+         this.tick();
+         this.isDeleting = false;
+         };
+         
+         TxtType.prototype.tick = function() {
+         var i = this.loopNum % this.toRotate.length;
+         var fullTxt = this.toRotate[i];
+         
+         if (this.isDeleting) {
+         this.txt = fullTxt.substring(0, this.txt.length - 1);
+         } else {
+         this.txt = fullTxt.substring(0, this.txt.length + 1);
+         }
+         
+         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+         
+         var that = this;
+         var delta = 200 - Math.random() * 100;
+         
+         if (this.isDeleting) { delta /= 2; }
+         
+         if (!this.isDeleting && this.txt === fullTxt) {
+         delta = this.period;
+         this.isDeleting = true;
+         } else if (this.isDeleting && this.txt === '') {
+         this.isDeleting = false;
+         this.loopNum++;
+         delta = 500;
+         }
+         
+         setTimeout(function() {
+         that.tick();
+         }, delta);
+         };
+         
+         window.onload = function() {
+         var elements = document.getElementsByClassName('typewrite');
+         for (var i=0; i<elements.length; i++) {
+             var toRotate = elements[i].getAttribute('data-type');
+             var period = elements[i].getAttribute('data-period');
+             if (toRotate) {
+               new TxtType(elements[i], JSON.parse(toRotate), period);
+             }
+         }
+         // INJECT CSS
+         var css = document.createElement("style");
+         css.type = "text/css";
+         css.innerHTML = ".typewrite > .wrap {padding-right:2px; border-right: 2px solid #111827; height: 5px; color: #1D4ED8}";
+         document.body.appendChild(css); 
+         };
       </script>
       <noscript>
          <img
