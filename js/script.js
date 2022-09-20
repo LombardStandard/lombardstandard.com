@@ -111,12 +111,14 @@ function updateContent() {
 }
 
 function updateIframes() {
-  document.getElementById(
-    'iframe-sub'
-  ).src = `https://dev.lombardstandard.com/subscribeForm/?lang=${i18next.language}`;
-  document.getElementById(
-    'iframe-lead'
-  ).src = `https://dev.lombardstandard.com/search_leads_widget/?lang=${i18next.language}`;
+  const iFrameSub = document.getElementById('iframe-sub');
+  const iFrameLead = document.getElementById('iframe-lead');
+  const lang = i18next.language.includes('en') ? 'en' : i18next.language;
+
+  if (iFrameSub && iFrameLead) {
+    iFrameSub.src = `https://app.lombardstandard.com/subscribeForm/?lang=${lang}`;
+    iFrameLead.src = `https://app.lombardstandard.com/search_leads_widget/?lang=${lang}`;
+  }
 }
 
 async function i18Loader() {
@@ -149,7 +151,9 @@ async function i18Loader() {
   langSelector.addEventListener('change', (e) => {
     i18next.changeLanguage(e.target.value);
   });
-  langSelector.value = i18next.language;
+  langSelector.value = i18next.language.includes('en')
+    ? 'en'
+    : i18next.language;
 
   let closeText = 'OK';
   let message = 'By viewing this website you agree to our';

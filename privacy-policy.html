@@ -35,6 +35,8 @@
     <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png">
     <!-- Global site tag (gtag.js) - Google Analytics -->
      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
+     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       
@@ -51,7 +53,16 @@
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
       body {
       font-family: 'Roboto', sans-serif;
-      }  
+      }
+      select {
+      position: relative;
+      padding-right: 20px !important;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M12 21l-12-18h24z"/></svg>') no-repeat;
+      background-position: right 10px top 50%;
+      }
     </style>
   </head>
   <body>
@@ -65,6 +76,13 @@
             </svg>
           </a>
         </div>
+        <div>
+          <select disabled="true" id="langSelector" name="lang" class="inline-flex px-3 py-2 text-xs rounded-lg text-gray-900 bg-white hover:text-gray-500 transition-all duration-150 ease-out cursor-pointer">
+             <option value="en"> English&nbsp;&nbsp;&nbsp; </option>
+             <option value="ja"> 日本語&nbsp;&nbsp;&nbsp; </option>
+             <option value="de"> Deutsch&nbsp;&nbsp;&nbsp; </option>
+          </select>
+       </div>
       </div>
     </div>
     <!-- Tabs -->
@@ -72,13 +90,13 @@
       <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
         <div>
           <div class="mt-8 rounded-xl p-8 bg-white shadow-md text-gray-900 text-sm font-light">
-            <div class="text-center font-bold text-xl mt-4 ">Privacy Policy</div>
+            <div class="text-center font-bold text-xl mt-4 i18nelement" data-i18n="Privacy Policy">Privacy Policy</div>
             <br><br>
-            <b class="font-bold">Last Revised:</b> September 16, 2022<br><br>
-            Lombard Standard Ltd and its affiliates (collectively "<b class="font-bold">Lombard Standard</b>" or "<b class="font-bold">us</b>", or "<b class="font-bold">we</b>") are committed to safeguarding your privacy. This Privacy Policy (the "<b class="font-bold">Policy</b>") describes our policies and procedures regarding the collection, use and disclosure of information we obtain through our website at <a href="index" class="text-blue-700 font-bold hover:text-blue-900 transition-all duration-150 ease-out" target="_blank"> lombardstandard.com</a> (the "<b class="font-bold">Website</b>"), and/or through other activities. You acknowledge that by using the Website you implicitly agree and consent to the terms of this Policy.<br><br>
-            <div class="text-center font-bold">IMPORTANT INFORMATION</div>
+            <b class="font-bold i18nelement" data-i18n="Last Revised">Last Revised:</b> September 16, 2022<br><br>
+            <span class="i18nelement" data-i18n="policy-line-1">Lombard Standard Ltd and its affiliates (collectively</span> "<b class="font-bold">Lombard Standard</b>" <span class="i18nelement" data-i18n="or">or</span> "<b class="font-bold i18nelement" data-i18n="us">us</b>", <span class="i18nelement" data-i18n="or">or</span> "<b class="font-bold i18nelement" data-i18n="we">we</b>") <span class="i18nelement" data-i18n="policy-line-2">are committed to safeguarding your privacy. This Privacy Policy (the</span> "<b class="font-bold i18nelement" data-i18n="Policy">Policy</b>") <span class="i18nelement" data-i18n="policy-line-3">describes our policies and procedures regarding the collection, use and disclosure of information we obtain through our website at</span> <a href="index" class="text-blue-700 font-bold hover:text-blue-900 transition-all duration-150 ease-out" target="_blank"> lombardstandard.com</a> <span class="i18nelement" data-i18n="(the">(the</span> "<b class="font-bold i18nelement" data-i18n="Website">Website</b>"), <span class="i18nelement" data-i18n="policy-line-4">and/or through other activities. You acknowledge that by using the Website you implicitly agree and consent to the terms of this Policy.</span><br><br>
+            <div class="text-center font-bold i18nelement" data-i18n="IMPORTANT INFORMATION">IMPORTANT INFORMATION</div>
             <br>
-            WHO WE ARE. For the purpose of applicable data protection legislation, the controller of your personal data is:<br><br>
+            <span class="i18nelement" data-i18n="policy-line-5">WHO WE ARE. For the purpose of applicable data protection legislation, the controller of your personal data is</span>:<br><br>
             <ul class="pl-4 list-none">
               <li class="font-bold">Lombard Standard Ltd</li>
               <li>128 City Road</li>
@@ -86,67 +104,67 @@
               <li>United Kingdom</li>
             </ul>
             <br>
-            CHANGES TO THIS POLICY. We reserve the right to modify this Policy at any time, so we encourage you to review it frequently. The “Last Revised” legend above indicates when this Policy was last changed.<br><br>
-            <div class="font-bold">1. What we do</div>
+            <span class="i18nelement" data-i18n="policy-line-6">CHANGES TO THIS POLICY. We reserve the right to modify this Policy at any time, so we encourage you to review it frequently. The “Last Revised” legend above indicates when this Policy was last changed.</span><br><br>
+            <div class="font-bold i18nelement" data-i18n="1. What we do">1. What we do</div>
             <br>
-            We collect personal information of the following types of people to enable us to operate the Website:<br><br>
+            <span class="i18nelement" data-i18n="policy-line-7">We collect personal information of the following types of people to enable us to operate the Website</span>:<br><br>
             <ul class="list-disc pl-8">
-              <li>Customers who use the Website</li>
-              <li>Professionals who may be interested in the Website</li>
-              <li>Suppliers, employees and advisors that support the Website</li>
+              <li class="i18nelement" data-i18n="policy-line-8">Customers who use the Website</li>
+              <li class="i18nelement" data-i18n="policy-line-9">Professionals who may be interested in the Website</li>
+              <li class="i18nelement" data-i18n="policy-line-10">Suppliers, employees and advisors that support the Website</li>
             </ul>
             <br>
-            <div class="font-bold">2. Information we collect</div>
+            <div class="font-bold i18nelement" data-i18n="2. Information we collect">2. Information we collect</div>
             <br>
-            We collect information about you that you give to us in connection with the Website and/or by corresponding with us by phone, email, in writing or otherwise. It includes information that you provide when you enquire about the Website, submit forms, proposals, brochures or other data, subscribe to our mailing lists and/or attend events or meetings organised by us. The information we collect may include your name, address, email address, telephone number and other information available into the public domain (e.g. social media or company website).<br><br>
-            <div class="font-bold">3. How we use the information</div>
+            <span class="i18nelement" data-i18n="policy-line-11">We collect information about you that you give to us in connection with the Website and/or by corresponding with us by phone, email, in writing or otherwise. It includes information that you provide when you enquire about the Website, submit forms, proposals, brochures or other data, subscribe to our mailing lists and/or attend events or meetings organised by us. The information we collect may include your name, address, email address, telephone number and other information available into the public domain (e.g. social media or company website).</span><br><br>
+            <div class="font-bold i18nelement" data-i18n="3. How we use the information">3. How we use the information</div>
             <br>
-            The information we collect will be held in confidence by us and will not be passed on by us to other entities, except for the purposes related to the Website. We use the information we collect in the following ways:<br><br>
+            <span class="i18nelement" data-i18n="policy-line-12">The information we collect will be held in confidence by us and will not be passed on by us to other entities, except for the purposes related to the Website. We use the information we collect in the following ways</span>:<br><br>
             <ul class="list-disc pl-8">
-              <li>To operate out the Website</li>
-              <li>To carry out obligations arising amongst us</li>
-              <li>To provide you with updates related to the Website</li>
+              <li class="i18nelement" data-i18n="policy-line-13">To operate out the Website</li>
+              <li class="i18nelement" data-i18n="policy-line-14">To carry out obligations arising amongst us</li>
+              <li class="i18nelement" data-i18n="policy-line-15">To provide you with updates related to the Website</li>
             </ul>
             <br>
-            <div class="font-bold">4. Our legitimate business interests</div>
+            <div class="font-bold i18nelement" data-i18n="4. Our legitimate business interests">4. Our legitimate business interests</div>
             <br>
-            Lombard Standard is an online lead generation service for commercial real estate operators. In this capacity, the collection of personal information is a fundamental and essential part of our business. In order to maintain, expand and develop our business we must record the personal information into databases, which contain the information we collect.<br><br>
-            <div class="font-bold">5. To whom we may disclose your information</div>
+            <span class="i18nelement" data-i18n="policy-line-16">Lombard Standard is an online lead generation service for commercial real estate operators. In this capacity, the collection of personal information is a fundamental and essential part of our business. In order to maintain, expand and develop our business we must record the personal information into databases, which contain the information we collect.</span><br><br>
+            <div class="font-bold i18nelement" data-i18n="5. To whom we may disclose your information">5. To whom we may disclose your information</div>
             <br>
-            In relation with one or more of the purposes outlined in the paragraph #3, we might disclose details about you to some entities listed below. If you are an individual in the European Union, please note that some of the recipients of your personal information listed below will be based in countries outside of the European Union whose laws may not provide the same level of data protection.<br><br>
+            <span class="i18nelement" data-i18n="policy-line-17">In relation with one or more of the purposes outlined in the paragraph #3, we might disclose details about you to some entities listed below. If you are an individual in the European Union, please note that some of the recipients of your personal information listed below will be based in countries outside of the European Union whose laws may not provide the same level of data protection.</span><br><br>
             <ul class="list-disc pl-8">
-              <li>Employees and members of Lombard Standard</li>
-              <li>Third parties that enable us to operate the Website</li>
-              <li>Third parties that provide services to us</li>
+              <li class="i18nelement" data-i18n="policy-line-18">Employees and members of Lombard Standard</li>
+              <li class="i18nelement" data-i18n="policy-line-19">Third parties that enable us to operate the Website</li>
+              <li class="i18nelement" data-i18n="policy-line-20">Third parties that provide services to us</li>
             </ul>
             <br>
-            <div class="font-bold">6. Retention and protection of your data</div>
+            <div class="font-bold i18nelement" data-i18n="6. Retention and protection of your data">6. Retention and protection of your data</div>
             <br>
-            We use a range of physical, electronic and managerial measures to ensure that we keep your personal information secure, accurate and up to date. We understand our duty to retain accurate data, and to only retain personal information for as long as we need it for our legitimate business interests. Accordingly, we have a data retention policy to remove periodically all data that ceases to be in our legitimate business interests.<br><br>
-            <div class="font-bold">7. Your rights</div>
+            <span class="i18nelement" data-i18n="policy-line-21">We use a range of physical, electronic and managerial measures to ensure that we keep your personal information secure, accurate and up to date. We understand our duty to retain accurate data, and to only retain personal information for as long as we need it for our legitimate business interests. Accordingly, we have a data retention policy to remove periodically all data that ceases to be in our legitimate business interests.</span><br><br>
+            <div class="font-bold i18nelement" data-i18n="7. Your rights">7. Your rights</div>
             <br>
-            You have various rights in relation to the handling, retention and disclosure of your personal information. In particular, you have the right to:<br><br>
+            <span class="i18nelement" data-i18n="policy-line-22">You have various rights in relation to the handling, retention and disclosure of your personal information. In particular, you have the right to</span>:<br><br>
             <ul class="list-disc pl-8">
-              <li>Access and request a copy of your personal information</li>
-              <li>Amend, update or correct your personal information</li>
-              <li>Delete or restrict the use of your personal information</li>
-              <li>Withdraw the consent to our processing of your personal information</li>
+              <li class="i18nelement" data-i18n="policy-line-23">Access and request a copy of your personal information</li>
+              <li class="i18nelement" data-i18n="policy-line-24">Amend, update or correct your personal information</li>
+              <li class="i18nelement" data-i18n="policy-line-25">Delete or restrict the use of your personal information</li>
+              <li class="i18nelement" data-i18n="policy-line-26">Withdraw the consent to our processing of your personal information</li>
             </ul>
             <br>
-            <div class="font-bold">8. Cookies</div>
+            <div class="font-bold i18nelement" data-i18n="8. Cookies">8. Cookies</div>
             <br>
-            We use cookies and similar technologies for the purpose of systems administration, website improvement, statistical analysis, advertisement and marketing, and to deliver a better and more personalised service to users. Most web browsers allow you to manage cookies via the browser settings. For example you may choose to delete existing cookies, prevent your browser from accepting new cookies, have the browser notify you when you receive a new cookie or disable cookies altogether. By using the Website you are agreeing to the placement of cookies on your computer. Whenever you visit or interact with the Website, we automatically collect certain information about your browser and your interaction with the Website, including:<br><br>
+            <span class="i18nelement" data-i18n="policy-line-27">We use cookies and similar technologies for the purpose of systems administration, website improvement, statistical analysis, advertisement and marketing, and to deliver a better and more personalised service to users. Most web browsers allow you to manage cookies via the browser settings. For example you may choose to delete existing cookies, prevent your browser from accepting new cookies, have the browser notify you when you receive a new cookie or disable cookies altogether. By using the Website you are agreeing to the placement of cookies on your computer. Whenever you visit or interact with the Website, we automatically collect certain information about your browser and your interaction with the Website, including</span>:<br><br>
             <ul class="list-disc pl-8">
-              <li>IP address</li>
-              <li>Browser and device type</li>
-              <li>Operating system</li>
-              <li>Timestamp of page visits</li>
-              <li>The pages accessed</li>
+              <li class="i18nelement" data-i18n="policy-line-28">IP address</li>
+              <li class="i18nelement" data-i18n="policy-line-29">Browser and device type</li>
+              <li class="i18nelement" data-i18n="policy-line-30">Operating system</li>
+              <li class="i18nelement" data-i18n="policy-line-31">Timestamp of page visits</li>
+              <li class="i18nelement" data-i18n="policy-line-32">The pages accessed</li>
             </ul>
             <br>
-            <div class="font-bold">9. Comments and questions</div>
+            <div class="font-bold i18nelement" data-i18n="9. Comments and questions">9. Comments and questions</div>
             <br>
-            We welcome your comments or questions about this Policy, please use the contacts in this page to send us a message.
+            <span class="i18nelement" data-i18n="policy-line-33">We welcome your comments or questions about this Policy, please use the contacts in this page to send us a message.</span>
           </div>
         </div>
       </div>
@@ -168,7 +186,7 @@
             </a>
     </div>
     <div class="mt-8 md:order-1 md:mt-0">
-      <p class="text-center text-sm text-gray-400">&copy; <span id="copyright"></span> Lombard Standard Ltd&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy" target="_self" class="hover:text-blue-700 transition-all duration-150 ease-out">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:hello@lomb.st" target="_self" class="hover:text-blue-700 transition-all duration-150 ease-out">hello@lomb.st</a></p> 
+      <p class="text-center text-sm text-gray-400">&copy; <span id="copyright"></span> Lombard Standard Ltd&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy" target="_self" class="hover:text-blue-700 transition-all duration-150 ease-out i18nelement" data-i18n="Privacy Policy">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:hello@lomb.st" target="_self" class="hover:text-blue-700 transition-all duration-150 ease-out">hello@lomb.st</a></p> 
     </div> 
   </div>
 </footer>
@@ -183,7 +201,5 @@
         src="https://px.ads.linkedin.com/collect/?pid=3365265&fmt=gif"
         >
     </noscript>
-    <!-- Cookie Consent -->
-    <script src="https://cookieinfoscript.com/js/cookieinfo.min.js" id="cookieinfo" data-close-text="OK" data-font-size="14px" data-message="By viewing this website you agree to our" data-link="#111827" data-linkmsg="<b>Privacy Policy</b>." data-moreinfo="https://lombardstandard.com/privacy-policy" data-text-align="left" data-bg="#FDE68A" data-cookie="Lombard Standard Analytics"></script>
   </body>
 </html>
