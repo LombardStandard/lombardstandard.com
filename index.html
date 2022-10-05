@@ -56,12 +56,17 @@
       <script src="https://cdn.tailwindcss.com"></script>
       <style>
          @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
          html {
          scroll-behavior: smooth;
-         }      
-         body {
+         }   
+         * {
          font-family: 'Roboto', sans-serif;
-         }      
+         color: #111827;
+         }
+         .font-mono {
+         font-family: 'Roboto Mono', monospace;
+         }
          .accordion {
          cursor: pointer;
          width: 100%;
@@ -70,10 +75,10 @@
          transition: 0.4s;
          color: #111827;
          background-color: #ffffff;
-         }    
+         }  
          .active {
          background-color: #ffffff;
-         }     
+         }   
          .accordion:after {
          content: '\002B';
          color: #1d4ed8;
@@ -81,7 +86,7 @@
          font-size: 18px;
          float: right;
          margin-left: 20px;
-         }     
+         }   
          .active:after {
          content: '\2212';
          }
@@ -89,14 +94,14 @@
          max-height: 0;
          overflow: hidden;
          transition: max-height 0.2s ease-out;
-         }   
+         }  
          select {
-         position: relative;  
+         position: relative; 
          padding-right: 32px !important;
          -moz-appearance: none;
          -webkit-appearance: none;
          appearance: none;
-         background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"  stroke="%231D4ED8" ><text x="0%" y="75%">🌐</text></svg>') no-repeat;
+         background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="%231D4ED8" ><text x="0%" y="75%">🌐</text></svg>') no-repeat;
          background-position: right 10px top 50%;
          }
       </style>
@@ -113,11 +118,11 @@
                </a>
             </div>
             <div>
-               <select disabled="true" id="langSelector" name="lang" style="" class="inline-flex w-min px-3 py-2 text-xs rounded-lg text-gray-900 bg-white hover:text-blue-700 transition-all duration-150 ease-out cursor-pointer">
+               <select disabled="true" id="langSelector" name="lang" style="" class="inline-flex w-min px-3 py-2 text-xs rounded-lg bg-white hover:text-blue-700 transition-all duration-150 ease-out cursor-pointer border-0">
                   <option value="en"> English&nbsp;&nbsp;&nbsp; </option>
                   <option value="ja"> 日本語&nbsp;&nbsp;&nbsp; </option>
                   <option value="de"> Deutsch&nbsp;&nbsp;&nbsp; </option>
-                 </select>
+               </select>
             </div>
          </div>
       </div>
@@ -126,73 +131,91 @@
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
             <div class="flex flex-col grid grid-cols-4 gap-x-12">
                <div class="col-span-4 w-full">
-                  <p class="text-sm text-gray-900 uppercase i18nelement" data-i18n="COMMERCIAL REAL ESTATE BROKERAGE"> COMMERCIAL REAL ESTATE BROKERAGE </p>
-                  <h1 class="mt-2 text-5xl font-extrabold text-gray-900 tracking-tight"> <span class="i18nelement" data-i18n="Use AI to find buyers in">Use AI to find buyers in</span>&nbsp;<span class="typewrite" data-period="2000" data-type='[ "Japan", "Europe", "Asia Pacific" ]'> <span class="wrap"></span> </span> </h1>
+                  <p class="text-sm uppercase i18nelement" data-i18n="COMMERCIAL REAL ESTATE BROKERAGE"> COMMERCIAL REAL ESTATE BROKERAGE </p>
+                  <h1 class="mt-2 text-5xl font-extrabold tracking-tight"> <span class="i18nelement" data-i18n="Use AI to find buyers in">Use AI to find buyers in</span>&nbsp;<span class="typewrite" data-period="2000" data-type='[ "Japan", "Europe", "Asia Pacific" ]'> <span class="wrap"></span> </span> </h1>
                   <p class="mt-2 text-lg font-light text-gray-500 leading-6 i18nelement" data-i18n="hero-header-3"> Our algorithm searches, profiles and ranks investors in all asset classes across the largest markets globally. </p>
                   <div class="mt-6 flex flex-row">
                      <div> <a href="#trynow" class="inline-flex w-fit text-center px-3 py-2 text-sm font-bold rounded-lg text-white bg-blue-700 hover:bg-blue-800 transition-all duration-150 ease-out i18nelement" data-i18n="TRY NOW"> TRY NOW </a> </div>
                      <div class="ml-2"> <a href="#waitlist" class="inline-flex text-center px-3 py-2 text-sm font-bold rounded-lg text-blue-700 hover:text-blue-800 transition-all duration-150 ease-out i18nelement" data-i18n="JOIN WAITLIST"> JOIN WAITLIST </a> </div>
+                  </div>
+                  <div class="mt-10 flex flex-row items-center">
+                     <p class="text-lg text-yellow-600 pr-3 ">★★★★★ </p>
+                     <p class="font-light text-sm i18nelement pl-3 border-l border-gray-400" data-i18n="try-now-5"> Tetsuya Hasegawa, Executive Director Real Estate <br><span class="font-bold">Japan Post Bank</p>
                   </div>
                </div>
             </div>
          </div>
       </div>
       <!-- Stats -->
-      <div class="pt-12 pb-16 px-4 sm:px-8 md:px-12 bg-blue-200">
+      <div class="py-12 px-4 sm:px-8 md:px-12 bg-blue-200">
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
-            <div class="flex justify-center">
-               <div class="text-white text-sm bg-gray-900 w-fit text-center align-middle rounded-full py-1 px-3 i18nelement mb-6" data-i18n="our buyers database"> our buyers database </div>
+            <div class="flex justify-center items-center mb-3">
+               <div class="text-white text-sm bg-gray-900 w-fit text-center align-middle rounded-full py-1 px-3 i18nelement" data-i18n="buyers database"> buyers database </div>
             </div>
-            <div class="flex justify-around">
-                  <div class="flex sm:flex-row flex-col items-top w-max mt-6">
-                     <div class="text-5xl items-center">🏛️</div>
-                     <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col">
-                        <div id="total-companies" class="text-4xl font-extrabold tracking-tight text-gray-900 text-left"> - </div>
-                        <div class="text-sm leading-4 text-gray-900 i18nelement" data-i18n="Real Estate firms"> Real Estate firms </div>
-                     </div>
-                  </div>
-                  <div class="flex sm:flex-row flex-col items-top w-max mt-6 mx-4">
-                     <div class="text-5xl items-center">👨‍💼</div>
-                     <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col">
-                        <div id="total-individuals" class="text-4xl font-extrabold tracking-tight text-gray-900 text-left"> - </div>
-                        <div class="text-sm leading-4 text-gray-900 i18nelement" data-i18n="Corporate executives"> Corporate executives </div>
-                     </div>
-                  </div>
-                  <div class="flex sm:flex-row flex-col items-top w-max mt-6 ">
-                     <div id="region-globe" class="text-5xl items-center">🌏</div>
-                     <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col">
-                        <div id="region-percentage" class="text-4xl font-extrabold tracking-tight text-gray-900 text-left"> - </div>
-                        <div class="text-sm leading-4 text-gray-900"> <span class="i18nelement" data-i18n="In your region">In your region</span> <span id="region-text">(APAC)</span> </div>
-                     </div>
+            <div class="flex justify-center">
+               <div class="relative flex flex-col items-center group mb-6 text-xs text-gray-500 underline decoration-dotted underline-offset-4 cursor-pointer hover:text-blue-700 w-fit i18nelement" data-i18n="breakdown1">
+                  BREAKDOWN
+                  <div class="absolute bottom-0 flex flex-col items-center invisible mb-6 group-hover:visible transition-all duration-150 ease-out">
+                     <span class="flex flex-row space-x-4 relative z-10 p-4 text-sm leading-6 bg-white text-gray-900 text-left rounded-lg whitespace-no-wrap shadow-lg i18nelement" data-i18n="breakdown2">
+                     <span>➜&nbsp;&nbsp;Advisors<br>➜&nbsp;&nbsp;Bankers<br>➜&nbsp;&nbsp;Developers</span>
+                     <span>➜&nbsp;&nbsp;Funds<br>➜&nbsp;&nbsp;Managers<br>➜&nbsp;&nbsp;Operators&nbsp;</span>
+                     </span>
+                     <div class="w-3 h-3 -mt-2 z-10 rotate-45 bg-white"></div>
                   </div>
                </div>
+            </div>
+            <div class="flex justify-around mb-6">
+               <div class="flex sm:flex-row flex-col items-top w-max mt-6">
+                  <div class="text-5xl items-center">🏛️</div>
+                  <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col">
+                     <div id="total-companies" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
+                     <div class="text-sm leading-4 i18nelement" data-i18n="Real Estate firms"> Real Estate firms </div>
+                  </div>
+               </div>
+               <div class="flex sm:flex-row flex-col items-top w-max mt-6 mx-4">
+                  <div class="text-5xl items-center">👨‍💼</div>
+                  <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col">
+                     <div id="total-individuals" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
+                     <div class="text-sm leading-4 i18nelement" data-i18n="Corporate executives"> Corporate executives</div>
+                  </div>
+               </div>
+               <div class="flex sm:flex-row flex-col items-top w-max mt-6 ">
+                  <div id="region-globe" class="text-5xl items-center">🌏</div>
+                  <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col">
+                     <div id="region-percentage" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
+                     <div class="text-sm leading-4"> <span class="i18nelement" data-i18n="In your region">In your region</span> <span id="region-text">(APAC)</span> </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
       <!-- Try now -->
       <div id="trynow" class="pt-24 pb-32 px-4 sm:px-8 md:px-12 bg-blue-50">
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto rounded-xl space-y-8">
-            <div class="flex flex-col text-center justify-center pb-12">
-               <p class="text-sm text-gray-900 uppercase i18nelement" data-i18n="TRY NOW"> TRY NOW </p>
-               <h2 class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight i18nelement" data-i18n="Generate leads in one click"> Generate leads in one click </h2>
+            <div class="flex flex-col text-center justify-center pb-6 sm:pb-12">
+               <p class="text-sm uppercase i18nelement" data-i18n="TRY NOW"> TRY NOW </p>
+               <h2 class="mt-2 text-4xl font-extrabold tracking-tight i18nelement" data-i18n="Generate leads in one click"> Generate leads in one click </h2>
                <p class="mt-2 font-light text-lg text-gray-500 leading-6 i18nelement" data-i18n="try-now-3"> Just input basic asset data and the AI will find prospects for your deal. </p>
             </div>
             <div class="flex flex-col sm:grid sm:grid-cols-5 gap-x-12">
-               <div class="flex-initial overflow-hidden sm:order-none order-2 mt-16 sm:mt-0 col-span-3 rounded-xl shadow-lg bg-white h-min"> <iframe id="iframe-lead" class="w-full p-8 rounded-xl bg-white" src="https://app.lombardstandard.com/search_leads_widget/" frameborder="0" width="100%" style="height: 730px"></iframe> </div>
+               <div class="flex-initial overflow-hidden sm:order-none order-2 col-span-3 rounded-xl shadow-lg bg-white h-min"> <iframe id="iframe-lead" class="w-full p-8 rounded-xl bg-white" src="https://app.lombardstandard.com/search_leads_widget/" frameborder="0" width="100%" style="height: 730px"></iframe> </div>
                <div class="space-y-6 sm:order-none order-first col-span-2 col-start-4">
                   <div>
-                     <div class="flex flex-row space-x-6 sm:space-x-8">
-                        <div>
-                           <p class="text-lg text-yellow-600 leading-6">★★★★★</p>
-                           <p class="mt-4 font-light text-lg text-gray-900 leading-6 i18nelement" data-i18n="try-now-4"> A groundbreaking idea that may serve to increase transparency and liquidity of the commercial real estate transaction market. </p>
-                           <div class="flex flex-row mt-4 items-center"> 
-                              <p class="bg-violet-200 text-violet-700 text-xs font-medium align-middle w-8 h-8 rounded-full p-2 mr-4" >TH</p>
-                              <p class=" text-sm text-gray-500 i18nelement" data-i18n="try-now-5"> Tetsuya Hasegawa, Executive Director Real Estate @ Japan Post Bank </p>
+                     <div class="sm:flex flex-col hidden">
+                        <div class="flex flex-col">
+                           <div class="flex flex-col self-end rounded-lg p-3 text-center w-fit bg-lime-200 mb-12" >
+                              <p class="i18nelement font-normal text-xs text-lime-700" data-i18n="try-now-4"> MATCHING</p>
+                              <p class="text-xl font-bold font-mono text-lime-700">90%</p>
                            </div>
-                           <p class="mt-8 text-lg text-yellow-600 leading-6">★★★★★</p>
-                           <p class="mt-4 font-light text-lg text-gray-900 leading-6 i18nelement" data-i18n="try-now-6"> This platform saves time and money by accessing directly to a pool of qualified buyers without intermediaries. </p>
-                           <div class="flex flex-row mt-4 items-center">
-                              <p class="bg-lime-200 text-lime-700 text-xs font-medium align-middle w-8 h-8 rounded-full p-2 mr-4" >RJ</p>
-                              <p class="text-sm text-gray-500 i18nelement" data-i18n="try-now-7"> Richard Johnson, Managing Director Real Estate @ SIGNA Financial Services AG </p>
+                           <div class="flex flex-col " >
+                              <p class="i18nelement text-sm flex mb-4 font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-4"> • COMPANY<span class="inline-flex ml-2 rounded-full bg-gray-900 bg-opacity-5 w-1/2">&nbsp;</span></p>
+                              <p class="i18nelement text-sm flex mb-4 font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-4"> • SEGMENT<span class="inline-flex ml-2 rounded-full bg-gray-900 bg-opacity-5 w-1/2">&nbsp;</span></p>
+                              <p class="i18nelement text-sm flex mb-4 font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-4"> • AUM<span class="inline-flex ml-2 rounded-full bg-gray-900 bg-opacity-5 w-1/2">&nbsp;</span></p>
+                              <p class="i18nelement text-sm flex mb-4 font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-4"> • EMPLOYEES<span class="inline-flex ml-2 rounded-full bg-gray-900 bg-opacity-5 w-1/4">&nbsp;</span></p>
+                              <p class="i18nelement text-sm flex flex-col font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-4"> • CONTACTS<span class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-1/2 leading-none">&nbsp;</span><span class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-5/6 leading-none">&nbsp;</span><span class="flex mt-3 mb-4 rounded-full bg-gray-900 bg-opacity-5 w-3/4 leading-none">&nbsp;</span></p>
+                              <p class="i18nelement text-sm flex flex-col font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-4">• FUNDS MANAGED<span class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-1/2 leading-none">&nbsp;</span><span class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-5/6 leading-none">&nbsp;</span><span class="flex mt-3 mb-4 rounded-full bg-gray-900 bg-opacity-5 w-3/4 leading-none">&nbsp;</span></p>
+                              <p class="i18nelement text-sm flex flex-col font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-4">• NEWS<span class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-1/2 leading-none">&nbsp;</span><span class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-5/6 leading-none">&nbsp;</span><span class="flex mt-3 mb-4 rounded-full bg-gray-900 bg-opacity-5 w-3/4 leading-none">&nbsp;</span></p>
+                              <p class="i18nelement text-sm flex flex-col font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-4">• PAST TRANSACTIONS<span class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-1/2 leading-none">&nbsp;</span><span class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-5/6 leading-none">&nbsp;</span><span class="flex mt-3 mb-4 rounded-full bg-gray-900 bg-opacity-5 w-3/4 leading-none">&nbsp;</span></p>
                            </div>
                         </div>
                      </div>
@@ -205,12 +228,12 @@
       <div id="waitlist" class="pt-6 pb-24 px-4 sm:px-8 md:px-12 bg-blue-50">
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto text-center">
             <div class="flex flex-col justify-center">
-               <p class="text-sm text-gray-900 uppercase i18nelement" data-i18n="Coming soon"> Coming soon </p>
-               <h2 class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight i18nelement" data-i18n="Join the waitlist"> Claim your free account</h2>
+               <p class="text-sm uppercase i18nelement" data-i18n="Coming soon"> Coming soon </p>
+               <h2 class="mt-2 text-4xl font-extrabold tracking-tight i18nelement" data-i18n="Join the waitlist"> Claim your free account</h2>
                <p class="self-center max-w-xl mt-2 font-light text-lg text-gray-500 leading-6 i18nelement" data-i18n="features-3"> We'll release tools to improve efficiency and speed up your business. </p>
                <div class="mt-6 h-24 sm:max-w-lg w-full flex justify-end mr-2 self-center"> <iframe id="iframe-sub" class="w-full" src="https://app.lombardstandard.com/subscribeForm/"></iframe> </div>
                <div class="text-white text-sm bg-gray-900 w-fit text-center align-middle rounded-full py-1 px-3 i18nelement self-center" data-i18n="FEATURES"> upcoming features </div>
-               <div class="text-lg mt-6 sm:px-20 leading-10 font-light text-gray-900 self-center text-center i18nelement" data-i18n="features-5"> 🗄️&nbsp;&nbsp;Search archive&nbsp;&nbsp;💬&nbsp;&nbsp;Multichannel messaging&nbsp;&nbsp;🔍&nbsp;&nbsp;Filtering and sorting&nbsp;&nbsp;📘&nbsp;&nbsp;Custom address book&nbsp;&nbsp;✅&nbsp;&nbsp;Progress bar&nbsp;&nbsp;📍&nbsp;&nbsp;Local datacenters&nbsp;&nbsp;🔔&nbsp;&nbsp;Email notifications&nbsp;&nbsp;📈&nbsp;&nbsp;Charts and analytics&nbsp;&nbsp;🌐&nbsp;&nbsp;Automated translation </div>
+               <div class="text-lg mt-6 sm:px-20 leading-10 font-light self-center text-center i18nelement" data-i18n="features-5"> 🗄️&nbsp;&nbsp;Search archive&nbsp;&nbsp;💬&nbsp;&nbsp;Multichannel messaging&nbsp;&nbsp;🔍&nbsp;&nbsp;Filtering and sorting&nbsp;&nbsp;📘&nbsp;&nbsp;Custom address book&nbsp;&nbsp;✅&nbsp;&nbsp;Progress bar&nbsp;&nbsp;📍&nbsp;&nbsp;Local datacenters&nbsp;&nbsp;🔔&nbsp;&nbsp;Email notifications&nbsp;&nbsp;📈&nbsp;&nbsp;Charts and analytics&nbsp;&nbsp;🌐&nbsp;&nbsp;Automated translation </div>
             </div>
          </div>
       </div>
@@ -219,8 +242,8 @@
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto">
             <div class="grid grid-cols-1 gap-16 lg:grid-cols-3 lg:gap-16">
                <div>
-                  <p class="text-sm text-gray-900 uppercase i18nelement" data-i18n="ABOUT US"> ABOUT US </p>
-                  <h2 class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight i18nelement" data-i18n="Execution is our #1 priority"> Execution is our #1 priority </h2>
+                  <p class="text-sm uppercase i18nelement" data-i18n="ABOUT US"> ABOUT US </p>
+                  <h2 class="mt-2 text-4xl font-extrabold tracking-tight i18nelement" data-i18n="Execution is our #1 priority"> Execution is our #1 priority </h2>
                   <p class="mt-2 font-light text-lg text-gray-500 leading-6 i18nelement" data-i18n="team-3"> We are a delivery-focused group of individuals with domain expertise, local networks and sharp vision. <br /> <br /> Offices: <br /> </p>
                   <div class="flex flex-row mt-2 items-center">
                      <img class="h-5 w-5 rounded-full border border-gray-300" src="https://cdn.lomb.st/social/flags/jp.png" alt="" />
@@ -230,9 +253,9 @@
                      <img class="h-5 w-5 rounded-full border border-gray-300" src="https://cdn.lomb.st/social/flags/gb.png" alt="" />
                      <p class="i18nelement ml-2 text-sm text-gray-500" data-i18n="London, UK">London, UK</p>
                   </div>
-                 <p class="mt-8 mb-4 font-light text-lg text-gray-500 i18nelement" data-i18n="team-4"> Technical sponsors: <br /> </p>
-                 <div class="flex flex-row items-center space-x-6">
-                    <a href="https://aws.amazon.com/" target="_blank"><img class="h-8 w-auto grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/aws.png" alt="" /></a>
+                  <p class="mt-8 mb-4 font-light text-lg text-gray-500 i18nelement" data-i18n="team-4"> Technical sponsors: <br /> </p>
+                  <div class="flex flex-row items-center space-x-6">
+                     <a href="https://aws.amazon.com/" target="_blank"><img class="h-8 w-auto grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/aws.png" alt="" /></a>
                      <a href="https://stripe.com" target="_blank"><img class="mb-2 h-7 w-auto grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/stripe.png" alt="" /></a>
                      <a href="https://coda.io/" target="_blank"><img class="mb-1 h-9 w-auto grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/coda-2.png" alt="" /></a>
                   </div>
@@ -246,7 +269,7 @@
                               <h3>Alberto MG Saruggia</h3>
                               <p class="text-gray-500 text-base font-light i18nelement" data-i18n="Founder CEO"> Founder CEO </p>
                               <a href="https://www.linkedin.com/in/alberto-mg-saruggia/" target="_blank">
-                                 <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
+                              <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
                               </a>
                            </div>
                         </div>
@@ -258,7 +281,7 @@
                               <h3 class="i18nelement" data-i18n="Yuichi Honda">Yuichi Honda</h3>
                               <p class="text-gray-500 text-base font-light i18nelement" data-i18n="Co-founder COO"> Co-founder COO </p>
                               <a href="https://www.linkedin.com/in/yuichihonda/" target="_blank">
-                                 <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
+                              <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
                               </a>
                            </div>
                         </div>
@@ -270,7 +293,7 @@
                               <h3>Juay Hiang Tan</h3>
                               <p class="text-gray-500 text-base font-light i18nelement" data-i18n="Real Estate Asia Pacific"> Real Estate Asia Pacific </p>
                               <a href="https://linkedin.com/in/juay-hiang-tan-33ba464/" target="_blank">
-                                 <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
+                              <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
                               </a>
                            </div>
                         </div>
@@ -282,7 +305,7 @@
                               <h3 class="i18nelement" data-i18n="Fumiyo Takei">Fumiyo Takei</h3>
                               <p class="text-gray-500 text-base font-light i18nelement" data-i18n="Real Estate Japan"> Real Estate Japan </p>
                               <a href="https://www.linkedin.com/in/fumi-takei-3103b520/" target="_blank">
-                                 <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
+                              <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
                               </a>
                            </div>
                         </div>
@@ -294,7 +317,7 @@
                               <h3>Nils Huebener</h3>
                               <p class="text-gray-500 text-base font-light i18nelement" data-i18n="Real Estate Europe"> Real Estate Europe </p>
                               <a href="https://www.linkedin.com/in/nils-huebener-1ba2b917b/" target="_blank">
-                                 <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
+                              <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
                               </a>
                            </div>
                         </div>
@@ -306,7 +329,7 @@
                               <h3>Chris Hodgens</h3>
                               <p class="text-gray-500 text-base font-light i18nelement" data-i18n="Legal Affairs"> Legal Affairs </p>
                               <a href="https://www.linkedin.com/in/chris-hodgens-6a74855/" target="_blank">
-                                 <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
+                              <img class="h-4 w-4 mt-1 grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
                               </a>
                            </div>
                         </div>
@@ -334,18 +357,18 @@
                   <p class="text-gray-500 font-light align-middle mt-4 i18nelement" data-i18n="FAQ-2"> 👉 Feel free to send us an <a href="mailto:hello@lomb.st" target="_self" class="hover:text-blue-700 transition-all duration-150 ease-out font-bold">email</a> if you have any questions. </p>
                </div>
                <div class="flex flex-col space-y-1 col-span-2">
-                  <button class="accordion bg-white rounded-lg py-2 font-light px-6 text-gray-900 text-left i18nelement" data-i18n="When will be the release?"> When will be the release? </button>
-                  <div class="panel text-gray-900 px-6 py-0.5 font-light leading-6">
+                  <button class="accordion bg-white rounded-lg py-2 font-light px-6 text-left i18nelement" data-i18n="When will be the release?"> When will be the release? </button>
+                  <div class="panel px-6 py-0.5 font-light leading-6">
                      <p class="i18nelement" data-i18n="ans-1"> We are working hard to release the Beta version by end 2022. </p>
                      <div class="h-3"></div>
                   </div>
-                  <button class="accordion bg-white rounded-lg py-2 px-6 text-base text-gray-900 font-light text-left i18nelement" data-i18n="Are you a brokerage firm?"> Are you a brokerage firm? </button>
-                  <div class="panel text-gray-900 px-6 py-0.5 font-light leading-6">
+                  <button class="accordion bg-white rounded-lg py-2 px-6 text-base font-light text-left i18nelement" data-i18n="Are you a brokerage firm?"> Are you a brokerage firm? </button>
+                  <div class="panel px-6 py-0.5 font-light leading-6">
                      <p class="i18nelement" data-i18n="ans-2"> No, we are not involved into transactions or communications between users. </p>
                      <div class="h-3"></div>
                   </div>
-                  <button class="accordion bg-white rounded-lg py-2 px-6 text-base text-gray-900 font-light text-left i18nelement" data-i18n="How do you find leads?"> How do you find leads? </button>
-                  <div class="panel text-gray-900 px-6 py-0.5 font-light leading-6">
+                  <button class="accordion bg-white rounded-lg py-2 px-6 text-base font-light text-left i18nelement" data-i18n="How do you find leads?"> How do you find leads? </button>
+                  <div class="panel px-6 py-0.5 font-light leading-6">
                      <p class="i18nelement" data-i18n="ans-3"> Besides our organic network, the algorithm first scrapes and ranks publicly available sources, then matches buyers against the asset description. </p>
                      <div class="h-3"></div>
                   </div>
@@ -358,9 +381,9 @@
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto md:flex items-center md:justify-between mt-8">
             <div class="flex justify-center md:order-2">
                <a href="https://linkedin.com/company/lombard-standard" target="_blank">
-                  <img class="h-6 w-6 opacity-100 hover:opacity-80 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
+               <img class="h-6 w-6 opacity-100 hover:opacity-80 transition-all duration-150 ease-out" src="https://cdn.lomb.st/website/LinkedIn.PNG" alt="" />
                </a>
- </div>
+            </div>
             <div class="mt-4 md:order-1 md:mt-0">
                <p class="text-center text-sm text-gray-500"> &copy; <span id="copyright"></span> Lombard Standard Ltd&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy" target="_self" class="hover:text-blue-700 transition-all duration-150 ease-out i18nelement" data-i18n="Privacy Policy">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:hello@lomb.st" target="_self" class="hover:text-blue-700 transition-all duration-150 ease-out">hello@lomb.st</a> </p>
             </div>
@@ -372,76 +395,76 @@
          var acc = document.getElementsByClassName('accordion');
          var i;
          for (i = 0; i < acc.length; i++) {
-           acc[i].addEventListener('click', function () {
-             this.classList.toggle('active');
-             var panel = this.nextElementSibling;
-             if (panel.style.maxHeight) {
-               panel.style.maxHeight = null;
-             } else {
-               panel.style.maxHeight = panel.scrollHeight + 'px';
-             }
-           });
+          acc[i].addEventListener('click', function () {
+           this.classList.toggle('active');
+           var panel = this.nextElementSibling;
+           if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+           } else {
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+           }
+          });
          }
       </script>
       <script>
          var TxtType = function (el, toRotate, period) {
-           this.toRotate = toRotate;
-           this.el = el;
-           this.loopNum = 0;
-           this.period = parseInt(period, 10) || 2000;
-           this.txt = '';
-           this.tick();
-           this.isDeleting = false;
+          this.toRotate = toRotate;
+          this.el = el;
+          this.loopNum = 0;
+          this.period = parseInt(period, 10) || 2000;
+          this.txt = '';
+          this.tick();
+          this.isDeleting = false;
          };
          
          TxtType.prototype.tick = function () {
-           var i = this.loopNum % this.toRotate.length;
-           var fullTxt = this.toRotate[i];
+          var i = this.loopNum % this.toRotate.length;
+          var fullTxt = this.toRotate[i];
          
-           if (this.isDeleting) {
-             this.txt = fullTxt.substring(0, this.txt.length - 1);
-           } else {
-             this.txt = fullTxt.substring(0, this.txt.length + 1);
-           }
+          if (this.isDeleting) {
+           this.txt = fullTxt.substring(0, this.txt.length - 1);
+          } else {
+           this.txt = fullTxt.substring(0, this.txt.length + 1);
+          }
          
-           this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+          this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
          
-           var that = this;
-           var delta = 200 - Math.random() * 100;
+          var that = this;
+          var delta = 200 - Math.random() * 100;
          
-           if (this.isDeleting) {
-             delta /= 2;
-           }
+          if (this.isDeleting) {
+           delta /= 2;
+          }
          
-           if (!this.isDeleting && this.txt === fullTxt) {
-             delta = this.period;
-             this.isDeleting = true;
-           } else if (this.isDeleting && this.txt === '') {
-             this.isDeleting = false;
-             this.loopNum++;
-             delta = 500;
-           }
+          if (!this.isDeleting && this.txt === fullTxt) {
+           delta = this.period;
+           this.isDeleting = true;
+          } else if (this.isDeleting && this.txt === '') {
+           this.isDeleting = false;
+           this.loopNum++;
+           delta = 500;
+          }
          
-           setTimeout(function () {
-             that.tick();
-           }, delta);
+          setTimeout(function () {
+           that.tick();
+          }, delta);
          };
          
          window.onload = function () {
-           var elements = document.getElementsByClassName('typewrite');
-           for (var i = 0; i < elements.length; i++) {
-             var toRotate = elements[i].getAttribute('data-type');
-             var period = elements[i].getAttribute('data-period');
-             if (toRotate) {
-               new TxtType(elements[i], JSON.parse(toRotate), period);
-             }
+          var elements = document.getElementsByClassName('typewrite');
+          for (var i = 0; i < elements.length; i++) {
+           var toRotate = elements[i].getAttribute('data-type');
+           var period = elements[i].getAttribute('data-period');
+           if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
            }
-           // INJECT CSS
-           var css = document.createElement('style');
-           css.type = 'text/css';
-           css.innerHTML =
-             '.typewrite > .wrap {padding-right:2px; border-right: 0px solid #6B7280; color: #1D4ED8}';
-           document.body.appendChild(css);
+          }
+          // INJECT CSS
+          var css = document.createElement('style');
+          css.type = 'text/css';
+          css.innerHTML =
+           '.typewrite > .wrap {padding-right:2px; border-right: 0px solid #6B7280; color: #1D4ED8}';
+          document.body.appendChild(css);
          };
       </script> 
       <noscript> <img height="1" width="1" style="display: none" alt="" src="https://px.ads.linkedin.com/collect/?pid=3365265&fmt=gif" /> </noscript>
