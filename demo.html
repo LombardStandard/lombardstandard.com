@@ -121,30 +121,21 @@
                <div class="text-white text-sm bg-gray-900 w-fit text-center align-middle rounded-full py-1 px-3 i18nelement" data-i18n="buyers database"> buyers database </div>
             </div>
             <div class="flex justify-center">
-               <div class="relative flex flex-col items-center group mb-6 text-xs text-gray-500 underline decoration-dotted underline-offset-4 cursor-pointer hover:text-blue-700 w-fit i18nelement" data-i18n="breakdown-1">
-                  BREAKDOWN</div>
-                  <div class="absolute bottom-0 flex flex-col items-center visible mb-6 group-hover:visible transition-all duration-150 ease-out i18nelement" data-i18n="breakdown-2">abcx</div>
-                     <div class="flex flex-row space-x-4 relative z-10 p-4 text-sm leading-6 bg-white text-gray-900 text-left rounded-lg shadow-lg i18nelement" data-i18n="breakdown-2" >abcx</div>
-                     <div class="w-3 h-3 -mt-2 z-10 rotate-45 bg-white"></div>
-                  
-               
-            </div>
-           <div class="flex min-h-screen items-center justify-center">
-  <div x-data="{ tooltip: false }" class="relative z-30 inline-flex">
-    <div x-on:mouseover="tooltip = true" x-on:mouseleave="tooltip = false" class="rounded-md px-3 py-2 bg-indigo-500 text-white cursor-pointer shadow">
-      Hover over me
+  <div x-data="{ tooltip: false }" class="relative z-30 flex flex-col items center">
+    <div x-on:mouseover="tooltip = true" x-on:mouseleave="tooltip = false" class="text-xs text-gray-500 underline decoration-dotted underline-offset-4 cursor-pointer hover:text-blue-700 w-fit i18nelement">
+      BREAKDOWN
     </div>
     <div class="relative" x-cloak x-show.transition.origin.top="tooltip">
-      <div class="absolute top-0 z-10 w-32 p-2 -mt-1 text-sm leading-tight text-white transform -translate-x-1/2 -translate-y-full bg-orange-500 rounded-lg shadow-lg i18nelement" data-i18n="breakdown-2">
-        Hi, I am Tooltip
+      <div class="absolute bottom-0 z-10 w-fit whitespace-nowrap p-4 text-sm leading-tight transform mb-7 transform -translate-x-16 -ml-3 bg-white rounded-lg shadow-lg i18nelement flex flex-row space-x-4" data-i18n="breakdown-2">
+        <span>➜&nbsp;&nbsp;Advisors<br>➜&nbsp;&nbsp;Bankers<br>➜&nbsp;&nbsp;Developers</span><span>➜&nbsp;&nbsp;Funds<br>➜&nbsp;&nbsp;Managers<br>➜&nbsp;&nbsp;Operators&nbsp;</span>
       </div>
-      <svg class="absolute z-10 w-6 h-6 text-orange-500 transform -translate-x-12 -translate-y-3 fill-current stroke-current" width="8" height="8">
+      <svg class="absolute z-10 w-6 h-6 transform -translate-y-full -mt-3 translate-x-full fill-white stroke-white" width="8" height="8">
         <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
       </svg>
     </div>
   </div>
 </div>
-            <div class="flex justify-around mb-6">
+            <div class="flex justify-around my-6">
                <div class="flex sm:flex-row flex-col items-top w-max mt-6">
                   <div class="text-5xl items-center">🏛️</div>
                   <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col">
