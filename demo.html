@@ -102,6 +102,13 @@
                      <div> <a href="#trynow" class="inline-flex w-fit text-center px-3 py-2 text-sm font-bold rounded-lg text-white bg-blue-700 hover:bg-blue-800 transition-all duration-150 ease-out i18nelement" data-i18n="TRY NOW"> TRY NOW </a> </div>
                      <div class="ml-2"> <a href="#waitlist" class="inline-flex text-center px-3 py-2 text-sm font-bold rounded-lg text-blue-700 hover:text-blue-800 transition-all duration-150 ease-out i18nelement" data-i18n="JOIN WAITLIST"> JOIN WAITLIST </a> </div>
                   </div>
+                  <div class="mt-10 flex flex-row items-center">
+                     <p class="text-lg text-yellow-600 pr-3 ">★★★★★ </p>
+                     <div class="flex flex-col border-l border-gray-400 pl-3">
+                        <p class="font-light text-sm i18nelement" data-i18n="hero-1"> Tetsuya Hasegawa, Executive Director Real Estate</p>
+                        <p class="font-bold text-sm i18nelement" data-i18n="hero-2">Japan Post Bank</p>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -152,28 +159,62 @@
       <!-- Try now -->
       <div id="trynow" class="pt-24 pb-32 px-4 sm:px-8 md:px-12 bg-blue-50">
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto rounded-xl space-y-8">
-            <div class="flex flex-col text-center justify-center pb-12">
+            <div class="flex flex-col text-center justify-center pb-6 sm:pb-12">
                <p class="text-sm uppercase i18nelement" data-i18n="TRY NOW"> TRY NOW </p>
                <h2 class="mt-2 text-4xl font-extrabold tracking-tight i18nelement" data-i18n="Generate leads in one click"> Generate leads in one click </h2>
                <p class="mt-2 font-light text-lg text-gray-500 leading-6 i18nelement" data-i18n="try-now-3"> Just input basic asset data and the AI will find prospects for your deal. </p>
             </div>
             <div class="flex flex-col sm:grid sm:grid-cols-5 gap-x-12">
-               <div class="flex-initial overflow-hidden sm:order-none order-2 mt-16 sm:mt-0 col-span-3 rounded-xl shadow-lg bg-white h-min"> <iframe id="iframe-lead" class="w-full p-8 rounded-xl bg-white" src="https://alpha.lombardstandard.com/search_leads_widget/" frameborder="0" width="100%" style="height: 730px"></iframe> </div>
+               <div class="flex-initial overflow-hidden sm:order-none order-2 col-span-3 rounded-xl shadow-lg bg-white h-min"> <iframe id="iframe-lead" class="w-full p-8 rounded-xl bg-white" src="https://alpha.lombardstandard.com/search_leads_widget/" frameborder="0" width="100%" style="height: 730px"></iframe> </div>
                <div class="space-y-6 sm:order-none order-first col-span-2 col-start-4">
                   <div>
-                     <div class="flex flex-row space-x-6 sm:space-x-8">
-                        <div>
-                           <p class="text-lg text-yellow-600 leading-6">★★★★★</p>
-                           <p class="mt-4 font-light text-lg leading-6 i18nelement" data-i18n="try-now-4"> A groundbreaking idea that may serve to increase transparency and liquidity of the commercial real estate transaction market. </p>
-                           <div class="flex flex-row mt-4 items-center">
-                              <p class="bg-violet-200 text-violet-700 text-xs font-medium align-middle w-8 h-8 rounded-full p-2 mr-4" >TH</p>
-                              <p class=" text-sm text-gray-500 i18nelement" data-i18n="try-now-5"> Tetsuya Hasegawa, Executive Director Real Estate @ Japan Post Bank </p>
+                     <div class="sm:flex flex-col hidden">
+                        <div class="flex flex-col">
+                           <div class="flex flex-col self-end rounded-lg p-3 text-center w-fit bg-lime-200 mb-12" >
+                              <p class="i18nelement font-normal text-xs text-lime-700" data-i18n="try-now-1"> MATCHING</p>
+                              <p class="text-xl font-bold font-mono text-lime-700">90%</p>
                            </div>
-                           <p class="mt-8 text-lg text-yellow-600 leading-6">★★★★★</p>
-                           <p class="mt-4 font-light text-lg leading-6 i18nelement" data-i18n="try-now-6"> This platform saves time and money by accessing directly to a pool of qualified buyers without intermediaries. </p>
-                           <div class="flex flex-row mt-4 items-center">
-                              <p class="bg-lime-200 text-lime-700 text-xs font-medium align-middle w-8 h-8 rounded-full p-2 mr-4" >RJ</p>
-                              <p class="text-sm text-gray-500 i18nelement" data-i18n="try-now-7"> Richard Johnson, Managing Director Real Estate @ SIGNA Financial Services AG </p>
+                           <div class="flex flex-col" >
+                              <div class="flex flex-row items center" >
+                                 <p class="i18nelement text-sm mb-4 font-bold text-gray-900 text-opacity-30" data-i18n="try-now-2"> • COMPANY</p>
+                                 <p class="ml-2 rounded-full bg-gray-900 bg-opacity-5 w-1/2 h-3.5 mt-1">&nbsp;</p>
+                              </div>
+                              <div class="flex flex-row items center" >
+                                 <p class="i18nelement text-sm flex mb-4 font-bold text-gray-900 text-opacity-30" data-i18n="try-now-4"> • SEGMENT</p>
+                                 <p class="inline-flex ml-2 rounded-full bg-gray-900 bg-opacity-5 w-1/2 h-3.5 mt-1">&nbsp;</p>
+                              </div>
+                              <div class="flex flex-row items center" >
+                                 <p class="i18nelement text-sm flex mb-4 font-bold text-gray-900 text-opacity-30" data-i18n="try-now-5"> • AUM</p>
+                                 <p class="inline-flex ml-2 rounded-full bg-gray-900 bg-opacity-5 w-1/2 h-3.5 mt-1">&nbsp;</p>
+                              </div>
+                              <div class="flex flex-row items center" >
+                                 <p class="i18nelement text-sm flex mb-4 font-bold text-gray-900 text-opacity-30" data-i18n="try-now-6"> • EMPLOYEES</p>
+                                 <p class="inline-flex ml-2 rounded-full bg-gray-900 bg-opacity-5 w-1/4 h-3.5 mt-1">&nbsp;</p>
+                              </div>
+                              <div class="flex flex-col items center" >
+                                 <p class="i18nelement text-sm flex flex-col font-bold text-gray-900 text-opacity-30" data-i18n="try-now-7"> • CONTACTS</p>
+                                 <p class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-1/2 h-3.5 mt-3">&nbsp;</p>
+                                 <p class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-5/6 h-3.5 mt-3">&nbsp;</p>
+                                 <p class="flex mt-3 mb-4 rounded-full bg-gray-900 bg-opacity-5 w-3/4 h-3.5 mt-3 mb-4 ">&nbsp;</p>
+                              </div>
+                              <div class="flex flex-col items center" >
+                                 <p class="i18nelement text-sm flex flex-col font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-8">• FUNDS MANAGED</p>
+                                 <p class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-1/2 h-3.5 mt-3">&nbsp;</p>
+                                 <p class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-5/6 h-3.5 mt-3">&nbsp;</p>
+                                 <p class="flex mt-3 mb-4 rounded-full bg-gray-900 bg-opacity-5 w-3/4 h-3.5 mt-3 mb-4 ">&nbsp;</p>
+                              </div>
+                              <div class="flex flex-col items center" >
+                                 <p class="i18nelement text-sm flex flex-col font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-9">• NEWS</p>
+                                 <p class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-1/2 h-3.5 mt-3">&nbsp;</p>
+                                 <p class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-5/6 h-3.5 mt-3">&nbsp;</p>
+                                 <p class="flex mt-3 mb-4 rounded-full bg-gray-900 bg-opacity-5 w-3/4 h-3.5 mt-3 mb-4 ">&nbsp;</p>
+                              </div>
+                              <div class="flex flex-col items center" >
+                                 <p class="i18nelement text-sm flex flex-col font-bold text-gray-900 text-opacity-30 leading-none" data-i18n="try-now-10">• PAST TRANSACTIONS</p>
+                                 <p class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-1/2 h-3.5 mt-3">&nbsp;</p>
+                                 <p class="flex mt-3 rounded-full bg-gray-900 bg-opacity-5 w-5/6 h-3.5 mt-3">&nbsp;</p>
+                                 <p class="flex mt-3 mb-4 rounded-full bg-gray-900 bg-opacity-5 w-3/4 h-3.5 mt-3 mb-4 ">&nbsp;</p>
+                              </div>
                            </div>
                         </div>
                      </div>
