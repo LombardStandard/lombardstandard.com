@@ -17,6 +17,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <!-- Style -->
       <link rel="stylesheet" href="css/global.css" />
+      <script src="//unpkg.com/alpinejs" defer></script>
       <script src="https://cdn.tailwindcss.com"></script>
       <style>
          @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
@@ -128,6 +129,21 @@
                   
                
             </div>
+           <div class="flex min-h-screen items-center justify-center">
+  <div x-data="{ tooltip: false }" class="relative z-30 inline-flex">
+    <div x-on:mouseover="tooltip = true" x-on:mouseleave="tooltip = false" class="rounded-md px-3 py-2 bg-indigo-500 text-white cursor-pointer shadow">
+      Hover over me
+    </div>
+    <div class="relative" x-cloak x-show.transition.origin.top="tooltip">
+      <div class="absolute top-0 z-10 w-32 p-2 -mt-1 text-sm leading-tight text-white transform -translate-x-1/2 -translate-y-full bg-orange-500 rounded-lg shadow-lg i18nelement" data-i18n="breakdown-2">
+        Hi, I am Tooltip
+      </div>
+      <svg class="absolute z-10 w-6 h-6 text-orange-500 transform -translate-x-12 -translate-y-3 fill-current stroke-current" width="8" height="8">
+        <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
+      </svg>
+    </div>
+  </div>
+</div>
             <div class="flex justify-around mb-6">
                <div class="flex sm:flex-row flex-col items-top w-max mt-6">
                   <div class="text-5xl items-center">🏛️</div>
