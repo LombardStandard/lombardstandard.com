@@ -94,7 +94,7 @@ function nFormatter(num) {
     console.log('error fetching site data:', err.message);
     totalIndividualsDiv.innerHTML = '3.6k';
     totalCompaniesDiv.innerHTML = '1.3k';
-    regionPercentageDiv.innerHTML = '34%';
+    regionPercentageDiv.innerHTML = '32.4%';
   }
 
   regionTextDiv.innerHTML = `(${regionMap[region] || 'APAC'})`;
