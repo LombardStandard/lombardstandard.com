@@ -70,7 +70,7 @@ function nFormatter(num) {
       regionGlobeDiv.innerHTML = '🌏';
     }
 
-    if (region.includes('Americas')) {
+    if (region.includes('America')) {
       regionPercentageDiv.innerHTML =
         regionWisePercentage['North America'] + '%';
       regionGlobeDiv.innerHTML = '🌎';
