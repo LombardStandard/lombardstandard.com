@@ -133,7 +133,7 @@
                <div class="col-span-4 md:col-span-3 w-full">
                   <p class="text-sm uppercase i18nelement" data-i18n="hero-header-1"> AI-POWERED LEAD GENERATION </p>
                   <h1 class="mt-2 text-5xl font-extrabold tracking-tight i18nelement break-words" data-i18n="hero-header-2">Use AI to find buyers for commercial real estate </h1> 
-                  <p class="mt-2 text-lg font-light text-gray-500 leading-6 i18nelement" data-i18n="hero-header-3"> Our algorithm searches, profiles and ranks corporate investors in all asset classes across global markets. </p>
+                  <p class="mt-2 text-lg font-light text-gray-500 leading-6 i18nelement" data-i18n="hero-header-3"> Our algorithm searches, profiles and ranks corporate investors in all asset classes across global markets. </p> 
                   <div class="mt-6 flex flex-row">
                      <div> <a href="#trynow" class="inline-flex w-fit text-center px-3 py-2 text-sm font-bold rounded-lg text-white bg-blue-700 hover:bg-blue-800 transition-all duration-150 ease-out i18nelement" data-i18n="hero-3"> TRY NOW </a> </div>
                      <div class="ml-2"> <a href="#waitlist" class="inline-flex text-center px-3 py-2 text-sm font-bold rounded-lg text-blue-700 hover:text-blue-800 transition-all duration-150 ease-out i18nelement" data-i18n="hero-4"> JOIN WAITLIST </a> </div>
@@ -460,6 +460,7 @@ function plusSlides(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("Slides");
+  slides[i].style.display = "none"; 
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
