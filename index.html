@@ -132,20 +132,38 @@
             <div class="flex flex-col grid grid-cols-4 gap-x-12">
                <div class="col-span-4 md:col-span-3 w-full">
                   <p class="text-sm uppercase i18nelement" data-i18n="hero-header-1"> AI-POWERED LEAD GENERATION </p>
-                  <h1 class="mt-2 text-5xl font-extrabold tracking-tight"> <span class="i18nelement break-words" data-i18n="hero-header-2">Use AI to find property buyers in</span>&nbsp;<span class="typewrite" data-period="2000" data-type='[ "Japan", "Europe", "APAC" ]'> <span class="wrap"></span> </span> </h1>
+                  <h1 class="mt-2 text-5xl font-extrabold tracking-tight i18nelement break-words" data-i18n="hero-header-2">Use AI to find buyers for commercial real estate </h1> 
                   <p class="mt-2 text-lg font-light text-gray-500 leading-6 i18nelement" data-i18n="hero-header-3"> Our algorithm searches, profiles and ranks corporate investors in all asset classes across global markets. </p>
                   <div class="mt-6 flex flex-row">
                      <div> <a href="#trynow" class="inline-flex w-fit text-center px-3 py-2 text-sm font-bold rounded-lg text-white bg-blue-700 hover:bg-blue-800 transition-all duration-150 ease-out i18nelement" data-i18n="hero-3"> TRY NOW </a> </div>
                      <div class="ml-2"> <a href="#waitlist" class="inline-flex text-center px-3 py-2 text-sm font-bold rounded-lg text-blue-700 hover:text-blue-800 transition-all duration-150 ease-out i18nelement" data-i18n="hero-4"> JOIN WAITLIST </a> </div>
                   </div>
-                  <div class="mt-10 flex flex-row items-top w-full md:w-5/6">
+                  <div class="mt-10 h-36 overflow-visible">
+                  <div class="flex flex-row items-top w-full md:w-5/6 Slides">
                      <p class="text-lg text-yellow-600 pr-4 whitespace-nowrap"> ★ ★ ★ ★ ★ </p>
                      <div class="flex flex-col border-l border-gray-400 pl-4">
-                        <p class="font-light text-lg i18nelement pb-2 leading-6" data-i18n="hero-0"> A groundbreaking digital tool to increase transparency and liquidity of Commercial Real Estate.</p>
-                        <p class="font-light text-gray-500 text-sm i18nelement" data-i18n="hero-1"> Tetsuya Hasegawa, Executive Director Real Estate</p>
-                        <p class="font-bold text-gray-500 text-sm i18nelement" data-i18n="hero-2">Japan Post Bank</p>
+                        <p class="font-light text-lg i18nelement pb-2 leading-6" data-i18n="hero-0a"> A groundbreaking digital tool to increase transparency and liquidity of Commercial Real Estate.</p>
+                        <p class="font-light text-gray-500 text-sm i18nelement" data-i18n="hero-1a"> Tetsuya Hasegawa, Executive Director Real Estate</p>
+                        <p class="font-bold text-gray-500 text-sm i18nelement" data-i18n="hero-2a">Japan Post Bank</p>
                      </div>
                   </div>
+                  <div class="flex flex-row items-top w-full md:w-5/6 Slides">
+                     <p class="text-lg text-yellow-600 pr-4 whitespace-nowrap"> ★ ★ ★ ★ ★ </p>
+                     <div class="flex flex-col border-l border-gray-400 pl-4">
+                        <p class="font-light text-lg i18nelement pb-2 leading-6" data-i18n="hero-0b"> This product is extremely useful in my day-to-day tasks such as market research and network discovery.</p>
+                        <p class="font-light text-gray-500 text-sm i18nelement" data-i18n="hero-1b"> John Kakita, Managing Director Japan</p>
+                        <p class="font-bold text-gray-500 text-sm i18nelement" data-i18n="hero-2b">Odyssey Group Hong Kong</p>
+                     </div>
+                  </div>
+                  <div class="flex flex-row items-top w-full md:w-5/6 Slides">
+                     <p class="text-lg text-yellow-600 pr-4 whitespace-nowrap"> ★ ★ ★ ★ ★ </p>
+                     <div class="flex flex-col border-l border-gray-400 pl-4">
+                        <p class="font-light text-lg i18nelement pb-2 leading-6" data-i18n="hero-0c"> It saves time and money by accessing directly to a pool of qualified buyers without intermediaries.</p>
+                        <p class="font-light text-gray-500 text-sm i18nelement" data-i18n="hero-1c"> Richard Johnson, Managing Director Real Estate</p>
+                        <p class="font-bold text-gray-500 text-sm i18nelement" data-i18n="hero-2c">SIGNA Financial Services AG</p>
+                     </div>
+                  </div>
+                 </div>
                </div>
             </div>
          </div>
@@ -431,65 +449,30 @@
          }
       </script>
       <script>
-         var TxtType = function (el, toRotate, period) {
-          this.toRotate = toRotate;
-          this.el = el;
-          this.loopNum = 0;
-          this.period = parseInt(period, 10) || 2000;
-          this.txt = '';
-          this.tick();
-          this.isDeleting = false;
-         };
-         
-         TxtType.prototype.tick = function () {
-          var i = this.loopNum % this.toRotate.length;
-          var fullTxt = this.toRotate[i];
-         
-          if (this.isDeleting) {
-           this.txt = fullTxt.substring(0, this.txt.length - 1);
-          } else {
-           this.txt = fullTxt.substring(0, this.txt.length + 1);
-          }
-         
-          this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-         
-          var that = this;
-          var delta = 200 - Math.random() * 100;
-         
-          if (this.isDeleting) {
-           delta /= 2;
-          }
-         
-          if (!this.isDeleting && this.txt === fullTxt) {
-           delta = this.period;
-           this.isDeleting = true;
-          } else if (this.isDeleting && this.txt === '') {
-           this.isDeleting = false;
-           this.loopNum++;
-           delta = 500;
-          }
-         
-          setTimeout(function () {
-           that.tick();
-          }, delta);
-         };
-         
-         window.onload = function () {
-          var elements = document.getElementsByClassName('typewrite');
-          for (var i = 0; i < elements.length; i++) {
-           var toRotate = elements[i].getAttribute('data-type');
-           var period = elements[i].getAttribute('data-period');
-           if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-           }
-          }
-          // INJECT CSS
-          var css = document.createElement('style');
-          css.type = 'text/css';
-          css.innerHTML =
-           '.typewrite > .wrap {padding-right:2px; border-right: 0px solid #6B7280; color: #1D4ED8}';
-          document.body.appendChild(css);
-         };
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("Slides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "flex";  
+}
+window.onload= function () {
+ setInterval(function(){ 
+     plusSlides(1);
+ }, 5000);
+ }
+
       </script> 
       <noscript> <img height="1" width="1" style="display: none" alt="" src="https://px.ads.linkedin.com/collect/?pid=3365265&fmt=gif" /> </noscript>
    </body>
