@@ -52,14 +52,14 @@
          gtag('config', 'G-CYEZFH8RRT');
       </script>
       <script>
-      (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1805283,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+         (function(h,o,t,j,a,r){
+           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+           h._hjSettings={hjid:1805283,hjsv:6};
+           a=o.getElementsByTagName('head')[0];
+           r=o.createElement('script');r.async=1;
+           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+           a.appendChild(r);
+          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       </script>
       <!-- Style -->
       <link rel="stylesheet" href="css/global.css" />
@@ -111,7 +111,11 @@
          -moz-appearance: none;
          -webkit-appearance: none;
          appearance: none;
-         background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="%231D4ED8" ><text x="0%" y="75%">🌐</text></svg>') no-repeat;
+         background: url('data:image/svg+xml;utf8,
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="%231D4ED8" >
+            <text x="0%" y="75%">🌐</text>
+         </svg>
+         ') no-repeat;
          background-position: right 10px top 50%;
          }
       </style>
@@ -217,7 +221,10 @@
                <p class="mt-2 font-light text-lg text-gray-500 leading-6 i18nelement max-w-lg self-center" data-i18n="try-now-3"> Just input basic asset information and the AI will find the best prospects for your deal. </p>
             </div>
             <div class="flex flex-col sm:grid sm:grid-cols-5 gap-x-12">
-               <div class="flex-initial overflow-hidden sm:order-none order-2 col-span-3 rounded-xl shadow-lg bg-white h-min"> <iframe id="iframe-lead" class="w-full p-8 rounded-xl bg-white" src="https://app.lombardstandard.com/search_leads_widget/" frameborder="0" width="100%" style="height: 730px"></iframe> </div>
+               <div class="sm:order-none order-2 col-span-3">
+                  <p class="mb-2 font-light text-xs text-center sm:text-left text-gray-500 i18nelement italic" data-i18n="try-now-12"> This is a Beta version limited to simple search, join the waitlist below for full release. </p>
+                  <div class="flex-initial overflow-hidden rounded-xl shadow-lg bg-white h-min"> <iframe id="iframe-lead" class="w-full p-8 rounded-xl bg-white" src="https://app.lombardstandard.com/search_leads_widget/" frameborder="0" width="100%" style="height: 730px"></iframe> </div>
+               </div>
                <div class="space-y-6 sm:order-none order-first col-span-2 col-start-4">
                   <div>
                      <div class="sm:flex flex-col hidden">
