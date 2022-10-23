@@ -162,8 +162,8 @@ async function i18Loader() {
   switch (i18next.language) {
     case 'ja':
       closeText = 'OK';
-      message = 'このウェブサイトを閲覧することにより、あなたは私たちの';
-      link = 'プライバシーポリシー';
+      message = 'By viewing this website you agree to our';
+      link = 'Privacy Policy';
       break;
     case 'de':
       closeText = 'OK';
