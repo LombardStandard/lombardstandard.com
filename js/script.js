@@ -157,13 +157,13 @@ async function i18Loader() {
 
   let closeText = 'OK';
   let message = 'By viewing this website you agree to our';
-  let link = 'Privacy Policy';
+  let link = 'Privacy Policy.';
 
   switch (i18next.language) {
     case 'ja':
       closeText = 'OK';
-      message = 'By viewing this website you agree to our';
-      link = 'Privacy Policy';
+      message = 'このウェブサイトを閲覧することにより、あなたは私たちの';
+      link = 'プライバシーポリシー。';
       break;
     case 'de':
       closeText = 'OK';
