@@ -51,18 +51,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-      body {
-      font-family: 'Roboto', sans-serif;
-      }
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+      * {
+         font-family: 'Roboto', sans-serif;
+         color: #111827;
+         }
       select {
-      position: relative;
-      padding-right: 20px !important;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      appearance: none;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M12 21l-12-18h24z"/></svg>') no-repeat;
-      background-position: right 10px top 50%;
-      }
+         position: relative; 
+         padding-right: 32px !important;
+         -moz-appearance: none;
+         -webkit-appearance: none;
+         appearance: none;
+         background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="%231D4ED8" ><text x="0%" y="75%">🌐</text></svg>') no-repeat;
+         background-position: right 10px top 50%;
+         }
     </style>
   </head>
   <body>
@@ -77,10 +79,9 @@
           </a>
         </div>
         <div>
-          <select disabled="true" id="langSelector" name="lang" class="inline-flex px-3 py-2 text-xs rounded-lg text-gray-900 bg-white hover:text-gray-500 transition-all duration-150 ease-out cursor-pointer">
-             <option value="en"> English&nbsp;&nbsp;&nbsp; </option>
-             <option value="ja"> 日本語&nbsp;&nbsp;&nbsp; </option>
-             <option value="de"> Deutsch&nbsp;&nbsp;&nbsp; </option>
+          <select disabled="true" id="langSelector" name="lang" style="" class="inline-flex w-min px-3 py-2 text-xs rounded-lg bg-white hover:text-blue-700 transition-all duration-150 ease-out cursor-pointer border-0">
+                  <option value="en"> English&nbsp;&nbsp;&nbsp; </option>
+                  <option value="ja"> 日本語&nbsp;&nbsp;&nbsp; </option>
           </select>
        </div>
       </div>
