@@ -150,8 +150,8 @@ async function i18Loader() {
   switch (i18next.language) {
     case 'ja':
       closeText = 'OK';
-      message = 'By viewing this website you agree to our';
-      link = 'Privacy Policy';
+      message = 'このウェブサイトを閲覧することにより、あなたは私たちの';
+      link = 'プライバシーポリシー。';
       break;
     case 'de':
       closeText = 'OK';
@@ -167,7 +167,7 @@ async function i18Loader() {
   cookieScript.setAttribute('data-font-size', '14px');
   cookieScript.setAttribute('data-message', message);
   cookieScript.setAttribute('data-link', '#111827');
-  cookieScript.setAttribute('data-linkmsg', `<b>${link}</b>.`);
+  cookieScript.setAttribute('data-linkmsg', `<b>${link}</b>`);
   cookieScript.setAttribute(
     'data-moreinfo',
     'https://lombardstandard.com/privacy-policy'
