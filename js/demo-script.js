@@ -55,7 +55,7 @@ function nFormatter(num) {
     if (region.includes('Asia') || region.includes('Australia')) {
       regionPercentageDiv.innerHTML =
         regionWisePercentage['Asia Pacific'] + '%';
-      regionGlobeDiv.innerHTML = '';
+      regionGlobeDiv.innerHTML = '🌏';
     }
 
     if (region.includes('America')) {
