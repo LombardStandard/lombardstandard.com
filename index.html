@@ -179,35 +179,49 @@
       </div>
       <!-- Stats -->
       <div class="pb-12 px-4 sm:px-8 md:px-12 bg-white">
-         <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto border-t border-gray-300 pt-12">
-            <div class="flex justify-center items-center mb-3">
-               <div class="text-white text-sm bg-gray-900 w-fit text-center align-middle rounded-full py-1 px-3 i18nelement" data-i18n="buyers database"> real-time buyers database </div>
+   <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto border-t border-gray-300 pt-12">
+      <div class="flex justify-center items-center mb-3">
+         <div class="text-white text-sm bg-gray-900 w-fit text-center align-middle rounded-full py-1 px-3 i18nelement" data-i18n="buyers database"> real-time buyers database </div>
+      </div>
+      <div class="flex justify-around my-10">
+         <div class="hidden sm:flex flex sm:flex-row flex-col items-top w-max mt-6">
+            <div class="text-5xl items-center">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+               </svg>
             </div>
-            <div class="flex justify-around my-6">
-               <div class="hidden sm:flex flex sm:flex-row flex-col items-top w-max mt-6">
-                  <div class="text-5xl items-center">🏛️</div>
-                  <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col bg-gray-100 rounded-lg p-0 bg-opacity-0">
-                     <div id="total-companies" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
-                     <div class="text-sm leading-4 i18nelement" data-i18n="Real Estate firms"> Real Estate firms </div>
-                  </div>
-               </div>
-               <div class="flex sm:flex-row flex-col items-top w-max mt-6 sm:ml-4 mr-4 ml-0">
-                  <div class="text-5xl items-center">👨‍💼</div>
-                  <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col bg-gray-100 rounded-lg p-0 bg-opacity-0">
-                     <div id="total-individuals" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
-                     <div class="text-sm leading-4 i18nelement" data-i18n="Corporate executives"> Corporate executives</div>
-                  </div>
-               </div>
-               <div class="flex sm:flex-row flex-col items-top w-max mt-6 ">
-                  <div id="region-globe" class="text-5xl items-center">🌏</div>
-                  <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col bg-gray-100 rounded-lg p-0 bg-opacity-0">
-                     <div id="region-percentage" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
-                     <div class="text-sm leading-4"> <span class="i18nelement" data-i18n="In your region">In your region</span> <span id="region-text">(APAC)</span> </div>
-                  </div>
-               </div>
+            <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col bg-gray-100 rounded-lg p-0 bg-opacity-0">
+               <div id="total-companies" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
+               <div class="text-sm leading-4 i18nelement" data-i18n="Real Estate firms"> Real Estate firms </div>
+            </div>
+         </div>
+         <div class="flex sm:flex-row flex-col items-top w-max mt-6 sm:ml-4 mr-4 ml-0">
+            <div class="text-5xl items-center">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+               </svg>
+               </svg>
+            </div>
+            <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col bg-gray-100 rounded-lg p-0 bg-opacity-0">
+               <div id="total-individuals" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
+               <div class="text-sm leading-4 i18nelement" data-i18n="Corporate executives"> Corporate executives</div>
+            </div>
+         </div>
+         <div class="flex sm:flex-row flex-col items-top w-max mt-6 ">
+            <div id="region-globe" class="text-5xl items-center">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 text-blue-700">
+                  <path d="M15.75 8.25a.75.75 0 01.75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 11-.992-1.124A2.243 2.243 0 0015 9a.75.75 0 01.75-.75z" />
+                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM4.575 15.6a8.25 8.25 0 009.348 4.425 1.966 1.966 0 00-1.84-1.275.983.983 0 01-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 012.328-.377L16.5 15h.628a2.25 2.25 0 011.983 1.186 8.25 8.25 0 00-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.575 15.6z" clip-rule="evenodd" />
+               </svg>
+            </div>
+            <div class="sm:ml-4 ml-0 mt-3 sm:mt-0 flex flex-col bg-gray-100 rounded-lg p-0 bg-opacity-0">
+               <div id="region-percentage" class="text-4xl font-bold tracking-tight text-left font-mono"> - </div>
+               <div class="text-sm leading-4"> <span class="i18nelement" data-i18n="In your region">In your region</span> <span id="region-text">(APAC)</span> </div>
             </div>
          </div>
       </div>
+   </div>
+</div>
       <!-- Try now -->
       <div id="trynow" class="pt-24 pb-32 px-4 sm:px-8 md:px-12 bg-blue-50">
          <div class="max-w-full md:max-w-5xl lg:max-w-7xl mx-auto rounded-xl space-y-8">
