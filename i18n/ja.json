@@ -46,7 +46,7 @@
   "team-4": "協力：",
   "team-5": "事業所：",
   "iframe": "<iframe class='w-full rounded-xl bg-white shadow-lg' src='https://lombard.retool.com/embedded/public/06916326-84f1-4a85-9643-3b735b9d5ab3' frameborder='0' width='100%' style='height: 870px; border: 1px solid #e0e0e0'></iframe>",
-  "form": "<iframe src='https://coda.io/embed/sL3vPW0li6' width=900 height=350px style='max-width: 100%; border:1px solid #E0E0E0;' class='shadow-lg mt-6 rounded-xl'></iframe>",
+  "form": "<iframe src='https://coda.io/embed/sL3vPW0li6' height='350px' style='max-width: 100%; border:1px solid #E0E0E0;' class='shadow-lg mt-6 rounded-xl'></iframe>",
   "customers": "ベータ•ユーザー",
   "Tokyo, Japan": "日本、東京",
   "London, UK": "イギリス、ロンドン",
