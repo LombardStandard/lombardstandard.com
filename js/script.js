@@ -122,7 +122,7 @@ function updateIframes() {
 }
 
 async function i18Loader() {
-  const langs = ['en', 'ja', 'de'];
+  const langs = ['en', 'ja'];
   const langJsons = await Promise.all(
     langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
   );
@@ -164,11 +164,6 @@ async function i18Loader() {
       closeText = 'OK';
       message = 'このウェブサイトを閲覧することにより、あなたは私たちの';
       link = 'プライバシーポリシー。';
-      break;
-    case 'de':
-      closeText = 'OK';
-      message = 'Durch das Betrachten dieser Website stimmen Sie unseren zu';
-      link = 'Datenschutz-Bestimmungen';
       break;
   }
 
