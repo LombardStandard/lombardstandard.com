@@ -3,13 +3,13 @@
 let ds;
 
 function setup() {
-  createCanvas(640, 640);
+  createCanvas(300, 300);
   ds = new PenroseLSystem();
   ds.simulate(5);
 }
 
 function draw() {
-  background(255, 255, 255);
+  background(0, 255, 255);
   ds.render();
 }
 
@@ -20,7 +20,7 @@ function PenroseLSystem() {
     this.ruleX = "+YF--ZF[---WF--XF]+";
     this.ruleY = "-WF++XF[+++YF++ZF]-";
     this.ruleZ = "--YF++++WF[+ZF++++XF]--XF";
-    this.startLength = 800.0;
+    this.startLength = 390.0;
     this.theta = TWO_PI / 10.0; 
     this.reset();
 }
@@ -65,7 +65,7 @@ PenroseLSystem.prototype.iterate = function() {
       }
     }
 
-    this.drawLength =         this.drawLength * 0.5;
+    this.drawLength = this.drawLength * 0.5;
     this.generations++;
     this.production = newProduction;
 }
@@ -105,3 +105,4 @@ PenroseLSystem.prototype.render = function () {
   }
 
 </script>
+  
