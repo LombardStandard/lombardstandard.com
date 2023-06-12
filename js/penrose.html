@@ -1,9 +1,9 @@
+<script>
 let ds;
 
 function setup() {
   createCanvas(640, 640);
   ds = new PenroseLSystem();
-  //please, play around with the following line
   ds.simulate(5);
 }
 
@@ -14,18 +14,13 @@ function draw() {
 
 function PenroseLSystem() {
     this.steps = 0;
-
-   //these are axiom and rules for the penrose rhombus l-system
-   //a reference would be cool, but I couldn't find a good one
     this.axiom = "[X]++[X]++[X]++[X]++[X]";
     this.ruleW = "YF++ZF----XF[-YF----WF]++";
     this.ruleX = "+YF--ZF[---WF--XF]+";
     this.ruleY = "-WF++XF[+++YF++ZF]-";
     this.ruleZ = "--YF++++WF[+ZF++++XF]--XF";
-
-    //please play around with the following two lines
     this.startLength = 800.0;
-    this.theta = TWO_PI / 10.0; //36 degrees, try TWO_PI / 6.0, ...
+    this.theta = TWO_PI / 10.0; 
     this.reset();
 }
 
@@ -45,14 +40,11 @@ PenroseLSystem.prototype.getAge = function () {
     return this.generations;
   }
 
-//apply substitution rules to create new iteration of production string
 PenroseLSystem.prototype.iterate = function() {
     let newProduction = "";
 
     for(let i=0; i < this.production.length; ++i) {
       let step = this.production.charAt(i);
-      //if current character is 'W', replace current character
-      //by corresponding rule
       if (step == 'W') {
         newProduction = newProduction + this.ruleW;
       }
@@ -66,8 +58,6 @@ PenroseLSystem.prototype.iterate = function() {
         newProduction = newProduction + this.ruleZ;
       }
       else {
-        //drop all 'F' characters, don't touch other
-        //characters (i.e. '+', '-', '[', ']'
         if (step != 'F') {
           newProduction = newProduction + step;
         }
@@ -79,7 +69,6 @@ PenroseLSystem.prototype.iterate = function() {
     this.production = newProduction;
 }
 
-//convert production string to a turtle graphic
 PenroseLSystem.prototype.render = function () {
     translate(width / 2, height / 2);
 
@@ -90,8 +79,6 @@ PenroseLSystem.prototype.render = function () {
 
     for(let i=0; i<this.steps; ++i) {
       let step = this.production.charAt(i);
-
-      //'W', 'X', 'Y', 'Z' symbols don't actually correspond to a turtle action
       if( step == 'F') {
         stroke(29, 78, 216, 20);
         for(let j=0; j < this.repeats; j++) {
@@ -116,6 +103,5 @@ PenroseLSystem.prototype.render = function () {
     }
   }
 
-
-//http://p5js.org/examples/
+</script>
   
