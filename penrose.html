@@ -73,7 +73,7 @@ PenroseLSystem.prototype.iterate = function() {
 PenroseLSystem.prototype.render = function () {
     translate(width / 2, height / 2);
 
-    this.steps += 20;
+    this.steps += 2;
     if(this.steps > this.production.length) {
       this.steps = this.production.length;
     }
