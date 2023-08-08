@@ -1,143 +1,248 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-   <head>
-      <meta charset="utf-8" />
-      <title>Lombard Standard</title>
-      <meta http-equiv="x-ua-compatible" content="ie=edge" />
-      <meta name="description" content="We build trust.">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#1D4ED8" />
-      <meta name="author" content="Lombard Standard" />
-      <meta name="keywords" content="PropTech,Technology,Data,CRE,Commercial Real Estate,Lead Generation,AI,Artificial Intelligence,Analytics,CRM,Customer Relationship Management,LombardGPT" />
-      <meta name="twitter:title" content="Lombard Standard">
-      <meta name="twitter:description" content="We build trust.">
-      <meta name="twitter:image" content="https://cdn.lomb.st/website/share-main.png">
-      <meta name="twitter:image:alt" content="Lombard Standard">
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:site" content="@lombardstandard">
-      <meta property="og:title" content="Lombard Standard" />
-      <meta property="og:description" content="We build trust." />
-      <meta property="og:image" content="https://cdn.lomb.st/website/share-main.png" />
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1280" />
-      <meta property="og:image:height" content="640" />
-      <meta property="og:url" content="https://lombardstandard.com/" />
-      <meta property="og:site_name" content="Lombard Standard" />
-      <meta property="og:type" content="website" />
-      <script src="https://cdn.tailwindcss.com"></script>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-      <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script type="application/ld+json">
-         {
-         "@context": "https://schema.org",
-         "@type": "Corporation",
-         "@id": "https://corporation.lombardstandard.com",
-         "name": "Lombard Standard",
-         "alternateName": "lombardstandard",
-         "description": "Lombard Standard provides services to the Commercial Real Estate industry.",
-         "image": "https://cdn.lomb.st/website/share-main.png",
-         "logo": "https://cdn.lomb.st/website/logo-blank-md.png",
-         "url": "https://lombardstandard.com",
-         "legalName": "Lombard Standard K.K.",
-         "email": "hello@lomb.st",
-         "sameAs": [
-         "https://www.wikidata.org/wiki/Q108829640",
-         "https://www.linkedin.com/company/lombard-standard/",
-         "https://www.crunchbase.com/organization/lombard-standard",
-         "https://github.com/LombardStandard",
-         "https://www.eu-startups.com/directory/lombard-standard/",
-         "https://theorg.com/org/lombard-standard",
-         "https://twitter.com/lombardstandard",
-         "https://www.trustpilot.com/review/lombardstandard.com",
-         "https://www.unissu.com/proptech-company/lombard-standard",
-         "https://www.investhk.gov.hk/en/client-profiles/lombard-standard-hk-limited.html",
-         "https://www.builtworld.com/company/Lombard-Standard"
-         ],
-         "address": {
-         "@type": "PostalAddress",
-         "addressLocality": "Tokyo",
-         "postalCode": "150-0043",
-         "streetAddress": "Tokyu Building 2F-C, 1-10-8 Dogenzaka, Shibuya-ku, Tokyo Japan",
-         "addressCountry": {
-         "@type": "Country",
-         "name": "JP"
-         }
-         },
-         "founder": {
-         "@type": "Person",
-         "givenName": "Alberto MG",
-         "familyName": "Saruggia",
-         "sameAs": [
-         "https://www.crunchbase.com/person/alberto-mg-saruggia",
-         "www.linkedin.com/in/alberto-mg-saruggia"
-         ]
-         },
-         "foundingDate": "2018",
-         "foundingLocation": {
-         "@type": "Place",
-         "name": "Tokyo, Japan"
-         }
-         } 
-      </script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
-         
-         function gtag() {
-         	dataLayer.push(arguments);
-         }
-         gtag('js', new Date());
-         gtag('config', 'G-CYEZFH8RRT');
-      </script>
-      <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-      <link rel="canonical" href="https://lombardstandard.com" />
-      <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
-      <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
-      <link rel="stylesheet" href="css/global.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="" />
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
-   </head>
-   <body>
-      <nav class="px-12 flex flex-row justify-between items-center py-12 w-full">
-         <div class="flex">
-            <a href="/" target="_self">
-               <svg class="h-8 w-28">
-                  <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark"></use>
-               </svg>
-            </a>
-         </div>
-         <!-- Translation
+  <head>
+    <meta charset="utf-8" />
+    <title>Lombard Standard</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="We build trust." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1D4ED8" />
+    <meta name="author" content="Lombard Standard" />
+    <meta
+      name="keywords"
+      content="PropTech,Technology,Data,CRE,Commercial Real Estate,Lead Generation,AI,Artificial Intelligence,Analytics,CRM,Customer Relationship Management,LombardGPT"
+    />
+    <meta name="twitter:title" content="Lombard Standard" />
+    <meta name="twitter:description" content="We build trust." />
+    <meta
+      name="twitter:image"
+      content="https://cdn.lomb.st/website/share-main.png"
+    />
+    <meta name="twitter:image:alt" content="Lombard Standard" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lombardstandard" />
+    <meta property="og:title" content="Lombard Standard" />
+    <meta property="og:description" content="We build trust." />
+    <meta
+      property="og:image"
+      content="https://cdn.lomb.st/website/share-main.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:url" content="https://lombardstandard.com/" />
+    <meta property="og:site_name" content="Lombard Standard" />
+    <meta property="og:type" content="website" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js"
+      integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "@id": "https://corporation.lombardstandard.com",
+        "name": "Lombard Standard",
+        "alternateName": "lombardstandard",
+        "description": "Lombard Standard provides services to the Commercial Real Estate industry.",
+        "image": "https://cdn.lomb.st/website/share-main.png",
+        "logo": "https://cdn.lomb.st/website/logo-blank-md.png",
+        "url": "https://lombardstandard.com",
+        "legalName": "Lombard Standard K.K.",
+        "email": "hello@lomb.st",
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q108829640",
+          "https://www.linkedin.com/company/lombard-standard/",
+          "https://www.crunchbase.com/organization/lombard-standard",
+          "https://github.com/LombardStandard",
+          "https://www.eu-startups.com/directory/lombard-standard/",
+          "https://theorg.com/org/lombard-standard",
+          "https://twitter.com/lombardstandard",
+          "https://www.trustpilot.com/review/lombardstandard.com",
+          "https://www.unissu.com/proptech-company/lombard-standard",
+          "https://www.investhk.gov.hk/en/client-profiles/lombard-standard-hk-limited.html",
+          "https://www.builtworld.com/company/Lombard-Standard"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tokyo",
+          "postalCode": "150-0043",
+          "streetAddress": "Tokyu Building 2F-C, 1-10-8 Dogenzaka, Shibuya-ku, Tokyo Japan",
+          "addressCountry": {
+            "@type": "Country",
+            "name": "JP"
+          }
+        },
+        "founder": {
+          "@type": "Person",
+          "givenName": "Alberto MG",
+          "familyName": "Saruggia",
+          "sameAs": [
+            "https://www.crunchbase.com/person/alberto-mg-saruggia",
+            "www.linkedin.com/in/alberto-mg-saruggia"
+          ]
+        },
+        "foundingDate": "2018",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Tokyo, Japan"
+        }
+      }
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-CYEZFH8RRT');
+    </script>
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="/sitemap.xml"
+    />
+    <link rel="canonical" href="https://lombardstandard.com" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com/"
+      crossorigin=""
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="px-12 flex flex-row justify-between items-center py-12 w-full">
+      <div class="flex">
+        <a href="/" target="_self">
+          <svg class="h-8 w-28">
+            <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark"></use>
+          </svg>
+        </a>
+      </div>
+      <!-- Translation
             <div>
                <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-3 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300">
                   <option value="en">English</option>
                   <option value="ja">日本語</option>
                </select>
             </div>
-            -->   
-      </nav>
-      <div class="md:my-24 mx-auto my-16 px-12 space-y-4 flex flex-row items-center space-x-48">
-         <div>
-            <h1 class="max-w-2xl font-extrabold tracking-tight mb-6 text-5xl" data-i18n="global-about">We build trust.<br><span class="text-gray-400 leading-snug">私たちは信頼を築きます。</span></h1>
-            <div class="max-w-2xl space-y-6 md:mt-1 mt-4">
-               <div data-i18n="about-section-1">Lombard Standard is building LombardGPT, an Artificial Intelligence and Machine Learning (AI/ML) service for the Commercial Real Estate industry.<br><span class="text-gray-400 leading-snug">Lombard Standard は、商業用不動産業界向けの人工知能および機械学習 (AI/ML) サービスである LombardGPT を構築しています。</span></div>
-               <a href="https://www.lombardgpt.com" target="_blank" class="flex flex-row py-3 px-6 text-left rounded-lg w-fit text-blue-700 bg-gray-100 hover:bg-gray-200 text-lg transition duration-250 ease-out">LombardGPT<img alt="" class="ml-2 w-4" src="img/svgs/arrow-right.svg#arrow-right"></img></a>
-            </div>
-         </div>
-         <iframe src="https://lombardstandard.com/penrose.html" height="320px" width="320px" class="hidden lg:block"></iframe>
+            -->
+    </nav>
+    <div
+      class="md:my-24 mx-auto my-16 px-12 space-y-4 flex flex-row items-center lg:space-x-20 xl:space-x-48"
+    >
+      <div>
+        <h1
+          class="max-w-2xl font-extrabold tracking-tight mb-6 text-5xl"
+          data-i18n="global-about"
+        >
+          We build trust.<br /><span class="text-gray-400 leading-snug"
+            >私たちは信頼を築きます。</span
+          >
+        </h1>
+        <div class="max-w-2xl space-y-6 md:mt-1 mt-4">
+          <div data-i18n="about-section-1">
+            Lombard Standard is building LombardGPT, an Artificial Intelligence
+            and Machine Learning (AI/ML) service for the Commercial Real Estate
+            industry.<br /><span class="text-gray-400 leading-snug"
+              >Lombard Standard は、商業用不動産業界向けの人工知能および機械学習
+              (AI/ML) サービスである LombardGPT を構築しています。</span
+            >
+          </div>
+          <a
+            href="https://www.lombardgpt.com"
+            target="_blank"
+            class="flex flex-row py-3 px-6 text-left rounded-lg w-fit text-blue-700 bg-gray-100 hover:bg-gray-200 text-lg transition duration-250 ease-out"
+            >LombardGPT<img
+              alt=""
+              class="ml-2 w-4"
+              src="img/svgs/arrow-right.svg#arrow-right"
+          /></a>
+        </div>
       </div>
-      <footer class="mx-auto px-12 text-base pb-20 md:pb-48">
-         <div class="border-t pt-8 border-gray-300">
-            <p class="inline" data-i18n="global-copyright"> © Lombard Standard株式会社</p>
-            <span class="inline ml-1" id="copyright"></span>
-            <div>
-               <a href="/profile" class="text-gray-400 hover:text-blue-700" >Company profile (会社概要)</a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="mailto:hello@lomb.st" class="text-gray-400 hover:text-blue-700">Contact us (お問い合わせ)</a>
-               <p class="pt-4 space-x-5 items-center"> <a href="https://aws.amazon.com" target="_blank"> <img alt="AWS" class="inline h-6 grayscale opacity-70" src="img/AWS.png"> </a> <a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline h-4 grayscale opacity-70" src="img/Antler.png"> </a> <a href="https://openai.com" target="_blank"> <img alt="OpenAI" class="inline h-4 grayscale opacity-70" src="img/OpenAI.png"> </a></p>
-            </div>
-         </div>
-      </footer>
-      <script src="js/script.js"></script>
-   </body>
+      <div class="iframe-container">
+        <iframe
+          src="https://lombardstandard.com/penrose.html"
+          height="360px"
+          width="360px"
+          class="hidden lg:block"
+        ></iframe>
+      </div>
+    </div>
+    <footer class="mx-auto px-12 text-base pb-20 md:pb-48">
+      <div class="border-t pt-8 border-gray-300">
+        <p class="inline" data-i18n="global-copyright">
+          © Lombard Standard株式会社
+        </p>
+        <span class="inline ml-1" id="copyright"></span>
+        <div>
+          <a href="/profile" class="text-gray-400 hover:text-blue-700"
+            >Company profile (会社概要)</a
+          ><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span
+          ><a
+            href="mailto:hello@lomb.st"
+            class="text-gray-400 hover:text-blue-700"
+            >Contact us (お問い合わせ)</a
+          >
+          <p class="pt-4 space-x-5 items-center">
+            <a href="https://aws.amazon.com" target="_blank">
+              <img
+                alt="AWS"
+                class="inline h-6 grayscale opacity-70"
+                src="img/AWS.png"
+              />
+            </a>
+            <a href="https://www.antler.co" target="_blank">
+              <img
+                alt="Antler"
+                class="inline h-4 grayscale opacity-70"
+                src="img/Antler.png"
+              />
+            </a>
+            <a href="https://openai.com" target="_blank">
+              <img
+                alt="OpenAI"
+                class="inline h-4 grayscale opacity-70"
+                src="img/OpenAI.png"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
