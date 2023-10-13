@@ -151,16 +151,16 @@
     />
   </head>
 
-  <body class="w-full bg-[#F4F5F5] py-8">
-    <div class="container mx-auto max-w-6xl px-4">
+  <body class="overflow-x-hidden w-full bg-[#F4F5F5] py-8">
+    <div class="container mx-auto max-w-6xl px-6 sm:px-12 lg:px-6">
       <header class="w-full flex items-center justify-between">
         <div class="flex items-center gap-8">
           <a href="/"
-            ><svg class="h-8 w-32">
+            ><svg class="h-10 w-36">
               <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" /></svg
           ></a>
 
-          <nav class="flex items-center gap-6">
+          <nav class="hidden lg:flex items-center gap-6">
             <a
               href="/product"
               class="transition-color duration-300 ease-linear delay-0 hover:text-gray-400"
@@ -180,7 +180,7 @@
         </div>
 
         <button
-          class="relative pl-3 pr-8 py-1.5 bg-primary rounded font-bold text-white hover:bg-gray-900"
+          class="hidden lg:block relative pl-3 pr-8 py-1.5 bg-primary rounded font-bold text-white hover:bg-gray-900"
         >
           Request Demo
 
@@ -202,13 +202,42 @@
             </svg>
           </div>
         </button>
+
+        <button class="block lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#000"
+            class="w-7 h-7"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
       </header>
 
       <div
         id="main-content"
-        class="flex flex-col-reverse py-36 w-full lg:justify-between lg:items-center lg:gap-4 lg:flex-row"
+        class="flex flex-col w-full pt-14 pb-36 lg:py-36 lg:justify-between lg:items-center lg:gap-4 lg:flex-row"
       >
-        <div class="flex flex-col gap-7 w-full lg:w-[55%]">
+        <div class="flex w-full relative justify-end lg:hidden">
+          <div
+            class="absolute tilt-image w-[65%] md:-bottom-6 md:relative md:w-[40%]"
+          >
+            <img
+              class="max-w-full h-auto"
+              src="https://tigereye.wpengine.com/wp-content/uploads/2023/08/Asset-12@4x-1.png"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col z-10 mt-[40%] gap-7 w-[75%] md:mt-0 lg:w-[55%]"
+        >
           <div class="flex flex-col gap-1">
             <h1 class="text-[38px] font-bold leading-10">
               Can’t see what’s holding up growth?
@@ -219,7 +248,7 @@
             </h1>
           </div>
 
-          <div class="flex w-[80%]">
+          <div class="flex lg:w-[80%]">
             <p>
               TigerEye finds revenue risks and opportunities in your sales
               pipeline so you can make good decisions and move faster.
@@ -253,7 +282,7 @@
           </div>
         </div>
 
-        <div class="flex w-full lg:justify-end lg:w-[42%]">
+        <div class="hidden lg:flex w-full lg:justify-end lg:w-[42%]">
           <div class="relative tilt-image -right-12">
             <img
               class="max-w-full h-auto"
@@ -264,13 +293,13 @@
         </div>
       </div>
 
-      <div class="flex flex-col gap-10 pb-36 w-full">
+      <div class="flex flex-col gap-10 py-36 w-full lg:pt-0">
         <h2 class="text-[36px] font-bold leading-10">
           Visibility for the Enterprise
         </h2>
 
-        <div class="flex justify-between gap-2">
-          <div class="flex flex-col w-[30%] gap-1">
+        <div class="flex flex-col justify-between gap-8 lg:gap-2 lg:flex-row">
+          <div class="flex flex-col w-full lg:gap-1 lg:w-[30%]">
             <h3 class="text-[20px] font-bold leading-10">Sales Leadership</h3>
 
             <div>
@@ -282,7 +311,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col w-[30%] gap-1">
+          <div class="flex flex-col w-full lg:gap-1 lg:w-[30%]">
             <h3 class="text-[20px] font-bold leading-10">Revenue Operations</h3>
 
             <div>
@@ -294,7 +323,7 @@
             </div>
           </div>
 
-          <div class="flex flex-col w-[30%] gap-1">
+          <div class="flex flex-col w-full lg:gap-1 lg:w-[30%]">
             <h3 class="text-[20px] font-bold leading-10">C-Suite</h3>
 
             <div>
@@ -308,8 +337,10 @@
         </div>
       </div>
 
-      <div class="flex items-center w-full gap-12 pb-36 w-full">
-        <div class="flex flex-col w-[20%]">
+      <div
+        class="flex flex-col items-center w-full gap-12 pb-36 pt-10 w-full lg:pt-0 lg:flex-row"
+      >
+        <div class="flex w-[20%]">
           <img
             class="max-w-full h-auto"
             decoding="async"
@@ -318,7 +349,7 @@
           />
         </div>
 
-        <div class="flex flex-col w-[80%] items-end gap-6">
+        <div class="flex flex-col w-full items-end gap-6 lg:w-[80%]">
           <p class="text-[23px] font-light leading-[27px]">
             “TigerEye equips sales leaders with everything they need to hit
             revenue targets, streamline sales processes and set new bets.”
@@ -335,8 +366,20 @@
           Smarter Revenue Intelligence
         </h2>
 
-        <div class="flex justify-between">
-          <div class="flex flex-col gap-4 w-[50%]">
+        <div class="flex flex-col justify-between lg:flex-row">
+          <div class="flex w-full justify-end lg:hidden">
+            <div class="flex w-[30%] mr-10">
+              <img
+                class="max-w-full h-auto"
+                decoding="async"
+                src="https://tigereye.wpengine.com/wp-content/uploads/2023/08/Wheel-v3@2x-1.png"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col w-full relative gap-4 sm:-top-28 lg:w-[50%] lg:top-0"
+          >
             <div class="flex flex-col">
               <h6 class="text-[17px] font-bold leading-10">
                 Tailored Intelligence
@@ -368,7 +411,7 @@
             </div>
           </div>
 
-          <div class="flex w-[30%]">
+          <div class="hidden lg:flex w-[30%]">
             <img
               class="max-w-full h-auto"
               decoding="async"
@@ -378,20 +421,22 @@
         </div>
       </div>
 
-      <div class="flex flex-col gap-10 pb-36 w-full">
+      <div class="flex flex-col gap-16 pb-48 lg:gap-10 lg:pb-36 w-full">
         <h1 class="text-[38px] font-bold leading-10">
           Schedule a Live Demo Today
         </h1>
 
-        <div class="flex w-full justify-between gap-4">
-          <p class="font-light w-[40%]">
+        <div
+          class="flex flex-col w-full justify-between gap-8 lg:gap-4 lg:flex-row"
+        >
+          <p class="font-light w-full lg:w-[40%]">
             Learn how we are helping go-to-market teams save time and execute
             faster in a live, 30 minute demo.
           </p>
 
-          <div class="flex flex-col w-[40%] gap-8">
-            <div class="flex gap-8">
-              <div class="flex flex-col">
+          <div class="flex flex-col w-full gap-8 lg:w-[40%]">
+            <div class="flex flex-col w-full gap-8 sm:flex-row">
+              <div class="flex flex-col w-full">
                 <label class="font-medium">First Name</label>
                 <input
                   type="text"
@@ -399,7 +444,7 @@
                 />
               </div>
 
-              <div class="flex flex-col">
+              <div class="flex flex-col w-full">
                 <label class="font-medium">Last Name</label>
                 <input
                   type="text"
@@ -408,8 +453,8 @@
               </div>
             </div>
 
-            <div class="flex gap-8">
-              <div class="flex flex-col">
+            <div class="flex flex-col w-full gap-8 sm:flex-row">
+              <div class="flex flex-col w-full">
                 <label class="font-medium">Work Email</label>
                 <input
                   type="email"
@@ -417,7 +462,7 @@
                 />
               </div>
 
-              <div class="flex flex-col">
+              <div class="flex flex-col w-full">
                 <label class="font-medium">Job Title</label>
                 <input
                   type="text"
@@ -446,14 +491,19 @@
       </div>
 
       <footer
-        class="flex justify-between mb-16 w-full border-t border-[#CBD6E2] pt-4 pr-16"
+        class="flex flex-col justify-between gap-10 mb-16 w-full border-t border-[#CBD6E2] pt-4 pr-16 lg:flex-row"
       >
-        <div class="flex flex-col gap-2">
-          <p class="text-[#4C5966] leading-[27px]">
-            <strong>© 2023 TigerEye Labs, Inc.</strong>
+        <div class="flex flex-col gap-2 w-full sm:w-[50%]">
+          <a href="/"
+            ><svg class="h-6 w-20 sm:h-10 sm:w-36">
+              <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" /></svg
+          ></a>
+
+          <p class="text-[#4C5966] leading-[27px] mt-1">
+            <strong>© 2023 Lombard Standard, Inc.</strong>
           </p>
 
-          <div class="flex gap-1.5 font-medium text-[#4C5966]">
+          <div class="flex flex-wrap gap-1.5 font-medium text-[#4C5966]">
             <a>Terms of service</a>
             <span>|</span>
             <a>Trust Center</a>
@@ -470,39 +520,45 @@
           </div>
         </div>
 
-        <div class="flex flex-col gap-1.5 font-medium text-[#4C5966]">
-          <a>Home</a>
-          <a>Product</a>
-          <a>About</a>
-          <a>Database</a>
-        </div>
-
-        <div class="flex flex-col gap-10">
+        <div
+          class="flex flex-col w-full justify-between gap-10 sm:gap-0 sm:w-[70%] sm:flex-row lg:w-[50%]"
+        >
           <div class="flex flex-col gap-1.5 font-medium text-[#4C5966]">
-            <a>415-662-0000</a>
-            <a>Contact Us</a>
+            <a>Home</a>
+            <a>Product</a>
+            <a>About</a>
+            <a>Database</a>
           </div>
 
-          <button
-            class="text-xs relative pr-3 pl-8 py-1.5 bg-primary uppercase rounded font-bold text-white hover:bg-gray-900"
-          >
-            Stickers
-
-            <div
-              class="absolute left-2.5 inset-y-0 flex items-center justify-center"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="#fff"
-                class="w-4 h-4"
-              >
-                <path
-                  d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
-                />
-              </svg>
+          <div class="flex flex-col gap-10">
+            <div class="flex flex-col gap-1.5 font-medium text-[#4C5966]">
+              <a>415-662-0000</a>
+              <a>Contact Us</a>
             </div>
-          </button>
+
+            <div>
+              <button
+                class="text-xs relative pr-3 pl-8 py-1.5 bg-primary uppercase rounded font-bold text-white transition-all duration-200 ease-linear delay-0 hover:bg-gray-900"
+              >
+                Stickers
+
+                <div
+                  class="absolute left-2.5 inset-y-0 flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="#fff"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
