@@ -283,44 +283,100 @@
             faster in a live, 30 minute demo.
           </p>
 
-          <div class="flex flex-col w-full gap-8 lg:w-[40%]">
-            <div class="flex flex-col w-full gap-8 sm:flex-row">
-              <div class="flex flex-col w-full">
-                <label class="font-medium">First Name</label>
-                <input type="text" class="h-[40px] px-[15px] border-[#CBD6E2] rounded-[3px] border" />
+          <div class="flex w-full lg:w-[40%]">
+            <form class="flex flex-col w-full gap-8" name="New registration" method="POST" id="registerform" data-netlify="true" netlify-honeypot="bot-field">
+              <p class="hidden"><label> Don’t fill this out if you’re human: <input name="bot-field" /></label> </p>
+              <input type="hidden" name="form-name" value="New registration" />
+              <input type="text" value="last-name" hidden />
+              <input type="text" value="first-name" hidden />
+              <input type="text" value="work-email" hidden />
+              <input type="text" value="job-title" hidden />
+              <input type="text" value="company-name" hidden />
+              <input type="text" value="country" hidden />
+              
+              <div class="flex flex-col w-full gap-8 sm:justify-between sm:flex-row">
+                <div class="flex flex-col w-full sm:w-[47%]">
+                  <label for="first-name" class="font-medium">First Name</label>
+                  <input required type="text" id="first-name" name="first-name" class="h-[40px] px-3 border-[#CBD6E2] outline-none ring-0 rounded-lg border focus:border-primary" />
+                </div>
+
+                <div class="flex flex-col w-full sm:w-[47%]">
+                  <label for="last-name" class="font-medium">Last Name</label>
+                  <input required type="text" id="last-name" name="last-name" class="h-[40px] px-3 border-[#CBD6E2] outline-none ring-0 rounded-lg border focus:border-primary" />
+                </div>
               </div>
 
-              <div class="flex flex-col w-full">
-                <label class="font-medium">Last Name</label>
-                <input type="text" class="h-[40px] px-[15px] border-[#CBD6E2] rounded-[3px] border" />
+              <div class="flex flex-col w-full gap-8 sm:justify-between sm:flex-row">
+                <div class="flex flex-col w-full sm:w-[47%]">
+                  <label for="work-email" class="font-medium">Work Email</label>
+                  <input required type="email" id="work-email" name="work-email" class="h-[40px] px-3 border-[#CBD6E2] outline-none ring-0 rounded-lg border focus:border-primary" />
+                </div>
+
+                <div class="flex flex-col w-full sm:w-[47%]">
+                  <label for="job-title" class="font-medium">Job Title</label>
+                  <input type="text" id="job-title" name="job-title" class="h-[40px] px-3 border-[#CBD6E2] outline-none ring-0 rounded-lg border focus:border-primary" />
+                </div>
               </div>
-            </div>
 
-            <div class="flex flex-col w-full gap-8 sm:flex-row">
-              <div class="flex flex-col w-full">
-                <label class="font-medium">Work Email</label>
-                <input type="email" class="h-[40px] px-[15px] border-[#CBD6E2] rounded-[3px] border" />
+              <div class="flex flex-col w-full sm:justify-between gap-8 sm:flex-row">
+                <div class="flex flex-col w-full sm:w-[47%]">
+                  <label for="company-name" class="font-medium">Company Name</label>
+                  <input type="text" id="company-name" name="company-name" class="h-[40px] px-3 border-[#CBD6E2] outline-none ring-0 rounded-lg border focus:border-primary" />
+                </div>
+
+                <div class="flex flex-col w-full sm:w-[47%]">
+                  <label for="country" class="font-medium">Country</label>
+                  <select id="country" name="country" class="h-[40px] px-3 bg-white border-[#CBD6E2] outline-none ring-0 rounded-lg border focus:border-primary">
+                    <option selected data-i18n="form-selected">Select</option>
+                    <option value="Australia" data-i18n="form-australia">Australia</option>
+                    <option value="Austria" data-i18n="form-austria">Austria</option>
+                    <option value="Belgium" data-i18n="form-belgium"> Belgium </option>
+                    <option value="Canada" data-i18n="form-canada">Canada</option>
+                    <option value="China" data-i18n="form-china">China</option>
+                    <option value="Denmark" data-i18n="form-denmark"> Denmark </option>
+                    <option value="Finland" data-i18n="form-finland"> Finland </option>
+                    <option value="France" data-i18n="form-france">France</option>
+                    <option value="Germany" data-i18n="form-germany">Germany</option>
+                    <option value="Hong Kong" data-i18n="form-hong-kong"> Hong Kong </option>
+                    <option value="Hungary" data-i18n="form-hungary"> Hungary </option>
+                    <option value="Indonesia" data-i18n="form-indonesia"> Indonesia </option>
+                    <option value="Ireland" data-i18n="form-ireland"> Ireland </option>
+                    <option value="Italy" data-i18n="form-italy">Italy</option>
+                    <option value="Japan" data-i18n="form-japan">Japan</option>
+                    <option value="Malaysia" data-i18n="form-malaysia"> Malaysia </option>
+                    <option value="Netherlands" data-i18n="form-netherlands"> Netherlands </option>
+                    <option value="New Zealand" data-i18n="form-new-zealand">New Zealand</option>
+                    <option value="Norway" data-i18n="form-norway"> Norway </option>
+                    <option value="Poland" data-i18n="form-poland"> Poland </option>
+                    <option value="Portugal" data-i18n="form-portugal"> Portugal </option>
+                    <option value="Singapore" data-i18n="form-singapore"> Singapore </option>
+                    <option value="South Africa" data-i18n="form-south-africa">South Africa</option>
+                    <option value="South Korea" data-i18n="form-south-korea">South Korea</option>
+                    <option value="Spain" data-i18n="form-spain">Spain</option>
+                    <option value="Sweden" data-i18n="form-sweden">Sweden</option>
+                    <option value="Switzerland" data-i18n="form-switzerland">Switzerland</option>
+                    <option value="Taiwan" data-i18n="form-taiwan"> Taiwan </option>
+                    <option value="Thailand" data-i18n="form-thailand">Thailand</option>
+                    <option value="United Kingdom" data-i18n="form-united-kingdom">United Kingdom</option>
+                    <option value="United States" data-i18n="form-united-states">United States</option>
+                  </select>
+                </div>
               </div>
 
-              <div class="flex flex-col w-full">
-                <label class="font-medium">Job Title</label>
-                <input type="text" class="h-[40px] px-[15px] border-[#CBD6E2] rounded-[3px] border" />
+              <p class="text-[14px] leading-[24px] break-words">
+                TigerEye needs the contact information you provide to us to
+                contact you about our products and services. You may unsubscribe
+                from these communications at any time. For information on how to
+                unsubscribe, as well as our privacy practices and commitment to
+                protecting your privacy, please review our Privacy Policy.
+              </p>
+
+              <div>
+                <button type="submit" id="submitButton" class="relative px-3 py-1.5 bg-primary rounded-lg font-bold text-white">
+                  Request Live Demo
+                </button>
               </div>
-            </div>
-
-            <p class="text-[14px] leading-[24px] break-words">
-              TigerEye needs the contact information you provide to us to
-              contact you about our products and services. You may unsubscribe
-              from these communications at any time. For information on how to
-              unsubscribe, as well as our privacy practices and commitment to
-              protecting your privacy, please review our Privacy Policy.
-            </p>
-
-            <div>
-              <button class="relative px-3 py-1.5 bg-primary rounded font-bold text-white">
-                Request Live Demo
-              </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
