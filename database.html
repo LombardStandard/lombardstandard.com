@@ -102,13 +102,14 @@
       gtag('config', 'G-CYEZFH8RRT');
     </script>
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-    <link rel="canonical" href="https://lombardstandard.com/about" />
+    <link rel="canonical" href="https://lombardstandard.com/database" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
     <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
     <link rel="stylesheet" href="css/new-global.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet" />
   </head>
 
   <body class="overflow-x-hidden w-full bg-gray-100 py-8">
@@ -136,36 +137,34 @@
       </header>
 
       <div class="flex flex-col gap-16 py-36 lg:gap-10 w-full">
-        <h1 class="text-[38px] font-bold leading-10">
-          About Lombard Standard
-        </h1>
-
-        <div class="flex flex-col w-full gap-10 lg:gap-6 lg:flex-row">
-          <div class="flex flex-col w-full gap-4 lg:w-[30%]">
-            <h3 class="text-[20px] font-bold">A Letter from the Founders</h3>
-            <p class="font-medium">September 8, 2022</p>
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+          <div class="flex flex-col w-full h-full justify-between " >
+            <div class="flex flex-col items-center">
+                <h3 class="sm:text-xl text-base text-gray-400 pb-6 i18nelement" data-i18n="database-companies-1">Companies Location</h3>
+                <div id="map-container" class="w-full min-h-[320px] lg:mt-0 justify-self-end bg-gray-50 rounded-lg p-8"></div>
+             </div> 
+            <div class="flex lg:flex-col w-full items-center justify-between lg:mt-0 mt-12 bg-gray-50 rounded-lg p-8 lg:space-y-8">
+                <div class="flex flex-col w-1/2 items-center">
+                   <h3 class="sm:text-xl text-base text-gray-400 i18nelement" data-i18n="database-vectors-1">Vector Dimensions</h3>
+                   <h2 id="vector-dimensionality" class="sm:text-4xl text-xl font-extrabold ">-</h2>
+                </div>
+                <div class="flex flex-col w-1/2 items-center" >
+                   <h3 class="sm:text-xl text-base text-gray-400 i18nelement" data-i18n="database-vectors-2">Vector Points</h3>
+                   <h2 id="vector-points" class="sm:text-4xl text-xl font-extrabold">-</h2>
+                </div>
+             </div>
           </div>
-
-          <div class="flex flex-col w-full gap-4 font-medium lg:w-[65%]">
-            <p class="leading-[27.2px]">Our new company is called TigerEye.</p>
-
-            <p class="leading-[27.2px]">During our PlanGrid days, we had a front-row view of some of the biggest sales product deficiencies. Today, we are in stealth building a sales solution that will help companies make better strategic decisions. We’re currently focused on removing as many constraints as possible for our customers.</p>
-
-            <p class="leading-[27.2px]">In 2011, we started PlanGrid with a mission to build great software. PlanGrid was loved by 15,000+ customers, and we grew from $0 to $100 million in annual recurring revenue in eight years. The company was acquired by Autodesk in 2018, and a little over a year later, we ended our watch. Next to being a parent, founding a company is one of the most humbling experiences of our lives. We are better people because of it. We’re now applying our lessons learned from PlanGrid to TigerEye. Here are a few:</p>
-
-            <p class="leading-[27.2px]"><strong>Team.</strong> First and foremost, our team matters most. We are the sum of everyone we surround ourselves with. This time around, we won’t tolerate oversized egos, arrogance or cynicism in our culture. At TigerEye, everyone understands we are all excellent at something, and amateurs at most things. We are humble, approachable teammates, and we walk it like we talk it. We are committed to building TigerEye together and focused on creating value for each other, our customers and the world.</p>
-
-            <p class="leading-[27.2px]"><strong>Technology.</strong> We’re mobile enterprise software and machine learning experts. We were among the first enterprise software developers to launch across all app stores. We understand the challenges and high cost of building natively, and the eternal feature-parity hell that comes with it. TigerEye is enterprise-ready from the start, leveraging tech that’s only possible thanks to innovations made in recent years. We have the strongest security protections built into our products: encryption at rest, true customer data segmentation, SSO and more. TigerEye is mobile-first while offering a full desktop experience (not a slow web app), and works great offline too.</p>
-
-            <p class="leading-[27.2px]"><strong>Wholehearted.</strong> Life can be hard even for the most fortunate of us. As our previous company grew from a few people to several hundred across the globe, we experienced working while grieving. Teammates coped with loved ones dying, children getting sick and heartbreaking stories. The best we can do is to be wholehearted in everything we do. When we split our focus and energy in too many directions, we get overwhelmed and risk being mediocre at everything. At TigerEye, we are all committed to being fully present — this means at work and in our personal lives.</p>
-
-            <p class="leading-[27.2px]">We are grateful to have investors who are supportive of us as parents first and as founders second. We’re thrilled that Initialized Capital and Next47 co-led our $30 million Series A investment. We’re also delighted to welcome Garry Tan to our board of directors and Ching-Yu Hu as our board observer.</p>
-
-            <p class="leading-[27.2px]">We are on a journey to build trust and value. And we aren’t doing this alone. We are collaborating with our customers at every stage to make sure that what we build helps them run their company better, so they can focus on their impact in the world. If you want early access to TigerEye, reach out here. If you want to join our team, drop us a line.</p>
-
-            <p class="leading-[27.2px]">We know this all sounds a little vague right now, but bear with us. Sales teams are going to love our products.</p>
+          <div class="flex flex-col w-full space-y-16 pt-20 lg:pt-0">
+             <div class="flex flex-col items-center space-y-6">
+                <h3 class="sm:text-xl text-base text-gray-400 i18nelement" data-i18n="database-companies-2">Companies Count</h3>
+                <div class="w-full h-[320px] bg-gray-50 rounded-lg" id="profileCount"></div>
+             </div>
+             <div class="flex flex-col items-center space-y-6">
+                <h3 class="sm:text-xl text-base text-gray-400 i18nelement" data-i18n="database-companies-3">Companies Sectors</h3>
+                <div class="w-full h-[320px] bg-gray-50 rounded-lg" id="sectors"></div>
+             </div>
           </div>
-        </div>
+       </div>
       </div>
 
       <footer class="flex flex-col justify-between gap-10 mb-16 w-full border-t border-[#CBD6E2] pt-4 pr-16 lg:flex-row">
@@ -212,5 +211,12 @@
         </div>
       </footer>
     </div>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+    <script src="js/stats.js"></script>
   </body>
 </html>
