@@ -231,8 +231,9 @@
 
               <div class="flex flex-col w-full gap-8 sm:justify-between sm:flex-row">
                 <div class="flex flex-col w-full sm:w-[47%]">
-                  <label for="work-email" class="font-medium">Work Email</label>
-                  <input required type="email" id="work-email" name="work-email" class="h-[40px] px-3 border-[#CBD6E2] outline-none ring-0 rounded-lg border focus:border-primary" />
+                  <label for="textEmail" class="font-medium">Work Email</label>
+                  <div class="text-xs text-red-600" id="errorEmail"></div>
+                  <input required type="text" id="textEmail" onkeyup="validateEmail();" name="work-email" class="h-[40px] px-3 border-[#CBD6E2] outline-none ring-0 rounded-lg border focus:border-primary" />
                 </div>
 
                 <div class="flex flex-col w-full sm:w-[47%]">
@@ -295,7 +296,7 @@
               </p>
 
               <div>
-                <button type="submit" id="submitButton" class="relative px-3 py-1.5 bg-primary rounded-lg font-bold text-white">
+                <button disabled type="submit" id="submitButton" class="relative px-3 py-1.5 bg-primary rounded-lg font-bold text-white disabled:opacity-50 disabled:cursor-not-allowed">
                   Request Live Demo
                 </button>
               </div>
@@ -348,5 +349,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="js/form.js"></script>
   </body>
 </html>
