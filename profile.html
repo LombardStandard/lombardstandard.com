@@ -73,15 +73,39 @@
             <p class="col-span-8 py-6" data-i18n="disclosure-section-5a"> Amazon Web Services, Google Cloud Platform, OpenAI</p>
          </div>
       </div>
-      <footer class="max-w-4xl mx-auto px-8 text-base pb-20 md:pb-48">
-         <div class="border-t pt-8 border-gray-300">
-            <p class="inline" data-i18n="global-copyright"> © Lombard Standard株式会社</p>
-            <span class="inline ml-1" id="copyright"></span>
-            <div>
-               <a href="/profile" class="text-gray-400 hover:text-blue-700" >Company profile (会社概要)</a><span class="text-gray-400">&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="mailto:hello@lomb.st" class="text-gray-400 hover:text-blue-700">Contact us (お問い合わせ)</a>
-               <p class="pt-6 space-x-5 items-center"> <a href="https://aws.amazon.com" target="_blank"> <img alt="AWS" class="inline h-6 grayscale opacity-70" src="img/AWS.png"> </a> <a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline h-4 grayscale opacity-70" src="img/Antler.png"> </a> <a href="https://openai.com" target="_blank"> <img alt="OpenAI" class="inline h-4 grayscale opacity-70" src="img/OpenAI.png"> </a></p>
+       <footer class="max-w-4xl mx-auto flex flex-col justify-between gap-10 mb-16 w-full border-t border-gray-300 pt-4 pr-16 lg:flex-row">
+        <div class="flex flex-col gap-2 w-full sm:w-[50%] mt-2">
+          <a href="/"><svg class="h-8 w-28">
+              <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+            </svg></a>
+
+          <div class="font-light leading-[27px] mt-4">
+            <p>©<span class="inline ml-1" id="copyright"></span> Lombard Standard K.K.</p>
+          </div>
+
+          <div class="flex pt-2 gap-4">
+            <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline h-4" src="img/LinkedIn.png"> </a>
+            <a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline h-4" src="img/Antler.png"> </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full justify-between gap-10 sm:gap-0 sm:w-[70%] sm:flex-row lg:w-[50%] mt-2">
+          <div class="flex flex-col gap-1.5 font-light">
+            <a href="/" class="hover:text-blue-700">Home</a>
+            <a href="/product" class="hover:text-blue-700 ">Product</a>
+            <a href="/database" class="hover:text-blue-700">Database</a>
+            <a href="/about" class="hover:text-blue-700">About</a>
+          </div>
+
+          <div class="flex flex-col gap-10">
+            <div class="flex flex-col gap-1.5 font-light">
+              <a class="hover:text-blue-700" href="mailto:hello@lomb.st">Contact us</span></a>
+            <a class="hover:text-blue-700" href="/">Terms of Service</span></a>
+          <a class="hover:text-blue-700" href="/privacy">Privacy Policy</span></a>
+        <a class="hover:text-blue-700" href="/profile">Company Profile</span></a>
             </div>
-         </div>
+          </div>
+        </div>
       </footer>
       <script src="js/script.js"></script>
    </body>
