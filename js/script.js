@@ -38,67 +38,67 @@ function nFormatter(num) {
 }
 
 // fetch and populate site(leads) data
-(async function fetchAndPopulateData() {
-  const regionMap = {
-    Asia: 'APAC',
-    Australia: 'APAC',
-    Europe: 'EMEA',
-    America: 'Americas',
-    Africa: 'EMEA',
-    Atlantic: 'EMEA',
-    Indian: 'EMEA',
-  };
-  const totalIndividualsDiv = document.getElementById('total-individuals');
-  const totalCompaniesDiv = document.getElementById('total-companies');
-  const regionPercentageDiv = document.getElementById('region-percentage');
-  const regionTextDiv = document.getElementById('region-text');
-  const regionGlobeDiv = document.getElementById('region-globe');
-  const region = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[0];
+// (async function fetchAndPopulateData() {
+//   const regionMap = {
+//     Asia: 'APAC',
+//     Australia: 'APAC',
+//     Europe: 'EMEA',
+//     America: 'Americas',
+//     Africa: 'EMEA',
+//     Atlantic: 'EMEA',
+//     Indian: 'EMEA',
+//   };
+//   const totalIndividualsDiv = document.getElementById('total-individuals');
+//   const totalCompaniesDiv = document.getElementById('total-companies');
+//   const regionPercentageDiv = document.getElementById('region-percentage');
+//   const regionTextDiv = document.getElementById('region-text');
+//   const regionGlobeDiv = document.getElementById('region-globe');
+//   const region = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[0];
 
-  try {
-    const { totalIndividuals, totalCompanies, regionWisePercentage } =
-      await fetch(
-        'https://c5w166ug64.execute-api.us-east-1.amazonaws.com/default/siteData-API'
-      ).then((res) => res.json());
+//   try {
+//     const { totalIndividuals, totalCompanies, regionWisePercentage } =
+//       await fetch(
+//         'https://c5w166ug64.execute-api.us-east-1.amazonaws.com/default/siteData-API'
+//       ).then((res) => res.json());
 
-    totalIndividualsDiv.innerHTML = nFormatter(totalIndividuals);
-    totalCompaniesDiv.innerHTML = nFormatter(totalCompanies);
+//     totalIndividualsDiv.innerHTML = nFormatter(totalIndividuals);
+//     totalCompaniesDiv.innerHTML = nFormatter(totalCompanies);
 
-    if (region.includes('Asia') || region.includes('Australia')) {
-      regionPercentageDiv.innerHTML =
-        regionWisePercentage['Asia Pacific'] + '%';
-      regionGlobeDiv.innerHTML = '🌏';
-    }
+//     if (region.includes('Asia') || region.includes('Australia')) {
+//       regionPercentageDiv.innerHTML =
+//         regionWisePercentage['Asia Pacific'] + '%';
+//       regionGlobeDiv.innerHTML = '🌏';
+//     }
 
-    if (region.includes('America')) {
-      regionPercentageDiv.innerHTML =
-        regionWisePercentage['North America'] + '%';
-      regionGlobeDiv.innerHTML = '🌎';
-    }
+//     if (region.includes('America')) {
+//       regionPercentageDiv.innerHTML =
+//         regionWisePercentage['North America'] + '%';
+//       regionGlobeDiv.innerHTML = '🌎';
+//     }
 
-    if (
-      region.includes('Europe') ||
-      region.includes('Africa') ||
-      region.includes('Atlantic') ||
-      region.includes('Indian')
-    ) {
-      regionPercentageDiv.innerHTML =
-        String(
-          parseFloat(regionWisePercentage['Europe']) +
-            parseFloat(regionWisePercentage['Africa']) +
-            parseFloat(regionWisePercentage['Middle East'])
-        ) + '%';
-      regionGlobeDiv.innerHTML = '🌍';
-    }
-  } catch (err) {
-    console.log('error fetching site data:', err.message);
-    totalIndividualsDiv.innerHTML = '3.6k';
-    totalCompaniesDiv.innerHTML = '1.3k';
-    regionPercentageDiv.innerHTML = '32.4%';
-  }
+//     if (
+//       region.includes('Europe') ||
+//       region.includes('Africa') ||
+//       region.includes('Atlantic') ||
+//       region.includes('Indian')
+//     ) {
+//       regionPercentageDiv.innerHTML =
+//         String(
+//           parseFloat(regionWisePercentage['Europe']) +
+//             parseFloat(regionWisePercentage['Africa']) +
+//             parseFloat(regionWisePercentage['Middle East'])
+//         ) + '%';
+//       regionGlobeDiv.innerHTML = '🌍';
+//     }
+//   } catch (err) {
+//     console.log('error fetching site data:', err.message);
+//     totalIndividualsDiv.innerHTML = '3.6k';
+//     totalCompaniesDiv.innerHTML = '1.3k';
+//     regionPercentageDiv.innerHTML = '32.4%';
+//   }
 
-  regionTextDiv.innerHTML = `(${regionMap[region] || 'APAC'})`;
-})();
+//   regionTextDiv.innerHTML = `(${regionMap[region] || 'APAC'})`;
+// })();
 
 // i18n integration
 function updateContent() {
@@ -147,13 +147,15 @@ async function i18Loader() {
   });
 
   const langSelector = document.getElementById('langSelector');
-  langSelector.removeAttribute('disabled');
-  langSelector.addEventListener('change', (e) => {
-    i18next.changeLanguage(e.target.value);
-  });
-  langSelector.value = i18next.language.includes('en')
-    ? 'en'
-    : i18next.language;
+  if (langSelector) {
+    langSelector.removeAttribute('disabled');
+    langSelector.addEventListener('change', (e) => {
+      i18next.changeLanguage(e.target.value);
+    });
+    langSelector.value = i18next.language.includes('en')
+      ? 'en'
+      : i18next.language;
+  }
 
   let closeText = 'OK';
   let message = 'By viewing this website you agree to our';
