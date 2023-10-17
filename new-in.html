@@ -119,7 +119,7 @@
         </nav>
       </div>
 
-      <button class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition">Request Demo</button>
+      <button class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition">Register to beta</button>
 
       <button class="block lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" class="w-7 h-7">
@@ -266,13 +266,12 @@
 
       <div class="flex flex-col gap-16 py-36 lg:gap-10 w-full">
         <h1 class="text-[36px] font-extrabold leading-10">
-          Schedule a Live Demo Today
+          Register to Beta today
         </h1>
 
         <div class="flex flex-col w-full justify-between gap-8 lg:gap-4 lg:flex-row">
           <p class="font-light w-full lg:w-[40%]">
-            Learn how we are helping go-to-market teams save time and execute
-            faster in a live, 30 minute demo.
+            Fill out the form
           </p>
 
           <div class="flex w-full lg:w-[40%]">
@@ -348,24 +347,24 @@
                     <option class="i18nelement" value="United States" data-i18n="form-united-states">United States</option>
                   </select>
                 </div>
-                <button type="submit" id="submitButton" data-i18n="form-submit-button" class="i18nelement text-white bg-blue-700 duration-250 ease-out font-medium enabled:hover:bg-blue-800 inline-flex items-center justify-between md:text-lg px-5 py-3 rounded-md text-base transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Submit</button>
+                <button type="submit" id="submitButton" data-i18n="form-submit-button" class="i18nelement text-white bg-blue-700 transitions font-medium enabled:hover:bg-blue-900 inline-flex px-4 py-2 rounded-lg text-base transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Submit</button>
               </div>
             </form>
           </div>
         </div>
       </div>
 
-      <footer class="flex flex-col justify-between gap-10 mb-16 w-full border-t border-[#CBD6E2] pt-4 pr-16 lg:flex-row">
+      <footer class="flex flex-col justify-between gap-10 mb-16 w-full border-t border-gray-500 pt-4 pr-16 lg:flex-row">
         <div class="flex flex-col gap-2 w-full sm:w-[50%]">
           <a href="/"><svg class="h-8 w-28">
               <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
             </svg></a>
 
           <p class="text-blue-700 leading-[27px] mt-1">
-            <strong>© 2023 Lombard Standard K.K.</strong>
+            <strong>©<span class="inline ml-1" id="date"></span> Lombard Standard K.K.</strong>
           </p>
 
-          <div class="flex flex-wrap gap-1.5 font-medium text-[#4C5966]">
+          <div class="flex flex-wrap gap-1.5 font-medium text-gray-500">
             <a>Terms of service</a>
             <span>|</span>
             <a>Trust Center</a>
@@ -373,7 +372,7 @@
             <a>Privacy</a>
           </div>
 
-          <div class="flex border-t border-[#CBD6E2] pt-2">
+          <div class="flex border-t border-gray-500 pt-2">
             <a>LinkedIn</a>
             <a>Instagram</a>
             <a>YouTube</a>
@@ -383,7 +382,7 @@
         </div>
 
         <div class="flex flex-col w-full justify-between gap-10 sm:gap-0 sm:w-[70%] sm:flex-row lg:w-[50%]">
-          <div class="flex flex-col gap-1.5 font-medium text-[#4C5966]">
+          <div class="flex flex-col gap-1.5 font-medium text-gray-500">
             <a href="/">Home</a>
             <a href="/product">Product</a>
             <a href="/database">Database</a>
@@ -391,7 +390,7 @@
           </div>
 
           <div class="flex flex-col gap-10">
-            <div class="flex flex-col gap-1.5 font-medium text-[#4C5966]">
+            <div class="flex flex-col gap-1.5 font-medium text-gray-500">
               <a>415-662-0000</a>
               <a>Contact Us</a>
             </div>
