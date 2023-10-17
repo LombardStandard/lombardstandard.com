@@ -197,7 +197,7 @@
   "disclosure-section-6": "<strong>E-Mail </strong>", 
   "disclosure-section-6a": "<a class='hover:text-blue-700' href='mailto:hello@lomb.st'>hello@lomb.st</a>",
   "disclosure-section-7": "<strong>Trading banks</strong>",
-  "disclosure-section-7a": "Sumishin SBI Net Bank, HSBC (Hong Kong))",
+  "disclosure-section-7a": "Sumishin SBI Net Bank, HSBC (Hong Kong)",
   "disclosure-section-8": "<strong>Business</strong>", 
   "disclosure-section-8a": "Information Technology, Real Estate",
   "disclosure-section-9": "<strong>Founder CEO</strong>", 
@@ -207,5 +207,5 @@
   "disclosure-section-11": "<strong>Investors</strong>",
   "disclosure-section-11a": "Antler K.K.",
   "disclosure-section-12": "<strong>Technical sponsors</strong>",
-  "disclosure-section-12a": "Amazon Web Services, Google Cloud Platform, Microsoft Azure",
+  "disclosure-section-12a": "Amazon Web Services, Google Cloud Platform, Microsoft Azure"
 }
