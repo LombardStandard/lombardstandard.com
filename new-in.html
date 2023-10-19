@@ -106,7 +106,7 @@
 
 <body class="overflow-x-hidden w-full bg-white py-8">
   <div class="container mx-auto max-w-6xl px-6 sm:px-12 lg:px-6">
-    <header class="w-full flex items-center justify-between" id="header">
+    <header class="w-full flex items-center justify-between">
       <div class="flex items-center gap-8">
         <a href="/"><svg class="h-8 w-28">
             <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
@@ -124,7 +124,7 @@
           <option value="ja">日本語</option>
         </select>
 
-        <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition" href="#form">Register to Beta</a>
+        <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition">Register to Beta</a>
 
         <button class="block lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" class="w-7 h-7">
@@ -173,7 +173,9 @@
 
       <div class="flex flex-col gap-8 lg:gap-2 lg:flex-row justify-between">
         <div class="flex flex-col w-full lg:gap-2 lg:w-1/4">
-          <h3 class="text-xl font-bold leading-10"><span class="text-2xl inline-block align-baseline text-blue-700">↯&nbsp;</span>Save time</h3>
+          <h3 class="flex flex-row text-xl font-bold leading-10 items-center">
+            <div class="text-2xl text-blue-700">↯&nbsp;</div>Save time
+          </h3>
 
           <div>
             <p class="font-light">
@@ -183,7 +185,9 @@
         </div>
 
         <div class="flex flex-col w-full lg:gap-2 lg:w-1/4">
-          <h3 class="text-xl font-bold leading-10"><span class="text-2xl inline-block align-baseline text-blue-700">﹩&nbsp;</span>Save money</h3>
+          <h3 class="flex flex-row text-xl font-bold leading-10 items-center">
+            <div class="text-2xl text-blue-700">$&nbsp;</div>Save money
+          </h3>
 
           <div>
             <p class="font-light">
@@ -193,7 +197,9 @@
         </div>
 
         <div class="flex flex-col w-full lg:gap-2 lg:w-1/4">
-          <h3 class="text-xl font-bold leading-10"><span class="text-2xl text-blue-700 inline-block align-baseline">+&nbsp;</span>Tap more buyers</h3>
+          <h3 class="flex flex-row text-xl font-bold leading-10 items-center">
+            <div class="text-2xl text-blue-700">+&nbsp;</div>Tap more buyers
+          </h3>
 
           <div>
             <p class="font-light">
@@ -269,7 +275,7 @@
 
       </div>
 
-      <div id="form" class="flex flex-col gap-12 py-36 w-full">
+      <div class="flex flex-col gap-12 py-36 w-full">
         <h1 class="text-3xl font-extrabold leading-10">
           Register to Beta today
         </h1>
