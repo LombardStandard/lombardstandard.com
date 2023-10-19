@@ -123,10 +123,14 @@ function updateIframes() {
 
 function updateImages() {
   const imageHead = document.getElementById('header-image')
+  const imageBody = document.getElementById('body-image')
   const lang = i18next.language.includes('en') ? 'en' : i18next.language;
 
   if (imageHead) {
     imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${lang}.png`
+  }
+  if (imageBody) {
+    imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${lang}.png`
   }
 }
 
