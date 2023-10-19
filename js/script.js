@@ -113,15 +113,11 @@ function updateContent() {
 function updateIframes() {
   const iFrameSub = document.getElementById('iframe-sub');
   const iFrameLead = document.getElementById('iframe-lead');
-  const imgheader = document.getElementById('image-header');
   const lang = i18next.language.includes('en') ? 'en' : i18next.language;
 
   if (iFrameSub && iFrameLead) {
     iFrameSub.src = `https://app.lombardstandard.com/subscribeForm/?lang=${lang}`;
     iFrameLead.src = `https://app.lombardstandard.com/search_leads_widget/?lang=${lang}`;
-  }
-  if (imgheader) {
-    imgheader.src = `img/VectorDB-JP`;
   }
 }
 
