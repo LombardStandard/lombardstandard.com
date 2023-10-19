@@ -126,7 +126,7 @@ function updateImages() {
   const lang = i18next.language.includes('en') ? 'en' : i18next.language;
 
   if (imageHead) {
-    imageHead.src = `/img/VectorDB-${lang}.png`
+    imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${lang}.pdf`
   }
 }
 
