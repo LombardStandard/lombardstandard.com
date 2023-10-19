@@ -121,6 +121,15 @@ function updateIframes() {
   }
 }
 
+function updateImages() {
+  const imageHead = document.getElementById('header-image')
+  const lang = i18next.language.includes('en') ? 'en' : i18next.language;
+
+  if (imageHead) {
+    imageHead.src = `/img/VectorDB-${lang}.png`
+  }
+}
+
 async function i18Loader() {
   const langs = ['en', 'ja'];
   const langJsons = await Promise.all(
@@ -140,10 +149,12 @@ async function i18Loader() {
 
   updateContent();
   updateIframes();
+  updateImages();
 
   i18next.on('languageChanged', () => {
     updateContent();
     updateIframes();
+    updateImages();
   });
 
   const langSelector = document.getElementById('langSelector');
@@ -186,6 +197,6 @@ async function i18Loader() {
 //  cookieScript.setAttribute('data-cookie', 'Lombard Standard Analytics');
 
 //  document.body.appendChild(cookieScript);
-// }
+}
 
 i18Loader();
