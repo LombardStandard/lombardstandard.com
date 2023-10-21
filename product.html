@@ -2,7 +2,7 @@
 <html lang="en-gb">
   <head>
     <meta charset="utf-8" />
-    <title>Lombard Standard</title>
+    <title>Lombard Standard - Product</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="description" content="We build trust." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,58 +28,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Corporation",
-        "@id": "https://corp.lombardstandard.com",
-        "name": "Lombard Standard",
-        "alternateName": "lombardstandard",
-        "description": "Lombard Standard provides services to the Commercial Real Estate industry.",
-        "image": "https://cdn.lomb.st/website/share-main.png",
-        "logo": "https://cdn.lomb.st/website/logo-blank-md.png",
-        "url": "https://lombardstandard.com",
-        "legalName": "Lombard Standard K.K.",
-        "email": "hello@lomb.st",
-        "sameAs": [
-          "https://www.wikidata.org/wiki/Q108829640",
-          "https://www.linkedin.com/company/lombard-standard/",
-          "https://www.crunchbase.com/organization/lombard-standard",
-          "https://github.com/LombardStandard",
-          "https://www.eu-startups.com/directory/lombard-standard/",
-          "https://theorg.com/org/lombard-standard",
-          "https://twitter.com/lombardstandard",
-          "https://www.trustpilot.com/review/lombardstandard.com",
-          "https://www.unissu.com/proptech-company/lombard-standard",
-          "https://www.investhk.gov.hk/en/client-profiles/lombard-standard-hk-limited.html",
-          "https://www.builtworld.com/company/Lombard-Standard"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Tokyo",
-          "postalCode": "150-0043",
-          "streetAddress": "Tokyu Building 2F-C, 1-10-8 Dogenzaka, Shibuya-ku, Tokyo Japan",
-          "addressCountry": {
-            "@type": "Country",
-            "name": "JP"
-          }
-        },
-        "founder": {
-          "@type": "Person",
-          "givenName": "Alberto MG",
-          "familyName": "Saruggia",
-          "sameAs": [
-            "https://www.crunchbase.com/person/alberto-mg-saruggia",
-            "www.linkedin.com/in/alberto-mg-saruggia"
-          ]
-        },
-        "foundingDate": "2023",
-        "foundingLocation": {
-          "@type": "Place",
-          "name": "Tokyo, Japan"
-        }
-      }
-    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
   
@@ -99,36 +47,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="" />
   </head>
 
-  <body class="overflow-x-hidden w-full bg-gray-100 py-8">
-    <div class="container mx-auto max-w-6xl px-6 sm:px-12 lg:px-6">
+  <body class="overflow-x-hidden w-full bg-white py-8">
+    <div class="mx-auto max-w-10xl px-8 lg:px-16">
       <header class="w-full flex items-center justify-between">
-        <div class="flex items-center gap-8">
-          <a href="/"><svg class="h-8 w-28">
-              <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
-            </svg></a>
-  
-          <nav class="hidden lg:flex items-center gap-6">
-            <a href="/product" class="transition-color duration-300 ease-linear delay-0 hover:text-gray-400">Product</a>
-            <a href="/database" class="transition-color duration-300 ease-linear delay-0 hover:text-gray-400">Database</a>
-            <a href="/about" class="transition-color duration-300 ease-linear delay-0 hover:text-gray-400">About</a>
-          </nav>
-        </div>
-  
-        <button class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition">Request Demo</button>
-  
+      <div class="flex items-center gap-8">
+        <a href="/"><svg class="h-8 w-28">
+            <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+          </svg></a>
+
+        <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
+          <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
+          <a href="/database" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-2">Database</a>
+          <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+          <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
+        </nav>
+      </div>
+      <div class="flex flex-row">
+        <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+
+        <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" data-i18n="menu-5">Register to Beta</a>
+
         <button class="block lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" class="w-7 h-7">
             <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
           </svg>
         </button>
-      </header>
+      </div>
+    </header>
 
-      <div class="flex flex-col gap-16 pt-28 lg:gap-10 w-full">
-        <h1 class="text-[38px] font-bold leading-10">
-          TigerEye Revenue Delivery
+      <div class="flex flex-col gap-y-8 w-full">
+        <h1 class="text-4xl font-extrabold leading-10 i18nelement">
+          Introducing LombardGPT
         </h1>
 
-        <p class="leading-[27.2px]">B2B Sales teams use TigerEye to build revenue better. TigerEye helps teams with sales funnel optimization, account management, and sales coaching. From the bird’s-eye view from the C-Suite to the details for sales managers and account executives, every level of the org sees their book of business more clearly with TigerEye.</p>
+        <p class="leading-8 i18nelement font-light">LombardGPT is an Artificial Intelligence and Machine Learning (AI/ML) service for the Commercial Real Estate industry. Large Language Models (LLMs) in the general domain, such as ChatGPT, have shown remarkable success in producing human-like responses. However, such models have not been tailored to the commercial real estate domain, resulting in inability to give plausible recommendations for buy/sell matching and investors profiling. <br><br>LombardGPT analyzes billions of datapoints and is able to accurately match sell side requests with potential buyers in all asset classes across global markets.</p>
       
         <div class="flex flex-col w-full gap-8 justify-between lg:flex-row">
           <div class="w-full md:w-[60%] lg:w-[37%]">
