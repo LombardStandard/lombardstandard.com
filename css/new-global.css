@@ -49,6 +49,4 @@ html {
   scroll-behavior: smooth;
 }
 
-.tilt-image {
-  transform: perspective(800px) rotate3d(2, -2, 0, 16deg);
 }
