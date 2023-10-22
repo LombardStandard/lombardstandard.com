@@ -49,4 +49,8 @@ html {
   scroll-behavior: smooth;
 }
 
+.iframe-container {
+  overflow: hidden;
+}
+
 }
