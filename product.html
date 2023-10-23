@@ -78,66 +78,47 @@
         </button>
       </div>
     </header>
-    <div class="flex flex-col w-full py-14 lg:py-28">
-      <div class="flex flex-col gap-y-8 w-full">
+    <div class="flex flex-row w-full pt-14 lg:pt-28 justify-between">
+      <div class="flex flex-col gap-y-8 w-full lg:w-1/2">
         <h1 class="text-4xl font-extrabold leading-10 i18nelement">
           Introducing LombardGPT
         </h1>
-        <h2 class="i18nelement font-light">LombardGPT is an Artificial Intelligence and Machine Learning (AI/ML) service for the Commercial Real Estate industry. Large Language Models (LLMs) in the general domain, such as ChatGPT, have shown remarkable success in producing human-like responses. However, such models have not been tailored to the Commercial Real Estate domain, resulting in inability to give plausible recommendations for buy/sell matching and investors profiling. <br><br>LombardGPT analyzes billions of datapoints and is able to accurately match sell side requests with potential buyers in all asset classes across global markets.</h2>
+        <h2 class="i18nelement font-light">LombardGPT is an Artificial Intelligence and Machine Learning (AI/ML) service for the Commercial Real Estate industry. We use Large Language Models (LLMs) to analyze billions of datapoints and accurately match sell side requests with potential buyers in all asset classes across global markets.</h2>
+      </div>
+      <div class="iframe-container mr-16">
+        <iframe src="https://lombardstandard.com/penrose.html" height="360px" width="360px" class="hidden lg:block"></iframe>
       </div>
     </div>
-    <div class="flex flex-col gap-6 pb-14 lg:pb-28 w-full">
-      <div class="flex flex-col gap-6 lg:flex-row justify-between">
-        <div class="flex flex-col lg:w-full w-2/3 gap-4 border border-gray-300 rounded-xl p-8">
-          <img class="w-12 h-auto flex-none" src="https://lombst.s3.amazonaws.com/website/Globe.png">
-          <h3 class="flex flex-row text-xl font-bold leading-10 items-center i18nelement" data-i18n="feature-1">Global Buyers</h3>
+    <div class="flex flex-col gap-16 py-14 lg:pb-28 lg:pt-0 w-full">
+      <h2 class="text-3xl font-extrabold leading-10 i18nelement" data-i18n="feature-0">
+        What
+      </h2>
+      <div class="flex flex-col gap-4 lg:flex-row justify-between">
+        <div class="flex flex-col lg:w-full w-2/3 gap-8 border border-gray-300 rounded-xl p-6">
+          <div class="flex-none">
+            <img class="h-12 w-auto" src="https://lombst.s3.amazonaws.com/website/Summarize.png">
+          </div>
+          <h3 class="flex font-bold text-lg i18nelement" data-i18n="feature-1">Summarization & Classification</h3>
           <div>
             <p class="font-light i18nelement" data-i18n="feature-1a">
-              Our 6,000+ buyers database includes Developers, Operators, Asset Managers, Family Offices, Professional Services and Financial institutions.
-            </p>
+              Developers, Operators, Asset Managers, Family Offices, Professional and Financial institutions.</p>
           </div>
         </div>
-        <div class="flex flex-col lg:w-full w-2/3 gap-4 border border-gray-300 rounded-xl p-8">
-          <img class="w-12 h-auto flex-none" src="https://lombst.s3.amazonaws.com/website/Intelligence.png">
-          <h3 class="flex flex-row text-xl font-bold leading-10 items-center i18nelement" data-i18n="feature-2">Intelligent matching</h3>
+        <div class="flex flex-col lg:w-full w-2/3 gap-8 border border-gray-300 rounded-xl p-6">
+          <div class="flex-none">
+            <img class="h-12 w-auto" src="https://lombst.s3.amazonaws.com/website/Rerank.png">
+          </div>
+          <h3 class="flex font-bold text-xl i18nelement" data-i18n="feature-2">Semantically rank</h3>
           <div>
             <p class="font-light i18nelement" data-i18n="feature-2a">
-              Potential buyers for a specific property are ranked by our AI algorithm based on property's location, type, strategy and layout.
-            </p>
+              Potential buyers are ranked by our AI algorithm.</p>
           </div>
         </div>
-        <div class="flex flex-col lg:w-full w-2/3 gap-4 border border-gray-300 rounded-xl p-8">
-          <img class="w-12 h-auto flex-none" src="https://lombst.s3.amazonaws.com/website/Updates.png">
-          <h3 class="flex flex-row text-xl font-bold leading-10 items-center i18nelement" data-i18n="feature-3">Buyers updates</h3>
-          <div>
-            <p class="font-light i18nelement" data-i18n="feature-3a">
-              Daily CRE headlines from 20+ specialized outlets in Australia, Europe, Hong Kong, Japan, Middle East, Singapore, UK and US.
-            </p>
+        <div class="flex flex-col lg:w-full w-2/3 gap-8 border border-gray-300 rounded-xl p-6">
+          <div class="flex flex-row">
+            <img class="h-12 w-auto" src="https://lombst.s3.amazonaws.com/website/Summarize.png">
           </div>
-        </div>
-      </div>
-      <div class="flex flex-col gap-6 lg:flex-row justify-between">
-        <div class="flex flex-col lg:w-full w-2/3 gap-4 border border-gray-300 rounded-xl p-8">
-          <img class="w-12 h-auto flex-none" src="https://lombst.s3.amazonaws.com/website/Globe.png">
-          <h3 class="flex flex-row text-xl font-bold leading-10 items-center i18nelement" data-i18n="feature-1">Global Buyers</h3>
-          <div>
-            <p class="font-light i18nelement" data-i18n="feature-1a">
-              Our 6,000+ buyers database includes Developers, Operators, Asset Managers, Family Offices, Professional Services and Financial institutions.
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-col lg:w-full w-2/3 gap-4 border border-gray-300 rounded-xl p-8">
-          <img class="w-12 h-auto flex-none" src="https://lombst.s3.amazonaws.com/website/Intelligence.png">
-          <h3 class="flex flex-row text-xl font-bold leading-10 items-center i18nelement" data-i18n="feature-2">Intelligent matching</h3>
-          <div>
-            <p class="font-light i18nelement" data-i18n="feature-2a">
-              Potential buyers for a specific property are ranked by our AI algorithm based on property's location, type, strategy and layout.
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-col lg:w-full w-2/3 gap-4 border border-gray-300 rounded-xl p-8">
-          <img class="w-12 h-auto flex-none" src="https://lombst.s3.amazonaws.com/website/Updates.png">
-          <h3 class="flex flex-row text-xl font-bold leading-10 items-center i18nelement" data-i18n="feature-3">Buyers updates</h3>
+          <h3 class="flex flex-row text-xl font-bold items-center i18nelement" data-i18n="feature-3">Generate emails</h3>
           <div>
             <p class="font-light i18nelement" data-i18n="feature-3a">
               Daily CRE headlines from 20+ specialized outlets in Australia, Europe, Hong Kong, Japan, Middle East, Singapore, UK and US.
