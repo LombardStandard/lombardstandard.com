@@ -137,10 +137,10 @@ window.addEventListener('load', async () => {
   const getCurrentLang = () =>
      (i18next.language.includes('en') ? 'en' : i18next.language) || 'en';
 
-  /*  const updateChartData = () => {
+   const updateChartData = () => {
      const t = translations[getCurrentLang()];
 
-     // for profile count chart
+     /*// for profile count chart
      const {
         profile_count,
         upcoming_profile_count
@@ -154,7 +154,7 @@ window.addEventListener('load', async () => {
         category: t['Upcoming profiles'] || 'Upcoming profiles',
         value: upcoming_profile_count,
      });
-     // for profile count chart
+     */// for profile count chart
 
      // for sectors chart
      const {
@@ -171,7 +171,7 @@ window.addEventListener('load', async () => {
     
 
   };
-  */
+ 
   // i18n
 
   // api
@@ -335,9 +335,9 @@ window.addEventListener('load', async () => {
         })
      );
 
-     if (id === 'profileCount') {
-        profileCountSeries = series;
-     }
+    // if (id === 'profileCount') {
+    //    profileCountSeries = series;
+    // }
      if (id === 'sectors') {
         sectorSeries = series;
      }
