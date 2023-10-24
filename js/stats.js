@@ -379,7 +379,7 @@ window.addEventListener('load', async () => {
      map = new mapboxgl.Map({
         container: containerId,
         accessToken: MAPBOX_ACCESS_KEY,
-        style: 'mapbox://styles/amg22075/ck1acsvj00ore1clvyw66eqqe',
+        style: 'mapbox://styles/amg22075/ckucg49w84hws18mq0qhdder7',
         center: [11, 38],
         renderWorldCopies: false,
         zoom: 0,
