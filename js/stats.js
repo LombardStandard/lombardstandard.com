@@ -137,7 +137,7 @@ window.addEventListener('load', async () => {
   const getCurrentLang = () =>
      (i18next.language.includes('en') ? 'en' : i18next.language) || 'en';
 
-  const updateChartData = () => {
+  /*  const updateChartData = () => {
      const t = translations[getCurrentLang()];
 
      // for profile count chart
@@ -171,6 +171,7 @@ window.addEventListener('load', async () => {
     
 
   };
+  */
   // i18n
 
   // api
