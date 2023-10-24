@@ -130,9 +130,20 @@
         <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
           <div class="flex flex-col w-full h-full justify-between " >
             <div class="flex flex-col items-center">
-                <h3 id="count" class="sm:text-xl text-base text-gray-400 pb-6">-</h3>
+                <h3 class="sm:text-xl text-base text-gray-400 pb-6 i18nelement" data-i18n="database-companies-1">Companies Location</h3>
                 <div id="map-container" class="w-full min-h-[320px] lg:mt-0 justify-self-end bg-gray-50 rounded-lg p-8"></div>
              </div> 
+            <div class="flex lg:flex-col w-full items-center justify-between lg:mt-0 mt-12 bg-gray-50 rounded-lg p-8 lg:space-y-8">
+                <div class="flex flex-col w-1/2 items-center">
+                   <h3 class="sm:text-xl text-base text-gray-400 i18nelement" data-i18n="database-vectors-1">Vector Dimensions</h3>
+                   <h2 id="vector-dimensionality" class="sm:text-4xl text-xl font-extrabold ">-</h2>
+                </div>
+                <div class="flex flex-col w-1/2 items-center" >
+                   <h3 class="sm:text-xl text-base text-gray-400 i18nelement" data-i18n="database-vectors-2">Vector Points</h3>
+                   <h2 id="vector-points" class="sm:text-4xl text-xl font-extrabold">-</h2>
+                </div>
+             </div>
+          </div>
           <div class="flex flex-col w-full space-y-16 pt-20 lg:pt-0">
              <div class="flex flex-col items-center space-y-6">
                 <h3 class="sm:text-xl text-base text-gray-400 i18nelement" data-i18n="database-companies-2">Companies Count</h3>
@@ -146,7 +157,7 @@
        </div>
       </div>
 
-     <div class="flex flex-col gap-10 py-14 lg:py-28">
+      <div class="flex flex-col gap-10 py-14 lg:py-28">
          <h1 class="text-3xl font-extrabold leading-10 i18nelement" data-i18n="form-title">
             Register to Beta today
          </h1>
@@ -267,13 +278,12 @@
             </div>
          </div>
       </footer>
-      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
-    <script src="js/stats.js"></script>  
-      <script src="js/script.js"></script>
-      <script src="js/form.js"></script>
-   </body>
+    <script src="js/stats.js"></script>
+  </body>
 </html>
