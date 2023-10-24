@@ -172,10 +172,6 @@ window.addEventListener('load', async () => {
      });
      // for sectors chart
     
-const count = document.getElementById('count')
-if (count) {
-  count.innerHTML = profile_count;
-}
 
   };
   // i18n
@@ -249,6 +245,7 @@ if (count) {
            vector_dimensionality.toLocaleString();
         document.getElementById('vector-points').innerHTML =
            total_vector_points.toLocaleString();
+       document.getElementById('count').innerHTML = profile_count;
 
         const {
            ref_country_codes
