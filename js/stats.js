@@ -171,6 +171,12 @@ window.addEventListener('load', async () => {
         });
      });
      // for sectors chart
+    
+const count = document.getElementById('count')
+if (count) {
+  count.innerHTML = profile_count;
+}
+
   };
   // i18n
 
@@ -287,6 +293,7 @@ window.addEventListener('load', async () => {
            }
         });
 
+       
         renderDealsMap('map-container', {
            type: 'FeatureCollection',
            features,
@@ -294,6 +301,7 @@ window.addEventListener('load', async () => {
      } catch (err) {
         console.log('Error occurred while fetching stats:', err.message);
      }
+    
   };
 
   const createChart = (id = '', data = []) => {
@@ -446,6 +454,8 @@ window.addEventListener('load', async () => {
         });
      });
   };
+
+
 
   // setDate();
   fetchStats();
