@@ -246,6 +246,7 @@ window.addEventListener('load', async () => {
         document.getElementById('vector-points').innerHTML =
            total_vector_points.toLocaleString();
        
+
         const {
            ref_country_codes
         } = await getCountriesLatLong();
@@ -289,6 +290,7 @@ window.addEventListener('load', async () => {
            }
         });
 
+       document.getElementById('count').innerHTML = profile_count;
        
         renderDealsMap('map-container', {
            type: 'FeatureCollection',
@@ -450,6 +452,8 @@ window.addEventListener('load', async () => {
         });
      });
   };
+
+  
 
 
 
