@@ -245,8 +245,7 @@ window.addEventListener('load', async () => {
            vector_dimensionality.toLocaleString();
         document.getElementById('vector-points').innerHTML =
            total_vector_points.toLocaleString();
-       document.getElementById('count').innerHTML = profile_count.toLocaleString();
-
+       
         const {
            ref_country_codes
         } = await getCountriesLatLong();
