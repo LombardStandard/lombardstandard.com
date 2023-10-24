@@ -241,10 +241,7 @@ window.addEventListener('load', async () => {
         createChart('profileCount', profileData);
         createChart('sectors', sectorsData);
 
-        document.getElementById('vector-dimensionality').innerHTML =
-           vector_dimensionality.toLocaleString();
-        document.getElementById('vector-points').innerHTML =
-           total_vector_points.toLocaleString();
+
        
 
         const {
