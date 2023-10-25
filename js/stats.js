@@ -136,7 +136,6 @@ window.addEventListener('load', async () => {
   }
 
   await i18Loader();
-<--
   const getCurrentLang = () =>
      (i18next.language.includes('en') ? 'en' : i18next.language) || 'en';
 
