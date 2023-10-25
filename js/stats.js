@@ -1,4 +1,7 @@
-
+const copyright = document.getElementById('copyright')
+if (copyright) {
+  copyright.innerHTML = new Date().getFullYear();
+}
 
 window.addEventListener('load', async () => {
   // i18n
