@@ -1,7 +1,3 @@
-const copyright = document.getElementById('copyright')
-if (copyright) {
-  copyright.innerHTML = new Date().getFullYear();
-}
 
 window.addEventListener('load', async () => {
   // i18n
@@ -239,7 +235,7 @@ window.addEventListener('load', async () => {
            value: profile_count_in_sectors.y[i],
         }));
 
-     //  createChart('profileCount', profileData);
+        createChart('profileCount', profileData);
         createChart('sectors', sectorsData);
 
      //  document.getElementById('vector-dimensionality').innerHTML =
