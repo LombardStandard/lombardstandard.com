@@ -1,3 +1,7 @@
+const copyright = document.getElementById('copyright')
+if (copyright) {
+  copyright.innerHTML = new Date().getFullYear();
+}
 
 window.addEventListener('load', async () => {
   // i18n
@@ -132,11 +136,11 @@ window.addEventListener('load', async () => {
   }
 
   await i18Loader();
-
+<--
   const getCurrentLang = () =>
      (i18next.language.includes('en') ? 'en' : i18next.language) || 'en';
 
-   const updateChartData = () => {
+    const updateChartData = () => {
      const t = translations[getCurrentLang()];
 
      // for profile count chart
@@ -170,7 +174,7 @@ window.addEventListener('load', async () => {
     
 
   };
- 
+  
   // i18n
 
   // api
@@ -238,12 +242,10 @@ window.addEventListener('load', async () => {
         createChart('profileCount', profileData);
         createChart('sectors', sectorsData);
 
-     //  document.getElementById('vector-dimensionality').innerHTML =
-     //      vector_dimensionality.toLocaleString();
-     //   document.getElementById('vector-points').innerHTML =
-     //      total_vector_points.toLocaleString();
-
-
+        document.getElementById('vector-dimensionality').innerHTML =
+           vector_dimensionality.toLocaleString();
+        document.getElementById('vector-points').innerHTML =
+           total_vector_points.toLocaleString();
        
 
         const {
@@ -379,7 +381,7 @@ window.addEventListener('load', async () => {
      map = new mapboxgl.Map({
         container: containerId,
         accessToken: MAPBOX_ACCESS_KEY,
-        style: 'mapbox://styles/amg22075/ckucg49w84hws18mq0qhdder7',
+        style: 'mapbox://styles/amg22075/ck1acsvj00ore1clvyw66eqqe',
         center: [11, 38],
         renderWorldCopies: false,
         zoom: 0,
