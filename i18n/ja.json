@@ -262,5 +262,11 @@
   "database-companies-2": "企業数",
   "database-companies-3": "企業部門",
   "database-vectors-1": "ベクトルの次元",
-  "database-vectors-2": "ベクトル点"
+  "database-vectors-2": "ベクトル点",
+  "product-1": "Summarization & Classification",
+  "product-1a": "Each buyer is summarized and claissfied as developer, operator, asset manager, family office, service provider or financial institution.",
+  "product-2": "Semantic rank",
+  "product-2a": "Potential buyers are ranked and recommended by our AI algorithm based on a specific property's location, type, strategy and layout.",
+  "product-3": "Generative AI emails",
+  "product-3a": "Ultra-personalized, human-like email content is created automatically for each property and sent to mulitple buyers in one click."
 }
