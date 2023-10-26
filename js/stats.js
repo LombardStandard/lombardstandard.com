@@ -402,7 +402,7 @@ window.addEventListener('load', async () => {
            type: 'geojson',
            data,
            cluster: true,
-           clusterRadius: 130,
+           clusterRadius: 125,
         });
 
         map.addLayer({
