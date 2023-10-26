@@ -122,13 +122,13 @@
       </div>
     </div>
     <div>
-      <div class="flex flex-col py-14 lg:py-28 gap-10">
+      <div class="flex flex-col py-8 lg:py-16 gap-10">
         <div class="flex flex-col lg:flex-row justify-between gap-x-8 sm:gap-x-4">
           <div class="flex flex-col gap-16 lg:gap-10 w-2/3 mt-20 order-last lg:order-first">
           <div class="flex flex-col w-full h-full" >
             <div class="flex flex-col">
                 <h3 class="font-light pb-6 i18nelement">Buyers location</h3>
-                <div id="map-container" class="w-full min-h-[320px] lg:mt-0 justify-self-end bg-gray-50 rounded-lg overflow-hidden"></div>
+                <div id="map-container" class="w-full min-h-[320px] rounded-lg overflow-hidden"></div>
              </div> 
           </div>
           <div class="flex flex-col w-full space-y-16 pt-20 lg:pt-0">
@@ -145,11 +145,11 @@
                   </h2>
                </div>
                <div class="flex flex-col ">
-                  <div class="flex flex-col">
-                     <h6 class="text-lg font-light i18nelement"><span id="count" class="font-bold text-blue-700">-</span>&nbsp;buy-side companies</h6>
-                    <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span class="font-bold">66</span>&nbsp;countries</h6>
-                    <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span class="font-bold">21</span>&nbsp;news outlets</h6>
-                    <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span id="vector-points" class="font-bold">-</span>&nbsp;data points</h6>
+                  <div class="flex flex-col space-y-4">
+                     <h6 class="text-lg font-light i18nelement"><span id="count" class="font-extrabold text-blue-700">-</span>&nbsp;buy-side companies</h6>
+                    <h6 class="text-lg font-light i18nelement"><span class="font-extrabold text-blue-700">66</span>&nbsp;countries</h6>
+                    <h6 class="text-lg font-light i18nelement"><span class="font-extrabold text-blue-700">21</span>&nbsp;news outlets</h6>
+                    <h6 class="text-lg font-light i18nelement"><span id="vector-points" class="font-extrabold text-blue-700">-</span>&nbsp;data points</h6>
                   </div>
                </div>
             </div>
@@ -158,12 +158,13 @@
       
       
       
-      <div class="flex flex-col py-14 lg:py-28 gap-10">
-            <div class="flex flex-col gap-y-10">
-               <div>
+      <div class="flex flex-col py-8 lg:py-16 gap-10">
+            <div class="flex flex-col gap-y-24">
+               <div class="flex flex-col gap-y-8 w-full">
                   <h2 class="text-3xl font-extrabold leading-10 i18nelement" data-i18n="feature-14">
                      Boost business, increase productivity
                   </h2>
+                 <h3 class="i18nelement font-light">LombardGPT is an Artificial Intelligence and Machine Learning (AI/ML) service for the Commercial Real Estate industry. We use Large Language Models (LLMs) to analyze millions of datapoints and accurately match sell side requests with potential buyers in all asset classes across global markets.</h3>
                </div>
                <div class="grid grid-cols-4 gap-16 rounded-xl bg-gray-50 p-16">
                   <div class="flex flex-col items-center gap-y-4">
@@ -286,28 +287,30 @@
             </div>
          </div>
       </div>
-      <footer class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
+       <footer class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
          <div class="flex flex-col gap-2 w-full">
             <a href="/">
                <svg class="h-8 w-28">
                   <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
                </svg>
             </a>
-            <div class="font-light leading-7 mt-4">
+            <div class="flex flex-row font-light mt-4">
                <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p>
-               <span class="inline ml-1" id="copyright"></span>
-            </div>
-            <div class="flex pt-2 gap-6">
+              <span class="inline ml-1" id="copyright"></span></div>
+              <p class="mr-4 font-light">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
+
+            <div class="flex flex-col pt-8 gap-6">
                <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline h-4" src="img/LinkedIn.png"> </a>
-               <a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline h-4" src="img/Antler.png"> </a>
+             
             </div>
          </div>
-         <div class="flex flex-col w-full justify-between gap-10 sm:gap-0 sm:w-9/12 sm:flex-row lg:w-1/2">
+         <div class="flex flex-col w-full justify-between items-end gap-10 sm:gap-0 sm:w-9/12 sm:flex-row lg:w-1/2">
             <div class="flex flex-col gap-2 font-light">
                <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
-               <a href="/database" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-2">Database</a>
                <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
                <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
+               <a href="/blog" class="transition hover:text-blue-700">Blog</a>
+
             </div>
             <div class="flex flex-col gap-10 mr-16">
                <div class="flex flex-col gap-2 font-light">
