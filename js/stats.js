@@ -240,8 +240,8 @@ window.addEventListener('load', async () => {
 
       //  document.getElementById('vector-dimensionality').innerHTML =
       //     vector_dimensionality.toLocaleString();
-      //  document.getElementById('vector-points').innerHTML =
-      //     total_vector_points.toLocaleString();
+        document.getElementById('vector-points').innerHTML =
+          total_vector_points.toLocaleString();
        
 
         const {
@@ -288,6 +288,7 @@ window.addEventListener('load', async () => {
         });
 
        document.getElementById('count').innerHTML = profile_count;
+       
        
         renderDealsMap('map-container', {
            type: 'FeatureCollection',
