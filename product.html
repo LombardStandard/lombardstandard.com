@@ -52,32 +52,32 @@
 <body class="overflow-x-hidden w-full bg-white py-8">
   <div class="mx-auto max-w-10xl px-8 lg:px-16">
     <header class="w-full flex items-center justify-between">
-      <div class="flex items-center gap-8">
-        <a href="/">
-          <svg class="h-8 w-28">
-            <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
-          </svg>
-        </a>
-        <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
-          <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
-          <a href="/database" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-2">Database</a>
-          <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
-          <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
-        </nav>
-      </div>
-      <div class="flex flex-row">
-        <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
-          <option value="en">English</option>
-          <option value="ja">日本語</option>
-        </select>
-        <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" data-i18n="menu-5">Register to Beta</a>
-        <button class="block lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" class="w-7 h-7">
-            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-          </svg>
-        </button>
-      </div>
-    </header>
+         <div class="flex items-center gap-8">
+            <a href="/">
+               <svg class="h-8 w-28">
+                  <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+               </svg>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
+               <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
+               <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+               <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
+               <a href="/blog" class="transition hover:text-blue-700" >Blog</a>           
+            </nav>
+         </div>
+         <div class="flex flex-row">
+            <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
+               <option value="en">English</option>
+               <option value="ja">日本語</option>
+            </select>
+            <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" data-i18n="menu-5">Register to Beta</a>
+            <button class="block lg:hidden">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" class="w-7 h-7">
+                  <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+               </svg>
+            </button>
+         </div>
+      </header>
     <div class="flex flex-row w-full py-14 lg:py-28 justify-between items-center"> 
       <div class="flex flex-col gap-y-8 w-full">
         <h1 class="text-4xl font-extrabold leading-10 i18nelement">
@@ -245,8 +245,7 @@
                      </div>
                      <div class="mb-6">
                         <label for="country" class="block mb-2 text-sm font-medium i18nelement" data-i18n="form-country">Country <span class="text-red-600 ml-1">*</span></label>
-                        <select id="country" name="country" class="bg-white border border-gray-300 text-sm rounded-md cursor-pointer focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" required>
-                           <option selected class="i18nelement" data-i18n="form-selected">Select</option>
+                        <select id="country" name="country" class="bg-white border border-gray-300 text-sm rounded-md cursor-pointer focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light placeholder:italic placeholder:text-slate-400" placeholder="Select" required>
                            <option class="i18nelement" value="Australia" data-i18n="form-australia">Australia</option>
                            <option class="i18nelement" value="Austria" data-i18n="form-austria">Austria</option>
                            <option class="i18nelement" value="Belgium" data-i18n="form-belgium"> Belgium </option>
