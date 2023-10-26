@@ -402,7 +402,7 @@ window.addEventListener('load', async () => {
            type: 'geojson',
            data,
            cluster: true,
-           clusterRadius: 100,
+           clusterRadius: 120,
         });
 
         map.addLayer({
@@ -426,7 +426,7 @@ window.addEventListener('load', async () => {
                  700,
                  40,
               ],
-              'circle-opacity': 1,
+              'circle-opacity': 0.8,
               'circle-stroke-width': 0,
               'circle-stroke-opacity': 1,
               'circle-stroke-color': '#111827',
@@ -440,12 +440,12 @@ window.addEventListener('load', async () => {
            filter: ['has', 'point_count'],
            layout: {
               'text-field': '{point_count_abbreviated}',
-              'text-font': ['Roboto Bold'],
-              'text-size': 16,
+              'text-font': ['Roboto Light'],
+              'text-size': 18,
               'text-offset': [0, 0],
            },
            paint: {
-              'text-color': '#1d4ed8',
+              'text-color': '#111827',
            },
         });
      });
