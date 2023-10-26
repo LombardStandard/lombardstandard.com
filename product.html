@@ -125,28 +125,26 @@
       <div class="flex flex-col py-14 lg:py-28 gap-10">
         <div class="flex flex-col lg:flex-row justify-between gap-x-8 sm:gap-x-4">
        <div class="flex flex-col gap-16 lg:gap-10 w-1/2 order-last lg:order-first">
-          <div class="flex flex-col w-full h-full  " >
-            <div class="flex flex-col items-center">
-                <h3 id="count" class="sm:text-xl text-base text-gray-400 pb-6">-</h3>
+            <div class="flex flex-col space-y-4 w-full h-full">
+                <h3 class="font-light i18nelement">Buyers location</h3>
                 <div id="map-container" class="w-full min-h-[320px] lg:mt-0 justify-self-end bg-gray-50 rounded-lg"></div>
              </div> 
-          </div>
           <div class="flex flex-col w-full space-y-16 pt-20 lg:pt-0">
-             <div class="flex flex-col items-center space-y-6">
-                <h3 class="sm:text-xl text-base text-gray-400 i18nelement" data-i18n="database-companies-3">Companies Sectors</h3>
-                <div class="w-full h-[320px] bg-gray-50 rounded-lg" id="sectors"></div>
+             <div class="flex flex-col space-y-4">
+                <h3 class="font-light i18nelement">Buyers segments breakdown</h3>
+                <div class="w-full h-[320px] rounded-lg" id="sectors"></div>
              </div>
           </div>
        </div>
           <div class="flex flex-col lg:ml-12 gap-y-10 ">
                <div>
                   <h2 class="text-3xl font-extrabold leading-10 i18nelement" data-i18n="feature-5">
-                     CRE matching, smarter
+                     Some data
                   </h2>
                </div>
                <div class="flex flex-col rounded-xl">
                   <div class="flex flex-col">
-                     <h6 class="text-lg font-bold i18nelement" data-i18n="feature-6"><span class="text-blue-700">⦿&nbsp;&nbsp;</span>Global buyers database</h6>
+                     <h6 class="text-lg font-light i18nelement" data-i18n="feature-6"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span id="count" class="font-bold"></span>Total buyers</h6>
                      <p class="font-light pl-6 i18nelement" data-i18n="feature-6a">We track 6,000+ buyers, including family offices and niche investors across all regions and asset types.</p>
                   </div>
                   <div class="flex flex-col mt-6">
@@ -180,7 +178,7 @@
                      Boost business, increase productivity
                   </h2>
                </div>
-               <div class="grid grid-cols-4 gap-16 rounded-xl bg-gray-100 p-16">
+               <div class="grid grid-cols-4 gap-16 rounded-xl bg-gray-50 p-16">
                   <div class="flex flex-col items-center gap-y-4">
                      <img src="https://lombst.s3.amazonaws.com/website/icons/Globe.png" class="h-8 w-auto flex flex-none">
                      <h6 class="text-lg font-bold text-center i18nelement" data-i18n="feature-10">Global database</h6>
