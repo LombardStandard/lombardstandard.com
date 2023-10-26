@@ -402,7 +402,7 @@ window.addEventListener('load', async () => {
            type: 'geojson',
            data,
            cluster: true,
-           clusterRadius: 80,
+           clusterRadius: 90,
         });
 
         map.addLayer({
@@ -420,13 +420,13 @@ window.addEventListener('load', async () => {
               'circle-radius': [
                  'step',
                  ['get', 'point_count'],
-                 30,
+                 28,
                  300,
-                 36,
+                 34,
                  700,
-                 44,
+                 42,
               ],
-              'circle-opacity': 0.7,
+              'circle-opacity': 0.8,
               'circle-stroke-width': 0,
               'circle-stroke-opacity': 1,
               'circle-stroke-color': '#111827',
