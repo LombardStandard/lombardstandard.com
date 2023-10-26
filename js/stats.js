@@ -334,7 +334,7 @@ window.addEventListener('load', async () => {
 
    //  if (id === 'profileCount') {
    //     profileCountSeries = series;
-     }
+   //   }
      if (id === 'sectors') {
         sectorSeries = series;
      }
