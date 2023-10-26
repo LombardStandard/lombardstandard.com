@@ -426,7 +426,7 @@ window.addEventListener('load', async () => {
                  700,
                  40,
               ],
-              'circle-opacity': 0.2,
+              'circle-opacity': 0.8,
               'circle-stroke-width': 0,
               'circle-stroke-opacity': 1,
               'circle-stroke-color': '#111827',
@@ -445,7 +445,7 @@ window.addEventListener('load', async () => {
               'text-offset': [0, 0],
            },
            paint: {
-              'text-color': '#111827',
+              'text-color': '#ffffff',
            },
         });
      });
