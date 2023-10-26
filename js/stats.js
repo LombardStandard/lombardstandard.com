@@ -416,7 +416,7 @@ window.addEventListener('load', async () => {
            paint: {
               'circle-pitch-alignment': 'map',
               'circle-pitch-scale': 'map',
-              'circle-color': '#1d4ed8',
+              'circle-color': '#ffffff',
               'circle-radius': [
                  'step',
                  ['get', 'point_count'],
@@ -445,7 +445,7 @@ window.addEventListener('load', async () => {
               'text-offset': [0, 0],
            },
            paint: {
-              'text-color': '#ffffff',
+              'text-color': '#1d4ed8',
            },
         });
      });
