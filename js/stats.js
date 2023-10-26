@@ -328,8 +328,8 @@ window.addEventListener('load', async () => {
            valueField: 'value',
            categoryField: 'category',
            oversizedBehavior: 'wrap',
-           legendLabelText: '[#111827; 300; fontSize: 14px; fontFamily: Roboto]{category}[/]',
-           legendValueText: '[#111827; bold; fontSize: 14px; fontFamily: Roboto]{value}[/]',
+           legendLabelText: '[#111827; 300; fontSize: 16px; fontFamily: Roboto]{category}[/]',
+           legendValueText: '[#111827; bold; fontSize: 16px; fontFamily: Roboto]{value}[/]',
         })
      );
 
