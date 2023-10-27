@@ -277,5 +277,12 @@
   "product-2": "Semantic rank",
   "product-2a": "Potential buyers are ranked and recommended by our AI algorithm based on a specific property's location, type, strategy and layout.",
   "product-3": "Generative AI emails",
-  "product-3a": "Ultra-personalized, human-like email content is created automatically for each property and sent to mulitple buyers in one click."
+  "product-3a": "Ultra-personalized, human-like email content is created automatically for each property and sent to mulitple buyers in one click.",
+  "about-date": "2023年 10月 27日",
+  "about-section-1": "投資用商業不動産(CRE)の売買取引は、昔ながらの複雑で旧式なやり方を相変わらず踏襲しています。つまり「人的関係」です。過去30年に限って言えば、デジタルスプレッドシートの普及(1990年代初頭)やオンラインCREマーケット(2000年頃)などのソフトウェア技術がこの商慣習に変革を起こし、新しい可能性が芽生え出して来ました。しかし、オンラインCREマーケットは数十年にわたり確立されて来たビジネスモデルであるにも拘わらず、米国以外で進展することはありませんでした。",
+  "about-section-2": "ヨーロッパやアジア太平洋地域では、共通言語は勿論のこと統一された取引ルールもありませんが、興味深いことに金額の多寡に拘わらず売り情報の秘匿性がディールの価値の非常に重要な部分を未だに占めているという点では共通しています。そのため、テクノロジーや一部機能を限定的に取込んだ局所的なプラットフォームはあるものの、広範な地域をカバーするプラットフォームは未だ存在しません。その結果、世界中の商業不動産の売り手も買い手も殆どが取引先を探すのに「人的関係」とスプレッドシートに頼っているのが現状で、そのためやり方も各社バラバラである上非効率極まりないことになっています。今こそ問題を解決すべき時が来たのです。",
+  "about-section-3": "<strong>テクノロジー。</strong> 人口知能（AI）の利用によって、ほんの数カ月前でさえ想像することさえ出来なかった計算能力を企業は獲得出来るようになりました。今や、人工知能（AI）と機械学習のアルゴリズムを大規模かつ低コストで利用する道が開けて来たのです。LombardGPTは数千におよぶウェブサイトを大規模言語モデル（LLM）を使って分析し、グローバル市場においてあらゆる物件タイプの売り手と買い手候補をマッチングさせることを可能にしたのです。",
+  "about-section-4": "<strong>チーム。</strong>私達はアジアを拠点とし、不動産をデジタル化するという強い信念に熱く燃える者の集まりです。ダイバーシティと専門性に富み、ビジョンを確実に推し進めていく気概を備えております。あらゆる業界の中でも進化から取り残され最も旧態依然とした不動産業界を変えるべく挑戦して参ります。道のりは遠いかもしれません、しかし変化を始める時は既に訪れたのです。",
+  "about-section-5": "プリシード期の企業に投資するベンチャー・キャピタル、<strong>Antler Japan</strong>、には多大な支援を頂き感謝しております。また、日本の<strong>住商建物様</strong>や<strong>ラルゴ・コーポレーション様</strong>、ドイツの<strong>Lubke Kelber</strong>社等にはパイロット・プログラムにご参加頂き大変感謝しております。LombardGPTの初期トライアルをご希望される方は<a class='text-blue-700' href='https://register.lombardgpt.com'>ウェイティングリストに登録</a>をクリック、説明をお聞きになりたい方は<a class='text-blue-700' href='mailto:hello@lomb.st'>メールを送る</a>をクリックして下さい。",
+  "about-section-6": "貴社の皆様にきっと気に入って頂けるものと自負しております。"
 }
