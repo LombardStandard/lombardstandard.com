@@ -288,7 +288,6 @@ window.addEventListener('load', async () => {
         });
 
        document.getElementById('count-1').innerHTML = profile_count;
-       document.getElementById('count-2').innerHTML = profile_count;
        
        
         renderDealsMap('map-container', {
