@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-gb">
+
 <head>
   <meta charset="utf-8" />
   <title>Lombard Standard - Product</title>
@@ -47,322 +48,176 @@
   <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
+
 <body class="w-full mx-auto max-w-8xl py-8 px-8 lg:px-16">
-    <header class="w-full flex items-center justify-between">
-      <div class="flex items-center gap-8">
+  <header class="w-full flex items-center justify-between">
+    <div class="flex items-center gap-8">
+      <a href="/">
+        <svg class="h-8 w-28">
+          <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+        </svg>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
+        <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
+        <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+        <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
+        <a href="/blog" class="transition hover:text-blue-700">Blog</a>
+      </nav>
+    </div>
+    <div class="flex flex-row">
+      <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+      </select>
+      <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" data-i18n="menu-5">Register to Beta</a>
+      <button class="block lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" class="w-7 h-7">
+          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <div class="flex flex-col gap-10 py-7 lg:py-14">
+    <h1 class="text-4xl font-extrabold leading-10 i18nelement" data-i18n="form-title">
+      Register to Beta today
+    </h1>
+    <div class="flex flex-col w-full gap-16 lg:flex-row">
+      <div class="space-y-10 w-1/2 lg:w-9/12">
+        <p class="font-light i18nelement" data-i18n="form-body">
+          We help Commercial Real Estate sellers and brokers make informed decisions faster. Using Artificial Intelligence trained on buyer's data across multiple markets, we tracks investors activity and ranks buyer's sentiment towards a specific properrty. Your team will spend less time looking for answers and more time closing business. <br><br> Fill out the form to register to the Beta release. We'll offer you a free trial.
+        </p>
+        <div class="flex rounded-xl overflow-hidden">
+          <video width="100%" controls autoplay muted>
+            <source src="https://lombst.s3.amazonaws.com/temp/video%234.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="flex w-1/2 lg:w-9/12 lg:ml-12">
+        <form name="New registration" method="POST" id="registerform" data-netlify="true" netlify-honeypot="bot-field">
+          <p class="hidden"><label> Don’t fill this out if you’re human: <input name="bot-field" /></label> </p>
+          <input type="hidden" name="form-name" value="New registration" />
+          <input type="text" value="last-name" hidden />
+          <input type="text" value="first-name" hidden />
+          <input type="text" value="work-email" hidden />
+          <input type="text" value="job-title" hidden />
+          <input type="text" value="company-name" hidden />
+          <input type="text" value="country" hidden />
+          <div class="bg-blue-700/10 rounded-xl sm:mt-0 p-8">
+            <div class="flex flex-col">
+              <div class="mb-6">
+                <label for="first-name" class="flex flex-row  mb-2 text-sm font-medium i18nelement" data-i18n="form-first-name">First Name <span class="text-red-600 ml-1">*</span></label>
+                <input type="text" id="first-name" name="first-name" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" required>
+              </div>
+              <div class="mb-6">
+                <label for="last-name" class="flex flex-row mb-2 text-sm font-medium i18nelement" data-i18n="form-last-name">Last Name <span class="text-red-600 ml-1">*</span></label>
+                <input type="text" id="last-name" name="last-name" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" required>
+              </div>
+            </div>
+            <div class="mb-6">
+              <div class="flex flex-row justify-between mb-2 items-center">
+                <label for="textEmail" class="block text-sm font-medium i18nelement" data-i18n="form-work-email">Work email <span class="text-red-600 ml-1">*</span></label>
+                <div class="text-xs text-red-600" id="errorEmail"></div>
+              </div>
+              <input type="text" name="work-email" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" id="textEmail" onkeyup="validateEmail(); required">
+            </div>
+            <div class="mb-6">
+              <label for="job-title" class="block mb-2 text-sm font-medium i18nelement" data-i18n="form-job-title">Job Title <span class="text-red-600 ml-1">*</span></label>
+              <input type="text" id="job-title" name="job-title" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" required>
+            </div>
+            <div class="mb-6">
+              <label for="company-name" class="block mb-2 text-sm font-medium i18nelement" data-i18n="form-company-name">Company Name <span class="text-red-600 ml-1">*</span></label>
+              <input type="text" id="company-name" name="company-name" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" required>
+            </div>
+            <div class="mb-6">
+              <label for="country" class="block mb-2 text-sm font-medium i18nelement" data-i18n="form-country">Country <span class="text-red-600 ml-1">*</span></label>
+              <select id="country" name="country" class="bg-white border border-gray-300 text-sm rounded-md cursor-pointer focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" required>
+                <option selected disabled class="i18nelement text-gray-500" value="" data-i18n="form-selected">Select</option>
+                <option class="i18nelement" value="Australia" data-i18n="form-australia">Australia</option>
+                <option class="i18nelement" value="Austria" data-i18n="form-austria">Austria</option>
+                <option class="i18nelement" value="Belgium" data-i18n="form-belgium"> Belgium </option>
+                <option class="i18nelement" value="Canada" data-i18n="form-canada">Canada</option>
+                <option class="i18nelement" value="China" data-i18n="form-china">China</option>
+                <option class="i18nelement" value="Denmark" data-i18n="form-denmark"> Denmark </option>
+                <option class="i18nelement" value="Finland" data-i18n="form-finland"> Finland </option>
+                <option class="i18nelement" value="France" data-i18n="form-france">France</option>
+                <option class="i18nelement" value="Germany" data-i18n="form-germany">Germany</option>
+                <option class="i18nelement" value="Hong Kong" data-i18n="form-hong-kong"> Hong Kong </option>
+                <option class="i18nelement" value="Hungary" data-i18n="form-hungary"> Hungary </option>
+                <option class="i18nelement" value="Indonesia" data-i18n="form-indonesia"> Indonesia </option>
+                <option class="i18nelement" value="Ireland" data-i18n="form-ireland"> Ireland </option>
+                <option class="i18nelement" value="Italy" data-i18n="form-italy">Italy</option>
+                <option class="i18nelement" value="Japan" data-i18n="form-japan">Japan</option>
+                <option class="i18nelement" value="Malaysia" data-i18n="form-malaysia"> Malaysia </option>
+                <option class="i18nelement" value="Netherlands" data-i18n="form-netherlands"> Netherlands </option>
+                <option class="i18nelement" value="New Zealand" data-i18n="form-new-zealand">New Zealand</option>
+                <option class="i18nelement" value="Norway" data-i18n="form-norway"> Norway </option>
+                <option class="i18nelement" value="Poland" data-i18n="form-poland"> Poland </option>
+                <option class="i18nelement" value="Portugal" data-i18n="form-portugal"> Portugal </option>
+                <option class="i18nelement" value="Singapore" data-i18n="form-singapore"> Singapore </option>
+                <option class="i18nelement" value="South Africa" data-i18n="form-south-africa">South Africa</option>
+                <option class="i18nelement" value="South Korea" data-i18n="form-south-korea">South Korea</option>
+                <option class="i18nelement" value="Spain" data-i18n="form-spain">Spain</option>
+                <option class="i18nelement" value="Sweden" data-i18n="form-sweden">Sweden</option>
+                <option class="i18nelement" value="Switzerland" data-i18n="form-switzerland">Switzerland</option>
+                <option class="i18nelement" value="Taiwan" data-i18n="form-taiwan"> Taiwan </option>
+                <option class="i18nelement" value="Thailand" data-i18n="form-thailand">Thailand</option>
+                <option class="i18nelement" value="United Kingdom" data-i18n="form-united-kingdom">United Kingdom</option>
+                <option class="i18nelement" value="United States" data-i18n="form-united-states">United States</option>
+              </select>
+            </div>
+            <p class="text-gray-500 text-sm font-light i18nelement" data-i18n="form-privacy">Lombard Standard needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our <a class="font-bold hover:text-blue-700" href="/privacy">Privacy Policy</span></a>.</p>
+            <button type="submit" id="submitButton" data-i18n="form-submit-button" class="i18nelement text-white bg-blue-700 transition font-medium enabled:hover:bg-blue-900 inline-flex px-4 py-2 rounded-lg text-base transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="py-7 lg:py-14 gap-6">
+    <div class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
+      <div class="flex flex-col gap-2 w-full">
         <a href="/">
           <svg class="h-8 w-28">
             <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
           </svg>
         </a>
-        <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
+        <div class="flex flex-row font-light mt-4">
+          <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
+        </div>
+
+      </div>
+      <div class="flex flex-col justify-between gap-x-10 gap-y-2 w-full lg:flex-row lg:w-2/3 pr-16">
+        <div class="flex flex-col gap-2 font-light">
           <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
           <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
           <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
+
+        </div>
+        <div class="flex flex-col gap-2 font-light ">
+
           <a href="/blog" class="transition hover:text-blue-700">Blog</a>
-        </nav>
+          <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy" href="/privacy">Privacy Policy</a>
+          <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</span></a>
+        </div>
       </div>
+    </div>
+    <div class="flex flex-row justify-between items-center">
       <div class="flex flex-row">
-        <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
-          <option value="en">English</option>
-          <option value="ja">日本語</option>
-        </select>
-        <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" data-i18n="menu-5">Register to Beta</a>
-        <button class="block lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" class="w-7 h-7">
-            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-          </svg>
-        </button>
+        <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline h-4 mr-4" src="img/LinkedIn.png"> </a>
+        <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4" src="img/x.png"> </a>
       </div>
-    </header>
-    <div class="flex flex-row w-full py-14 lg:py-28 justify-between items-center">
-      <div class="flex flex-col gap-y-8 w-full">
-        <h1 class="text-4xl font-extrabold leading-10 i18nelement">
-          Leverage AI for CRE matching
-        </h1>
-        <h2 class="i18nelement font-light">LombardGPT is an AI-powered index of Commercial Real Estate buyers. We use Large Language Models (LLMs) to analyze millions of datapoints and accurately match sell side requests with potential buyers in all asset classes across global markets.</h2>
+      <div class="flex flex-col">
+        <p class="mr-4 font-light">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
       </div>
-    </div>
-    <div class="flex flex-col gap-16 py-14 lg:pb-28 lg:pt-0 w-full">
-      <div class="flex flex-col lg:flex-row justify-between divide-y lg:divide-x lg:divide-y-0">
-        <div class="flex flex-col lg:w-full w-2/3 gap-8 p-8 pl-0">
-          <div class="flex-none">
-            <img class="h-12 w-auto" src="https://lombst.s3.amazonaws.com/website/Summarize.png">
-          </div>
-          <h3 class="flex font-bold text-lg i18nelement" data-i18n="product-1">Summarization & Classification</h3>
-          <div>
-            <p class="font-light i18nelement" data-i18n="product-1a">
-              Each buyer is summarized and claissfied as developer, operator, asset manager, family office, service provider or financial institution.</p>
-          </div>
-        </div>
-        <div class="flex flex-col lg:w-full w-2/3 gap-8 p-8 p-8 pl-0 lg:pl-8">
-          <div class="flex-none">
-            <img class="h-12 w-auto" src="https://lombst.s3.amazonaws.com/website/Rerank.png">
-          </div>
-          <h3 class="flex font-bold text-lg i18nelement" data-i18n="product-2">Semantic rank</h3>
-          <div>
-            <p class="font-light i18nelement" data-i18n="product-2a">
-              Potential buyers are ranked and recommended by our AI algorithm based on a specific property's location, type, strategy and layout.</p>
-          </div>
-        </div>
-        <div class="flex flex-col lg:w-full w-2/3 gap-8 p-8 pr-0 lg:pr-8 pl-0 lg:pl-8">
-          <div class="flex flex-row">
-            <img class="h-12 w-auto" src="https://lombst.s3.amazonaws.com/website/Emails.png">
-          </div>
-          <h3 class="flex flex-row text-lg font-bold items-center i18nelement" data-i18n="product-3">Generative AI emails</h3>
-          <div>
-            <p class="font-light i18nelement" data-i18n="product-3a">
-              Ultra-personalized, human-like email content is created automatically for each property and sent to mulitple buyers in one click.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="flex flex-col py-8 lg:py-16 gap-10">
-        <div class="flex flex-col lg:flex-row justify-between gap-x-8 sm:gap-x-4">
-          <div class="flex flex-col gap-16 lg:gap-10 w-2/3 mt-20 order-last lg:order-first">
-            <div class="flex flex-col w-full h-full">
-              <div class="flex flex-col">
-                <h3 class="font-light pb-6 text-gray-500 i18nelement">Buyers location</h3>
-                <div id="map-container" class="w-full min-h-[320px] rounded-lg overflow-hidden"></div>
-              </div>
-            </div>
-            <div class="flex flex-col w-full space-y-16">
-              <div class="flex flex-col space-y-4">
-                <h3 class="font-light text-gray-500 i18nelement">Buyers segments breakdown</h3>
-                <div class="w-full h-[320px] rounded-lg" id="sectors"></div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col lg:ml-12 gap-y-10 w-full lg:w-1/3">
-            <div>
-              <h2 class="text-3xl font-extrabold leading-10 i18nelement">
-                Our data, in numbers
-              </h2>
-            </div>
-            <div class="flex flex-col ">
-              <div class="flex flex-col space-y-4">
-                <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span id="count-1" class="font-extrabold">-</span>&nbsp;buy-side companies</h6>
-                <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span id="vector-points" class="font-extrabold">-</span>&nbsp;data points</h6>
-                <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span class="font-extrabold">66</span>&nbsp;countries</h6>
-                <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span class="font-extrabold">21</span>&nbsp;news outlets</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col py-8 lg:py-16 gap-10">
-        <div class="flex flex-col gap-y-24">
-          <div class="flex flex-col gap-y-8 w-full">
-            <h2 class="text-3xl font-extrabold leading-10 i18nelement" data-i18n="feature-14">
-              Boost business, increase productivity
-            </h2>
-            <h3 class="i18nelement font-light">Our team have deep knowledege of bottlenecks, painpoints and concerns within a traditional industry such as CRE. We have designed a toolkit of features and functionalities to digitize your business with modern technologies, and to make it as smooth as possible. </h3>
-          </div>
-          <div class="flex flex-col gap-16 rounded-xl bg-gray-100 p-12">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-16">
-              <div class="flex-col gap-y-4 hidden lg:flex">
-                <div class="flex-none">
-                  <img src="https://lombst.s3.amazonaws.com/website/icons/Globe.png" class="h-8 w-auto">
-                </div>
-                <h6 class="text-lg font-bold i18nelement">Global database</h6>
-                <p class="font-light i18nelement"><span id="count-2">-</span>&nbsp;buyers across all regions and asset types.</p>
-              </div>
-              <div class="flex flex-col gap-y-4">
-                <div class="flex-none">
-                  <img src="https://lombst.s3.amazonaws.com/website/icons/Intelligence.png" class="h-8 w-auto">
-                </div>
-                <h6 class="text-lg font-bold i18nelement">Intelligent matching
-                </h6>
-                <p class="font-light i18nelement">
-                  AI analyzes buyers’ criteria, updates and other factors.
-                </p>
-              </div>
-              <div class="flex-col gap-y-4 hidden lg:flex">
-                <div class="flex-none">
-                  <img src="https://lombst.s3.amazonaws.com/website/icons/Updates.png" class="h-8 w-auto">
-                </div>
-                <h6 class="text-lg font-bold i18nelement">Buyers updates</h6>
-                <p class="font-light i18nelement">Daily headlines from 20+ international CRE outlets.</p>
-              </div>
-              <div class="flex flex-col gap-y-4">
-                <div class="flex-none">
-                  <img src="https://lombst.s3.amazonaws.com/website/icons/Property.png" class="h-8 w-auto">
-                </div>
-                <h6 class="text-lg font-bold i18nelement">Your properties</h6>
-                <p class="font-light i18nelement">
-                  Matching potential buyers against your properties.
-                </p>
-              </div>
-            </div>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-16">
-              <div class="flex flex-col gap-y-4">
-                <div class="flex-none">
-                  <img src="https://lombst.s3.amazonaws.com/website/icons/Translation.png" class="h-8 w-auto">
-                </div>
-                <h6 class="text-lg font-bold i18nelement">Multi language</h6>
-                <p class="font-light i18nelement">Real-time translation to Japanese, more soon.</p>
-              </div>
-              <div class="flex flex-col gap-y-4">
-                <div class="flex-none">
-                  <img src="https://lombst.s3.amazonaws.com/website/icons/Confidentiality.png" class="h-8 w-auto flex-none">
-                </div>
-                <h6 class="text-lg font-bold i18nelement">Confidentiality
-                </h6>
-                <p class="font-light i18nelement">
-                  Private and secure, your data can't be seen by anyone.
-                </p>
-              </div>
-              <div class="flex-col gap-y-4 hidden lg:flex">
-                <div class="flex-none">
-                  <img src="https://lombst.s3.amazonaws.com/website/icons/Emails.png" class="h-8 w-auto">
-                </div>
-                <h6 class="text-lg font-bold i18nelement">Email automation</h6>
-                <p class="font-light i18nelement">Text generation and submission to relevant buyers.</p>
-              </div>
-              <div class="flex-col gap-y-4 hidden lg:flex">
-                <div class="flex-none">
-                  <img src="https://lombst.s3.amazonaws.com/website/icons/CRM.png" class="h-8 w-auto flex-none">
-                </div>
-                <h6 class="text-lg font-bold i18nelement">CRM Dashboard</h6>
-                <p class="font-light i18nelement">
-                  Keeping track of deal's progress fastly and easily.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col gap-10 py-14 lg:py-28">
-        <h1 class="text-3xl font-extrabold leading-10 i18nelement" data-i18n="form-title">
-          Register to Beta today
-        </h1>
-        <div class="flex flex-col w-full gap-8 lg:gap-4 lg:flex-row">
-          <p class="font-light w-full lg:w-9/12 i18nelement" data-i18n="form-body">
-            We help Commercial Real Estate sellers and brokers make informed decisions faster. Using Artificial Intelligence trained on buyer's data across multiple markets, we tracks investors activity and ranks buyer's sentiment towards a specific properrty. Your team will spend less time looking for answers and more time closing business. <br><br> Fill out the form to register to the Beta release. We'll offer you a free trial.
-          </p>
-          <div class="flex w-full lg:ml-12">
-            <form name="New registration" method="POST" id="registerform" data-netlify="true" netlify-honeypot="bot-field">
-              <p class="hidden"><label> Don’t fill this out if you’re human: <input name="bot-field" /></label> </p>
-              <input type="hidden" name="form-name" value="New registration" />
-              <input type="text" value="last-name" hidden />
-              <input type="text" value="first-name" hidden />
-              <input type="text" value="work-email" hidden />
-              <input type="text" value="job-title" hidden />
-              <input type="text" value="company-name" hidden />
-              <input type="text" value="country" hidden />
-              <div class="bg-blue-700/10 rounded-xl sm:mt-0 p-8">
-                <div class="flex flex-col">
-                  <div class="mb-6">
-                    <label for="first-name" class="flex flex-row  mb-2 text-sm font-medium i18nelement" data-i18n="form-first-name">First Name <span class="text-red-600 ml-1">*</span></label>
-                    <input type="text" id="first-name" name="first-name" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" required>
-                  </div>
-                  <div class="mb-6">
-                    <label for="last-name" class="flex flex-row mb-2 text-sm font-medium i18nelement" data-i18n="form-last-name">Last Name <span class="text-red-600 ml-1">*</span></label>
-                    <input type="text" id="last-name" name="last-name" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" required>
-                  </div>
-                </div>
-                <div class="mb-6">
-                  <div class="flex flex-row justify-between mb-2 items-center">
-                    <label for="textEmail" class="block text-sm font-medium i18nelement" data-i18n="form-work-email">Work email <span class="text-red-600 ml-1">*</span></label>
-                    <div class="text-xs text-red-600" id="errorEmail"></div>
-                  </div>
-                  <input type="text" name="work-email" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" id="textEmail" onkeyup="validateEmail(); required">
-                </div>
-                <div class="mb-6">
-                  <label for="job-title" class="block mb-2 text-sm font-medium i18nelement" data-i18n="form-job-title">Job Title <span class="text-red-600 ml-1">*</span></label>
-                  <input type="text" id="job-title" name="job-title" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" required>
-                </div>
-                <div class="mb-6">
-                  <label for="company-name" class="block mb-2 text-sm font-medium i18nelement" data-i18n="form-company-name">Company Name <span class="text-red-600 ml-1">*</span></label>
-                  <input type="text" id="company-name" name="company-name" class="border border-gray-300 text-sm rounded-md focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" placeholder="" required>
-                </div>
-                <div class="mb-6">
-                  <label for="country" class="block mb-2 text-sm font-medium i18nelement" data-i18n="form-country">Country <span class="text-red-600 ml-1">*</span></label>
-                  <select id="country" name="country" class="bg-white border border-gray-300 text-sm rounded-md cursor-pointer focus:ring-blue-700 focus:border-blue-700 focus:outline-none block w-full p-2 font-light" required>
-                    <option selected disabled class="i18nelement text-gray-500" value="" data-i18n="form-selected">Select</option>
-                    <option class="i18nelement" value="Australia" data-i18n="form-australia">Australia</option>
-                    <option class="i18nelement" value="Austria" data-i18n="form-austria">Austria</option>
-                    <option class="i18nelement" value="Belgium" data-i18n="form-belgium"> Belgium </option>
-                    <option class="i18nelement" value="Canada" data-i18n="form-canada">Canada</option>
-                    <option class="i18nelement" value="China" data-i18n="form-china">China</option>
-                    <option class="i18nelement" value="Denmark" data-i18n="form-denmark"> Denmark </option>
-                    <option class="i18nelement" value="Finland" data-i18n="form-finland"> Finland </option>
-                    <option class="i18nelement" value="France" data-i18n="form-france">France</option>
-                    <option class="i18nelement" value="Germany" data-i18n="form-germany">Germany</option>
-                    <option class="i18nelement" value="Hong Kong" data-i18n="form-hong-kong"> Hong Kong </option>
-                    <option class="i18nelement" value="Hungary" data-i18n="form-hungary"> Hungary </option>
-                    <option class="i18nelement" value="Indonesia" data-i18n="form-indonesia"> Indonesia </option>
-                    <option class="i18nelement" value="Ireland" data-i18n="form-ireland"> Ireland </option>
-                    <option class="i18nelement" value="Italy" data-i18n="form-italy">Italy</option>
-                    <option class="i18nelement" value="Japan" data-i18n="form-japan">Japan</option>
-                    <option class="i18nelement" value="Malaysia" data-i18n="form-malaysia"> Malaysia </option>
-                    <option class="i18nelement" value="Netherlands" data-i18n="form-netherlands"> Netherlands </option>
-                    <option class="i18nelement" value="New Zealand" data-i18n="form-new-zealand">New Zealand</option>
-                    <option class="i18nelement" value="Norway" data-i18n="form-norway"> Norway </option>
-                    <option class="i18nelement" value="Poland" data-i18n="form-poland"> Poland </option>
-                    <option class="i18nelement" value="Portugal" data-i18n="form-portugal"> Portugal </option>
-                    <option class="i18nelement" value="Singapore" data-i18n="form-singapore"> Singapore </option>
-                    <option class="i18nelement" value="South Africa" data-i18n="form-south-africa">South Africa</option>
-                    <option class="i18nelement" value="South Korea" data-i18n="form-south-korea">South Korea</option>
-                    <option class="i18nelement" value="Spain" data-i18n="form-spain">Spain</option>
-                    <option class="i18nelement" value="Sweden" data-i18n="form-sweden">Sweden</option>
-                    <option class="i18nelement" value="Switzerland" data-i18n="form-switzerland">Switzerland</option>
-                    <option class="i18nelement" value="Taiwan" data-i18n="form-taiwan"> Taiwan </option>
-                    <option class="i18nelement" value="Thailand" data-i18n="form-thailand">Thailand</option>
-                    <option class="i18nelement" value="United Kingdom" data-i18n="form-united-kingdom">United Kingdom</option>
-                    <option class="i18nelement" value="United States" data-i18n="form-united-states">United States</option>
-                  </select>
-                </div>
-                <p class="text-gray-500 text-sm font-light i18nelement" data-i18n="form-privacy">Lombard Standard needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our <a class="font-bold hover:text-blue-700" href="/privacy">Privacy Policy</span></a>.</p>
-                <button type="submit" id="submitButton" data-i18n="form-submit-button" class="i18nelement text-white bg-blue-700 transition font-medium enabled:hover:bg-blue-900 inline-flex px-4 py-2 rounded-lg text-base transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Submit</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <footer class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
-        <div class="flex flex-col gap-2 w-full">
-          <a href="/">
-            <svg class="h-8 w-28">
-              <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
-            </svg>
-          </a>
-          <div class="flex flex-row font-light mt-4">
-            <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
-          </div>
-          <p class="mr-4 font-light">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
-          <div class="flex flex-none mt-4">
-            <img alt="RICS" class="h-12 w-auto" src="https://lombst.s3.amazonaws.com/website/RICS.png">
-          </div>
-          <div class="flex flex-row pt-8 gap-6">
-            <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline h-4" src="img/LinkedIn.png"> </a>
-            <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4" src="img/x.png"> </a>
-          </div>
-        </div>
-        <div class="flex flex-col justify-between gap-10 w-full lg:flex-row lg:w-2/3 pr-16 lg:items-end">
-          <div class="flex flex-col gap-2 font-light">
-            <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
-            <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
-            <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
-            <a href="/blog" class="transition hover:text-blue-700">Blog</a>
-          </div>
-          <div class="flex flex-col gap-2 font-light ">
-            <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</span></a>
-            <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-terms" href="/terms">Terms of Service</span></a>
-            <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy" href="/privacy">Privacy Policy</a>
-            <a class="transition hover:text-blue-700 i18nelement" data-i18n="disclosure-section-13" href="/profile">Company Profile</a>
-          </div>
-        </div>
-      </footer>
-      <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-      <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-      <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-      <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
-      <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
-      <script src="js/stats.js"></script>
-      <script src="js/form.js"></script>
-      <script src="js/script.js"></script>
+
+  </footer>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
