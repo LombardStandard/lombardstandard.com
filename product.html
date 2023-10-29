@@ -49,15 +49,18 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
 
-<body class="w-full mx-auto max-w-8xl py-8 px-8 lg:px-16 hidden sm:block">
-  <header class="w-full flex items-center justify-between">
+<body class="w-full mx-auto max-w-8xl py-8 px-8 lg:px-16">
+  <div class="sm:hidden flex">
+    <p class="text-center font-bold text-blue-700 i18nelement">Please rotate your phone or use a larger screen to see the website.</p>
+  </div>
+  <header class="hidden sm:flex w-full items-center justify-between">
     <div class="flex items-center gap-8">
       <a href="/">
         <svg class="h-8 w-28">
           <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
         </svg>
       </a>
-      <nav class="lg:flex items-center gap-8 font-light ml-8">
+      <nav class="hidden md:flex items-center gap-8 font-light ml-8 ">
         <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
         <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
         <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
@@ -69,15 +72,10 @@
         <option value="en">English</option>
         <option value="ja">日本語</option>
       </select>
-      <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
-      <button class="block lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" class="w-7 h-7">
-          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-        </svg>
-      </button>
+      <a class="block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
     </div>
   </header>
-  <div class="flex flex-row w-full py-14 lg:py-28 justify-between items-center">
+  <div class="hidden sm:flex  flex-row w-full py-14 lg:py-28 justify-between items-center">
     <div class="flex flex-col gap-y-8 w-full">
       <h1 class="text-3xl font-extrabold leading-10 i18nelement">
         Leverage AI for CRE matching
@@ -85,7 +83,7 @@
       <h2 class="i18nelement font-light">LombardGPT is an AI-powered index of Commercial Real Estate buyers. We use Large Language Models (LLMs) to analyze millions of datapoints and accurately match sell side requests with potential buyers in all asset classes across global markets.</h2>
     </div>
   </div>
-  <div class="flex flex-col gap-16 py-14 lg:pb-28 lg:pt-0 w-full">
+  <div class="hidden sm:flex  flex-col gap-16 py-14 lg:pb-28 lg:pt-0 w-full">
     <div class="flex flex-col lg:flex-row justify-between divide-y lg:divide-x lg:divide-y-0">
       <div class="flex flex-col lg:w-full w-2/3 gap-8 p-8 pl-0">
         <div class="flex-none">
@@ -120,176 +118,176 @@
       </div>
     </div>
   </div>
-    <div class="flex flex-col py-7 lg:py-14 gap-10">
-      <div class="flex flex-col lg:flex-row justify-between gap-x-8 sm:gap-x-4">
-        <div class="flex flex-col gap-16 lg:gap-10 w-full lg:w-2/3 mt-20 order-last lg:order-first">
-          <div class="flex flex-col w-full h-full">
-            <div class="flex flex-col">
-              <h3 class="font-light pb-6 text-gray-500 i18nelement">Buyers location</h3>
-              <div id="map-container" class="w-full min-h-[320px] rounded-lg overflow-hidden"></div>
-            </div>
-          </div>
-          <div class="flex flex-col w-full space-y-16">
-            <div class="flex flex-col space-y-4">
-              <h3 class="font-light text-gray-500 i18nelement">Buyers segments breakdown</h3>
-              <div class="w-full h-[320px] rounded-lg" id="sectors"></div>
-            </div>
+  <div class="hidden sm:flex  flex-col py-7 lg:py-14 gap-10">
+    <div class="flex flex-col lg:flex-row justify-between gap-x-8 sm:gap-x-4">
+      <div class="flex flex-col gap-16 lg:gap-10 w-full lg:w-2/3 mt-20 order-last lg:order-first">
+        <div class="flex flex-col w-full h-full">
+          <div class="flex flex-col">
+            <h3 class="font-light pb-6 text-gray-500 i18nelement">Buyers location</h3>
+            <div id="map-container" class="w-full min-h-[320px] rounded-lg overflow-hidden"></div>
           </div>
         </div>
-        <div class="flex flex-col lg:ml-12 gap-y-10 w-full lg:w-1/3">
-          <div>
-            <h2 class="text-3xl font-extrabold leading-10 i18nelement">
-              Our data, in numbers
-            </h2>
-          </div>
-          <div class="flex flex-col ">
-            <div class="flex flex-col space-y-4">
-              <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span id="count-1" class="font-extrabold">-</span>&nbsp;buy-side companies</h6>
-              <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span id="vector-points" class="font-extrabold">-</span>&nbsp;data points</h6>
-              <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span class="font-extrabold">66</span>&nbsp;countries</h6>
-              <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span class="font-extrabold">21</span>&nbsp;news outlets</h6>
-            </div>
+        <div class="flex flex-col w-full space-y-16">
+          <div class="flex flex-col space-y-4">
+            <h3 class="font-light text-gray-500 i18nelement">Buyers segments breakdown</h3>
+            <div class="w-full h-[320px] rounded-lg" id="sectors"></div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="flex flex-col py-7 lg:py-14 gap-10">
-      <div class="flex flex-col gap-y-24">
-        <div class="flex flex-col gap-y-8 w-full">
-          <h2 class="text-3xl font-extrabold leading-10 i18nelement" data-i18n="feature-14">
-            Boost business, increase productivity
+      <div class="flex flex-col lg:ml-12 gap-y-10 w-full lg:w-1/3">
+        <div>
+          <h2 class="text-3xl font-extrabold leading-10 i18nelement">
+            Our data, in numbers
           </h2>
-          <h3 class="i18nelement font-light">Our team have deep knowledege of bottlenecks, painpoints and concerns within a traditional industry such as CRE. We have designed a toolkit of features and functionalities to digitize your business with modern technologies, and to make it as smooth as possible. </h3>
         </div>
-        <div class="flex flex-col gap-16 rounded-xl bg-gray-100 p-12">
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-16">
-            <div class="flex-col gap-y-4 hidden lg:flex">
-              <div class="flex-none">
-                <img src="https://lombst.s3.amazonaws.com/website/icons/Globe.png" class="h-8 w-auto">
-              </div>
-              <h6 class="text-lg font-bold i18nelement">Global database</h6>
-              <p class="font-light i18nelement"> About 3,000 buyers across all regions and asset types.</p>
-            </div>
-            <div class="flex flex-col gap-y-4">
-              <div class="flex-none">
-                <img src="https://lombst.s3.amazonaws.com/website/icons/Intelligence.png" class="h-8 w-auto">
-              </div>
-              <h6 class="text-lg font-bold i18nelement">Intelligent matching
-              </h6>
-              <p class="font-light i18nelement">
-                AI analyzes buyers’ criteria, updates and other factors.
-              </p>
-            </div>
-            <div class="flex-col gap-y-4 hidden lg:flex">
-              <div class="flex-none">
-                <img src="https://lombst.s3.amazonaws.com/website/icons/Updates.png" class="h-8 w-auto">
-              </div>
-              <h6 class="text-lg font-bold i18nelement">Buyers updates</h6>
-              <p class="font-light i18nelement">Daily headlines from 20+ international CRE outlets.</p>
-            </div>
-            <div class="flex flex-col gap-y-4">
-              <div class="flex-none">
-                <img src="https://lombst.s3.amazonaws.com/website/icons/Property.png" class="h-8 w-auto">
-              </div>
-              <h6 class="text-lg font-bold i18nelement">Your properties</h6>
-              <p class="font-light i18nelement">
-                Matching potential buyers against your properties.
-              </p>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-16">
-            <div class="flex flex-col gap-y-4">
-              <div class="flex-none">
-                <img src="https://lombst.s3.amazonaws.com/website/icons/Translation.png" class="h-8 w-auto">
-              </div>
-              <h6 class="text-lg font-bold i18nelement">Multi language</h6>
-              <p class="font-light i18nelement">Real-time translation to Japanese, more soon.</p>
-            </div>
-            <div class="flex flex-col gap-y-4">
-              <div class="flex-none">
-                <img src="https://lombst.s3.amazonaws.com/website/icons/Confidentiality.png" class="h-8 w-auto flex-none">
-              </div>
-              <h6 class="text-lg font-bold i18nelement">Confidentiality
-              </h6>
-              <p class="font-light i18nelement">
-                Private and secure, your data can't be seen by anyone.
-              </p>
-            </div>
-            <div class="flex-col gap-y-4 hidden lg:flex">
-              <div class="flex-none">
-                <img src="https://lombst.s3.amazonaws.com/website/icons/Emails.png" class="h-8 w-auto">
-              </div>
-              <h6 class="text-lg font-bold i18nelement">Email automation</h6>
-              <p class="font-light i18nelement">Text generation and submission to relevant buyers.</p>
-            </div>
-            <div class="flex-col gap-y-4 hidden lg:flex">
-              <div class="flex-none">
-                <img src="https://lombst.s3.amazonaws.com/website/icons/CRM.png" class="h-8 w-auto flex-none">
-              </div>
-              <h6 class="text-lg font-bold i18nelement">CRM Dashboard</h6>
-              <p class="font-light i18nelement">
-                Keeping track of deal's progress fastly and easily.
-              </p>
-            </div>
+        <div class="flex flex-col ">
+          <div class="flex flex-col space-y-4">
+            <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span id="count-1" class="font-extrabold">-</span>&nbsp;buy-side companies</h6>
+            <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span id="vector-points" class="font-extrabold">-</span>&nbsp;data points</h6>
+            <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span class="font-extrabold">66</span>&nbsp;countries</h6>
+            <h6 class="text-lg font-light i18nelement"><span class="text-blue-700">⦿&nbsp;&nbsp;</span><span class="font-extrabold">21</span>&nbsp;news outlets</h6>
           </div>
         </div>
       </div>
     </div>
-    <!-- CTA -->
-    <div class="flex flex-col py-14 lg:py-28 gap-10 items-center">
-      <div class="flex flex-col p-12 gap-y-10 w-9/12 lg:max-w-3xl rounded-xl font-light items-center border border-blue-700 shadow-lg">
-        <p class="text-center">With LombardGPT your team will spend less time looking for answers and more time closing business. Register to the Beta release, we'll offer a free trial.</p>
-        <div class="flex flex-none">
-          <a class="inline-block px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
+  </div>
+  <div class="hidden sm:flex  flex-col py-7 lg:py-14 gap-10">
+    <div class="flex flex-col gap-y-24">
+      <div class="flex flex-col gap-y-8 w-full">
+        <h2 class="text-3xl font-extrabold leading-10 i18nelement" data-i18n="feature-14">
+          Boost business, increase productivity
+        </h2>
+        <h3 class="i18nelement font-light">Our team have deep knowledege of bottlenecks, painpoints and concerns within a traditional industry such as CRE. We have designed a toolkit of features and functionalities to digitize your business with modern technologies, and to make it as smooth as possible. </h3>
+      </div>
+      <div class="flex flex-col gap-16 rounded-xl bg-gray-100 p-12">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-16">
+          <div class="flex-col gap-y-4 hidden lg:flex">
+            <div class="flex-none">
+              <img src="https://lombst.s3.amazonaws.com/website/icons/Globe.png" class="h-8 w-auto">
+            </div>
+            <h6 class="text-lg font-bold i18nelement">Global database</h6>
+            <p class="font-light i18nelement"> About 3,000 buyers across all regions and asset types.</p>
+          </div>
+          <div class="flex flex-col gap-y-4">
+            <div class="flex-none">
+              <img src="https://lombst.s3.amazonaws.com/website/icons/Intelligence.png" class="h-8 w-auto">
+            </div>
+            <h6 class="text-lg font-bold i18nelement">Intelligent matching
+            </h6>
+            <p class="font-light i18nelement">
+              AI analyzes buyers’ criteria, updates and other factors.
+            </p>
+          </div>
+          <div class="flex-col gap-y-4 hidden lg:flex">
+            <div class="flex-none">
+              <img src="https://lombst.s3.amazonaws.com/website/icons/Updates.png" class="h-8 w-auto">
+            </div>
+            <h6 class="text-lg font-bold i18nelement">Buyers updates</h6>
+            <p class="font-light i18nelement">Daily headlines from 20+ international CRE outlets.</p>
+          </div>
+          <div class="flex flex-col gap-y-4">
+            <div class="flex-none">
+              <img src="https://lombst.s3.amazonaws.com/website/icons/Property.png" class="h-8 w-auto">
+            </div>
+            <h6 class="text-lg font-bold i18nelement">Your properties</h6>
+            <p class="font-light i18nelement">
+              Matching potential buyers against your properties.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-16">
+          <div class="flex flex-col gap-y-4">
+            <div class="flex-none">
+              <img src="https://lombst.s3.amazonaws.com/website/icons/Translation.png" class="h-8 w-auto">
+            </div>
+            <h6 class="text-lg font-bold i18nelement">Multi language</h6>
+            <p class="font-light i18nelement">Real-time translation to Japanese, more soon.</p>
+          </div>
+          <div class="flex flex-col gap-y-4">
+            <div class="flex-none">
+              <img src="https://lombst.s3.amazonaws.com/website/icons/Confidentiality.png" class="h-8 w-auto flex-none">
+            </div>
+            <h6 class="text-lg font-bold i18nelement">Confidentiality
+            </h6>
+            <p class="font-light i18nelement">
+              Private and secure, your data can't be seen by anyone.
+            </p>
+          </div>
+          <div class="flex-col gap-y-4 hidden lg:flex">
+            <div class="flex-none">
+              <img src="https://lombst.s3.amazonaws.com/website/icons/Emails.png" class="h-8 w-auto">
+            </div>
+            <h6 class="text-lg font-bold i18nelement">Email automation</h6>
+            <p class="font-light i18nelement">Text generation and submission to relevant buyers.</p>
+          </div>
+          <div class="flex-col gap-y-4 hidden lg:flex">
+            <div class="flex-none">
+              <img src="https://lombst.s3.amazonaws.com/website/icons/CRM.png" class="h-8 w-auto flex-none">
+            </div>
+            <h6 class="text-lg font-bold i18nelement">CRM Dashboard</h6>
+            <p class="font-light i18nelement">
+              Keeping track of deal's progress fastly and easily.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <footer class="py-7 lg:py-14 gap-6">
-      <div class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
-         <div class="flex flex-col gap-2 w-full">
-            <a href="/">
-               <svg class="h-8 w-28">
-                  <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
-               </svg>
-            </a>
-            <div class="flex flex-row font-light mt-4">
-               <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
-            </div>
-
-         </div>
-         <div class="flex flex-col justify-between gap-x-10 gap-y-2 w-full lg:flex-row lg:w-2/3 pr-16">
-            <div class="flex flex-col gap-2 font-light">
-               <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
-               <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
-               <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
-
-            </div>
-            <div class="flex flex-col gap-2 font-light ">
-
-               <a href="/blog" class="transition hover:text-blue-700">Blog</a>
-               <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy" href="/privacy">Privacy Policy</a>
-               <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</span></a>
-            </div>
-         </div>
+  </div>
+  <!-- CTA -->
+  <div class="hidden sm:flex  flex-col py-14 lg:py-28 gap-10 items-center">
+    <div class="flex flex-col p-12 gap-y-10 w-9/12 lg:max-w-3xl rounded-xl font-light items-center border border-blue-700 shadow-lg">
+      <p class="text-center">With LombardGPT your team will spend less time looking for answers and more time closing business. Register to the Beta release, we'll offer a free trial.</p>
+      <div class="flex flex-none">
+        <a class="inline-block px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
       </div>
-      <div class="flex flex-row justify-between items-center">
-         <div class="flex flex-row">
-            <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline h-4 mr-4" src="img/LinkedIn.png"> </a>
-            <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4" src="img/x.png"> </a>
-         </div>
-         <div class="flex flex-col">
-            <p class="mr-4 font-light">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
-         </div>
+    </div>
+  </div>
+  <footer class="hidden sm:block py-7 lg:py-14 gap-6">
+    <div class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
+      <div class="flex flex-col gap-2 w-full">
+        <a href="/">
+          <svg class="h-8 w-28">
+            <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+          </svg>
+        </a>
+        <div class="flex flex-row font-light mt-4">
+          <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
+        </div>
 
-   </footer>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
-    <script src="js/stats.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/script.js"></script>
+      </div>
+      <div class="flex flex-col justify-between gap-x-10 gap-y-2 w-full lg:flex-row lg:w-2/3 pr-16">
+        <div class="flex flex-col gap-2 font-light">
+          <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
+          <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+          <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
+
+        </div>
+        <div class="flex flex-col gap-2 font-light ">
+
+          <a href="/blog" class="transition hover:text-blue-700">Blog</a>
+          <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy" href="/privacy">Privacy Policy</a>
+          <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row justify-between items-center">
+      <div class="flex flex-row">
+        <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline h-4 mr-4" src="img/LinkedIn.png"> </a>
+        <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4" src="img/x.png"> </a>
+      </div>
+      <div class="flex flex-col">
+        <p class="mr-4 font-light">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
+      </div>
+
+  </footer>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Responsive.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
