@@ -50,21 +50,21 @@
 </head>
 
 <body class="w-full mx-auto max-w-8xl py-8 px-8 lg:px-16">
-  <div class="sm:hidden flex">
+  <div class="sm:hidden flex items-center">
     <p class="text-center font-bold text-blue-700 i18nelement">Please rotate your phone or use a larger screen to see the website.</p>
   </div>
-  <header class="hidden sm:flex w-full items-center justify-between">
+  <header class="hidden sm:flex w-full items-center justify-between gap-x-4">
     <div class="flex items-center gap-8">
       <a href="/">
         <svg class="h-8 w-28">
           <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
         </svg>
       </a>
-      <nav class="hidden md:flex items-center gap-8 font-light ml-8 ">
+      <nav class="flex items-center gap-8 font-light ml-8 ">
         <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
         <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
-        <a href="/for-buyers" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
-        <a href="/blog" class="transition hover:text-blue-700">Blog</a>
+        <a href="/for-buyers" class="hidden md:block  transition hover:text-blue-700 i18nelement" data-i18n="menu-4">For buyers</a>
+        <a href="/blog" class="hidden md:block transition hover:text-blue-700 i18nelement" data-i18n="menu-4">Blog</a>
       </nav>
     </div>
     <div class="flex flex-row">
@@ -72,7 +72,7 @@
         <option value="en">English</option>
         <option value="ja">日本語</option>
       </select>
-      <a class="block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
+      <a class="hidden md:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
     </div>
   </header>
   <div class="hidden sm:flex  flex-row w-full py-14 lg:py-28 justify-between items-center">
