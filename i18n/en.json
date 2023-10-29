@@ -233,7 +233,7 @@
   "feature-4": "BETA CUSTOMERS",
   "feature-5": "CRE matching, smarter",
   "feature-6": "<span class='text-blue-700'>⦿&nbsp;&nbsp;</span>Global buyers database",
-  "feature-6a": "We track about 3,000 buyers, including family offices and niche investors across all regions and asset types.",
+  "feature-6a": "We track&nbsp;<span id="count-3">-</span>&nbsp;buyers, including family offices and niche investors across all regions and asset types.",
   "feature-7": "<span class='text-blue-700'>⦿&nbsp;&nbsp;</span>Buyers intelligence",
   "feature-7a": "AI analyzes buyers’ criteria, preferences, updates, news and other factors to match your specific property on sale.",
   "feature-8": "<span class='text-blue-700'>⦿&nbsp;&nbsp;</span>Intuitive and secure",
