@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Lombard Standard - Blog</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="Lombard Standard tracks and recommends commercial real estate investors for your transactions so you can find more buyers faster and reduce your costs." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1D4ED8" />
+  <meta name="author" content="Lombard Standard" />
+  <meta name="keywords" content="PropTech,Technology,Data,CRE,Commercial Real Estate,Lead Generation,AI,Artificial Intelligence,Analytics,CRM,Customer Relationship Management,LombardGPT" />
+  <meta name="twitter:title" content="Lombard Standard - Blog" />
+  <meta name="twitter:description" content="Lombard Standard tracks and recommends commercial real estate investors for your transactions so you can find more buyers faster and reduce your costs." />
+  <meta name="twitter:image" content="https://cdn.lomb.st/website/share-main.png" />
+  <meta name="twitter:image:alt" content="Lombard Standard" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lombardstandard" />
+  <meta property="og:title" content="Lombard Standard - Blog" />
+  <meta property="og:description" content="Lombard Standard tracks and recommends commercial real estate investors for your transactions so you can find more buyers faster and reduce your costs." />
+  <meta property="og:image" content="https://cdn.lomb.st/website/share-main.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="640" />
+  <meta property="og:url" content="https://lombardstandard.com/blog" />
+  <meta property="og:site_name" content="Lombard Standard" />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
+  <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-CYEZFH8RRT');
+  </script>
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <link rel="canonical" href="https://lombardstandard.com/blog" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
+  <link rel="stylesheet" href="css/new-global.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="w-full mx-auto max-w-8xl py-8 px-8 lg:px-16">
+  <header class="w-full flex items-center justify-between">
+    <div class="flex items-center gap-8">
+      <a href="/">
+        <svg class="h-8 w-28">
+          <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+        </svg>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
+        <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
+        <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+        <a href="/blog" class="transition hover:text-blue-700">Blog</a>
+      </nav>
+    </div>
+    <div class="flex flex-row">
+      <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+      </select>
+      <a class="hidden lg:block relative px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
+      <button class="block lg:hidden" data-modal-target="top-left-modal" data-modal-toggle="top-left-modal">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111827" class="w-7 h-7">
+          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+    <div id="top-left-modal" data-modal-placement="top-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+      <div class="relative w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-xl shadow">
+          <!-- Modal header -->
+          <div class="flex items-center justify-between pt-6 pr-6 ">
+            <button type="button" class="text-gray-900 bg-transparent hover:bg-gray-100 rounded-full text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="top-left-modal">
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+              </svg>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="flex flex-col pl-6 pb-6 space-y-6 font-light">
+            <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
+            <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+            <a href="/blog" class="transition hover:text-blue-700">Blog</a>
+            <div>
+              <a class="inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <div class="flex flex-col w-full py-14 lg:py-28 lg:justify-between lg:gap-x-8 lg:flex-row lg:items-center">
+    <div class="flex flex-col gap-y-8 w-full lg:w-1/2">
+      <div class="flex flex-col">
+        <h1 class="text-5xl font-extrabold i18nelement" data-i18n="header-1">
+          Blog<br>
+        </h1>
+      </div>
+      <div class="flex lg:w-9/12 font-light i18nelement" data-i18n="header-3">
+        <p>
+          LombardGPT tracks and recommends commercial real estate investors for your transactions so you can find more buyers faster and reduce your costs.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  
+<div class="max-w-md border border-gray-300 rounded-xl shadow">
+        <img class="rounded-t-xl" src="https://lombst.s3.amazonaws.com/website/Lombard%2BAntler.jpg" alt="" />
+    <div class="p-5">
+        <a href="https://prtimes.jp/main/html/rd/p/000000005.000108918.html">
+            <h5 class="mb-1 text-2xl font-bold">Antler invests Pre-Seed round in Lombard Standard</h5>
+          <h6 class="mb-6 text-sm text-gray-500">August 2, 2023</h6>
+        </a>
+        <p class="mb-6 font-normal text-gray-700 dark:text-gray-400">We are glad to announce our ¥20M in Pre-Seed funding from Antler Japan. Thanks to the team this round will boost our development in the coming months.</p>
+        <a href="https://prtimes.jp/main/html/rd/p/000000005.000108918.html" class="inline-flex justify-self-end items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition">
+            Read more
+        </a>
+    </div>
+</div>
+
+  
+  <div class="flex flex-col gap-16 py-14 lg:py-28 w-full">
+    <h2 class="text-3xl font-extrabold i18nelement" data-i18n="feature-0">
+      Matching automation for CRE enterprises
+    </h2>
+    <div class="flex flex-col gap-8 lg:gap-4 lg:flex-row justify-between">
+      <div class="flex flex-col w-full gap-2 lg:w-1/4">
+        <h3 class="flex flex-row text-xl font-bold items-center i18nelement" data-i18n="feature-1">
+          <div class="text-2xl text-blue-700">↯&nbsp;</div>
+          Save time
+        </h3>
+        <div>
+          <p class="font-light i18nelement" data-i18n="feature-1a">
+            Forget about endless hours to keep track of buyers criteria, email contacts and recent news. It’s all in one place with constant updates.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col w-full gap-2 lg:w-1/4">
+        <h3 class="flex flex-row text-xl font-bold items-center i18nelement" data-i18n="feature-2">
+          <div class="text-2xl text-blue-700">$&nbsp;</div>
+          Save money
+        </h3>
+        <div>
+          <p class="font-light i18nelement" data-i18n="feature-2a">
+            A small monthly subscription instead of diluting your hard-earned success fee. Reach buyers directly and avoid the usual chain of middle-men.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col w-full gap-2 lg:w-1/4">
+        <h3 class="flex flex-row text-xl font-bold items-center i18nelement" data-i18n="feature-3">
+          <div class="text-2xl text-blue-700">+&nbsp;</div>
+          Tap more buyers
+        </h3>
+        <div>
+          <p class="font-light i18nelement" data-i18n="feature-3a">
+            Break the closed circuit and increase the opportunities for your deals. Your business network can now expand to hundreds of untapped buyers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full my-10 lg:my-20 gap-8 py-14 px-7 w-full overflow-hidden border-t border-b border-gray-300">
+    <div class="flex flex-col md:flex-row gap-y-10 items-center justify-around gap-x-10">
+      <p class="text-sm text-left font-bold text-blue-700 i18nelement" data-i18n="feature-4">
+        BETA CUSTOMERS
+      </p>
+      <div class="flex-none">
+        <img class="w-auto h-20 grayscale" decoding="async" title="Sumisho Tatemono" src="https://lombst.s3.amazonaws.com/website/Sumisho.png" />
+      </div>
+      <div class="flex-none">
+        <img class="w-auto h-20 grayscale" decoding="async" title="Largo Corporation" src="https://lombst.s3.amazonaws.com/website/Largo.png" />
+      </div>
+      <div class="flex-none">
+        <img class="w-auto h-10 grayscale" decoding="async" title="Lubke Kelber" src="https://lombst.s3.amazonaws.com/website/Lubke.png" />
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col py-14 lg:py-28 gap-10">
+    <div class="flex flex-col justify-between gap-x-8 sm:gap-x-4 lg:items-center lg:gap-x-8 lg:flex-row">
+      <div class="hidden sm:block lg:w-8/12 order-last lg:order-first sm:mt-12 lg:mt-0">
+        <img id="body-image" class="max-w-full h-auto rounded-xl" decoding="async" src="" />
+      </div>
+      <div class="flex flex-col lg:ml-12 gap-y-10">
+        <div>
+          <h2 class="text-3xl font-extrabold i18nelement" data-i18n="feature-5">
+            CRE matching, smarter
+          </h2>
+        </div>
+        <div class="flex flex-col rounded-xl">
+          <div class="flex flex-col">
+            <h6 class="text-lg font-bold i18nelement" data-i18n="feature-6"><span class="text-blue-700">⦿&nbsp;&nbsp;</span>Global buyers database</h6>
+            <p class="font-light pl-6 i18nelement" data-i18n="feature-6a">We track about 3,000 buyers, including family offices and niche investors across all regions and asset types.</p>
+          </div>
+          <div class="flex flex-col mt-6">
+            <h6 class="text-lg font-bold i18nelement" data-i18n="feature-7"><span class="text-blue-700">⦿&nbsp;&nbsp;</span>Buyers intelligence
+            </h6>
+            <p class="font-light pl-6 i18nelement" data-i18n="feature-7a">
+              AI analyzes buyers’ criteria, preferences, updates, news and other factors to match your specific property on sale.
+            </p>
+          </div>
+          <div class="flex flex-col mt-6">
+            <h6 class="text-lg font-bold i18nelement" data-i18n="feature-8"><span class="text-blue-700">⦿&nbsp;&nbsp;</span>Intuitive and secure</h6>
+            <p class="font-light pl-6 i18nelement" data-i18n="feature-8a">Easy multi language search through industry-related keywords, in a protected environment without risk of data leakage.</p>
+          </div>
+          <div class="flex flex-col mt-6">
+            <h6 class="text-lg font-bold i18nelement" data-i18n="feature-9"><span class="text-blue-700">⦿&nbsp;&nbsp;</span>Contacts management</h6>
+            <p class="font-light pl-6 i18nelement" data-i18n="feature-9a">
+              Thousands of corporate connections, a smart CRM dashboard and multiple, ultra-personalized emails sent in just a few clicks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CTA -->
+  <div class="flex flex-col py-14 lg:py-28 gap-10 items-center">
+    <div class="flex flex-col p-12 gap-y-10 w-9/12 lg:max-w-3xl rounded-xl font-light items-center border border-blue-700 shadow-lg">
+      <p class="text-center">With LombardGPT your team will spend less time looking for answers and more time closing business. Register to the Beta release, we'll offer a free trial.</p>
+      <div class="flex flex-none">
+        <a class="inline-block px-4 py-2 bg-blue-700 rounded-lg font-medium text-white hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
+      </div>
+    </div>
+  </div>
+  <footer class="py-7 lg:py-14 gap-6">
+    <div class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
+      <div class="flex flex-col gap-2 w-full">
+        <a href="/">
+          <svg class="h-8 w-28">
+            <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+          </svg>
+        </a>
+        <div class="flex flex-row font-light mt-4">
+          <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
+        </div>
+
+      </div>
+      <div class="flex flex-col justify-between gap-x-10 gap-y-2 w-full lg:flex-row lg:w-2/3 pr-16">
+        <div class="flex flex-col gap-2 font-light">
+          <a href="/product" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-1">Product</a>
+          <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+          <a href="/blog" class="transition hover:text-blue-700">Blog</a>
+
+        </div>
+        <div class="flex flex-col gap-2 font-light ">
+
+          <a href="/register" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-4">Regsiter for Beta</a>
+          <a href="/privacy" class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy">Privacy Policy</a>
+          <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-row justify-between items-center">
+      <div class="flex flex-row">
+        <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline h-4 mr-4" src="img/LinkedIn.png"> </a>
+        <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4" src="img/x.png"> </a>
+      </div>
+      <div class="flex flex-col">
+        <p class="mr-4 font-light">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
+      </div>
+
+  </footer>
+  <script src="js/stats.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/form.js"></script>
+</body>
+
+</html>
