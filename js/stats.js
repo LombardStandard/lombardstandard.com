@@ -409,9 +409,7 @@ window.addEventListener('load', async () => {
   };
 
   const renderDealsMap = (containerId, data) => {
-    if (map) {
-      map.remove();
-    }
+    if (map) map.remove();
 
     map = new mapboxgl.Map({
       container: containerId,
