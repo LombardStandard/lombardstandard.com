@@ -199,7 +199,7 @@
   "disclosure-section-3a": "1,050万80円",
   "disclosure-section-4": "<strong>資本準備金</strong>", 
   "disclosure-section-4a": "1,000万80円",
-  "disclosure-section-5": "<strong>住所</strong>", 
+  "disclosure-section-5": "<strong>登記上および郵送先住所</strong>", 
   "disclosure-section-5a": " 〒150-0043 東京都渋谷区道玄坂1丁目10番8号 渋谷道玄坂東急ビル2F−C ",
   "disclosure-section-6": "<strong>E-Mail </strong>", 
   "disclosure-section-6a": "<a class='hover:text-blue-700' href='mailto:hello@lomb.st'>hello@lomb.st</a>",
@@ -216,6 +216,8 @@
   "disclosure-section-12": "<strong>テクニカルスポンサー</strong>",
   "disclosure-section-12a": "Amazon Web Services、 Google Cloud Platform、 Microsoft Azure",
   "disclosure-section-13": "会社概要",
+  "disclosure-section-14": "オフィス住所",
+  "disclosure-section-14a": "〒105-6004 東京都港区虎ノ門4丁目3-1 城山トラストタワー4階",
   "menu-1": "製品",
   "menu-2": "データベース",
   "menu-3": "チーム",
@@ -288,5 +290,14 @@
   "about-section-4": "<strong>チーム。</strong>私達はアジアを拠点とし、不動産をデジタル化するという強い信念に熱く燃える者の集まりです。ダイバーシティと専門性に富み、ビジョンを確実に推し進めていく気概を備えております。あらゆる業界の中でも進化から取り残され最も旧態依然とした不動産業界を変えるべく挑戦して参ります。道のりは遠いかもしれません、しかし変化を始める時は既に訪れたのです。",
   "about-section-5": "プリシード期の企業に投資するベンチャー・キャピタル、<strong>Antler Japan</strong>、には多大な支援を頂き感謝しております。また、日本の<strong>住商建物様</strong>や<strong>ラルゴ・コーポレーション様</strong>、ドイツの<strong>Lubke Kelber</strong>社等にはパイロット・プログラムにご参加頂き大変感謝しております。LombardGPTの初期トライアルをご希望される方は<a class='text-blue-700' href='https://register.lombardgpt.com'>ウェイティングリストに登録</a>をクリック、説明をお聞きになりたい方は<a class='text-blue-700' href='mailto:hello@lomb.st'>メールを送る</a>をクリックして下さい。",
   "about-section-6": "貴社の皆様にきっと気に入って頂けるものと自負しております。",
-  "CTA": "LombardGPTを使えば買い手探しの時間を短縮して、売買のクロージングに向け貴重な時間を集中出来ます。試用版に申し込みましょう、今なら無料でご提供しています。"
+  "CTA": "LombardGPTを使えば買い手探しの時間を短縮して、売買のクロージングに向け貴重な時間を集中出来ます。試用版に申し込みましょう、今なら無料でご提供しています。",
+  "about-1": "当社ビジネス",
+  "about-2": "商業不動産の売買マッチングは相も変わらず煩雑で旧態依然なプロセス、つまり「人間関係」ベース、からなんら進化していません。そう聞いて胸をなでおろす向きもいらっしゃるかもしれませんが、時間的にもコスト面からも非効率極まりないのは広く知られるところです。いまこそデジタル化すべき時なのです。人工知能(AI)の出現によってわずか数か月前には想像もつかなかったような計算能力が誰にでも手に入るようになりました。今や大規模なアルゴリズムを低コストで利用できるのです。この技術によって大きな恩恵が商業不動産のマッチングにもたらされると当社は考えます。",
+  "about-3": "アルベルト・MG・サルージャ",
+  "about-4": "創業者CEO",
+  "about-5": "20年余りヨーロッパ、アジア太平洋諸国、及び米国での商業不動産開発に携わった経験がある。2018年にLombard Standardを創業、2023年にAntlerによりプリシード投資対象に選ばれる。",
+  "about-6": "山田　伸幸",
+  "about-7": "共同創業者、コマーシャル・ディレクター",
+  "about-8": "日米両国で40年にわたり商業不動産の取引に携わった経験がある。2022年にアドバイザーとしてLombard Standardに参画、以後会社の発展に向け多大な貢献を果たす。",
+  "about-9": "オフィスはこちら"
 }
