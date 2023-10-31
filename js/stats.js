@@ -208,7 +208,7 @@ window.addEventListener('load', async () => {
     });
     // for sectors chart
 
-    if (mapLang) mapLang.setLanguage({ language: getCurrentLang() })
+    if (mapLang) map?.setStyle(mapLang.setLanguage(map.getStyle(), getCurrentLang()));
   };
 
   // api
