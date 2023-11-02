@@ -172,7 +172,7 @@ function updateImages() {
   if (imageBody) {
     imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${lang}.png`
   }
-  if (videoAd) {
+  if (videoHead) {
     videoHead.src = `https://lombst.s3.amazonaws.com/website/video-${lang}.mp4`
   }
 }
