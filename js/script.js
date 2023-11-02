@@ -163,7 +163,7 @@ function updateIframes() {
 function updateImages() {
   const imageHead = document.getElementById('header-image')
   const imageBody = document.getElementById('body-image')
-  const video = document.getElementById('video')
+  const videoHead = document.getElementById('videoAd')
   const lang = i18next.language.includes('en') ? 'en' : i18next.language;
 
   if (imageHead) {
@@ -172,8 +172,8 @@ function updateImages() {
   if (imageBody) {
     imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${lang}.png`
   }
-  if (video) {
-    video.src = `https://lombst.s3.amazonaws.com/website/video-${lang}.mp4.png`
+  if (videoAd) {
+    videoHead.src = `https://lombst.s3.amazonaws.com/website/video-${lang}.mp4`
   }
 }
 
