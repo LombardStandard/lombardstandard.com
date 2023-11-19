@@ -31,6 +31,9 @@ window.addEventListener('load', async () => {
       Others: 'Others',
       'Investment Banking': 'Investment Banking',
       'Leasing Real Estate': 'Leasing Real Estate',
+      "Asset Manager": "Asset Manager",
+      "Property Developer": "Property Developer",
+      "Property Operator": "Property Operator",
       months: [
         'January',
         'February',
@@ -56,6 +59,9 @@ window.addEventListener('load', async () => {
       'Professional Services': 'プロフェッショナルサービス',
       'Property Development': '不動産開発',
       'Property Operations': '不動産オペレーター',
+      "Asset Manager": "アセット・マネージャー",
+      "Property Developer": "不動産開発業者",
+      "Property Operator": "プロパティ演算子",
       months: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
     },
   };
@@ -184,29 +190,12 @@ window.addEventListener('load', async () => {
   const updateChartData = () => {
     const t = translations[getCurrentLang()];
 
-    // for profile count chart
-    // const { profile_count, upcoming_profile_count } = apiData;
-
-    // profileCountSeries.data.setIndex(0, {
-    //   category: t['Available profiles'] || 'Available profiles',
-    //   value: profile_count,
-    // });
-    // profileCountSeries.data.setIndex(1, {
-    //   category: t['Upcoming profiles'] || 'Upcoming profiles',
-    //   value: upcoming_profile_count,
-    // });
-    // for profile count chart
-
-    // for sectors chart
-    const { profile_count_in_sectors } = apiData;
-
-    profile_count_in_sectors.x.forEach((sector, i) => {
+    apiData.segments.forEach(([sector, value], i) => {
       sectorSeries.data.setIndex(i, {
         category: t[sector] || sector,
-        value: profile_count_in_sectors.y[i],
+        value: ((value / apiData.totalSegments) * 100).toFixed(1),
       });
     });
-    // for sectors chart
 
     if (mapLang) map?.setStyle(mapLang.setLanguage(map.getStyle(), getCurrentLang()));
   };
@@ -219,10 +208,13 @@ window.addEventListener('load', async () => {
     'United States of America': 'United States',
     "People's Republic of China": 'China',
     'Vatican City': 'Holy See (Vatican City State)',
+    'Kingdom of Saudi Arabia': 'Saudi Arabia',
+    'Hong Kong, China': 'Hong Kong',
+    'Hong Kong SAR': 'Hong Kong',
+    'Hong Kong S.A.R.': 'Hong Kong',
   };
 
   let map = null;
-  let profileCountSeries = null;
   let sectorSeries = null;
   let apiData = {};
   let mapLang = null
@@ -243,70 +235,46 @@ window.addEventListener('load', async () => {
 
   const fetchStats = async () => {
     try {
-      const {
-        profile_count,
-        upcoming_profile_count,
-        profile_count_in_sectors,
-        vector_dimensionality,
-        total_vector_points,
-        profile_count_in_countries,
-      } = await fetch(API_URL).then((res) => res.json());
-
-      apiData = {
-        profile_count,
-        upcoming_profile_count,
-        profile_count_in_sectors,
-      };
-
       const t = translations[getCurrentLang()];
 
-      const profileData = [
-        {
-          category: t['Available profiles'] || 'Available profiles',
-          value: profile_count,
-        },
-        {
-          category: t['Upcoming profiles'] || 'Upcoming profiles',
-          value: upcoming_profile_count,
-        },
-      ];
-      const sectorsData = profile_count_in_sectors.x.map((sector, i) => ({
+      const { stats } = await fetch(API_URL).then((res) => res.json());
+
+      // populating contacts
+      const contactsCount = document.getElementById('contacts-count')
+      if (contactsCount) {
+        contactsCount.innerHTML = stats.peopleCount || 0
+      }
+
+      // populating segments
+      const segments = Object.entries(stats.segments || {})
+      const totalSegments = segments.reduce((prev, [, value]) => prev + value, 0)
+      apiData.segments = segments
+      apiData.totalSegments = totalSegments
+
+      const sectorsData = segments.map(([sector, value]) => ({
         category: t[sector] || sector,
-        value: profile_count_in_sectors.y[i],
+        value: ((value / totalSegments) * 100).toFixed(1),
       }));
 
-      //  createChart('profileCount', profileData);
       createChart('sectors', sectorsData);
 
-      //  document.getElementById('vector-dimensionality').innerHTML =
-      //     vector_dimensionality.toLocaleString();
-      document.getElementById('vector-points').innerHTML =
-        total_vector_points.toLocaleString();
-
+      // populating countries
       const { ref_country_codes } = await getCountriesLatLong();
-
       const features = [];
 
-      profile_count_in_countries.x.forEach((country, i) => {
-        let finalCountry = country;
+      const countriesCount = document.getElementById('countries-count')
+      if (countriesCount) {
+        countriesCount.innerHTML = Object.keys(stats.countries).length
+      }
 
-        if (
-          [
-            'United States of America',
-            "People's republic of China",
-            'Vatican City',
-          ].includes(finalCountry)
-        ) {
-          finalCountry = COUNTRY_MAP[country];
-        }
+      for (let [country, count] of Object.entries(stats.countries)) {
+        let finalCountry = COUNTRY_MAP[country] || country;
 
         const data = ref_country_codes.find(
           (coord) => coord.country === finalCountry
         );
 
         if (data) {
-          const count = profile_count_in_countries.y[i];
-
           const arrayOfFeatures = Array.from(
             {
               length: count,
@@ -323,9 +291,7 @@ window.addEventListener('load', async () => {
 
           features.push(...arrayOfFeatures);
         }
-      });
-
-      document.getElementById('count-1').innerHTML = profile_count;
+      }
 
       renderDealsMap('map-container', {
         type: 'FeatureCollection',
@@ -367,13 +333,10 @@ window.addEventListener('load', async () => {
         legendLabelText:
           '[#111827; 300; fontSize: 16px; fontFamily: Roboto]{category}[/]',
         legendValueText:
-          '[#111827; bold; fontSize: 16px; fontFamily: Roboto]{value}[/]',
+          '[#111827; bold; fontSize: 16px; fontFamily: Roboto]{value}%[/]',
       })
     );
 
-    //  if (id === 'profileCount') {
-    //     profileCountSeries = series;
-    //   }
     if (id === 'sectors') {
       sectorSeries = series;
     }
@@ -404,9 +367,7 @@ window.addEventListener('load', async () => {
     legend.data.setAll(series.dataItems);
   };
 
-  const getCountriesLatLong = async () => {
-    return fetch('/js/countries.json').then((res) => res.json());
-  };
+  const getCountriesLatLong = () => fetch('/js/countries.json').then((res) => res.json())
 
   const renderDealsMap = (containerId, data) => {
     if (map) map.remove();
@@ -492,5 +453,4 @@ window.addEventListener('load', async () => {
 
   // setDate();
   fetchStats();
-  // api
 });
