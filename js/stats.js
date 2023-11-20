@@ -239,6 +239,12 @@ window.addEventListener('load', async () => {
 
       const { stats } = await fetch(API_URL).then((res) => res.json());
 
+      // populating companies
+      const companiesCount = document.getElementById('companies-count')
+      if (companiesCount) {
+        companiesCount.innerHTML = stats.companiesCount || 0
+      }
+
       // populating contacts
       const contactsCount = document.getElementById('contacts-count')
       if (contactsCount) {
