@@ -20,7 +20,7 @@ function validateEmail() {
   var Error = document.getElementById("errorEmail");
   Error.innerHTML = "";
   
-  var expr = /^[^\s@]+@[^\s@]+\.[^\s@]+$/+\s*;
+  var expr = /^\s*/^[^\s@]+@[^\s@]+\.[^\s@]+\s*$/;
   if (!expr.test(email)) {
       Error.innerHTML = "Invalid email address";
       document.getElementById("submitButton").disabled = true;
