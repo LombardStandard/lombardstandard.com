@@ -212,6 +212,7 @@ window.addEventListener('load', async () => {
     'Hong Kong, China': 'Hong Kong',
     'Hong Kong SAR': 'Hong Kong',
     'Hong Kong S.A.R.': 'Hong Kong',
+    'Taiwan': 'Taiwan, Province of China'
   };
 
   let map = null;
