@@ -386,7 +386,7 @@ window.addEventListener('load', async () => {
       center: [11, 38],
       renderWorldCopies: false,
       zoom: 0,
-      maxZoom: 8,
+      maxZoom: 6,
       minZoom: 0,
       pitch: 0,
       bearing: 0,
