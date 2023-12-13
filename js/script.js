@@ -154,20 +154,21 @@ function updateImages() {
   const imageBody = document.getElementById('body-image')
   const videoHead = document.getElementById('videoAd')
   const lang = i18next.language.includes('en') ? 'en' : i18next.language;
+  const finalLang = ['de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'].includes(lang) ? 'en' : lang
 
   if (imageHead) {
-    imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${lang}.png`
+    imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${finalLang}.png`
   }
   if (imageBody) {
-    imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${lang}.png`
+    imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${finalLang}.png`
   }
   if (videoHead) {
-    videoHead.src = `https://lombst.s3.amazonaws.com/website/video-${lang}.mp4`
+    videoHead.src = `https://lombst.s3.amazonaws.com/website/video-${finalLang}.mp4`
   }
 }
 
 async function i18Loader() {
-  const langs = ['en', 'ja'];
+  const langs = ['en', 'ja', 'de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'];
   const langJsons = await Promise.all(
     langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
   );

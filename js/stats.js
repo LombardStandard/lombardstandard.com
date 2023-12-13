@@ -64,6 +64,230 @@ window.addEventListener('load', async () => {
       "Property Operator": "プロパティ演算子",
       months: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
     },
+    de: {
+      "Available profiles": "Verfügbare Profile",
+      "Upcoming profiles": "Kommende Profile",
+      "Last updated": "Letzte Aktualisierung",
+      "Property": "Eigentum",
+      "Hospitality": "Gastfreundschaft",
+      "Investment Management": "Investitionsmanagement",
+      "Real Estate": "Immobilie",
+      "Financial Services": "Finanzdienstleistungen",
+      "Real Estate Development": "Immobilien-Entwicklung",
+      "Others": "Andere",
+      "Investment Banking": "Investment Banking",
+      "Leasing Real Estate": "Leasing von Immobilien",
+      "Asset Manager": "Vermögensverwalter",
+      "Property Developer": "Immobilienentwickler",
+      "Property Operator": "Immobilienbetreiber",
+      "Family Office": "Familienbüro",
+      "months": [
+        "Januar",
+        "Februar",
+        "Marsch",
+        "April",
+        "Mai",
+        "Juni",
+        "Juli",
+        "August",
+        "September",
+        "Oktober",
+        "November",
+        "Dezember"
+      ]
+    },
+    'zh-CN': {
+      "Available profiles": "可用的配置文件",
+      "Upcoming profiles": "即将推出的简介",
+      "Last updated": "最近更新时间",
+      "Property": "财产",
+      "Hospitality": "款待",
+      "Investment Management": "投资管理",
+      "Real Estate": "房地产",
+      "Financial Services": "金融服务",
+      "Real Estate Development": "房地产开发",
+      "Others": "其他的",
+      "Investment Banking": "投资银行",
+      "Leasing Real Estate": "租赁房地产",
+      "Asset Manager": "资产管理人",
+      "Property Developer": "房地产开发商",
+      "Property Operator": "物业经营者",
+      "Family Office": "家族办公室",
+      "months": [
+        "一月",
+        "二月",
+        "行进",
+        "四月",
+        "可能",
+        "六月",
+        "七月",
+        "八月",
+        "九月",
+        "十月",
+        "十一月",
+        "十二月"
+      ]
+    },
+    'zh-Hant': {
+      "Available profiles": "可用的設定檔",
+      "Upcoming profiles": "即將推出的簡介",
+      "Last updated": "最近更新時間",
+      "Property": "財產",
+      "Hospitality": "款待",
+      "Investment Management": "投資管理",
+      "Real Estate": "房地產",
+      "Financial Services": "金融服務",
+      "Real Estate Development": "房地產開發",
+      "Others": "其他的",
+      "Investment Banking": "投資銀行",
+      "Leasing Real Estate": "租賃房地產",
+      "Asset Manager": "資產管理人",
+      "Property Developer": "房地產開發商",
+      "Property Operator": "物業經營者",
+      "Family Office": "家族辦公室",
+      "months": [
+        "一月",
+        "二月",
+        "行進",
+        "四月",
+        "可能",
+        "六月",
+        "七月",
+        "八月",
+        "九月",
+        "十月",
+        "十一月",
+        "十二月"
+      ]
+    },
+    fr: {
+      "Available profiles": "Profils disponibles",
+      "Upcoming profiles": "Profils à venir",
+      "Last updated": "Dernière mise à jour",
+      "Property": "Propriété",
+      "Hospitality": "Hospitalité",
+      "Investment Management": "Gestion des investissements",
+      "Real Estate": "Immobilier",
+      "Financial Services": "Services financiers",
+      "Real Estate Development": "Développement immobilier",
+      "Others": "Autres",
+      "Investment Banking": "Banque d'investissement",
+      "Leasing Real Estate": "Location de biens immobiliers",
+      "Asset Manager": "Gestionnaire d'actifs",
+      "Property Developer": "Promoteur immobilier",
+      "Property Operator": "Opérateur immobilier",
+      "Family Office": "Bureau familial",
+      "months": [
+        "Janvier",
+        "Février",
+        "Mars",
+        "Avril",
+        "Peut",
+        "Juin",
+        "Juillet",
+        "Août",
+        "Septembre",
+        "Octobre",
+        "Novembre",
+        "Décembre"
+      ]
+    },
+    it: {
+      "Available profiles": "Profili disponibili",
+      "Upcoming profiles": "Prossimi profili",
+      "Last updated": "Ultimo aggiornamento",
+      "Property": "Proprietà",
+      "Hospitality": "Ospitalità",
+      "Investment Management": "Gestione degli investimenti",
+      "Real Estate": "Immobiliare",
+      "Financial Services": "Servizi finanziari",
+      "Real Estate Development": "Sviluppo immobiliare",
+      "Others": "Altri",
+      "Investment Banking": "Investimento bancario",
+      "Leasing Real Estate": "Locazione immobiliare",
+      "Asset Manager": "Gestore patrimoniale",
+      "Property Developer": "Sviluppatore immobiliare",
+      "Property Operator": "Operatore immobiliare",
+      "Family Office": "Ufficio familiare",
+      "months": [
+        "Gennaio",
+        "Febbraio",
+        "Marzo",
+        "aprile",
+        "Maggio",
+        "Giugno",
+        "Luglio",
+        "agosto",
+        "settembre",
+        "ottobre",
+        "novembre",
+        "Dicembre"
+      ]
+    },
+    es: {
+      "Available profiles": "Perfiles disponibles",
+      "Upcoming profiles": "Próximos perfiles",
+      "Last updated": "Última actualización",
+      "Property": "Propiedad",
+      "Hospitality": "Hospitalidad",
+      "Investment Management": "Gestión de inversiones",
+      "Real Estate": "Bienes raíces",
+      "Financial Services": "Servicios financieros",
+      "Real Estate Development": "Desarrollo inmobiliario",
+      "Others": "Otros",
+      "Investment Banking": "Banca de inversión",
+      "Leasing Real Estate": "Arrendamiento de Bienes Raíces",
+      "Asset Manager": "Gestor de activos",
+      "Property Developer": "Promotor inmobiliario",
+      "Property Operator": "Operador de propiedad",
+      "Family Office": "Oficina familiar",
+      "months": [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Puede",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre"
+      ]
+    },
+    pt: {
+      "Available profiles": "Perfis disponíveis",
+      "Upcoming profiles": "Próximos perfis",
+      "Last updated": "Ultima atualização",
+      "Property": "Propriedade",
+      "Hospitality": "Hospitalidade",
+      "Investment Management": "Gestão de Investimentos",
+      "Real Estate": "Imobiliária",
+      "Financial Services": "Serviços financeiros",
+      "Real Estate Development": "Desenvolvimento Imobiliário",
+      "Others": "Outros",
+      "Investment Banking": "Investimento bancário",
+      "Leasing Real Estate": "Locação de imóveis",
+      "Asset Manager": "Gerente de ativos",
+      "Property Developer": "Incorporador de imóveis",
+      "Property Operator": "Operador de propriedade",
+      "Family Office": "Escritório Familiar",
+      "months": [
+        "Janeiro",
+        "Fevereiro",
+        "Marchar",
+        "abril",
+        "Poderia",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "novembro",
+        "dezembro"
+      ]
+    }
   };
 
   const detectionOptions = {
@@ -129,17 +353,18 @@ window.addEventListener('load', async () => {
     const imageHead = document.getElementById('header-image');
     const imageBody = document.getElementById('body-image');
     const lang = i18next.language.includes('en') ? 'en' : i18next.language;
+    const finalLang = ['de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'].includes(lang) ? 'en' : lang
 
     if (imageHead) {
-      imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${lang}.png`;
+      imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${finalLang}.png`;
     }
     if (imageBody) {
-      imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${lang}.png`;
+      imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${finalLang}.png`;
     }
   }
 
   async function i18Loader() {
-    const langs = ['en', 'ja'];
+    const langs = ['en', 'ja', 'de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'];
     const langJsons = await Promise.all(
       langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
     );
