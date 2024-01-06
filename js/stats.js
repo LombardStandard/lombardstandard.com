@@ -356,7 +356,7 @@ window.addEventListener('load', async () => {
     const finalLang = ['de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'].includes(lang) ? 'en' : lang
 
     if (imageHead) {
-      imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${finalLang}.png`;
+      imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${finalLang}-min.png`;
     }
     if (imageBody) {
       imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${finalLang}.png`;
