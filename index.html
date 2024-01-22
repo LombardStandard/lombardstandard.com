@@ -24,7 +24,20 @@
   <meta property="og:url" content="https://lombardstandard.com/" />
   <meta property="og:site_name" content="Lombard Standard" />
   <meta property="og:type" content="website" />
+  <meta name="keywords" content="commercial real estate, real estate investors, transaction tracking, buyer recommendations, cost reduction" />
+  <meta name="mobile-friendly" content="true" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '440px'
+          },
+        }
+      }
+    }
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
   <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -222,33 +235,39 @@
       </div>
     </div>
   </div>
-  <div class="w-full my-10 lg:my-20 gap-8 py-14 px-7 w-full overflow-hidden border-t border-b border-gray-300">
-    <div class="flex flex-col md:flex-row gap-y-10 items-center justify-around gap-x-10">
+  <div class="w-full my-10 py-10 lg:my-20 gap-8 md:py-16 md:px-7 w-full overflow-hidden border-t border-b border-gray-300">
+    <div class="flex flex-col gap-8 md:items-center md:gap-2 w-full justify-between md:flex-row">
       <p class="text-sm text-left font-bold text-blue-700 i18nelement" data-i18n="feature-4">
         BETA CUSTOMERS
       </p>
-      <div class="flex-none">
-        <img class="w-auto h-36 grayscale" decoding="async" title="Mitsui Fudosan Realty" src="https://lombst.s3.amazonaws.com/website/Mitsui.jpeg" />
-      </div>
-      <div class="flex-none">
-        <img class="w-auto h-20 grayscale" decoding="async" title="Tokyo Tatemono" src="https://lombst.s3.amazonaws.com/website/Tokyo_Tatemono.png" />
-      </div>
-      <div class="flex-none">
-        <img class="w-auto h-20 grayscale" decoding="async" title="B-Lot" src="https://lombst.s3.amazonaws.com/website/B-Lot.jpg" />
+
+      <div class="scroller">
+        <div class="scroller__inner">
+          <img class="w-44 h-auto xs:w-auto xs:h-20 grayscale" decoding="async" title="Mitsui Fudosan Realty" src="https://lombst.s3.amazonaws.com/website/Mitsui (cropped).jpeg" />
+          <img class="w-44 h-auto xs:w-auto xs:h-20 grayscale" decoding="async" title="Tokyo Tatemono" src="https://lombst.s3.amazonaws.com/website/Tokyo_Tatemono.png" />
+          <img class="w-44 h-auto xs:w-auto xs:h-20 grayscale" decoding="async" title="B-Lot" src="https://lombst.s3.amazonaws.com/website/B-Lot.jpg" />
+          <img class="w-44 h-auto xs:w-auto xs:h-20 grayscale" decoding="async" title="Pag" src="https://lombst.s3.amazonaws.com/website/Pag.png" />
+
+          <!-- To make the images overflow -->
+          <img class="w-44 h-auto xs:w-auto xs:h-20 grayscale" decoding="async" title="Mitsui Fudosan Realty" src="https://lombst.s3.amazonaws.com/website/Mitsui (cropped).jpeg" />
+          <img class="w-44 h-auto xs:w-auto xs:h-20 grayscale" decoding="async" title="Tokyo Tatemono" src="https://lombst.s3.amazonaws.com/website/Tokyo_Tatemono.png" />
+          <img class="w-44 h-auto xs:w-auto xs:h-20 grayscale" decoding="async" title="B-Lot" src="https://lombst.s3.amazonaws.com/website/B-Lot.jpg" />
+          <img class="w-44 h-auto xs:w-auto xs:h-20 grayscale" decoding="async" title="Pag" src="https://lombst.s3.amazonaws.com/website/Pag.png" />
+        </div>
       </div>
     </div>
   </div>
   <div class="flex flex-col py-14 lg:py-28 gap-10">
     <div class="flex flex-col justify-between gap-x-8 sm:gap-x-4 lg:items-center lg:gap-x-8 lg:flex-row">
       <div class="order-last lg:order-first mt-12 lg:mt-0">
-        <div class="flex flex-col p-12 gap-y-10 w-full lg:max-w-3xl w-1/2 rounded-xl font-light items-center border border-blue-700 shadow-lg">
+        <div class="flex flex-col p-12 gap-y-10 w-full lg:max-w-3xl rounded-xl font-light items-center border border-blue-700 shadow-lg">
           <p class="text-center i18nelement" data-i18n="CTA">With LombardGPT your team will spend less time looking for answers and more time closing business. Register to the Beta release, we'll offer a free trial.</p>
           <div class="flex flex-none">
             <a class="inline-block px-4 py-2 bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="/register" data-i18n="menu-5">Register to Beta</a>
           </div>
         </div>
       </div>
-      <div class="flex flex-col lg:ml-12 gap-y-10 w-1/2">
+      <div class="flex flex-col lg:ml-12 gap-y-10 w-full lg:w-1/2">
         <div>
           <p class="text-3xl font-extrabold i18nelement" data-i18n="feature-5">
             CRE matching, smarter
@@ -316,6 +335,7 @@
   </footer>
   <script src="js/script.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/scroller.js"></script>
   <script type="text/javascript">
     _linkedin_partner_id = "5495354";
     window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
