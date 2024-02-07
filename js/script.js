@@ -167,6 +167,18 @@ function updateImages() {
   }
 }
 
+function updateVideo() {
+  const video = document.getElementById('video')
+  const videoSrc = document.getElementById("videoSrc")
+
+  if (video && videoSrc) {
+    const lang = i18next.language.includes('en') ? 'en' : i18next.language;
+    const videoURL = lang === 'ja' ? 'https://lombst.s3.amazonaws.com/website/AI+Matching+JA+(Captions).mp4' : 'https://lombst.s3.amazonaws.com/website/AI+Matching+(Captions).mp4'
+    videoSrc.setAttribute('src', videoURL);
+    video.load();
+  }
+}
+
 async function i18Loader() {
   const langs = ['en', 'ja', 'de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'];
   const langJsons = await Promise.all(
@@ -188,11 +200,13 @@ async function i18Loader() {
   updateContent();
   updateIframes();
   updateImages();
+  updateVideo();
 
   i18next.on('languageChanged', () => {
     updateContent();
     updateIframes();
     updateImages();
+    updateVideo();
   });
 
   const langSelector = document.getElementById('langSelector');
