@@ -451,7 +451,9 @@ window.addEventListener('load', async () => {
     'Hong Kong, China': 'Hong Kong',
     'Hong Kong SAR': 'Hong Kong',
     'Hong Kong S.A.R.': 'Hong Kong',
-    'Taiwan': 'Taiwan, Province of China'
+    'Taiwan': 'Taiwan, Province of China',
+    'South Korea': 'Korea, Republic of',
+    'North Korea': "Korea, Democratic People's Republic of"
   };
 
   let map = null;
