@@ -30,7 +30,6 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
   <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -86,7 +85,7 @@
           <div class="flex items-center justify-between pt-6 pr-6 ">
             <button type="button" class="text-gray-900 bg-transparent hover:bg-gray-100 rounded-full text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="top-left-modal">
               <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                <path stroke="#1D4ED8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
               </svg>
             </button>
           </div>
@@ -110,835 +109,238 @@
 
     <div class="flex flex-wrap w-full justify-between text-gray-900 mt-10">
       <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
-        <div class="relative z-10 h-full overflow-hidden rounded-sm border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
-          <p class="mb-3 text-lg font-semibold">TRIAL</p>
+        <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
+          <p class="mb-3 text-lg font-semibold text-blue-700">TRIAL</p>
           <h2 class="mb-5 text-[42px] font-bold">
-            Free
-            <span class="font-medium"> / 3 days</span>
+            <span class="i18nelement" data-i18n="Free">Free</span>
+            <span class="font-medium"> / <span class="i18nelement" data-i18n="3days">3 days</span></span>
           </h2>
-          <p class="mb-8 border-b pb-8">No credit card required</p>
+          <p class="mb-8 border-b pb-8 i18nelement" data-i18n="noCardRequired">No credit card required</p>
           <div class="flex flex-col gap-4">
-            <p>Try all features except export data in excel</p>
-            <p>Up to 2 users (admin + 1 member)</p>
-          </div>
-          <div>
-            <span class="absolute right-0 top-7 z-[-1]">
+            <div class="flex items-center gap-2 text-blue-700">
               <svg
-                width="77"
-                height="172"
-                viewBox="0 0 77 172"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
               >
-                <defs>
-                  <linearGradient
-                    id="paint0_linear"
-                    x1="86"
-                    y1="0"
-                    x2="86"
-                    y2="172"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#1D4ED8" stop-opacity="0.09" />
-                    <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-                <circle cx="86" cy="86" r="86" fill="url(#paint0_linear)" />
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
               </svg>
-            </span>
-            <span class="absolute right-4 top-4 z-[-1]">
+              <p class="i18nelement" data-i18n="tryAll">Try all features except export data in excel</p>
+            </div>
+            <div class="flex items-center gap-2 text-blue-700">
               <svg
-                width="41"
-                height="89"
-                view-box="0 0 41 89"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
               >
-                <circle
-                  cx="38.9138"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="1.42021"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 1.42021)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="1.4202"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 1.4202)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="1.42019"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 1.42019)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="1.4202"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 1.4202)"
-                  fill="#1D4ED8"
-                />
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
               </svg>
-            </span>
+              <p class="i18nelement" data-i18n="upto2Users">Up to 2 users (admin + 1 member)</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
-        <div class="relative z-10 h-full overflow-hidden rounded-sm border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
-          <p class="mb-3 text-lg font-semibold">MONTHLY</p>
-          <h2 class="mb-5 text-[42px] font-bold">
-            ¥33,000
-            <span class="font-medium"> / month</span>
+        <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
+          <p class="mb-3 text-lg text-blue-700 font-semibold">MONTHLY PLAN</p>
+          <h2 class="text-[42px] font-bold">
+            ¥35,750
+            <span class="font-medium"> / <span class="i18nelement" data-i18n="month">month</span></span>
           </h2>
-          <p class="mb-8 border-b pb-8">For small teams</p>
+          <p class="mb-5 text-sm i18nelement" data-i18n="consumptionTax">(includes Consumption tax)</p>
+          <p class="mb-8 border-b pb-8 i18nelement" data-i18n="smallTeams">For small teams</p>
           <div class="flex flex-col gap-4">
-            <p>Profiles of all 5,250+ buyers</p>
-            <p>News headlines from 15 outlets globally</p>
-            <p>Geospatial property data</p>
-            <p>Generative property description</p>
-            <p>Up to 5 users (admin + 4 members)</p>
-            <p>3-days support response (email only)</p>
-          </div>
-          <div>
-            <span class="absolute right-0 top-7 z-[-1]">
+            <div class="flex items-center gap-2">
               <svg
-                width="77"
-                height="172"
-                viewBox="0 0 77 172"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
               >
-                <defs>
-                  <linearGradient
-                    id="paint0_linear"
-                    x1="86"
-                    y1="0"
-                    x2="86"
-                    y2="172"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#1D4ED8" stop-opacity="0.09" />
-                    <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-                <circle cx="86" cy="86" r="86" fill="url(#paint0_linear)" />
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
               </svg>
-            </span>
-            <span class="absolute right-4 top-4 z-[-1]">
+              <p id="companies-count">-</p>
+            </div>
+            <div class="flex items-center gap-2">
               <svg
-                width="41"
-                height="89"
-                view-box="0 0 41 89"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
               >
-                <circle
-                  cx="38.9138"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="1.42021"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 1.42021)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="1.4202"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 1.4202)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="1.42019"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 1.42019)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="1.4202"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 1.4202)"
-                  fill="#1D4ED8"
-                />
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
               </svg>
-            </span>
+              <p class="i18nelement" data-i18n="newsHeadlines">News headlines from 15 outlets globally</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="generativeEmail">Generative emails</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="geospatial">Geospatial property data</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="generativePropDesc">Generative property description</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="upto5Users">Up to 5 users (admin + 4 members)</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="3daysSupport">3-days support response</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
-        <div class="relative z-10 h-full overflow-hidden rounded-sm border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
-          <p class="mb-3 text-lg font-semibold">YEARLY</p>
-          <h2 class="mb-5 text-[42px] font-bold">
-            ¥396,000
-            <span class="font-medium"> / year</span>
+        <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
+          <p class="mb-3 text-lg font-semibold text-blue-700">YEARLY PLAN</p>
+          <h2 class="text-[42px] font-bold">
+            ¥393,250
+            <span class="font-medium"> / <span class="i18nelement" data-i18n="year">year</span></span>
           </h2>
-          <p class="mb-8 border-b pb-8">For enterprises</p>
+          <p class="mb-5 text-sm i18nelement" data-i18n="consumptionTax">(includes Consumption tax)</p>
+          <p class="mb-8 border-b pb-8 i18nelement" data-i18n="forEnterprises">For enterprises</p>
           <div class="flex flex-col gap-4">
-            <p>All features in Monthly</p>
-            <p>Export all companies lists and profiles</p>
-            <p>Export all contacts</p>
-            <p>Export geospatial property data</p>
-            <p>Export generative property description</p>
-            <p>Same-day support response (email and phone)</p>
-          </div>
-          <div>
-            <span class="absolute right-0 top-7 z-[-1]">
+            <div class="flex items-center gap-2">
               <svg
-                width="77"
-                height="172"
-                viewBox="0 0 77 172"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
               >
-                <defs>
-                  <linearGradient
-                    id="paint0_linear"
-                    x1="86"
-                    y1="0"
-                    x2="86"
-                    y2="172"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#1D4ED8" stop-opacity="0.09" />
-                    <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-                <circle cx="86" cy="86" r="86" fill="url(#paint0_linear)" />
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
               </svg>
-            </span>
-            <span class="absolute right-4 top-4 z-[-1]">
+              <p class="i18nelement" data-i18n="allFeaturesMonthly">All features in Monthly</p>
+            </div>
+            <div class="flex items-center gap-2">
               <svg
-                width="41"
-                height="89"
-                view-box="0 0 41 89"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
               >
-                <circle
-                  cx="38.9138"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="38.9138"
-                  cy="1.42021"
-                  r="1.42021"
-                  transform="rotate(180 38.9138 1.42021)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="26.4157"
-                  cy="1.4202"
-                  r="1.42021"
-                  transform="rotate(180 26.4157 1.4202)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="13.9177"
-                  cy="1.42019"
-                  r="1.42021"
-                  transform="rotate(180 13.9177 1.42019)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="87.4849"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 87.4849)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="74.9871"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 74.9871)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="62.4892"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 62.4892)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="38.3457"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 38.3457)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="13.634"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 13.634)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="50.2754"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 50.2754)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="26.1319"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 26.1319)"
-                  fill="#1D4ED8"
-                />
-                <circle
-                  cx="1.41963"
-                  cy="1.4202"
-                  r="1.42021"
-                  transform="rotate(180 1.41963 1.4202)"
-                  fill="#1D4ED8"
-                />
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
               </svg>
-            </span>
+              <p class="i18nelement" data-i18n="exportCompanies">Export all companies lists and profiles</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p id="contacts-count"></p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="exportEmails">Export generative emails</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="exportGeospatial">Export geospatial property data</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="exportDesc">Export generative property description</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#1D4ED8"
+              >
+                <path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z" />
+              </svg>
+              <p class="i18nelement" data-i18n="sameDaySupport">Same-day support response</p>
+            </div>
           </div>
+          <span class="text-blue-700 absolute right-4 top-4 text-sm i18nelement" data-i18n="oneMonthOff">
+            One month off
+          </span>
         </div>
       </div>
     </div>
@@ -980,7 +382,7 @@
     </div>
     <div class="flex flex-row justify-between items-center">
       <div class="flex flex-row">
-        <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline rounded-sm h-4 mr-4" src="img/LinkedIn.png"> </a>
+        <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline rounded-[6px] h-4 mr-4" src="img/LinkedIn.png"> </a>
         <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4 mr-4" src="img/x.png"> </a>
         <a href="https://medium.com/@lombardstandard" target="_blank"> <img alt="Medium" class="inline h-4 mr-4" src="img/Medium.png"> </a>
       </div>
@@ -990,7 +392,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/pricing.js"></script>
 </body>
 
 </html>
