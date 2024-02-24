@@ -1,4 +1,9 @@
 window.addEventListener('load', async () => {
+  const copyright = document.getElementById('copyright')
+  if (copyright) {
+    copyright.innerHTML = new Date().getFullYear();
+  }
+
   const API_URL = 'https://api.beta.lombardgpt.com/stats';
   const detectionOptions = {
     // order and from where user language should be detected
