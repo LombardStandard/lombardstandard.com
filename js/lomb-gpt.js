@@ -1,6 +1,7 @@
-var d = new Date();
-var n = d.getFullYear();
-document.getElementById('date').innerHTML = n;
+const copyright = document.getElementById('copyright')
+if (copyright) {
+  copyright.innerHTML = new Date().getFullYear();
+}
 
 const detectionOptions = {
   // order and from where user language should be detected
