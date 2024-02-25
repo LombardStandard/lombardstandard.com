@@ -42,6 +42,16 @@ window.addEventListener('load', async () => {
        sameSite: 'strict'
     },
   };
+  const prices = {
+    monthly: {
+      JPY: 35750,
+      USD: 240
+    },
+    yearly: {
+      JPY: 393250,
+      USD: 2640
+    }
+  }
   
   // i18n integration
   function updateContent() {
@@ -142,6 +152,25 @@ window.addEventListener('load', async () => {
       console.log('Error occurred while fetching pricing stats:', err.message);
     }
   }
+
+  document.getElementById('currencySwitch')?.addEventListener('change', (e) => {
+    const monthlyPrice = document.getElementById('monthlyPrice')
+    const yearlyPrice = document.getElementById('yearlyPrice')
+    const currency = e.target.checked ? 'JPY' : 'USD'
+    const formatter = new Intl.NumberFormat('en-US', {
+      currency,
+      style: 'currency',
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0,
+    })
+
+    if (monthlyPrice) {
+      monthlyPrice.innerHTML = formatter.format(prices.monthly[currency])
+    }
+    if (yearlyPrice) {
+      yearlyPrice.innerHTML = formatter.format(prices.yearly[currency])
+    }
+  })
 
   fetchPricingStats()
 })
