@@ -111,7 +111,7 @@ window.addEventListener('load', async () => {
     (i18next.language.includes('en') ? 'en' : i18next.language) || 'en';
   const translations = {
     en: {
-      companiesCount: (count) => `Profiles of all ${count}+ buyers`,
+      companiesCount: (count) => `Profiles of all ${count} buyers`,
       contactsCount: (count) => `Export all ${count} contacts`
     },
     ja: {
