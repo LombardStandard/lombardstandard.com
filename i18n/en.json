@@ -419,7 +419,7 @@
   "disclosure-3": "<strong>Phone number</strong>", 
   "disclosure-3a": "We will disclose it without delay upon request",
   "disclosure-4": "<strong>Email address</strong>", 
-  "disclosure-4a": "<a class='hover:text-blue-700' href='mailto:hello@lomb.st'>hello@lomb.st</a>",
+  "disclosure-4a": "<a class='transition hover:text-blue-700' href='mailto:hello@lomb.st'>hello@lomb.st</a>",
   "disclosure-5": "<strong>Commercial Director</strong>", 
   "disclosure-5a": "Mr. Nobuyuki Yamada",
   "disclosure-6": "<strong>Additional fees</strong>", 
@@ -433,6 +433,6 @@
   "disclosure-10": "<strong>Payment period</strong>", 
   "disclosure-10a": "Credit card payments are processed immediately, while local bank transfers must be sent within 3 days of the date of order.",
   "disclosure-11": "<strong>Price</strong>",
-  "disclosure-11a": "Please refer to Pricing page <a class='transition hover:text-blue-700'>href='/pricing'>here</a>",
+  "disclosure-11a": "Please refer to Pricing page <a class='transition hover:text-blue-700' href='/pricing'>here</a>",
   "disclosure-12": "Last updated 2 March, 2024"
 }
