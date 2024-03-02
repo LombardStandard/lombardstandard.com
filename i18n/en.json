@@ -425,7 +425,7 @@
   "disclosure-6": "<strong>Additional fees</strong>", 
   "disclosure-6a": "No additional fees to the cost of the product",
   "disclosure-7": "<strong>Refunds & Support</strong>",
-  "disclosure-7a": "Refunds: Subscription may be recessed within 7 days with full refund<br>Support: Customers will receive full support during 9am-6pm JST",
+  "disclosure-7a": "Refunds: Subscription may be recessed at the end of biling period<br>Support: Customers will receive full support during 9am-6pm JST",
   "disclosure-8": "<strong>Delivery times</strong>", 
   "disclosure-8a": "Access credentials will be released at the subscription to the free trial",
   "disclosure-9": "<strong>Accepted payment methods</strong>", 
@@ -433,6 +433,6 @@
   "disclosure-10": "<strong>Payment period</strong>", 
   "disclosure-10a": "Credit card payments are processed immediately, while local bank transfers must be sent within 3 days of the date of order.",
   "disclosure-11": "<strong>Price</strong>",
-  "disclosure-11a": "The subscripion cost is $0.12 per buyer profile per month<br>Minimum number of profiles: 1,000<br>Minimum period: 12 months",
+  "disclosure-11a": "Please refer to Pricing page <a class='transition hover:text-blue-700'>href='/pricing'>here</a>",
   "disclosure-12": "Last updated 2 March, 2024"
 }
