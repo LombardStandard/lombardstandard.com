@@ -125,8 +125,8 @@ window.addEventListener('load', async () => {
       contactsCount: (count) => `Export all ${count} contacts`
     },
     ja: {
-      companiesCount: (count) => `${count} 人以上の購入者全員のプロフィール`,
-      contactsCount: (count) => `${count} 件すべての連絡先をエクスポートする`
+      companiesCount: (count) => `${count}社以上の投資家プロフィール`,
+      contactsCount: (count) => `${count}生成したメールをエクスポートする`
     }
   }
   let companiesCount = '-'
