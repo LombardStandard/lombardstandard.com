@@ -92,5 +92,53 @@ window.addEventListener('load', async () => {
   await i18Loader();
 
   // Buyers js
-  
+  const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+
+  const browseByURL = 'https://egltn7djl4lxhe7nkkmbyoaghy0whrvp.lambda-url.ap-northeast-1.on.aws'
+  const urlParams = new URLSearchParams(window.location.search);
+  const browseBy = urlParams.get('by');
+
+  if (browseBy) {
+    try {
+      const { success, message, buyers } = await fetch(browseByURL + `?by=${encodeURIComponent(browseBy)}`).then(res => res.json())
+
+      if (success) {
+        document.getElementById("category-header").innerHTML = `Buyers by "${capitalize(browseBy)}"`
+
+        const columns = 3;
+        const dividedArrays = [];
+        const itemsInFirstColumn = Math.ceil(buyers.length / columns);
+        let startIndex = 0;
+
+        for (let i = 0; i < columns; i++) {
+          const endIndex = startIndex + itemsInFirstColumn + (i == columns - 1 ? buyers.length % columns : 0);
+          
+          dividedArrays.push(buyers.slice(startIndex, endIndex));
+          startIndex = endIndex;
+        }
+
+        [1, 2, 3].forEach(column => {
+          const columnDiv = document.getElementById(`column-${column}`);
+
+          dividedArrays[column - 1].forEach((buyer) => {
+            const div = document.createElement("div");
+            const item = document.createElement("a");
+
+            div.className = 'text-blue-700'
+            item.setAttribute('href', `/buyer?domain=${encodeURIComponent(buyer.net_loc)}`)
+            item.textContent = buyer.name_en;
+
+            div.appendChild(item)
+            columnDiv.appendChild(div);
+          });
+        })
+      } else {
+        document.getElementById("category-header").innerHTML = message
+      }
+    } catch (err) {
+      document.getElementById("category-header").innerHTML = err.message
+    }
+  } else {
+    document.getElementById("category-header").innerHTML = 'Featured'
+  }
 })
