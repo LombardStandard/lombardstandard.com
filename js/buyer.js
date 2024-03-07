@@ -354,6 +354,13 @@ window.addEventListener('load', async () => {
         document.getElementById('company-news').innerHTML = 10
         document.getElementById('company-website').setAttribute('href', 'http://' + buyer.website)
 
+        for (let el of document.getElementsByClassName('investment-skeleton')) {
+          el.classList.add('hidden')
+        }
+        for (let el of document.getElementsByClassName('investment-data')) {
+          el.classList.remove('hidden')
+        }
+
         if (similarBuyers?.length) {
           const similarBuyersList = document.getElementById('similar-buyers-list')
           
@@ -411,7 +418,7 @@ window.addEventListener('load', async () => {
           div.className = 'flex w-1/3 mb-8'
 
           const a = document.createElement('a')
-          a.className = 'lg:inline-block px-4 py-2 text-center bg-gray-400 rounded-lg font-medium text-white text-center hover:bg-gray-500 transition'
+          a.className = 'lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-medium text-gray-900 text-center hover:bg-gray-300 transition'
           a.setAttribute('href', '/buyers')
           a.setAttribute('rel', 'noopener noreferrer')
           a.innerHTML = 'Explore more buyers'
