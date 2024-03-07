@@ -314,6 +314,30 @@ window.addEventListener('load', async () => {
         document.getElementById('logo-img-loader').classList.add('hidden')
         logoImg.setAttribute('src', getLogoURL(domain))
         logoImg.setAttribute('alt', buyer.name_en)
+        logoImg.onerror = () => {
+          const container = document.createElement('div');
+          container.className = 'rounded bg-white border border-gray-300 flex items-center justify-center';
+          container.setAttribute('style', 'width: 46px; height: 46px;');
+
+          const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+          svg.setAttribute('fill', 'none');
+          svg.setAttribute('viewBox', '0 0 24 24');
+          svg.setAttribute('stroke-width', '1.5');
+          svg.setAttribute('stroke', 'currentColor');
+          svg.setAttribute('class', 'w-6 h-6');
+
+          const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          path.setAttribute('stroke-linecap', 'round');
+          path.setAttribute('stroke-linejoin', 'round');
+          path.setAttribute('d', 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21');
+
+          svg.appendChild(path);
+          container.appendChild(svg);
+
+          const parent = logoImg.parentNode;
+          parent.replaceChild(container, logoImg);
+        }
         logoImg.classList.remove('hidden')
 
         const verificationBadge = document.getElementById('verification-badge')
@@ -343,10 +367,35 @@ window.addEventListener('load', async () => {
             a.setAttribute('rel', 'noopener noreferrer')
 
             const img = document.createElement('img')
+            img.className = 'rounded'
             img.setAttribute('width', '46px')
             img.setAttribute('height', '46px')
             img.setAttribute('src', getLogoURL(buyer.net_loc))
             img.setAttribute('alt', buyer.name_en)
+            img.onerror = () => {
+              const container = document.createElement('div');
+              container.className = 'rounded bg-white border border-gray-300 flex items-center justify-center';
+              container.setAttribute('style', 'width: 46px; height: 46px;');
+
+              const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+              svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+              svg.setAttribute('fill', 'none');
+              svg.setAttribute('viewBox', '0 0 24 24');
+              svg.setAttribute('stroke-width', '1.5');
+              svg.setAttribute('stroke', 'currentColor');
+              svg.setAttribute('class', 'w-6 h-6');
+
+              const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+              path.setAttribute('stroke-linecap', 'round');
+              path.setAttribute('stroke-linejoin', 'round');
+              path.setAttribute('d', 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21');
+
+              svg.appendChild(path);
+              container.appendChild(svg);
+
+              const parent = img.parentNode;
+              parent.replaceChild(container, img);
+            }
 
             const span = document.createElement('span')
             span.className = 'font-medium'
@@ -357,6 +406,18 @@ window.addEventListener('load', async () => {
             div.appendChild(a)
             similarBuyersList.appendChild(div)
           })
+
+          const div = document.createElement('div')
+          div.className = 'flex w-1/3 mb-8'
+
+          const a = document.createElement('a')
+          a.className = 'lg:inline-block px-4 py-2 text-center bg-gray-400 rounded-lg font-medium text-white text-center hover:bg-gray-500 transition'
+          a.setAttribute('href', '/buyers')
+          a.setAttribute('rel', 'noopener noreferrer')
+          a.innerHTML = 'Explore more buyers'
+
+          div.appendChild(a)
+          similarBuyersList.appendChild(div)
 
           document.getElementById('similar-buyers-container').classList.remove('hidden')
         }
