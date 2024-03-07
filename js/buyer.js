@@ -301,31 +301,70 @@ window.addEventListener('load', async () => {
   const getLogoURL = (domain) => `https://logo.clearbit.com/${domain}?size=100&format=png`
 
   if (domain) {
-    const { success, message, buyer } = await fetch(buyerURL + `?domain=${encodeURIComponent(domain)}`).then((res) => res.json())
+    try {
+      const { success, message, buyer, similarBuyers } = await fetch(buyerURL + `?domain=${encodeURIComponent(domain)}`).then((res) => res.json())
 
-    if (success) {
-      if (!buyer) {
-        document.getElementById('company-name').innerHTML = 'Not Found!'
-        return
+      if (success) {
+        if (!buyer) {
+          document.getElementById('company-name').innerHTML = 'Not Found!'
+          return
+        }
+
+        const logoImg = document.getElementById('logo-img')
+        document.getElementById('logo-img-loader').classList.add('hidden')
+        logoImg.setAttribute('src', getLogoURL(domain))
+        logoImg.setAttribute('alt', buyer.name_en)
+        logoImg.classList.remove('hidden')
+
+        const verificationBadge = document.getElementById('verification-badge')
+        if (buyer.verified) verificationBadge.setAttribute('fill', 'rgb(29 78 216)')
+        verificationBadge.classList.remove('hidden')
+
+        document.title = `${buyer.name_en} | Lombard Standard`
+        document.getElementById('company-name').innerHTML = buyer.name_en
+        document.getElementById('company-summary').innerHTML = buyer.summary
+        document.getElementById('company-segments').innerHTML = buyer.segment
+        document.getElementById('company-country-code').setAttribute('src', `/img/flags-svg/${COUNTRY_TO_FLAG[buyer.headquarters]}.svg`)
+        document.getElementById('company-country-name').innerHTML = buyer.headquarters
+        document.getElementById('company-contacts').innerHTML = 90
+        document.getElementById('company-news').innerHTML = 10
+        document.getElementById('company-website').setAttribute('href', 'http://' + buyer.website)
+
+        if (similarBuyers?.length) {
+          const similarBuyersList = document.getElementById('similar-buyers-list')
+          
+          similarBuyers.forEach(buyer => {
+            const div = document.createElement('div')
+            div.className = 'flex w-1/3 mb-8'
+
+            const a = document.createElement('a')
+            a.className = 'flex items-center gap-2'
+            a.setAttribute('href', `/buyer?domain=${buyer.net_loc}`)
+            a.setAttribute('rel', 'noopener noreferrer')
+
+            const img = document.createElement('img')
+            img.setAttribute('width', '46px')
+            img.setAttribute('height', '46px')
+            img.setAttribute('src', getLogoURL(buyer.net_loc))
+            img.setAttribute('alt', buyer.name_en)
+
+            const span = document.createElement('span')
+            span.className = 'font-medium'
+            span.innerHTML = buyer.name_en
+
+            a.appendChild(img)
+            a.appendChild(span)
+            div.appendChild(a)
+            similarBuyersList.appendChild(div)
+          })
+
+          document.getElementById('similar-buyers-container').classList.remove('hidden')
+        }
+      } else {
+        document.getElementById('company-name').innerHTML = message
       }
-
-      const logoImg = document.getElementById('logo-img')
-      document.getElementById('logo-img-loader').classList.add('hidden')
-      logoImg.setAttribute('src', getLogoURL(domain))
-      logoImg.setAttribute('alt', buyer.name_en)
-      logoImg.classList.remove('hidden')
-
-      document.title = `${buyer.name_en} | Lombard Standard`
-      document.getElementById('company-name').innerHTML = buyer.name_en
-      document.getElementById('company-summary').innerHTML = buyer.summary
-      document.getElementById('company-segments').innerHTML = buyer.segment
-      document.getElementById('company-country-code').setAttribute('src', `/img/flags-svg/${COUNTRY_TO_FLAG[buyer.headquarters]}.svg`)
-      document.getElementById('company-country-name').innerHTML = buyer.headquarters
-      document.getElementById('company-contacts').innerHTML = 90
-      document.getElementById('company-news').innerHTML = 10
-      document.getElementById('company-website').setAttribute('href', 'http://' + buyer.website)
-    } else {
-      document.getElementById('company-name').innerHTML = message
+    } catch (err) {
+      document.getElementById('company-name').innerHTML = 'Error occurred. Please try again!'
     }
   } else {
     document.getElementById('company-name').innerHTML = 'Not Found!'
