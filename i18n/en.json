@@ -436,5 +436,18 @@
   "disclosure-10a": "Credit card payments are processed immediately, while local bank transfers must be sent within 3 days of the date of order.",
   "disclosure-11": "<strong>Price</strong>",
   "disclosure-11a": "Please refer to Pricing page <a class='transition hover:text-blue-700' href='/pricing'>here</a>",
-  "disclosure-12": "Last updated 2 March, 2024"
+  "disclosure-12": "Last updated 2 March, 2024",
+  "segments": "Segments",
+  "headquarters": "Headquarters",
+  "contacts": "Contacts",
+  "news": "News",
+  "links": "Links",
+  "investmentCriteria": "Investment Criteria",
+  "markets": "Markets",
+  "assetTypes": "Asset types",
+  "strategies": "Strategies",
+  "dealSize": "Deal size",
+  "discoverSimilar": "Discover similar buyers",
+  "browseBy": "Browse By",
+  "exploreMoreBuyers": "Explore more buyers"
 }

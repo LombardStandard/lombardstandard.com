@@ -6,6 +6,7 @@
   "product-title": "製品 | Lombard Standard",
   "pricing-title": "価格設定 | Lombard Standard",
   "terms-page-title": "条項 | Lombard Standard",
+  "buyers-title": "バイヤー | Lombard Standard",
   "commercial-title": "商業的開示 | Lombard Standard",
   "hero-header-1": "AIを活用したリードジェネレーション",
   "hero-header-2": "AIを活用して商業不動産の買い手を探す",
@@ -435,5 +436,18 @@
   "disclosure-10a": "クレジット カードの支払いはすぐに処理されますが、地方銀行振込の場合は注文日から 3 日以内に送金する必要があります。",
   "disclosure-11": "<strong>価格</strong>",
   "disclosure-11a": "価格ページを参照してください<a class='transition hover:text-blue-700' href='/pricing'>ここ</a>",
-  "disclosure-12": "最終更新2024年 3月 2日"
+  "disclosure-12": "最終更新2024年 3月 2日",
+  "segments": "セグメント",
+  "headquarters": "本部",
+  "contacts": "連絡先",
+  "news": "ニュース",
+  "links": "リンク",
+  "investmentCriteria": "投資基準",
+  "markets": "市場",
+  "assetTypes": "資産の種類",
+  "strategies": "戦略",
+  "dealSize": "取引規模",
+  "discoverSimilar": "類似の購入者を発見する",
+  "browseBy": "参照方法",
+  "exploreMoreBuyers": "さらに購入者を探す"
 }

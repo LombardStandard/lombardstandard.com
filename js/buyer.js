@@ -5,6 +5,16 @@ window.addEventListener('load', async () => {
     copyright.innerHTML = new Date().getFullYear();
   }
 
+  const dynamicTranslation = {
+    en: {
+      'Not Found!': 'Not Found!',
+      'Explore more buyers': 'Explore more buyers'
+    },
+    ja: {
+      'Not Found!': '見つかりません！',
+      'Explore more buyers': 'さらに購入者を探す'
+    }
+  }
   const detectionOptions = {
     // order and from where user language should be detected
     order: [
@@ -54,7 +64,8 @@ window.addEventListener('load', async () => {
   }
   
   async function i18Loader() {
-    const langs = ['en', 'ja', 'de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'];
+    const langs = ['en', 'ja'];
+  // 'de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'
     const langJsons = await Promise.all(
       langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
     );
@@ -75,6 +86,7 @@ window.addEventListener('load', async () => {
   
     i18next.on('languageChanged', () => {
       updateContent();
+      updateBuyerContent();
     });
   
     const langSelector = document.getElementById('langSelector');
@@ -90,6 +102,9 @@ window.addEventListener('load', async () => {
   }
   
   await i18Loader();
+
+  const getCurrentLang = () =>
+    (i18next.language.includes('en') ? 'en' : i18next.language) || 'en';
 
   // Buyer js
   const COUNTRY_TO_FLAG = {
@@ -294,22 +309,37 @@ window.addEventListener('load', async () => {
     Zambia: 'ZM',
     Zimbabwe: 'ZW',
   }
+  let buyer = {}
   const buyerURL = 'https://2fxya6iatfbzd2pzgvkhszeyqu0ukowa.lambda-url.ap-northeast-1.on.aws'
   const urlParams = new URLSearchParams(window.location.search);
   const domain = urlParams.get('domain');
 
   const getLogoURL = (domain) => `https://logo.clearbit.com/${domain}?size=100&format=png`
+  const updateBuyerContent = () => {
+    const lang = getCurrentLang()
+    const name = buyer[`name_${lang}`] || buyer.name_en
+    const summary = lang === 'en' ? buyer.summary : buyer.summary_ja || buyer.summary
+    const segment = lang === 'en' ? buyer.segment : buyer.segment_ja || buyer.segment
+
+    document.title = `${name} | Lombard Standard`
+    document.getElementById('company-name').innerHTML = name
+    document.getElementById('company-summary').innerHTML = summary
+    document.getElementById('company-segments').innerHTML = segment
+  }
 
   if (domain) {
     try {
-      const { success, message, buyer, similarBuyers } = await fetch(buyerURL + `?domain=${encodeURIComponent(domain)}`).then((res) => res.json())
+      const { success, message, buyer: fetchedBuyer, similarBuyers } = await fetch(buyerURL + `?domain=${encodeURIComponent(domain)}`).then((res) => res.json())
 
       if (success) {
-        if (!buyer) {
-          document.getElementById('company-name').innerHTML = 'Not Found!'
+        const translation = dynamicTranslation[getCurrentLang()]
+
+        if (!fetchedBuyer) {
+          document.getElementById('company-name').innerHTML = translation['Not Found!']
           return
         }
-
+        
+        buyer = fetchedBuyer
         const logoImg = document.getElementById('logo-img')
         document.getElementById('logo-img-loader').classList.add('hidden')
         logoImg.setAttribute('src', getLogoURL(domain))
@@ -344,14 +374,11 @@ window.addEventListener('load', async () => {
         if (buyer.verified) verificationBadge.setAttribute('fill', 'rgb(29 78 216)')
         verificationBadge.classList.remove('hidden')
 
-        document.title = `${buyer.name_en} | Lombard Standard`
-        document.getElementById('company-name').innerHTML = buyer.name_en
-        document.getElementById('company-summary').innerHTML = buyer.summary
-        document.getElementById('company-segments').innerHTML = buyer.segment
+        updateBuyerContent()
         document.getElementById('company-country-code').setAttribute('src', `/img/flags-svg/${COUNTRY_TO_FLAG[buyer.headquarters]}.svg`)
         document.getElementById('company-country-name').innerHTML = buyer.headquarters
-        document.getElementById('company-contacts').innerHTML = 90
-        document.getElementById('company-news').innerHTML = 10
+        document.getElementById('company-contacts').innerHTML = buyer.contacts || '-'
+        document.getElementById('company-news').innerHTML = buyer.news || '-'
         document.getElementById('company-website').setAttribute('href', 'http://' + buyer.website)
 
         for (let el of document.getElementsByClassName('investment-skeleton')) {
@@ -418,10 +445,11 @@ window.addEventListener('load', async () => {
           div.className = 'flex w-1/3 mb-8'
 
           const a = document.createElement('a')
-          a.className = 'lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-medium text-gray-900 text-center hover:bg-gray-300 transition'
+          a.className = 'i18nelement lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-medium text-gray-900 text-center hover:bg-gray-300 transition'
           a.setAttribute('href', '/buyers')
           a.setAttribute('rel', 'noopener noreferrer')
-          a.innerHTML = 'Explore more buyers'
+          a.setAttribute('data-i18n', 'exploreMoreBuyers')
+          a.innerHTML = translation['Explore more buyers']
 
           div.appendChild(a)
           similarBuyersList.appendChild(div)

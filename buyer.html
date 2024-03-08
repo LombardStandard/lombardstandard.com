@@ -28,6 +28,17 @@
   <meta name="keywords" content="commercial real estate, real estate investors, transaction tracking, buyer recommendations, cost reduction" />
   <meta name="mobile-friendly" content="true" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '410px'
+          },
+        }
+      }
+    }
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYEZFH8RRT"></script>
   <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.0/i18nextBrowserLanguageDetector.min.js" integrity="sha512-0AsGX9U76VGa9M7xH/k0KRptOYGEebaFFJ01EAgDwXvVEr0hlQceEH/9WfyfpePtDGJ6cmwuqZ+Qb18hB8z+lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -124,50 +135,55 @@
 
       <span id="company-summary" class="text-gray-500">
         <div class="animate-pulse flex flex-col w-full gap-1">
-          <div class="h-2.5 bg-gray-200 rounded w-full"></div>
-          <div class="h-2.5 bg-gray-200 rounded w-full"></div>
-          <div class="h-2.5 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 bg-gray-200 rounded w-full"></div>
+          <div class="h-3 bg-gray-200 rounded w-full"></div>
         </div>
       </span>
 
-      <div class="flex w-full items-center">
+      <div class="flex flex-wrap w-full items-center">
         <div class="flex flex-col gap-2 w-1/5">
-          <h4 class="font-medium">Segments</h4>
+          <h4 class="font-medium i18nelement" data-i18n="segments">Segments</h4>
 
           <span id="company-segments" class="text-gray-500">
-            <div class="animate-pulse h-2.5 bg-gray-200 rounded w-28"></div>
+            <div class="animate-pulse h-3 bg-gray-200 rounded w-28"></div>
           </span>
         </div>
 
         <div class="flex flex-col gap-2 w-1/5">
-          <h4 class="font-medium">Headquarters</h4>
+          <h4 class="font-medium i18nelement" data-i18n="headquarters">Headquarters</h4>
           
           <div class="flex items-center gap-1">
             <img id="company-country-code" class="rounded-sm" width="18px" height="18px" />
 
             <span id="company-country-name" class="text-gray-500">
-              <div class="animate-pulse h-2.5 bg-gray-200 rounded w-28"></div>
+              <div class="animate-pulse h-3 bg-gray-200 rounded w-28"></div>
             </span>
           </div>
         </div>
 
         <div class="flex flex-col gap-2 w-1/5">
-          <h4 class="font-medium">Contacts</h4>
+          <h4 class="font-medium i18nelement" data-i18n="contacts">Contacts</h4>
           
           <span id="company-contacts" class="text-gray-500">
-            <div class="animate-pulse h-2.5 bg-gray-200 rounded w-6"></div>
+            <div class="animate-pulse h-3 bg-gray-200 rounded w-6"></div>
           </span>
         </div>
 
         <div class="flex flex-col gap-2 w-1/5">
-          <h4 class="font-medium">News</h4>
+          <h4 class="font-medium i18nelement" data-i18n="news">News</h4>
           <span id="company-news" class="text-gray-500">
-            <div class="animate-pulse h-2.5 bg-gray-200 rounded w-6"></div>
+            <div class="animate-pulse h-3 bg-gray-200 rounded w-6"></div>
           </span>
         </div>
 
         <div class="flex flex-col gap-2 w-1/5">
-          <h4 class="font-medium">Links</h4>
+          <h4 class="font-medium i18nelement" data-i18n="links">Links</h4>
           
           <div class="flex">
             <a id="company-website" class="bg-gray-300 p-2 rounded-full" href="#" target="_blank" rel="noopener noreferrer">
@@ -179,12 +195,12 @@
         </div>
       </div>
 
-      <div class="flex flex-col w-full gap-6 mt-4">
-        <h3 class="uppercase text-sm font-bold text-gray-500 border-b border-gray-300">Investment Criteria</h3>
+      <div class="flex flex-col w-full mt-4">
+        <h3 class="uppercase text-sm font-bold text-gray-500 border-b border-gray-300 i18nelement" data-i18n="investmentCriteria">Investment Criteria</h3>
 
-        <div class="flex w-full font-light">
-          <div class="flex flex-col gap-4 w-1/4">
-            <h4 class="font-bold text-3xl">Markets</h4>
+        <div class="flex flex-wrap w-full font-light">
+          <div class="flex flex-col gap-4 w-full pt-6 xs:w-1/2 md:w-1/4">
+            <h4 class="font-bold text-3xl i18nelement" data-i18n="markets">Markets</h4>
             
             <div class="hidden flex flex-col blur-sm select-none text-gray-500 investment-data">
               <p>VNWRIEFG</p>
@@ -200,8 +216,8 @@
             </div>
           </div>
 
-          <div class="flex flex-col gap-4 w-1/4">
-            <h4 class="font-bold text-3xl">Asset types</h4>
+          <div class="flex flex-col gap-4 w-full pt-6 xs:w-1/2 md:w-1/4">
+            <h4 class="font-bold text-3xl i18nelement" data-i18n="assetTypes">Asset types</h4>
             
             <div class="hidden flex flex-col blur-sm select-none investment-data">
               <p>ESVHR EDSGH</p>
@@ -215,8 +231,8 @@
             </div>
           </div>
 
-          <div class="flex flex-col gap-4 w-1/4">
-            <h4 class="font-bold text-3xl">Strategies</h4>
+          <div class="flex flex-col gap-4 w-full pt-6 xs:w-1/2 md:w-1/4">
+            <h4 class="font-bold text-3xl i18nelement" data-i18n="strategies">Strategies</h4>
             
             <div class="hidden flex flex-col blur-sm select-none investment-data">
               <p>IDAS LKJHGF</p>
@@ -231,8 +247,8 @@
             </div>
           </div>
 
-          <div class="flex flex-col gap-4 w-1/4">
-            <h4 class="font-bold text-3xl">Deal size</h4>
+          <div class="flex flex-col gap-4 w-full pt-6 xs:w-1/2 md:w-1/4">
+            <h4 class="font-bold text-3xl i18nelement" data-i18n="dealSize">Deal size</h4>
             
             <div class="hidden flex flex-col blur-sm select-none investment-data">
               <p>ABCDE $ABM</p>
@@ -245,7 +261,7 @@
       </div>
 
       <div id="similar-buyers-container" class="hidden flex flex-col w-full bg-gray-50 gap-6 px-10 pt-10 pb-2 rounded-xl mt-6">
-        <h5 class="text-2xl font-bold">Discover similar buyers</h5>
+        <h5 class="text-2xl font-bold i18nelement" data-i18n="discoverSimilar">Discover similar buyers</h5>
         
         <div id="similar-buyers-list" class="flex flex-wrap items-center w-full">
         </div>

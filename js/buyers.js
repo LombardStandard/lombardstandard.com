@@ -5,6 +5,16 @@ window.addEventListener('load', async () => {
     copyright.innerHTML = new Date().getFullYear();
   }
 
+  const dynamicTranslation = {
+    en: {
+      "Buyers by": (by) => `Buyers by "${by}"`,
+      "Featured": "Featured"
+    },
+    ja: {
+      "Buyers by": (by) => `「${by}」による購入者`,
+      "Featured": "特徴"
+    }
+  }
   const detectionOptions = {
     // order and from where user language should be detected
     order: [
@@ -52,9 +62,20 @@ window.addEventListener('load', async () => {
       i18nElement.innerHTML = i18next.t(key) || i18nElement.innerHTML;
     }
   }
+
+  function updateDynamicContent() {
+    const currentTranslation = dynamicTranslation[getCurrentLang()]
+
+    if (browseBy) {
+      document.getElementById("category-header").innerHTML = currentTranslation["Buyers by"](capitalize(browseBy))
+    } else {
+      document.getElementById("category-header").innerHTML = currentTranslation["Featured"]
+    }
+  }
   
   async function i18Loader() {
-    const langs = ['en', 'ja', 'de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'];
+    const langs = ['en', 'ja'];
+  // 'de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'
     const langJsons = await Promise.all(
       langs.map((lang) => fetch(`i18n/${lang}.json`).then((res) => res.json()))
     );
@@ -75,6 +96,7 @@ window.addEventListener('load', async () => {
   
     i18next.on('languageChanged', () => {
       updateContent();
+      updateDynamicContent();
     });
   
     const langSelector = document.getElementById('langSelector');
@@ -91,6 +113,9 @@ window.addEventListener('load', async () => {
   
   await i18Loader();
 
+  const getCurrentLang = () =>
+    (i18next.language.includes('en') ? 'en' : i18next.language) || 'en';
+
   // Buyers js
   const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
 
@@ -102,10 +127,12 @@ window.addEventListener('load', async () => {
     const { success, message, buyers } = await fetch(browseByURL + (browseBy ? `?by=${encodeURIComponent(browseBy)}` : '')).then(res => res.json())
 
     if (success) {
+      const currentTranslation = dynamicTranslation[getCurrentLang()]
+
       if (browseBy) {
-        document.getElementById("category-header").innerHTML = `Buyers by "${capitalize(browseBy)}"`
+        document.getElementById("category-header").innerHTML = currentTranslation["Buyers by"](capitalize(browseBy))
       } else {
-        document.getElementById("category-header").innerHTML = 'Featured'
+        document.getElementById("category-header").innerHTML = currentTranslation["Featured"]
       }
 
       const columns = 3;
