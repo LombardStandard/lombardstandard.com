@@ -420,7 +420,7 @@ window.addEventListener('load', async () => {
             img.onerror = () => {
               const container = document.createElement('div');
               container.className = 'rounded bg-white border border-gray-300 flex items-center justify-center';
-              container.setAttribute('style', 'width: 46px; height: 46px;');
+              container.setAttribute('style', 'width: 46px; height: 46px; min-width: 46px;');
 
               const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
               svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
@@ -428,7 +428,7 @@ window.addEventListener('load', async () => {
               svg.setAttribute('viewBox', '0 0 24 24');
               svg.setAttribute('stroke-width', '1.5');
               svg.setAttribute('stroke', 'currentColor');
-              svg.setAttribute('class', 'w-6 h-6');
+              svg.setAttribute('class', 'w-6 h-6 flex-shrink-0');
 
               const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
               path.setAttribute('stroke-linecap', 'round');
