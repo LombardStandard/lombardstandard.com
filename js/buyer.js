@@ -87,6 +87,7 @@ window.addEventListener('load', async () => {
     i18next.on('languageChanged', () => {
       updateContent();
       updateBuyerContent();
+      updateSimilarBuyers();
     });
   
     const langSelector = document.getElementById('langSelector');
@@ -310,6 +311,7 @@ window.addEventListener('load', async () => {
     Zimbabwe: 'ZW',
   }
   let buyer = {}
+  let similarBuyers = []
   const buyerURL = 'https://2fxya6iatfbzd2pzgvkhszeyqu0ukowa.lambda-url.ap-northeast-1.on.aws'
   const urlParams = new URLSearchParams(window.location.search);
   const domain = urlParams.get('domain');
@@ -326,13 +328,21 @@ window.addEventListener('load', async () => {
     document.getElementById('company-summary').innerHTML = summary
     document.getElementById('company-segments').innerHTML = segment
   }
+  const updateSimilarBuyers = () => {
+    const lang = getCurrentLang()
+
+    similarBuyers?.forEach(buyer => {
+      document.getElementById(`similar-buyer-${buyer.net_loc}`).innerHTML = buyer[`name_${lang}`] || buyer.name_en
+    })
+  }
 
   if (domain) {
     try {
-      const { success, message, buyer: fetchedBuyer, similarBuyers } = await fetch(buyerURL + `?domain=${encodeURIComponent(domain)}`).then((res) => res.json())
+      const { success, message, buyer: fetchedBuyer, similarBuyers: fetchedSimilarBuyers } = await fetch(buyerURL + `?domain=${encodeURIComponent(domain)}`).then((res) => res.json())
 
       if (success) {
-        const translation = dynamicTranslation[getCurrentLang()]
+        const lang = getCurrentLang()
+        const translation = dynamicTranslation[lang]
 
         if (!fetchedBuyer) {
           document.getElementById('company-name').innerHTML = translation['Not Found!']
@@ -340,6 +350,7 @@ window.addEventListener('load', async () => {
         }
         
         buyer = fetchedBuyer
+        similarBuyers = fetchedSimilarBuyers
         const logoImg = document.getElementById('logo-img')
         document.getElementById('logo-img-loader').classList.add('hidden')
         logoImg.setAttribute('src', getLogoURL(domain))
@@ -393,7 +404,7 @@ window.addEventListener('load', async () => {
           
           similarBuyers.forEach(buyer => {
             const div = document.createElement('div')
-            div.className = 'flex w-1/3 mb-8'
+            div.className = 'flex w-full md:w-1/2 lg:w-1/3 mb-8'
 
             const a = document.createElement('a')
             a.className = 'flex items-center gap-2'
@@ -433,7 +444,8 @@ window.addEventListener('load', async () => {
 
             const span = document.createElement('span')
             span.className = 'font-medium'
-            span.innerHTML = buyer.name_en
+            span.id = `similar-buyer-${buyer.net_loc}`
+            span.innerHTML = buyer[`name_${lang}`] || buyer.name_en
 
             a.appendChild(img)
             a.appendChild(span)
@@ -442,7 +454,7 @@ window.addEventListener('load', async () => {
           })
 
           const div = document.createElement('div')
-          div.className = 'flex w-1/3 mb-8'
+          div.className = 'flex w-full md:w-1/2 lg:w-1/3 mb-8'
 
           const a = document.createElement('a')
           a.className = 'i18nelement lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-medium text-gray-900 text-center hover:bg-gray-300 transition'
@@ -460,6 +472,7 @@ window.addEventListener('load', async () => {
         document.getElementById('company-name').innerHTML = message
       }
     } catch (err) {
+      console.log("Error", err)
       document.getElementById('company-name').innerHTML = 'Error occurred. Please try again!'
     }
   } else {

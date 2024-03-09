@@ -8,11 +8,15 @@ window.addEventListener('load', async () => {
   const dynamicTranslation = {
     en: {
       "Buyers by": (by) => `Buyers by "${by}"`,
-      "Featured": "Featured"
+      "Featured": "Featured",
+      "Numbers": "Numbers",
+      "Other": "Other"
     },
     ja: {
       "Buyers by": (by) => `「${by}」による購入者`,
-      "Featured": "特徴"
+      "Featured": "特徴",
+      "Numbers": "数字",
+      "Other": "他の"
     }
   }
   const detectionOptions = {
@@ -72,6 +76,14 @@ window.addEventListener('load', async () => {
       document.getElementById("category-header").innerHTML = currentTranslation["Featured"]
     }
   }
+
+  function updateBuyers() {
+    const lang = getCurrentLang()
+    
+    buyers.forEach(buyer => {
+      document.getElementById(`buyer-${buyer.net_loc}`).textContent = buyer[`name_${lang}`] || buyer.name_en
+    })
+  }
   
   async function i18Loader() {
     const langs = ['en', 'ja'];
@@ -97,6 +109,7 @@ window.addEventListener('load', async () => {
     i18next.on('languageChanged', () => {
       updateContent();
       updateDynamicContent();
+      updateBuyers();
     });
   
     const langSelector = document.getElementById('langSelector');
@@ -119,18 +132,23 @@ window.addEventListener('load', async () => {
   // Buyers js
   const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
 
+  let buyers = []
   const browseByURL = 'https://egltn7djl4lxhe7nkkmbyoaghy0whrvp.lambda-url.ap-northeast-1.on.aws'
   const urlParams = new URLSearchParams(window.location.search);
   const browseBy = urlParams.get('by');
 
   try {
-    const { success, message, buyers } = await fetch(browseByURL + (browseBy ? `?by=${encodeURIComponent(browseBy)}` : '')).then(res => res.json())
+    const { success, message, buyers: fetchedBuyers } = await fetch(browseByURL + (browseBy ? `?by=${encodeURIComponent(browseBy)}` : '')).then(res => res.json())
 
     if (success) {
-      const currentTranslation = dynamicTranslation[getCurrentLang()]
+      buyers = fetchedBuyers
+      const lang = getCurrentLang()
+      const currentTranslation = dynamicTranslation[lang]
 
       if (browseBy) {
-        document.getElementById("category-header").innerHTML = currentTranslation["Buyers by"](capitalize(browseBy))
+        const by = capitalize(browseBy)
+
+        document.getElementById("category-header").innerHTML = currentTranslation["Buyers by"](currentTranslation[by] || by)
       } else {
         document.getElementById("category-header").innerHTML = currentTranslation["Featured"]
       }
@@ -156,7 +174,8 @@ window.addEventListener('load', async () => {
 
           div.className = 'text-blue-700'
           item.setAttribute('href', `/buyer?domain=${encodeURIComponent(buyer.net_loc)}`)
-          item.textContent = buyer.name_en;
+          item.setAttribute('id', `buyer-${buyer.net_loc}`)
+          item.textContent = buyer[`name_${lang}`] || buyer.name_en;
 
           div.appendChild(item)
           columnDiv.appendChild(div);

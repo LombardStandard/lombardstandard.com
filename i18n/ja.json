@@ -239,6 +239,7 @@
   "menu-7": "ブログ",
   "menu-8": "無料でお申し込み頂けます",
   "menu-9": "価格設定",
+  "menu-10": "バイヤー",
   "header-1": "商業不動産の買い手をお探しですか？<br><span class='text-blue-700'>人工知能（AI）がお手伝いします。</span>",
   "header-3": "売り物件にマッチする商業不動産投資家を探索して推奨するLombard Standardを使えば、より多くの買い手をより速く見つけ同時にコストを削減できます。",
   "header-4": "詳しく知りたい",
@@ -449,5 +450,6 @@
   "dealSize": "取引規模",
   "discoverSimilar": "類似の購入者を発見する",
   "browseBy": "参照方法",
-  "exploreMoreBuyers": "さらに購入者を探す"
+  "exploreMoreBuyers": "さらに購入者を探す",
+  "seeAllBuyers": "すべての購入者を見る"
 }
