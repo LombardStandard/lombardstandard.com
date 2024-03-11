@@ -8,11 +8,13 @@ window.addEventListener('load', async () => {
   const dynamicTranslation = {
     en: {
       'Not Found!': 'Not Found!',
-      'Explore more buyers': 'Explore more buyers'
+      'Explore more buyers': 'Explore more buyers',
+      'Verified': 'Verified'
     },
     ja: {
       'Not Found!': '見つかりません！',
-      'Explore more buyers': 'さらに購入者を探す'
+      'Explore more buyers': 'さらに購入者を探す',
+      'Verified': '確認済み'
     }
   }
   const detectionOptions = {
@@ -382,8 +384,13 @@ window.addEventListener('load', async () => {
         logoImg.classList.remove('hidden')
 
         const verificationBadge = document.getElementById('verification-badge')
-        if (buyer.verified) verificationBadge.setAttribute('fill', 'rgb(29 78 216)')
-        verificationBadge.classList.remove('hidden')
+        if (buyer.verified) {
+          verificationBadge.setAttribute('data-i18n', 'verified')
+          verificationBadge.innerHTML = translation['Verified']
+          verificationBadge.className = 'text-green-700 bg-green-100 py-1 px-2 rounded-xl text-xs uppercase font-medium i18nelement'
+        } else {
+          verificationBadge.innerHTML = ''
+        }
 
         updateBuyerContent()
         document.getElementById('company-country-code').setAttribute('src', `/img/flags-svg/${COUNTRY_TO_FLAG[buyer.headquarters]}.svg`)
