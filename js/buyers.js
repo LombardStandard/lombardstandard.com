@@ -153,6 +153,8 @@ window.addEventListener('load', async () => {
         document.getElementById("category-header").innerHTML = currentTranslation["Featured"]
       }
 
+      document.getElementById('columns-wrapper').classList.add("border")
+
       const columns = 3;
       const dividedArrays = [];
       const itemsInFirstColumn = Math.ceil(buyers.length / columns);
@@ -171,12 +173,16 @@ window.addEventListener('load', async () => {
         dividedArrays[column - 1].forEach((buyer) => {
           const div = document.createElement("div");
           const item = document.createElement("a");
+          const span = document.createElement('span')
 
-          div.className = 'text-blue-700'
+          div.className = 'flex items-center text-blue-700 gap-2'
           item.setAttribute('href', `/buyer?domain=${encodeURIComponent(buyer.net_loc)}`)
           item.setAttribute('id', `buyer-${buyer.net_loc}`)
           item.textContent = buyer[`name_${lang}`] || buyer.name_en;
+          span.className = 'w-2.5 h-2.5 rounded-full'
+          span.style.backgroundColor = buyer.verified ? 'rgb(29, 177, 0)' : 'rgb(156, 163, 175)'
 
+          div.appendChild(span)
           div.appendChild(item)
           columnDiv.appendChild(div);
         });
