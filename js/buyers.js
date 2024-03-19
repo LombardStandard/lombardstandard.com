@@ -153,8 +153,6 @@ window.addEventListener('load', async () => {
         document.getElementById("category-header").innerHTML = currentTranslation["Featured"]
       }
 
-      document.getElementById('columns-wrapper').classList.add("border")
-
       const columns = 3;
       const dividedArrays = [];
       const itemsInFirstColumn = Math.ceil(buyers.length / columns);
@@ -180,7 +178,7 @@ window.addEventListener('load', async () => {
           item.setAttribute('id', `buyer-${buyer.net_loc}`)
           item.textContent = buyer[`name_${lang}`] || buyer.name_en;
           span.className = 'w-2.5 h-2.5 rounded-full'
-          span.style.backgroundColor = buyer.verified ? 'rgb(29, 177, 0)' : 'rgb(156, 163, 175)'
+          span.style.backgroundColor = buyer.verified ? 'rgb(29, 177, 0)' : 'rgb(209, 213, 219)'
 
           div.appendChild(span)
           div.appendChild(item)
