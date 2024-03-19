@@ -81,7 +81,7 @@ window.addEventListener('load', async () => {
     const lang = getCurrentLang()
     
     buyers.forEach(buyer => {
-      document.getElementById(`buyer-${buyer.net_loc}`).textContent = buyer[`name_${lang}`] || buyer.name_en
+      document.getElementById(`buyer-${buyer.net_loc}`).textContent = getCompanyName(buyer, lang)
     })
   }
   
@@ -131,6 +131,14 @@ window.addEventListener('load', async () => {
 
   // Buyers js
   const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+  const getCompanyName = (company, lang) => {
+    if (company.net_loc.includes('.jp'))
+      return company[`name_${lang}`] || company.name
+  
+    if (/[a-zA-Z]/.test(company.name)) return company.name
+  
+    return company[`name_${lang}`] || company.name
+  }
 
   let buyers = []
   const browseByURL = 'https://egltn7djl4lxhe7nkkmbyoaghy0whrvp.lambda-url.ap-northeast-1.on.aws'
@@ -176,7 +184,7 @@ window.addEventListener('load', async () => {
           div.className = 'flex items-center text-blue-700 gap-2'
           item.setAttribute('href', `/buyer?domain=${encodeURIComponent(buyer.net_loc)}`)
           item.setAttribute('id', `buyer-${buyer.net_loc}`)
-          item.textContent = buyer[`name_${lang}`] || buyer.name_en;
+          item.textContent = getCompanyName(buyer, lang);
           span.className = 'w-2.5 h-2.5 rounded-full'
           span.style.backgroundColor = buyer.verified ? 'rgb(29, 177, 0)' : 'rgb(209, 213, 219)'
 

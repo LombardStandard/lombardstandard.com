@@ -318,10 +318,18 @@ window.addEventListener('load', async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const domain = urlParams.get('domain');
 
+  const getCompanyName = (company, lang) => {
+    if (company.net_loc.includes('.jp'))
+      return company[`name_${lang}`] || company.name
+  
+    if (/[a-zA-Z]/.test(company.name)) return company.name
+  
+    return company[`name_${lang}`] || company.name
+  }
   const getLogoURL = (domain) => `https://logo.clearbit.com/${domain}?size=100&format=png`
   const updateBuyerContent = () => {
     const lang = getCurrentLang()
-    const name = buyer[`name_${lang}`] || buyer.name_en
+    const name = getCompanyName(buyer, lang)
     const summary = lang === 'en' ? buyer.summary : buyer.summary_ja || buyer.summary
     const segment = lang === 'en' ? buyer.segment : buyer.segment_ja || buyer.segment
 
@@ -334,7 +342,7 @@ window.addEventListener('load', async () => {
     const lang = getCurrentLang()
 
     similarBuyers?.forEach(buyer => {
-      document.getElementById(`similar-buyer-${buyer.net_loc}`).innerHTML = buyer[`name_${lang}`] || buyer.name_en
+      document.getElementById(`similar-buyer-${buyer.net_loc}`).innerHTML = getCompanyName(buyer, lang)
     })
   }
 
@@ -345,6 +353,7 @@ window.addEventListener('load', async () => {
       if (success) {
         const lang = getCurrentLang()
         const translation = dynamicTranslation[lang]
+        console.log("fetchedBuyer", fetchedBuyer)
 
         if (!fetchedBuyer) {
           document.getElementById('company-name').innerHTML = translation['Not Found!']
@@ -452,7 +461,7 @@ window.addEventListener('load', async () => {
             const span = document.createElement('span')
             span.className = 'font-medium'
             span.id = `similar-buyer-${buyer.net_loc}`
-            span.innerHTML = buyer[`name_${lang}`] || buyer.name_en
+            span.innerHTML = getCompanyName(buyer, lang)
 
             a.appendChild(img)
             a.appendChild(span)
