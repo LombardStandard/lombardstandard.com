@@ -7,13 +7,13 @@ window.addEventListener('load', async () => {
 
   const dynamicTranslation = {
     en: {
-      "Buyers by": (by) => `Buyers by "${by}"`,
+      "Companies by": (by) => `Companies by "${by}"`,
       "Featured": "Featured",
       "Numbers": "Numbers",
       "Other": "Other"
     },
     ja: {
-      "Buyers by": (by) => `「${by}」による購入者`,
+      "Companies by": (by) => `「${by}」別の企業`,
       "Featured": "特徴",
       "Numbers": "数字",
       "Other": "他の"
@@ -71,7 +71,7 @@ window.addEventListener('load', async () => {
     const currentTranslation = dynamicTranslation[getCurrentLang()]
 
     if (browseBy) {
-      document.getElementById("category-header").innerHTML = currentTranslation["Buyers by"](capitalize(browseBy))
+      document.getElementById("category-header").innerHTML = currentTranslation["Companies by"](capitalize(browseBy))
     } else {
       document.getElementById("category-header").innerHTML = currentTranslation["Featured"]
     }
@@ -158,7 +158,7 @@ window.addEventListener('load', async () => {
       if (browseBy) {
         const by = capitalize(browseBy)
 
-        document.getElementById("category-header").innerHTML = currentTranslation["Buyers by"](currentTranslation[by] || by)
+        document.getElementById("category-header").innerHTML = currentTranslation["Companies by"](currentTranslation[by] || by)
       } else {
         document.getElementById("category-header").innerHTML = currentTranslation["Featured"]
       }
@@ -184,7 +184,7 @@ window.addEventListener('load', async () => {
           const span = document.createElement('span')
 
           div.className = 'flex items-center text-blue-700 gap-2'
-          item.setAttribute('href', `/buyer?domain=${encodeURIComponent(buyer.net_loc)}`)
+          item.setAttribute('href', `/company?domain=${encodeURIComponent(buyer.net_loc)}`)
           item.setAttribute('id', `buyer-${buyer.net_loc}`)
           item.textContent = getCompanyName(buyer, lang);
           span.className = 'w-2.5 h-2.5 rounded-full'

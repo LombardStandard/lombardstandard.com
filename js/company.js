@@ -8,12 +8,12 @@ window.addEventListener('load', async () => {
   const dynamicTranslation = {
     en: {
       'Not Found!': 'Not Found!',
-      'Explore more buyers': 'Explore more buyers',
+      'Explore more companies': 'Explore more companies',
       'Verified': 'Verified'
     },
     ja: {
       'Not Found!': '見つかりません！',
-      'Explore more buyers': 'さらに購入者を探す',
+      'Explore more companies': 'さらに多くの企業を探索する',
       'Verified': '確認済み'
     }
   }
@@ -353,7 +353,6 @@ window.addEventListener('load', async () => {
       if (success) {
         const lang = getCurrentLang()
         const translation = dynamicTranslation[lang]
-        console.log("fetchedBuyer", fetchedBuyer)
 
         if (!fetchedBuyer) {
           document.getElementById('company-name').innerHTML = translation['Not Found!']
@@ -424,7 +423,7 @@ window.addEventListener('load', async () => {
 
             const a = document.createElement('a')
             a.className = 'flex items-center gap-2'
-            a.setAttribute('href', `/buyer?domain=${buyer.net_loc}`)
+            a.setAttribute('href', `/company?domain=${buyer.net_loc}`)
             a.setAttribute('rel', 'noopener noreferrer')
 
             const img = document.createElement('img')
@@ -474,10 +473,10 @@ window.addEventListener('load', async () => {
 
           const a = document.createElement('a')
           a.className = 'i18nelement lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-medium text-gray-900 text-center hover:bg-gray-300 transition'
-          a.setAttribute('href', '/buyers')
+          a.setAttribute('href', '/companies')
           a.setAttribute('rel', 'noopener noreferrer')
-          a.setAttribute('data-i18n', 'exploreMoreBuyers')
-          a.innerHTML = translation['Explore more buyers']
+          a.setAttribute('data-i18n', 'exploreMoreCompanies')
+          a.innerHTML = translation['Explore more companies']
 
           div.appendChild(a)
           similarBuyersList.appendChild(div)
