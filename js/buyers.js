@@ -132,12 +132,14 @@ window.addEventListener('load', async () => {
   // Buyers js
   const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1)
   const getCompanyName = (company, lang) => {
+    if (lang === 'ja') return company.name_ja
+
     if (company.net_loc.includes('.jp'))
-      return company[`name_${lang}`] || company.name
+      return company[`name_en`] || company.name
   
     if (/[a-zA-Z]/.test(company.name)) return company.name
   
-    return company[`name_${lang}`] || company.name
+    return company[`name_en`] || company.name
   }
 
   let buyers = []
