@@ -3,18 +3,6 @@ if (copyright) {
   copyright.innerHTML = new Date().getFullYear();
 }
 
-_linkedin_partner_id = '3365265';
-window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-(function () {
-  var s = document.getElementsByTagName('script')[0];
-  var b = document.createElement('script');
-  b.type = 'text/javascript';
-  b.async = true;
-  b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
-  s.parentNode.insertBefore(b, s);
-})();
-
 window.addEventListener('load', async () => {
   // i18n
   const translations = {
@@ -350,16 +338,20 @@ window.addEventListener('load', async () => {
   }
 
   function updateImages() {
-    const imageHead = document.getElementById('header-image');
-    const imageBody = document.getElementById('body-image');
+    const imageHead = document.getElementById('header-image')
+    const imageBody = document.getElementById('body-image')
+    const videoHead = document.getElementById('videoAd')
     const lang = i18next.language.includes('en') ? 'en' : i18next.language;
     const finalLang = ['de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'].includes(lang) ? 'en' : lang
-
+  
     if (imageHead) {
-      imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${finalLang}-min.png`;
+      imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${finalLang}-min.png`
     }
     if (imageBody) {
-      imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${finalLang}.png`;
+      imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${finalLang}.png`
+    }
+    if (videoHead) {
+      videoHead.src = `https://lombst.s3.amazonaws.com/website/video-${finalLang}.mp4`
     }
   }
 
