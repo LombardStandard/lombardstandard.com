@@ -466,5 +466,11 @@
   "streaming": "ストリーミング",
   "generativeAI": "生成AI",
   "companies": "企業",
-  "globalCREOutlets": "グローバルCREアウトレット"
+  "globalCREOutlets": "グローバルCREアウトレット",
+  "Family Office": "ファミリーオフィス",
+  "Financial Services": "金融サービス",
+  "Professional Services": "プロフェッショナルサービス",
+  "Asset Manager": "アセット・マネージャー",
+  "Property Developer": "不動産開発業者",
+  "Property Operator": "プロパティ演算子"
 }

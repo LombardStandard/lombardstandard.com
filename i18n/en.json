@@ -465,5 +465,11 @@
   "streaming": "Streaming",
   "generativeAI": "Generative AI",
   "companies": "Companies",
-  "globalCREOutlets": "Global CRE Outlets"
+  "globalCREOutlets": "Global CRE Outlets",
+  "Family Office": "Family Office",
+  "Financial Services": "Financial Services",
+  "Professional Services": "Professional Services",
+  "Asset Manager": "Asset Manager",
+  "Property Developer": "Property Developer",
+  "Property Operator": "Property Operator"
 }

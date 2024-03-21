@@ -420,14 +420,14 @@ window.addEventListener('load', async () => {
     (i18next.language.includes('en') ? 'en' : i18next.language) || 'en';
 
   const updateChartData = () => {
-    const t = translations[getCurrentLang()];
+    // const t = translations[getCurrentLang()];
 
-    apiData.segments.forEach(([sector, value], i) => {
-      sectorSeries.data.setIndex(i, {
-        category: t[sector] || sector,
-        value: ((value / apiData.totalSegments) * 100).toFixed(1),
-      });
-    });
+    // apiData.segments.forEach(([sector, value], i) => {
+    //   sectorSeries.data.setIndex(i, {
+    //     category: t[sector] || sector,
+    //     value: ((value / apiData.totalSegments) * 100).toFixed(1),
+    //   });
+    // });
 
     if (mapLang) map?.setStyle(mapLang.setLanguage(map.getStyle(), getCurrentLang()));
   };
@@ -495,6 +495,7 @@ window.addEventListener('load', async () => {
       const sectorsData = segments.map(([sector, value]) => ({
         category: t[sector] || sector,
         value: ((value / totalSegments) * 100).toFixed(1),
+        sector
       }));
 
       createChart('sectors', sectorsData);
@@ -544,68 +545,101 @@ window.addEventListener('load', async () => {
   };
 
   const createChart = (id = '', data = []) => {
-    const root = am5.Root.new(id);
-    root._logo.dispose();
+    const sectors = document.getElementById('sectors')
+    const fills = [
+      '#67B7DC',
+      '#6794DC',
+      '#6771DC',
+      '#8067DC',
+      '#A367DC',
+      '#C767DC'
+    ]
 
-    const responsive = am5themes_Responsive.new(root);
+    data.forEach((sector, i) => {
+      const div = document.createElement('div')
+      div.className = 'flex items-center gap-2'
 
-    responsive.addRule({
-      relevant: am5themes_Responsive.widthL,
-    });
-    root.setThemes([am5themes_Animated.new(root), responsive]);
+      const box = document.createElement('div')
+      box.className = 'w-4 h-4 rounded-sm'
+      box.style.backgroundColor = fills[i] || '#67B7DC'
 
-    const chart = root.container.children.push(
-      am5percent.PieChart.new(root, {
-        radius: am5.percent(50),
-        innerRadius: am5.percent(50),
-        centerX: am5.percent(25),
-        layout: am5.GridLayout.new(root, {
-          maxColumns: 3,
-          fixedWidthGrid: true,
-        }),
-      })
-    );
+      const p = document.createElement('p')
+      p.innerHTML = sector.category
+      p.className = 'text-lg font-light i18nelement'
+      p.setAttribute('data-i18n', sector.sector)
 
-    const series = chart.series.push(
-      am5percent.PieSeries.new(root, {
-        valueField: 'value',
-        categoryField: 'category',
-        oversizedBehavior: 'wrap',
-        legendLabelText:
-          '[#111827; 300; fontSize: 16px; fontFamily: Roboto]{category}[/]',
-        legendValueText:
-          '[#111827; bold; fontSize: 16px; fontFamily: Roboto]{value}%[/]',
-      })
-    );
+      const span = document.createElement('span')
+      span.innerHTML = sector.value + '%'
+      span.className = 'font-bold'
 
-    if (id === 'sectors') {
-      sectorSeries = series;
-    }
+      div.appendChild(box)
+      div.appendChild(p)
+      div.appendChild(span)
 
-    series.data.setAll(data);
-    series.labels.template.set('forceHidden', true);
-    series.ticks.template.set('forceHidden', true);
+      sectors.appendChild(div)
+    })
+    // const root = am5.Root.new(id);
+    // root._logo.dispose();
 
-    series.slices.template.setAll({
-      fillOpacity: 1,
-      stroke: am5.color(0xffffff),
-      strokeWidth: 2,
-    });
+    // const responsive = am5themes_Responsive.new(root);
 
-    series.slices.template.set('tooltipText', '');
-    series.slices.template.set('toggleKey', 'none');
+    // responsive.addRule({
+    //   relevant: am5themes_Responsive.widthL,
+    // });
+    // root.setThemes([am5themes_Animated.new(root), responsive]);
 
-    var legend = chart.children.push(
-      am5.Legend.new(root, {
-        centerY: am5.percent(50),
-        y: am5.percent(50),
-        x: am5.percent(75),
-        layout: root.verticalLayout,
-        fill: am5.color(0xffffff),
-      })
-    );
+    // const chart = root.container.children.push(
+    //   am5percent.PieChart.new(root, {
+    //     radius: am5.percent(50),
+    //     innerRadius: am5.percent(50),
+    //     centerX: am5.percent(25),
+    //     layout: am5.GridLayout.new(root, {
+    //       maxColumns: 3,
+    //       fixedWidthGrid: true,
+    //     }),
+    //   })
+    // );
 
-    legend.data.setAll(series.dataItems);
+    // const series = chart.series.push(
+    //   am5percent.PieSeries.new(root, {
+    //     valueField: 'value',
+    //     categoryField: 'category',
+    //     oversizedBehavior: 'wrap',
+    //     legendLabelText:
+    //       '[#111827; 300; fontSize: 16px; fontFamily: Roboto]{category}[/]',
+    //     legendValueText:
+    //       '[#111827; bold; fontSize: 16px; fontFamily: Roboto]{value}%[/]',
+    //   })
+    // );
+
+    // if (id === 'sectors') {
+    //   sectorSeries = series;
+    // }
+
+    // series.data.setAll(data);
+    // series.labels.template.set('forceHidden', true);
+    // series.ticks.template.set('forceHidden', true);
+
+    // series.slices.template.setAll({
+    //   fillOpacity: 1,
+    //   stroke: am5.color(0xffffff),
+    //   strokeWidth: 2,
+    // });
+
+    // series.slices.template.set('tooltipText', '');
+    // series.slices.template.set('toggleKey', 'none');
+
+    // var legend = chart.children.push(
+    //   am5.Legend.new(root, {
+    //     centerY: am5.percent(50),
+    //     y: am5.percent(50),
+    //     x: am5.percent(75),
+    //     layout: root.verticalLayout,
+    //     fill: am5.color(0xffffff),
+    //   })
+    // );
+
+    // legend.data.setAll(series.dataItems);
   };
 
   const getCountriesLatLong = () => fetch('/js/countries.json').then((res) => res.json())
