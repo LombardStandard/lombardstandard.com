@@ -387,7 +387,7 @@
   "tryAll": "Excel でのデータのエクスポートを除くすべての機能を試す",
   "upto2Users": "最大 2 ユーザー (管理者 + 1 メンバー)",
   "month": "月",
-  "consumptionTax": "(消費税を含みます)",
+  "consumptionTax": "税込み",
   "smallTeams": "小規模チーム向け",
   "newsHeadlines": "世界中の 15 の報道機関からのニュースのヘッドライン",
   "generativeEmail": "メールの生成",
@@ -396,7 +396,7 @@
   "upto5Users": "最大 5 ユーザー (管理者 + 4 メンバー)",
   "3daysSupport": "3日間のサポート対応",
   "year": "年",
-  "forEnterprises": "企業向け",
+  "forEnterprises": "大規模な組織の場合",
   "allFeaturesMonthly": "Monthly Plan のすべての機能",
   "exportCompanies": "すべての企業リストとプロファイルをエクスポートする",
   "exportEmails": "すべての連絡先をエクスポートする",
@@ -472,5 +472,10 @@
   "Professional Services": "プロフェッショナルサービス",
   "Asset Manager": "アセット・マネージャー",
   "Property Developer": "不動産開発業者",
-  "Property Operator": "プロパティ演算子"
+  "Property Operator": "プロパティ演算子",
+  "basicTool": "基本ツール",
+  "promptBasedRanking": "プロンプトベースのランキング",
+  "1user": "1ユーザー",
+  "3users": "3 ユーザー",
+  "5users": "5 ユーザー"
 }

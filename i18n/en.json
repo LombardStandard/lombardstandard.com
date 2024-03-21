@@ -277,7 +277,7 @@
   "feature-17a": "Text generation and submission to relevant buyers",
   "feature-18": "CRM Dashboard",
   "feature-18a": "Keeping track of deal's progress quickly and easily",
-  "feature-19": "Content Generation",
+  "feature-19": "Content generation",
   "feature-19a": "Tools to generates ultra-personalized email content, different location maps and tailored property description.",
   "feature-20": "Contact profiles",
   "feature-20a": "Name, title, LinkedIn profile and email address of thousands of CRE professionals globally, carefully selected.",
@@ -386,7 +386,7 @@
   "tryAll": "Try all features except export data in excel",
   "upto2Users": "Up to 2 users (admin + 1 member)",
   "month": "month",
-  "consumptionTax": "(includes Consumption Tax)",
+  "consumptionTax": "Including Tax",
   "smallTeams": "For small teams",
   "newsHeadlines": "News headlines from 15 outlets globally",
   "generativeEmail": "Generative emails",
@@ -395,7 +395,7 @@
   "upto5Users": "Up to 5 users (admin + 4 members)",
   "3daysSupport": "3-days support response",
   "year": "year",
-  "forEnterprises": "For enterprises",
+  "forEnterprises": "For large organizations",
   "allFeaturesMonthly": "All features in Monthly Plan",
   "exportCompanies": "Export all companies lists and profiles",
   "exportEmails": "Export generative emails",
@@ -471,5 +471,10 @@
   "Professional Services": "Professional Services",
   "Asset Manager": "Asset Manager",
   "Property Developer": "Property Developer",
-  "Property Operator": "Property Operator"
+  "Property Operator": "Property Operator",
+  "basicTool": "Basic tool",
+  "promptBasedRanking": "Prompt-based ranking",
+  "1user": "1 user",
+  "3users": "3 users",
+  "5users": "5 users"
 }
