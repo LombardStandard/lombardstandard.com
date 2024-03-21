@@ -51,277 +51,276 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
 
-<body class="w-full mx-auto max-w-8xl py-8 px-8 lg:px-16">
-  <header class="w-full flex items-center justify-between">
-    <div class="flex items-center gap-8">
-      <a href="/">
-        <svg class="h-8 w-28">
-          <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
-        </svg>
-      </a>
-      <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
-        <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
-        <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
-        <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
-        <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
-      </nav>
-    </div>
-    <div class="flex flex-row items-center">
-      <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
-        <option value="en">English</option>
-        <option value="ja">日本語</option>
-      </select>
-      <a class="hidden lg:inline-block text-center rounded-lg font-medium text-blue-700 text-center mr-8 hover:text-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login"  target="_blank" data-i18n="menu-5">Login</a>
-      <a class="hidden lg:inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup" data-i18n="menu-8">Sign up for free</a>
-      <button class="block lg:hidden" data-modal-target="top-left-modal" data-modal-toggle="top-left-modal">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111827" class="w-7 h-7">
-          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-        </svg>
-      </button>
-    </div>
-    <div id="top-left-modal" data-modal-placement="top-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-      <div class="relative w-full max-w-2xl max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-xl shadow">
-          <!-- Modal header -->
-          <div class="flex items-center justify-between pt-6 pr-6 ">
-            <button type="button" class="text-gray-900 bg-transparent hover:bg-gray-100 rounded-full text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="top-left-modal">
-              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-              </svg>
-            </button>
-          </div>
-          <!-- Modal body -->
-          <div class="flex flex-col px-6 pb-6 space-y-6 font-light">
-            <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
-            <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
-            <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
-            <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
-            <a class="inline-block text-center rounded-lg font-medium text-blue-700 text-center hover:text-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login"  target="_blank" data-i18n="menu-5">Login</a>
-            <a class="inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup"  target="_blank" data-i18n="menu-8">Sign up for free</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </header>
-
-  <main id="main">
-    <h1 id="heading" class="text-center font-bold text-4xl my-14 lg:my-20">News and updates</h1>
-
-    <div class="flex flex-col gap-10 lg:max-w-4xl w-full  mx-auto space-y-4 lg:px-8 px-0">
-
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
-            <div class="flex flex-none">
-              <img class="w-auto h-8 rounded-sm" src="https://lombst.s3.amazonaws.com/website/logo+big.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-4a"> Press Release</p>
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-4b"> Japanese</p>
-            </div>
-          </div>
-          <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-10a">Lombard Standard is looking for Seed Round</p>
-          <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-10c">Feburary 7, 2024</p>
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-10b">A number of major companies have recognized LombardGPT's unique technology to streamline and transform commercial real estate transactions.</p>
-          <a target="_blank" href="https://prtimes.jp/main/html/rd/p/000000003.000125201.html" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
-            Read more
-          </a>
-        </div>
-      </div>
-      
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
-            <div class="flex flex-none">
-              <img class="w-auto h-6 rounded-sm" src="https://lombst.s3.amazonaws.com/website/Azure.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-3a"> Announcement</p>
-            </div>
-          </div>
-          <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-9b">Level 4 development stage approved by MS Azure</p>
-          <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-9c">November 21, 2023</p>
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-9d">Today we have received additional $100,000 in Azure credits to accelerate the development of our platform. Thanks to Microsoft for believing in us.</p>
-        </div>
-      </div>
-      
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
-            <div class="flex flex-none">
-              <img class="w-auto h-8 rounded-sm" src="https://lombst.s3.amazonaws.com/website/logo+big.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-2a"> Article</p>
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-2b"> English</p>
-            </div>
-          </div>
-          <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-2c">CRE marketplaces in Japan, an overview </p>
-          <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-2d">October 31, 2023</p>
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-2e">At Lombard Standard we believe that the only product similar to a marketplace that can be offered in Japan at this stage is a fully automated lead generation powered by AI.</p>
-          <a target="_blank" href="https://medium.com/@lombardstandard/commercial-real-estate-marketplaces-are-they-a-scalable-alternative-to-personal-relationship-in-8e8369723f78" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
-            Read more
-          </a>
-        </div>
-      </div>
-      
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
-            <div class="flex flex-none">
-              <img class="w-auto h-6 rounded-sm" src="https://lombst.s3.amazonaws.com/website/Azure.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-3a"> Announcement</p>
-            </div>
-          </div>
-          <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-3b">Level 3 development stage approved by MS Azure</p>
-          <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-3c">October 27, 2023</p>
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-3d">Today we have received additional $20,000 in Azure credits to accelerate the development of our platform. Thanks to Microsoft for believing in us.</p>
-        </div>
-      </div>
-
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
-            <div class="flex flex-none">
-              <img class="w-auto h-8 rounded-sm" src="https://lombst.s3.amazonaws.com/website/logo+big.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-4a"> Press Release</p>
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-4b"> Japanese</p>
-            </div>
-          </div>
-          <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-4c">Lombard Standard announces LombardGPT</p>
-          <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-4d">October 11, 2023</p>
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-4e">The platform uses state-of-the-art AI algorithms to analyze buyers' investment criteria, making it possible to connect buyers with sellers with high accuracy.</p>
-          <a target="_blank" href="https://prtimes.jp/main/html/rd/p/000000001.000125201.html" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
-            Read more
-          </a>
-        </div>
-      </div>
-
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
-            <div class="flex flex-none">
-              <img class="w-auto h-8 rounded-sm" src="https://lombst.s3.amazonaws.com/website/logo+big.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-5a"> Article</p>
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-5b"> English</p>
-            </div>
-          </div>
-          <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-5c">Global Innovations in Commercial Real Estate </p>
-          <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-5d">September 26, 2023</p>
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-5e">The AI revolution is under going and will disrupt pretty much every business globally, but digital transformation (DX) of CRE is a global phenomenon that started 30 years ago.</p>
-          <a target="_blank" href="https://medium.com/@lombardstandard/certainly-the-digital-transformation-dx-of-commercial-real-estate-is-a-global-phenomenon-and-37ac8700be97" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
-            Read more
-          </a>
-        </div>
-      </div>
-
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
-            <div class="flex flex-none">
-              <img class="w-auto h-6 rounded-sm" src="https://lombst.s3.amazonaws.com/website/aws-3.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-6a"> Announcement</p>
-            </div>
-          </div>
-
-          <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-6b">AWS Startups approved further credits</p>
-          <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-6c">August 31, 2023</p>
-
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-6d">Today we have received additional $15,000 in AWS credits to continue the production of our prototype. Thanks to AWS for believing in us.</p>
-        </div>
-      </div>
-
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between w-full">
-            <div class="flex flex-none">
-              <img class="w-auto h-4 rounded-sm" src="https://lombst.s3.amazonaws.com/website/Antler.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-7a"> Press Release</p>
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-7b"> Japanese</p>
-            </div>
-          </div>
-          <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-7c">Antler Japan invests in Lombard Standard</p>
-          <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-7d">August 2, 2023</p>
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-7e">We are glad to receive ¥20M in Pre-Seed funding from Antler Japan. Thanks to the team this round will boost our development in the coming months.</p>
-          <a target="_blank" href="https://prtimes.jp/main/html/rd/p/000000005.000108918.html" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
-            Read more
-          </a>
-        </div>
-      </div>
-      <div class="flex flex-row border border-gray-300 rounded-xl">
-        <div class="p-7 font-light w-full">
-          <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
-            <div class="flex flex-none">
-              <img class="w-auto h-12 rounded-sm" src="https://lombst.s3.amazonaws.com/website/Sumisho.png" decoding="async" />
-            </div>
-            <div class="flex gap-x-2">
-              <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-8a"> Announcement</p>
-            </div>
-          </div>
-          <a href="https://prtimes.jp/main/html/rd/p/000000005.000108918.html">
-            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-8b">MOU signed with Sumisho Tatemono</p>
-            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-8c">February 16, 2023</p>
-          </a>
-          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-8d">Lombard Standard signed a Memorandum of Understanding to offer AI services to Sumisho Tatemono, a subsidiary of Sumitomo Corporation.</p>
-        </div>
-      </div>
-    </div>
-  </main>
-  
-  <footer class="py-7 lg:py-14 gap-6">
-    <div class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
-      <div class="flex flex-col gap-2 w-full">
+<body>
+  <div class="fixed w-full bg-white py-8 px-8 lg:px-16 top-0 z-50">
+    <header class="flex w-full max-w-8xl items-center justify-between">
+      <div class="flex items-center gap-8">
         <a href="/">
           <svg class="h-8 w-28">
             <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
           </svg>
         </a>
-        <div class="flex flex-row font-light mt-4">
-          <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
-        </div>
-
-      </div>
-      <div class="flex flex-col justify-between gap-x-10 gap-y-2 w-full lg:flex-row lg:w-2/3 pr-16">
-        <div class="flex flex-col gap-2 font-light">
+        <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
           <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
           <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
           <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
           <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
+        </nav>
+      </div>
+      <div class="flex flex-row items-center">
+        <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+        <a class="hidden lg:inline-block text-center rounded-lg font-medium text-blue-700 text-center mr-8 hover:text-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login"  target="_blank" data-i18n="menu-5">Login</a>
+        <a class="hidden lg:inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup" data-i18n="menu-8">Sign up for free</a>
+        <button class="block lg:hidden" data-modal-target="top-left-modal" data-modal-toggle="top-left-modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111827" class="w-7 h-7">
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <div id="top-left-modal" data-modal-placement="top-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-2xl max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-xl shadow">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between pt-6 pr-6">
+              <button type="button" class="text-gray-900 bg-transparent hover:bg-gray-100 rounded-full text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="top-left-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col px-6 pb-6 space-y-6 font-light">
+              <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
+              <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+              <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
+              <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
+              <a class="inline-block text-center rounded-lg font-medium text-blue-700 text-center hover:text-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login"  target="_blank" data-i18n="menu-5">Login</a>
+              <a class="inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup"  target="_blank" data-i18n="menu-8">Sign up for free</a>
+            </div>
+  
+          </div>
         </div>
-        <div class="flex flex-col gap-2 font-light ">
+      </div>
+    </header>
+  </div>
 
-          <a href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-8">Sign up for free</a>
-          <a href="/privacy" class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy">Privacy Policy</a>
-          <a href="/terms" class="transition hover:text-blue-700 i18nelement" data-i18n="global-terms">Terms</a>
-          <a href="/commercial-disclosure" class="transition hover:text-blue-700 i18nelement" data-i18n="global-disclosure">Commercial Disclosure</a>
-          <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</a>
+  <div class="w-full mx-auto max-w-8xl py-8 px-8 mt-16 lg:mt-0 lg:px-16">
+    <main id="main">
+      <h1 id="heading" class="text-center font-bold text-4xl my-14 lg:my-20">News and updates</h1>
+
+      <div class="flex flex-col gap-10 lg:max-w-4xl w-full  mx-auto space-y-4 lg:px-8 px-0">
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
+              <div class="flex flex-none">
+                <img class="w-auto h-8 rounded-sm" src="https://lombst.s3.amazonaws.com/website/logo+big.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-4a"> Press Release</p>
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-4b"> Japanese</p>
+              </div>
+            </div>
+            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-10a">Lombard Standard is looking for Seed Round</p>
+            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-10c">Feburary 7, 2024</p>
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-10b">A number of major companies have recognized LombardGPT's unique technology to streamline and transform commercial real estate transactions.</p>
+            <a target="_blank" href="https://prtimes.jp/main/html/rd/p/000000003.000125201.html" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
+              Read more
+            </a>
+          </div>
+        </div>
+        
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
+              <div class="flex flex-none">
+                <img class="w-auto h-6 rounded-sm" src="https://lombst.s3.amazonaws.com/website/Azure.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-3a"> Announcement</p>
+              </div>
+            </div>
+            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-9b">Level 4 development stage approved by MS Azure</p>
+            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-9c">November 21, 2023</p>
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-9d">Today we have received additional $100,000 in Azure credits to accelerate the development of our platform. Thanks to Microsoft for believing in us.</p>
+          </div>
+        </div>
+        
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
+              <div class="flex flex-none">
+                <img class="w-auto h-8 rounded-sm" src="https://lombst.s3.amazonaws.com/website/logo+big.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-2a"> Article</p>
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-2b"> English</p>
+              </div>
+            </div>
+            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-2c">CRE marketplaces in Japan, an overview </p>
+            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-2d">October 31, 2023</p>
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-2e">At Lombard Standard we believe that the only product similar to a marketplace that can be offered in Japan at this stage is a fully automated lead generation powered by AI.</p>
+            <a target="_blank" href="https://medium.com/@lombardstandard/commercial-real-estate-marketplaces-are-they-a-scalable-alternative-to-personal-relationship-in-8e8369723f78" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
+              Read more
+            </a>
+          </div>
+        </div>
+        
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
+              <div class="flex flex-none">
+                <img class="w-auto h-6 rounded-sm" src="https://lombst.s3.amazonaws.com/website/Azure.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-3a"> Announcement</p>
+              </div>
+            </div>
+            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-3b">Level 3 development stage approved by MS Azure</p>
+            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-3c">October 27, 2023</p>
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-3d">Today we have received additional $20,000 in Azure credits to accelerate the development of our platform. Thanks to Microsoft for believing in us.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
+              <div class="flex flex-none">
+                <img class="w-auto h-8 rounded-sm" src="https://lombst.s3.amazonaws.com/website/logo+big.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-4a"> Press Release</p>
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-4b"> Japanese</p>
+              </div>
+            </div>
+            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-4c">Lombard Standard announces LombardGPT</p>
+            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-4d">October 11, 2023</p>
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-4e">The platform uses state-of-the-art AI algorithms to analyze buyers' investment criteria, making it possible to connect buyers with sellers with high accuracy.</p>
+            <a target="_blank" href="https://prtimes.jp/main/html/rd/p/000000001.000125201.html" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
+              Read more
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
+              <div class="flex flex-none">
+                <img class="w-auto h-8 rounded-sm" src="https://lombst.s3.amazonaws.com/website/logo+big.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-5a"> Article</p>
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-5b"> English</p>
+              </div>
+            </div>
+            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-5c">Global Innovations in Commercial Real Estate </p>
+            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-5d">September 26, 2023</p>
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-5e">The AI revolution is under going and will disrupt pretty much every business globally, but digital transformation (DX) of CRE is a global phenomenon that started 30 years ago.</p>
+            <a target="_blank" href="https://medium.com/@lombardstandard/certainly-the-digital-transformation-dx-of-commercial-real-estate-is-a-global-phenomenon-and-37ac8700be97" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
+              Read more
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
+              <div class="flex flex-none">
+                <img class="w-auto h-6 rounded-sm" src="https://lombst.s3.amazonaws.com/website/aws-3.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-6a"> Announcement</p>
+              </div>
+            </div>
+
+            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-6b">AWS Startups approved further credits</p>
+            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-6c">August 31, 2023</p>
+
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-6d">Today we have received additional $15,000 in AWS credits to continue the production of our prototype. Thanks to AWS for believing in us.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between w-full">
+              <div class="flex flex-none">
+                <img class="w-auto h-4 rounded-sm" src="https://lombst.s3.amazonaws.com/website/Antler.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-7a"> Press Release</p>
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-7b"> Japanese</p>
+              </div>
+            </div>
+            <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-7c">Antler Japan invests in Lombard Standard</p>
+            <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-7d">August 2, 2023</p>
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-7e">We are glad to receive ¥20M in Pre-Seed funding from Antler Japan. Thanks to the team this round will boost our development in the coming months.</p>
+            <a target="_blank" href="https://prtimes.jp/main/html/rd/p/000000005.000108918.html" class="inline-flex items-center px-4 py-2 font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-900 transition i18nelement" data-i18n="blog-button">
+              Read more
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-row border border-gray-300 rounded-xl">
+          <div class="p-7 font-light w-full">
+            <div class="flex sm:flex-row flex-col sm:items-center gap-y-4 mb-8 justify-between">
+              <div class="flex flex-none">
+                <img class="w-auto h-12 rounded-sm" src="https://lombst.s3.amazonaws.com/website/Sumisho.png" decoding="async" />
+              </div>
+              <div class="flex gap-x-2">
+                <p class="text-xs text-gray-900 bg-gray-100 inline-flex px-3 py-1 rounded-full uppercase text-center i18nelement" data-i18n="blog-8a"> Announcement</p>
+              </div>
+            </div>
+            <a href="https://prtimes.jp/main/html/rd/p/000000005.000108918.html">
+              <p class="mb-1 text-2xl font-bold capitalize i18nelement" data-i18n="blog-8b">MOU signed with Sumisho Tatemono</p>
+              <p class="mb-6 text-sm text-gray-500 i18nelement" data-i18n="blog-8c">February 16, 2023</p>
+            </a>
+            <p class="mb-6 font-normal text-gray-700 dark:text-gray-400 i18nelement" data-i18n="blog-8d">Lombard Standard signed a Memorandum of Understanding to offer AI services to Sumisho Tatemono, a subsidiary of Sumitomo Corporation.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex flex-row justify-between items-center">
-      <div class="flex flex-row">
-        <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline rounded-sm h-4 mr-4" src="img/LinkedIn.png"> </a>
-        <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4 mr-4" src="img/x.png"> </a>
-        <a href="https://medium.com/@lombardstandard" target="_blank"> <img alt="Medium" class="inline h-4 mr-4" src="img/Medium.png"> </a>
-      </div>
-      <div class="flex flex-col">
-        <p class="mr-4 font-light i18nelement" data-i18n="menu-6">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
-      </div>
+    </main>
+    
+    <footer class="py-7 lg:py-14 gap-6">
+      <div class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
+        <div class="flex flex-col gap-2 w-full">
+          <a href="/">
+            <svg class="h-8 w-28">
+              <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+            </svg>
+          </a>
+          <div class="flex flex-row font-light mt-4">
+            <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
+          </div>
 
-  </footer>
+        </div>
+        <div class="flex flex-col justify-between gap-x-10 gap-y-2 w-full lg:flex-row lg:w-2/3 pr-16">
+          <div class="flex flex-col gap-2 font-light">
+            <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
+            <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+            <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
+            <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
+          </div>
+          <div class="flex flex-col gap-2 font-light ">
+            <a href="/privacy" class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy">Privacy Policy</a>
+            <a href="/terms" class="transition hover:text-blue-700 i18nelement" data-i18n="global-terms">Terms</a>
+            <a href="/commercial-disclosure" class="transition hover:text-blue-700 i18nelement" data-i18n="global-disclosure">Commercial Disclosure</a>
+            <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-row">
+          <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline rounded-sm h-4 mr-4" src="img/LinkedIn.png"> </a>
+          <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4 mr-4" src="img/x.png"> </a>
+          <a href="https://medium.com/@lombardstandard" target="_blank"> <img alt="Medium" class="inline h-4 mr-4" src="img/Medium.png"> </a>
+        </div>
+        <div class="flex flex-col">
+          <p class="mr-4 font-light i18nelement" data-i18n="menu-6">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
+        </div>
+    </footer>
+  </div>
   <script src="js/script.js"></script>
 </body>
 

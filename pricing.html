@@ -51,250 +51,252 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
 </head>
 
-<body class="w-full mx-auto max-w-8xl py-8 px-8 lg:px-16">
-  <header class="w-full flex items-center justify-between">
-    <div class="flex items-center gap-8">
-      <a href="/">
-        <svg class="h-8 w-28">
-          <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
-        </svg>
-      </a>
-      <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
-        <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
-        <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
-        <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
-        <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
-      </nav>
-    </div>
-    <div class="flex flex-row items-center">
-      <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
-        <option value="en">English</option>
-        <option value="ja">日本語</option>
-      </select>
-      <a class="hidden lg:inline-block text-center rounded-lg font-medium text-blue-700 text-center mr-8 hover:text-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login"  target="_blank" data-i18n="menu-5">Login</a>
-      <a class="hidden lg:inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup" data-i18n="menu-8">Sign up for free</a>
-      <button class="block lg:hidden" data-modal-target="top-left-modal" data-modal-toggle="top-left-modal">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111827" class="w-7 h-7">
-          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-        </svg>
-      </button>
-    </div>
-    <div id="top-left-modal" data-modal-placement="top-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-      <div class="relative w-full max-w-2xl max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-xl shadow">
-          <!-- Modal header -->
-          <div class="flex items-center justify-between pt-6 pr-6 ">
-            <button type="button" class="text-gray-900 bg-transparent hover:bg-gray-100 rounded-full text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="top-left-modal">
-              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-              </svg>
-            </button>
-          </div>
-          <!-- Modal body -->
-          <div class="flex flex-col px-6 pb-6 space-y-6 font-light">
-            <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
-            <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
-            <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
-            <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
-            <a class="inline-block text-center rounded-lg font-medium text-blue-700 text-center hover:text-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login"  target="_blank" data-i18n="menu-5">Login</a>
-            <a class="inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup"  target="_blank" data-i18n="menu-8">Sign up for free</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <h1 id="heading" class="text-center font-bold text-4xl mt-14 lg:mt-20 i18nelement" data-i18n="menu-9">Pricing</h1>
-
-    <div class="flex w-full justify-center items-center mt-10 gap-2">
-      <p>USD</p>
-      <label class="switch">
-        <input type="checkbox" checked id="currencySwitch">
-        <span class="slider round"></span>
-      </label>
-      <p>JPY</p>
-    </div>
-
-    <div class="flex flex-wrap w-full justify-between text-gray-900 mt-2">
-      <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
-        <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
-          <p class="mb-3 text-lg font-semibold text-blue-700">TRIAL</p>
-          <h2 class="text-[42px] font-bold">
-            <span class="i18nelement" data-i18n="Free">Free</span>
-          </h2>
-          <p class="mb-5 i18nelement" data-i18n="3days">3 days</p>
-          <p class="mb-8 border-b pb-8 i18nelement font-bold" data-i18n="noCardRequired">No credit card required</p>
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-2 text-blue-700">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="tryAll">Try all features except export data in excel</p>
-            </div>
-            <div class="flex items-center gap-2 text-blue-700">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="upto2Users">Up to 2 users (admin + 1 member)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
-        <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
-          <p class="mb-3 text-lg text-blue-700 font-semibold">MONTHLY PLAN</p>
-          <h2 class="text-[42px] font-bold">
-            <span id="monthlyPrice">¥35,750</span>
-            <span class="font-medium"> / <span class="font-light i18nelement" data-i18n="month">month</span></span>
-          </h2>
-          <p class="mb-5 i18nelement" data-i18n="consumptionTax">(includes Consumption Tax)</p>
-          <p class="mb-8 border-b pb-8 i18nelement font-bold" data-i18n="smallTeams">For small teams</p>
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p id="companies-count">-</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="newsHeadlines">News headlines from 15 outlets globally</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="generativeEmail">Generative emails</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="generativePropDesc">Generative property description</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="upto5Users">Up to 5 users (admin + 4 members)</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="3daysSupport">3-days support response</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
-        <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
-          <p class="mb-3 text-lg font-semibold text-blue-700">YEARLY PLAN</p>
-          <h2 class="text-[42px] font-bold">
-            <span id="yearlyPrice">¥393,250</span>
-            <span class="font-medium"> / <span class="font-light i18nelement" data-i18n="year">year</span></span>
-          </h2>
-          <p class="mb-5 i18nelement" data-i18n="consumptionTax">(includes Consumption Tax)</p>
-          <p class="mb-8 border-b pb-8 i18nelement font-bold" data-i18n="forEnterprises">For enterprises</p>
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="allFeaturesMonthly">All features in Monthly Plan</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="exportCompanies">Export all companies lists and profiles</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p id="contacts-count"></p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="exportEmails">Export generative emails</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="exportDesc">Export generative property description</p>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <p class="i18nelement" data-i18n="sameDaySupport">Same-day support response</p>
-            </div>
-          </div>
-          <span class="text-green-700 bg-green-100 py-1 px-2 rounded-full absolute right-4 top-4 text-sm i18nelement" data-i18n="oneMonthOff">
-            One month off
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex flex-col w-full items-center gap-2 mt-10">
-      <a class="px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup"  target="_blank" data-i18n="menu-8">Sign up for free</a>
-      <p class="text-sm font-light i18nelement" data-i18n="purchase-plans">Purchase plans in your account page</p>
-    </div>
-  </main>
-  
-  <footer class="py-7 lg:py-14 gap-6">
-    <div class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
-      <div class="flex flex-col gap-2 w-full">
+<body>
+  <div class="fixed w-full bg-white py-8 px-8 lg:px-16 top-0 z-50">
+    <header class="flex w-full max-w-8xl items-center justify-between">
+      <div class="flex items-center gap-8">
         <a href="/">
           <svg class="h-8 w-28">
             <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
           </svg>
         </a>
-        <div class="flex flex-row font-light mt-4">
-          <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
-        </div>
-
-      </div>
-      <div class="flex flex-col justify-between gap-x-10 gap-y-2 w-full lg:flex-row lg:w-2/3 pr-16">
-        <div class="flex flex-col gap-2 font-light">
+        <nav class="hidden lg:flex items-center gap-8 font-light ml-8">
           <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
           <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
           <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
           <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
+        </nav>
+      </div>
+      <div class="flex flex-row items-center">
+        <select disabled="true" id="langSelector" name="lang" class="appearance-none cursor-pointer inline-flex w-fit px-4 py-2 focus:ring-blue-700 focus:border-blue-700 bg-white text-sm rounded-md border border-gray-300 mr-8 font-light">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+        <a class="hidden lg:inline-block text-center rounded-lg font-medium text-blue-700 text-center mr-8 hover:text-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login"  target="_blank" data-i18n="menu-5">Login</a>
+        <a class="hidden lg:inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup" data-i18n="menu-8">Sign up for free</a>
+        <button class="block lg:hidden" data-modal-target="top-left-modal" data-modal-toggle="top-left-modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111827" class="w-7 h-7">
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <div id="top-left-modal" data-modal-placement="top-left" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-2xl max-h-full">
+          <!-- Modal content -->
+          <div class="relative bg-white rounded-xl shadow">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between pt-6 pr-6">
+              <button type="button" class="text-gray-900 bg-transparent hover:bg-gray-100 rounded-full text-sm w-8 h-8 ml-auto inline-flex justify-center items-center" data-modal-hide="top-left-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="flex flex-col px-6 pb-6 space-y-6 font-light">
+              <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
+              <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+              <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
+              <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
+              <a class="inline-block text-center rounded-lg font-medium text-blue-700 text-center hover:text-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login"  target="_blank" data-i18n="menu-5">Login</a>
+              <a class="inline-block px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup"  target="_blank" data-i18n="menu-8">Sign up for free</a>
+            </div>
+  
+          </div>
         </div>
-        <div class="flex flex-col gap-2 font-light ">
+      </div>
+    </header>
+  </div>
 
-          <a href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-8">Sign up for free</a>
-          <a href="/privacy" class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy">Privacy Policy</a>
-          <a href="/terms" class="transition hover:text-blue-700 i18nelement" data-i18n="global-terms">Terms</a>
-          <a href="/commercial-disclosure" class="transition hover:text-blue-700 i18nelement" data-i18n="global-disclosure">Commercial Disclosure</a>
-          <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</a>
+  <div class="w-full mx-auto max-w-8xl py-8 px-8 mt-16 lg:mt-0 lg:px-16">
+    <main id="main">
+      <h1 id="heading" class="text-center font-bold text-4xl mt-14 lg:mt-20 i18nelement" data-i18n="menu-9">Pricing</h1>
+
+      <div class="flex w-full justify-center items-center mt-10 gap-2">
+        <p>USD</p>
+        <label class="switch">
+          <input type="checkbox" checked id="currencySwitch">
+          <span class="slider round"></span>
+        </label>
+        <p>JPY</p>
+      </div>
+
+      <div class="flex flex-wrap w-full justify-between text-gray-900 mt-2">
+        <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
+          <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
+            <p class="mb-3 text-lg font-semibold text-blue-700">TRIAL</p>
+            <h2 class="text-[42px] font-bold">
+              <span class="i18nelement" data-i18n="Free">Free</span>
+            </h2>
+            <p class="mb-5 i18nelement" data-i18n="3days">3 days</p>
+            <p class="mb-8 border-b pb-8 i18nelement font-bold" data-i18n="noCardRequired">No credit card required</p>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-2 text-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="tryAll">Try all features except export data in excel</p>
+              </div>
+              <div class="flex items-center gap-2 text-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="upto2Users">Up to 2 users (admin + 1 member)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
+          <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
+            <p class="mb-3 text-lg text-blue-700 font-semibold">MONTHLY PLAN</p>
+            <h2 class="text-[42px] font-bold">
+              <span id="monthlyPrice">¥35,750</span>
+              <span class="font-medium"> / <span class="font-light i18nelement" data-i18n="month">month</span></span>
+            </h2>
+            <p class="mb-5 i18nelement" data-i18n="consumptionTax">(includes Consumption Tax)</p>
+            <p class="mb-8 border-b pb-8 i18nelement font-bold" data-i18n="smallTeams">For small teams</p>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p id="companies-count">-</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="newsHeadlines">News headlines from 15 outlets globally</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="generativeEmail">Generative emails</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="generativePropDesc">Generative property description</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="upto5Users">Up to 5 users (admin + 4 members)</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="3daysSupport">3-days support response</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full px-4 my-4 md:w-1/2 lg:w-1/3">
+          <div class="relative z-10 h-full overflow-hidden rounded-[6px] border-2 bg-white px-8 py-10 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
+            <p class="mb-3 text-lg font-semibold text-blue-700">YEARLY PLAN</p>
+            <h2 class="text-[42px] font-bold">
+              <span id="yearlyPrice">¥393,250</span>
+              <span class="font-medium"> / <span class="font-light i18nelement" data-i18n="year">year</span></span>
+            </h2>
+            <p class="mb-5 i18nelement" data-i18n="consumptionTax">(includes Consumption Tax)</p>
+            <p class="mb-8 border-b pb-8 i18nelement font-bold" data-i18n="forEnterprises">For enterprises</p>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="allFeaturesMonthly">All features in Monthly Plan</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="exportCompanies">Export all companies lists and profiles</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p id="contacts-count"></p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="exportEmails">Export generative emails</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="exportDesc">Export generative property description</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1D4ED8" class="w-6 h-6 flex-shrink-0">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="i18nelement" data-i18n="sameDaySupport">Same-day support response</p>
+              </div>
+            </div>
+            <span class="text-green-700 bg-green-100 py-1 px-2 rounded-full absolute right-4 top-4 text-sm i18nelement" data-i18n="oneMonthOff">
+              One month off
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex flex-row justify-between items-center">
-      <div class="flex flex-row">
-        <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline rounded-[6px] h-4 mr-4" src="img/LinkedIn.png"> </a>
-        <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4 mr-4" src="img/x.png"> </a>
-        <a href="https://medium.com/@lombardstandard" target="_blank"> <img alt="Medium" class="inline h-4 mr-4" src="img/Medium.png"> </a>
+
+      <div class="flex flex-col w-full items-center gap-2 mt-10">
+        <a class="px-4 py-2 text-center bg-blue-700 rounded-lg font-medium text-white text-center hover:bg-blue-900 transition i18nelement" href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup"  target="_blank" data-i18n="menu-8">Sign up for free</a>
+        <p class="text-sm font-light i18nelement" data-i18n="purchase-plans">Purchase plans in your account page</p>
       </div>
-      <div class="flex flex-col">
-        <p class="mr-4 font-light i18nelement" data-i18n="menu-6">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
+    </main>
+    
+    <footer class="py-7 lg:py-14 gap-6">
+      <div class="flex flex-col justify-between gap-10 mt-28 mb-14 w-full border-t border-gray-300 pt-7 lg:flex-row">
+        <div class="flex flex-col gap-2 w-full">
+          <a href="/">
+            <svg class="h-8 w-28">
+              <use xlink:href="img/svgs/icon-lombst.svg#logo-ls-dark" />
+            </svg>
+          </a>
+          <div class="flex flex-row font-light mt-4">
+            <p class="i18nelement inline" data-i18n="global-copyright">© Lombard Standard K.K.,</p><span class="inline ml-1" id="copyright"></span>
+          </div>
+
+        </div>
+        <div class="flex flex-col justify-between gap-x-10 gap-y-2 w-full lg:flex-row lg:w-2/3 pr-16">
+          <div class="flex flex-col gap-2 font-light">
+            <a href="/companies" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-10">Companies</a>
+            <a href="/about" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-3">About</a>
+            <a href="/blog" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-7">Blog</a>
+            <a href="/pricing" class="transition hover:text-blue-700 i18nelement" data-i18n="menu-9">Pricing</a>
+          </div>
+          <div class="flex flex-col gap-2 font-light">
+            <a href="/privacy" class="transition hover:text-blue-700 i18nelement" data-i18n="global-privacy">Privacy Policy</a>
+            <a href="/terms" class="transition hover:text-blue-700 i18nelement" data-i18n="global-terms">Terms</a>
+            <a href="/commercial-disclosure" class="transition hover:text-blue-700 i18nelement" data-i18n="global-disclosure">Commercial Disclosure</a>
+            <a class="transition hover:text-blue-700 i18nelement" data-i18n="global-contact" href="mailto:hello@lomb.st">Contact us</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+      <div class="flex flex-row justify-between items-center">
+        <div class="flex flex-row">
+          <a href="https://www.linkedin.com/company/lombard-standard/" target="_blank"> <img alt="LinkedIn" class="inline rounded-[6px] h-4 mr-4" src="img/LinkedIn.png"> </a>
+          <a href="https://twitter.com/LombardStandard" target="_blank"> <img alt="X" class="inline h-4 mr-4" src="img/x.png"> </a>
+          <a href="https://medium.com/@lombardstandard" target="_blank"> <img alt="Medium" class="inline h-4 mr-4" src="img/Medium.png"> </a>
+        </div>
+        <div class="flex flex-col">
+          <p class="mr-4 font-light i18nelement" data-i18n="menu-6">Backed by<a href="https://www.antler.co" target="_blank"> <img alt="Antler" class="inline mb-0.5 h-4 ml-1" src="img/Antler.png"> </a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="js/pricing.js"></script>
 </body>

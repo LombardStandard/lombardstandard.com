@@ -228,7 +228,7 @@
   "disclosure-section-12a": "Amazon Web Services、 Google Cloud Platform、 Microsoft Azure",
   "disclosure-section-13": "会社概要",
   "disclosure-section-14": "<strong>オフィス住所</strong>",
-  "disclosure-section-14a": "〒105-6004 東京都港区虎ノ門4丁目3-1 城山トラストタワー4階 <a class='font-bold text-blue-700' href='https://maps.google.com/maps?ll=35.664659,139.743261&z=16&t=m&hl=en&gl=JP&mapclient=embed&cid=8897779007619584907' target='_blank'>地図</a>",
+  "disclosure-section-14a": "〒105-6004 東京都港区虎ノ門4丁目3-1 城山トラストタワー4階 <a class='font-bold text-blue-700' href='https://maps.google.com/maps?ll=35.664659,139.743261&z=16&t=m&hl=ja&gl=JP&mapclient=embed&cid=8897779007619584907' target='_blank'>地図</a>",
   "disclosure-section-map": " <iframe class='w-full h-96' src='https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d6482.998429432021!2d139.743381!3d35.664708!3m2!1i1024!2i768!4f13.1!2m1!1z5Z-O5bGx44OI44Op44K544OI44K_44Ov44O8IOOAkjEwNS0wMDAxIOadseS6rOmDvea4r-WMuuiZjuODjumWgO-8lOS4geebru-8kw!5e0!3m2!1sja!2sjp!4v1698743690183!5m2!1sja!2sjp' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
   "menu-1": "製品",
   "menu-2": "データベース",
@@ -250,7 +250,7 @@
   "feature-2a": "世界中の報道機関からの毎日のニュース ヘッドラインを地域ごとに即時に表示し、検索およびフィルタリング用のツールを提供します。",
   "feature-3": "検証済みの企業とチャットする",
   "feature-3a": "積極的に市場に参入している企業との事前の接続を可能にするインスタント メッセージング サービス。",
-  "feature-4": "パイロットプログラム顧客 → ベータプログラム顧客",
+  "feature-4": "ベータプログラム顧客",
   "feature-5": "商業不動産売買マッチングをハイテク化",
   "feature-6": "<span class='text-blue-700'>⦿&nbsp;&nbsp;</span>買い手の検索",
   "feature-6a": "地域や資産タイプを超えて購入者のプロフィールにアクセスします。",
@@ -464,5 +464,7 @@
   "database": "データベース",
   "soon": "すぐ",
   "streaming": "ストリーミング",
-  "generativeAI": "生成AI"
+  "generativeAI": "生成AI",
+  "companies": "企業",
+  "globalCREOutlets": "グローバルCREアウトレット"
 }
