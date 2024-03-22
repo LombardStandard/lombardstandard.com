@@ -454,6 +454,8 @@ window.addEventListener('load', async () => {
   let apiData = {};
   let mapLang = null
 
+  const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
   // const setDate = () => {
   //    const currentLang = getCurrentLang();
   //    const t = translations[currentLang];
@@ -477,13 +479,13 @@ window.addEventListener('load', async () => {
       // populating companies
       const companiesCount = document.getElementById('companies-count')
       if (companiesCount) {
-        companiesCount.innerHTML = stats.companiesCount || 0
+        companiesCount.innerHTML = stats.companiesCount ? numberWithCommas(stats.companiesCount) : 0
       }
 
       // populating contacts
       const contactsCount = document.getElementById('contacts-count')
       if (contactsCount) {
-        contactsCount.innerHTML = stats.peopleCount || 0
+        contactsCount.innerHTML = stats.peopleCount ? numberWithCommas(stats.peopleCount) : 0
       }
 
       // populating segments

@@ -477,5 +477,6 @@
   "promptBasedRanking": "プロンプトベースのランキング",
   "1user": "1ユーザー",
   "3users": "3 ユーザー",
-  "5users": "5 ユーザー"
+  "5users": "5 ユーザー",
+  "verifiedCompany": "認証済み企業"
 }
