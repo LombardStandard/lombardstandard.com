@@ -405,8 +405,6 @@ window.addEventListener('load', async () => {
         document.getElementById('company-country-code').setAttribute('src', `/img/flags-svg/${COUNTRY_TO_FLAG[buyer.headquarters]}.svg`)
         document.getElementById('company-country-name').innerHTML = buyer.headquarters
         document.getElementById('company-contacts').innerHTML = buyer.contacts || '-'
-        document.getElementById('company-news').innerHTML = buyer.news || '-'
-        document.getElementById('company-website').setAttribute('href', 'http://' + buyer.website)
 
         for (let el of document.getElementsByClassName('investment-skeleton')) {
           el.classList.add('hidden')
