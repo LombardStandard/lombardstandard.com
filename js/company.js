@@ -9,12 +9,14 @@ window.addEventListener('load', async () => {
     en: {
       'Not Found!': 'Not Found!',
       'Explore more companies': 'Explore more companies',
-      'Verified': 'Verified'
+      'Verified': 'Verified',
+      'Sign up for more info': 'Sign up for more info'
     },
     ja: {
       'Not Found!': '見つかりません！',
       'Explore more companies': 'さらに多くの企業を探索する',
-      'Verified': '確認済み'
+      'Verified': '確認済み',
+      'Sign up for more info': 'サインアップして詳細情報を入手'
     }
   }
   const detectionOptions = {
@@ -320,12 +322,7 @@ window.addEventListener('load', async () => {
   const domain = urlParams.get('domain');
 
   const getCompanyName = (company, lang) => {
-    if (company.net_loc.includes('.jp'))
-      return company[`name_${lang}`] || company.name
-  
-    if (/[a-zA-Z]/.test(company.name)) return company.name
-  
-    return company[`name_${lang}`] || company.name
+    return company[`name_${lang}`] || company.name_en
   }
   const getLogoURL = (domain) => `https://logo.clearbit.com/${domain}?size=100&format=png`
   const updateBuyerContent = () => {
@@ -336,7 +333,7 @@ window.addEventListener('load', async () => {
 
     document.title = `${name} | Lombard Standard`
     document.getElementById('company-name').innerHTML = name
-    document.getElementById('company-summary').innerHTML = summary
+    document.getElementById('company-summary').innerHTML = `${summary} <a href="https://beta.lombardstandard.com/api/auth/login?screen_hint=signup" class="font-bold text-blue-700">${dynamicTranslation[lang]['Sign up for more info']}</a>`
     document.getElementById('company-segments').innerHTML = segment
   }
   const updateSimilarBuyers = () => {
@@ -405,6 +402,7 @@ window.addEventListener('load', async () => {
         document.getElementById('company-country-code').setAttribute('src', `/img/flags-svg/${COUNTRY_TO_FLAG[buyer.headquarters]}.svg`)
         document.getElementById('company-country-name').innerHTML = buyer.headquarters
         document.getElementById('company-contacts').innerHTML = buyer.contacts || '-'
+        document.getElementById('company-website').setAttribute('href', 'http://' + buyer.website)
 
         for (let el of document.getElementsByClassName('investment-skeleton')) {
           el.classList.add('hidden')
