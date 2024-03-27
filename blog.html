@@ -1,11 +1,16 @@
 x<!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8" />
   <title class="i18nelement" data-i18n="blog-title">Blog | Lombard Standard</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="description" content="Digital transformation (DX) of Commercial Real Estate is a global phenomenon that started 30 years ago." />
+  <script type="text/javascript">
+    const isJapanese = window.navigator.language.toLowerCase() === 'ja-jp' || window.navigator.language.toLowerCase() === 'ja' ;
+    var description= isJapanese ? "最近、Microsoft Startup Hub からステージ 4 の開発が承認され、追加のクレジットが付与されました。 ニュースと最新情報について詳しく読んでください。" : "We have been recently approved by Microsoft Startup Hub for Stage 4 development and granted addtional credits. Read more about our news and updates."; 
+    <meta name="description" lang="en-us" content=description />
+    <meta name="description" lang="ja-jp" content=description />
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1D4ED8" />
   <meta name="author" content="Lombard Standard" />
@@ -42,8 +47,8 @@ x<!DOCTYPE html>
   </script>
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
   <link rel="canonical" href="https://lombardstandard.com/blog" />
-  <link rel="alternate" hreflang="ja" href="https://lombardstandard.com/blog?lang=ja" />
-  <link rel="alternate" hreflang="en" href="https://lombardstandard.com/blog?lang=en" />
+  <link rel="alternate" hreflang="ja-jp" href="https://lombardstandard.com/blog?lang=ja" />
+  <link rel="alternate" hreflang="en-us" href="https://lombardstandard.com/blog?lang=en" />
   <link rel="alternate" hreflang="x-default" href="https://lombardstandard.com/blog?lang=en">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
