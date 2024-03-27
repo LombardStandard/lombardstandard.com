@@ -477,5 +477,7 @@
   "1user": "1 user",
   "3users": "3 users",
   "5users": "5 users",
-  "verifiedCompany": "Verified company"
+  "verifiedCompany": "Verified company",
+  "unsubscribed-1": "Unsubscribed | Lombard Standard"
+  "unsubscribed-2": "Unsubscribed"
 }
