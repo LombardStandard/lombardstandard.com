@@ -1,4 +1,4 @@
-###invite-user
+### invite-user
 
 Language: based on inviter setting (EN/JA) at the time of submitting
 
