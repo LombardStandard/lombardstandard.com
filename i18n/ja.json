@@ -478,5 +478,7 @@
   "1user": "1ユーザー",
   "3users": "3 ユーザー",
   "5users": "5 ユーザー",
-  "verifiedCompany": "認証済み企業"
+  "verifiedCompany": "認証済み企業",
+  "unsubscribed-1": "購読を解除した | Lombard Standard",
+  "unsubscribed-2": "購読を解除した"
 }
