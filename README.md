@@ -5,8 +5,8 @@
 **From (display name):** Lombard Standard
 
 **Dynamic elements:**
-* Subject (EN/JA): 
-  * fname lname invited you to join LombardGPT
-  * fname lname が LombardGPT に招待しました
-* Button: href (in standard and MSO)
-* Content: fname lname  (in body and plain text)
+-Subject (EN/JA): 
+_fname lname invited you to join LombardGPT
+_fname lname が LombardGPT に招待しました
+- Button: href (in standard and MSO)
+- Content: fname lname  (in body and plain text)
