@@ -488,5 +488,6 @@
   "Export-3": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>Unlimited</span>",
   "Report": "Market reports chatbot",
   "pricing-desc": "We offer 3 subscriptions including a starter free plan with basic tools and flexible monthly and yearly plans for both small teams and larger enterprises.",
-  "blog-desc": "Stay up to date with Lombard Standard's corporate announcements, PRs, tech development, clients enegagement and product release."
+  "blog-desc": "Stay up to date with Lombard Standard's corporate announcements, PRs, tech development, clients enegagement and product release.",
+  "blog-desc-1": "News and updates"
 }
