@@ -473,12 +473,22 @@
   "Asset Manager": "アセット・マネージャー",
   "Property Developer": "不動産開発業者",
   "Property Operator": "プロパティ演算子",
-  "basicTool": "基本的なツール",
   "promptBasedRanking": "プロンプトベースのランキング",
-  "1user": "1ユーザー",
-  "3users": "3 ユーザー",
-  "5users": "5 ユーザー",
+  "1user": "1ユーザー用",
+  "3users": "3ユーザー用",
+  "5users": "5ユーザー用",
   "verifiedCompany": "認証済み企業",
   "unsubscribed-1": "配信を停止しました | Lombard Standard",
-  "unsubscribed-2": "配信を停止しました"
+  "unsubscribed-2": "配信を停止しました",
+  "ChatVerified": "認証済みの企業とチャットする",
+  "ContentGen-1": "コンテンツの生成&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>50ヒット</span>",
+  "ContentGen-2": "コンテンツの生成&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>600ヒット</span>",
+  "ContentGen-3": "コンテンツの生成&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>無制限</span>",
+  "Export-1": "連絡先のエクスポート&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>2 companies</span>",
+  "Export-2": "連絡先のエクスポート&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>15 companies</span>",
+  "Export-3": "連絡先のエクスポート&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>無制限</span>",
+  "Report": "マーケットレポートチャットボット"
+
+
+
 }
