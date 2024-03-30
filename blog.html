@@ -1,14 +1,14 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <title class="i18nelement" data-i18n="blog-title">Blog | Lombard Standard</title>
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <script type="text/javascript">
-    const isJapanese = window.navigator.language.toLowerCase() === 'ja-jp' || window.navigator.language.toLowerCase() === 'ja' ;
-    var description= isJapanese ? "Lombard Standard の企業発表、PR、技術開発、クライアントとの関わり、製品リリースに関する最新情報を入手してください。" : "Stay up to date with Lombard Standard's corporate announcements, PRs, tech development, clients enegagement and product release."; 
-    document.head.querySelector('meta[name="description"]').content = description;
+  <script>
+    const isJapanese = window.navigator.language.toLowerCase() === "ja-jp" || window.navigator.language.toLowerCase() === "ja" ;
+    var description = isJapanese ? "Lombard Standard の企業発表、PR、技術開発、クライアントとの関わり、製品リリースに関する最新情報を入手してください。" : "Stay up to date with Lombard Standard's corporate announcements, PRs, tech development, clients enegagement and product release."; 
+    document.head.querySelector("meta[name='description']").content = description;
     <meta name="description" lang="en" content=description />
     <meta name="description" lang="ja" content=description />
   </script>
@@ -119,7 +119,7 @@ x<!DOCTYPE html>
 
   <div class="w-full mx-auto max-w-8xl py-8 px-8 mt-16 lg:mt-0 lg:px-16">
     <main id="main">
-      <p id="heading" class="text-left font-extrabold text-3xl mt-14 lg:mt-28">News and updates</p>
+      <p id="heading" class="text-left font-extrabold text-3xl mt-14 lg:mt-28 i18nelement" data-i18n="blog-desc-1">News and updates</p>
       <h1 class="font-light mt-6 i18nelement lg:w-1/2 w-full mb-12" data-i18n="blog-desc">Stay up to date with Lombard Standard's corporate announcements, PRs, tech development, clients enegagement and product release.</h1>
 
       <div class="flex flex-col gap-10 lg:max-w-4xl w-full  mx-auto space-y-4 lg:px-8 px-0">
