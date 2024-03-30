@@ -181,7 +181,7 @@ window.addEventListener('load', async () => {
           item.setAttribute('id', `buyer-${buyer.net_loc}`)
           item.textContent = getCompanyName(buyer, lang);
           span.className = 'w-2.5 h-2.5 rounded-full'
-          span.style.backgroundColor = buyer.verified ? 'rgb(29, 177, 0)' : 'rgb(209, 213, 219)'
+          span.style.backgroundColor = buyer.verified ? 'rgb(16,185,129)' : 'rgb(209, 213, 219)'
 
           div.appendChild(span)
           div.appendChild(item)
