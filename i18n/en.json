@@ -480,5 +480,6 @@
   "unsubscribed-1": "Unsubscribed | Lombard Standard",
   "unsubscribed-2": "Unsubscribed",
   "ChatVerified": "Chat with verified companies",
-  "ContentGen-1": "Content generation&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>50 generations</span>"
+  "ContentGen-1": "Content generation&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>50 generations</span>",
+  "Export-1": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>2 companies</span>"
 }
