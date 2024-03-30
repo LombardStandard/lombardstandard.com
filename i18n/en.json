@@ -480,12 +480,12 @@
   "unsubscribed-1": "Unsubscribed | Lombard Standard",
   "unsubscribed-2": "Unsubscribed",
   "ChatVerified": "Chat with verified companies",
-  "ContentGen-1": "Content generation&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>50 generations</span>",
-  "ContentGen-2": "Content generation&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>600 generations</span>",
-  "ContentGen-3": "Content generation&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>Unlimited generations</span>",
+  "ContentGen-1": "Content generation&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>50 hits</span>",
+  "ContentGen-2": "Content generation&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>600 hits</span>",
+  "ContentGen-3": "Content generation&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>Unlimited</span>",
   "Export-1": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>2 companies</span>",
   "Export-2": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>15 companies</span>",
-  "Export-3": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>Unlimited companies</span>",
+  "Export-3": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>Unlimited</span>",
   "Report": "Market reports chatbot",
-  "Report-3": "Market reports chatbot&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>Coming soon</span>"
+  "Report-3": "Market reports chatbot&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>Soon</span>"
 }
