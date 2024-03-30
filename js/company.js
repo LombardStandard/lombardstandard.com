@@ -393,7 +393,7 @@ window.addEventListener('load', async () => {
         if (buyer.verified) {
           verificationBadge.setAttribute('data-i18n', 'verified')
           verificationBadge.innerHTML = translation['Verified']
-          verificationBadge.className = 'text-green-700 bg-green-100 py-1 px-2 rounded-xl text-xs uppercase font-medium i18nelement'
+          verificationBadge.className = 'text-emerald-500 bg-emerald-100 py-1 px-2 rounded-md text-sm uppercase font-medium i18nelement'
         } else {
           verificationBadge.innerHTML = ''
         }
