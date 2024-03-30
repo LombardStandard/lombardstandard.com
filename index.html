@@ -8,6 +8,7 @@
   <script type="text/javascript">
     const isJapanese = window.navigator.language.toLowerCase() === 'ja-jp' || window.navigator.language.toLowerCase() === 'ja' ;
     var description= isJapanese ? "Lombard Standard は、お客様の取引に商業用不動産投資家を追跡して推奨するため、より多くの買い手をより早く見つけてコストを削減できます。" : "Lombard Standard tracks and recommends commercial real estate investors for your transactions so you can find more buyers faster and reduce your costs."; 
+    document.head.querySelector('meta[name="description"]').content = description;
     <meta name="description" lang="en" content=description />
     <meta name="description" lang="ja" content=description />
   </script>
