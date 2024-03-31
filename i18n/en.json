@@ -281,7 +281,7 @@
   "feature-19a": "Tools to generates ultra-personalized email content, different location maps and tailored property description.",
   "feature-20": "Contact profiles",
   "feature-20a": "Name, title, LinkedIn profile and email address of thousands of CRE professionals globally, carefully selected.",
-  "feature-21": "Market reports chatbot",
+  "feature-21": "Trends chatbot",
   "feature-21a": "Interactive chat with our bot about hundreds of market reports from various sources, including historical data.",
   "terms-title": "Beta Testing Agreement Terms & Conditions",
   "terms-section-1": "<p class='font-bold inline'>Scope of Agreement.</p> Beta Customer (the 'Customer') is being granted rights under this Agreement for the purpose of testing and providing input and other Feedback to Lombard Standard K.K. ('Lombard') regarding one or more of Lombard’s proprietary, non-commercially available hosted software applications, application platform interfaces, services, features and/or functionalities (the 'Beta Product(s)') as more fully described in the Beta Testing Agreement Order Form (the 'Order Form', which, together with these Terms & Conditions, form the 'Agreement'). This Agreement covers all Beta Products made available to Customer by Lombard, including, without limitation, any Beta Products specifically identified by Lombard as being in 'Beta' or any similar stage of development. Lombard retains sole and absolute discretion as to which, if any, Beta Products will be made available to Customer during the Term. While Customer is not required to utilize or enable any Beta Products, if Customer elects to do so, then Customer’s use of and access to any such Beta Products shall be subject to the terms of this Agreement.",
@@ -486,7 +486,7 @@
   "Export-1": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>2 companies</span>",
   "Export-2": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>10 companies/month</span>",
   "Export-3": "Export contacts&nbsp; <span class='bg-gray-100 text-gray-500 px-2 py-1 text-center rounded-md'>unlimited</span>",
-  "Report": "Market reports chatbot",
+  "Report": "Trends chatbot",
   "pricing-desc": "We offer 3 subscriptions including a starter free plan with basic tools and flexible monthly and yearly plans for both small teams and larger enterprises.",
   "blog-desc": "Stay up to date with Lombard Standard's corporate announcements, PRs, tech development, clients enegagement and product release.",
   "blog-desc-1": "News and updates"
