@@ -442,7 +442,7 @@
   "disclosure-10": "<strong>返済期間</strong>", 
   "disclosure-10a": "クレジット カードの支払いはすぐに処理されますが、地方銀行振込の場合は注文日から 3 日以内に送金する必要があります。",
   "disclosure-11": "<strong>価格</strong>",
-  "disclosure-11a": "価格ページを参照してください<a class='transition hover:text-blue-700' href='/pricing'>ここ</a>",
+  "disclosure-11a": "価格ページを参照してください<a class='text-blue-700' href='/pricing'>ここ</a>",
   "disclosure-12": "最終更新2024年 3月 2日",
   "segments": "セグメント",
   "headquarters": "本部",
