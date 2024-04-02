@@ -214,3 +214,8 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 /* Switch */
+
+/* Tailwind custom */
+.max-w-8xl {
+  max-width: 88rem;
+}
