@@ -217,5 +217,5 @@ input:checked + .slider:before {
 
 /* Tailwind custom */
 .max-w-8xl {
-  max-width: 88rem;
+  max-width: 90rem;
 }
