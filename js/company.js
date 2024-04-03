@@ -469,7 +469,7 @@ window.addEventListener('load', async () => {
           div.className = 'flex w-full md:w-1/2 lg:w-1/3 mb-8'
 
           const a = document.createElement('a')
-          a.className = 'i18nelement lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-medium text-gray-900 text-center hover:bg-gray-300 transition'
+          a.className = 'i18nelement lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-light text-gray-900 text-center hover:bg-gray-300 transition'
           a.setAttribute('href', '/companies')
           a.setAttribute('rel', 'noopener noreferrer')
           a.setAttribute('data-i18n', 'exploreMoreCompanies')
