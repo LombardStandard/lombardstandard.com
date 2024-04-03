@@ -455,7 +455,7 @@ window.addEventListener('load', async () => {
             }
 
             const span = document.createElement('span')
-            span.className = 'font-lighht ml-2'
+            span.className = 'font-light ml-2'
             span.id = `similar-buyer-${buyer.net_loc}`
             span.innerHTML = getCompanyName(buyer, lang)
 
