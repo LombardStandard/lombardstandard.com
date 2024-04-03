@@ -431,7 +431,7 @@ window.addEventListener('load', async () => {
             img.setAttribute('alt', buyer.name_en)
             img.onerror = () => {
               const container = document.createElement('div');
-              container.className = 'rounded bg-white border border-gray-300 flex items-center justify-center';
+              container.className = 'rounded bg-white flex items-center justify-center';
               container.setAttribute('style', 'width: 46px; height: 46px; min-width: 46px;');
 
               const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -455,7 +455,7 @@ window.addEventListener('load', async () => {
             }
 
             const span = document.createElement('span')
-            span.className = 'font-medium'
+            span.className = 'font-lighht ml-2'
             span.id = `similar-buyer-${buyer.net_loc}`
             span.innerHTML = getCompanyName(buyer, lang)
 
@@ -469,7 +469,7 @@ window.addEventListener('load', async () => {
           div.className = 'flex w-full md:w-1/2 lg:w-1/3 mb-8'
 
           const a = document.createElement('a')
-          a.className = 'i18nelement lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-light text-gray-900 text-center hover:bg-gray-300 transition'
+          a.className = 'i18nelement lg:inline-block px-4 py-2 text-center bg-gray-200 rounded-lg font-medium text-gray-900 text-center hover:bg-gray-300 transition'
           a.setAttribute('href', '/companies')
           a.setAttribute('rel', 'noopener noreferrer')
           a.setAttribute('data-i18n', 'exploreMoreCompanies')
