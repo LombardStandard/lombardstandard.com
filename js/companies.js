@@ -176,7 +176,7 @@ window.addEventListener('load', async () => {
           const item = document.createElement("a");
           const span = document.createElement('span')
 
-          div.className = 'flex items-center text-blue-700 gap-2'
+          div.className = 'flex items-center font-light text-blue-700 gap-2'
           item.setAttribute('href', `/company?domain=${encodeURIComponent(buyer.net_loc)}`)
           item.setAttribute('id', `buyer-${buyer.net_loc}`)
           item.textContent = getCompanyName(buyer, lang);
