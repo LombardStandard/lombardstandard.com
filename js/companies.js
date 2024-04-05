@@ -387,7 +387,7 @@ window.addEventListener('load', async () => {
           item.textContent = getCompanyName(buyer, lang);
 
           span.className = 'w-2 h-2 rounded-full'
-          span.style.backgroundColor = buyer.verified ? 'rgb(16,185,129)' : 'rgb(209, 213, 219)'
+          span.style.backgroundColor = buyer.verified ? 'rgb(16,185,129)' : 'rgb(255, 255, 255)'
 
           img.setAttribute('width', '18px')
           img.setAttribute('height', '18px')
