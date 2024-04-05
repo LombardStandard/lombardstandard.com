@@ -392,7 +392,7 @@ window.addEventListener('load', async () => {
           img.setAttribute('width', '18px')
           img.setAttribute('height', '18px')
           img.setAttribute('src', `/img/flags-svg/${COUNTRY_TO_FLAG[buyer.headquarters]}.svg`)
-          img.className = 'rounded-sm border border-gray-100'
+          img.className = 'rounded-sm border border-gray-200'
 
           div.appendChild(span)
           div.appendChild(img)
