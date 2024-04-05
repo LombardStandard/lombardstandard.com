@@ -400,6 +400,7 @@ window.addEventListener('load', async () => {
 
         updateBuyerContent()
         document.getElementById('company-country-code').setAttribute('src', `/img/flags-svg/${COUNTRY_TO_FLAG[buyer.headquarters]}.svg`)
+        document.getElementById('company-country-code').className = 'rounded-sm border border-gray-200'
         document.getElementById('company-country-name').innerHTML = buyer.headquarters
         document.getElementById('company-contacts').innerHTML = buyer.contacts || '-'
         document.getElementById('company-website').setAttribute('href', 'http://' + buyer.website)
