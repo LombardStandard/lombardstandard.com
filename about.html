@@ -5,8 +5,13 @@
    <meta charset="utf-8" />
    <title class="i18nelement" data-i18n="about-title">About | Lombard Standard</title>
    <meta http-equiv="x-ua-compatible" content="ie=edge" />  
-   <meta name="description" lang="en" content="Lombard Standard started as a consulting business and quickly became a tech-driven startup funded by Antler VC in 2023." />
-   <meta name="description" lang="ja" content="Lombard Standard はコンサルティング ビジネスとしてスタートし、すぐに 2023 年に Antler VC の資金提供を受けてテクノロジー主導のスタートアップになりました。" />
+   <script type="text/javascript">
+     const isJapanese = window.navigator.language.toLowerCase() === 'ja-jp' || window.navigator.language.toLowerCase() === 'ja' ;
+     var description= isJapanese ? "Lombard Standard はコンサルティング ビジネスとしてスタートし、すぐに 2023 年に Antler VC の資金提供を受けてテクノロジー主導のスタートアップになりました。" : "Lombard Standard started as a consulting business and quickly became a tech-driven startup funded by Antler VC in 2023."; 
+     document.head.querySelector('meta[name="description"]').content = description;  
+    <meta name="description" lang="en" content=description />
+    <meta name="description" lang="ja" content=description />
+   </script>  
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <meta name="theme-color" content="#1D4ED8" />
    <meta name="author" content="Lombard Standard" />
