@@ -81,7 +81,7 @@ window.addEventListener('load', async () => {
     const lang = getCurrentLang()
     
     buyers.forEach(buyer => {
-      document.getElementById(`buyer-${buyer.net_loc}`).textContent = getCompanyName(buyer, lang)
+      document.getElementById(`buyer-${buyer.location}`).textContent = getCompanyName(buyer, lang)
     })
   }
   
@@ -382,8 +382,8 @@ window.addEventListener('load', async () => {
 
           div.className = 'flex items-center font-light text-blue-700 gap-2'
           
-          item.setAttribute('href', `/company?domain=${encodeURIComponent(buyer.net_loc)}`)
-          item.setAttribute('id', `buyer-${buyer.net_loc}`)
+          item.setAttribute('href', `/company?id=${encodeURIComponent(buyer.location)}`)
+          item.setAttribute('id', `buyer-${buyer.location}`)
           item.textContent = getCompanyName(buyer, lang);
 
           span.className = 'w-2 h-2 rounded-full'

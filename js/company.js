@@ -319,7 +319,7 @@ window.addEventListener('load', async () => {
   let similarBuyers = []
   const buyerURL = 'https://2fxya6iatfbzd2pzgvkhszeyqu0ukowa.lambda-url.ap-northeast-1.on.aws'
   const urlParams = new URLSearchParams(window.location.search);
-  const domain = urlParams.get('domain');
+  const id = urlParams.get('id');
 
   const getCompanyName = (company, lang) => {
     return company[`name_${lang}`] || company.name_en
@@ -344,9 +344,9 @@ window.addEventListener('load', async () => {
     })
   }
 
-  if (domain) {
+  if (id) {
     try {
-      const { success, message, buyer: fetchedBuyer, similarBuyers: fetchedSimilarBuyers } = await fetch(buyerURL + `?domain=${encodeURIComponent(domain)}`).then((res) => res.json())
+      const { success, message, buyer: fetchedBuyer, similarBuyers: fetchedSimilarBuyers } = await fetch(buyerURL + `?id=${encodeURIComponent(id)}`).then((res) => res.json())
 
       if (success) {
         const lang = getCurrentLang()
@@ -361,7 +361,7 @@ window.addEventListener('load', async () => {
         similarBuyers = fetchedSimilarBuyers
         const logoImg = document.getElementById('logo-img')
         document.getElementById('logo-img-loader').classList.add('hidden')
-        logoImg.setAttribute('src', getLogoURL(domain))
+        logoImg.setAttribute('src', getLogoURL(buyer.net_loc))
         logoImg.setAttribute('alt', buyer.name_en)
         logoImg.onerror = () => {
           const container = document.createElement('div');
@@ -421,7 +421,7 @@ window.addEventListener('load', async () => {
 
             const a = document.createElement('a')
             a.className = 'flex items-center gap-2'
-            a.setAttribute('href', `/company?domain=${buyer.net_loc}`)
+            a.setAttribute('href', `/company?id=${buyer.location}`)
             a.setAttribute('rel', 'noopener noreferrer')
 
             const img = document.createElement('img')
