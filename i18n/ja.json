@@ -8,6 +8,7 @@
   "terms-page-title": "条項 | Lombard Standard",
   "companies-title": "収録企業 | Lombard Standard",
   "commercial-title": "商業的開示 | Lombard Standard",
+  "news-title": "ニュース | Lombard Standard",
   "hero-header-1": "AIを活用したリードジェネレーション",
   "hero-header-2": "AIを活用して商業不動産の買い手を探す",
   "hero-header-3": "当社のアルゴリズムは、グローバル市場のあらゆる資産クラスの企業投資家を検索し、プロファイリングし、ランク付けします。",
@@ -240,6 +241,7 @@
   "menu-8": "無料でお申し込み頂けます",
   "menu-9": "料金",
   "menu-10": "収録企業",
+  "menu-11": "ニュース",
   "header-1": "商業不動産会社向け<span class='text-blue-700'>AIを活用したマーケットネットワーク</span>",
   "header-3": "当社の予測型人工知能アルゴリズムはCRE企業のデータポイントを学習しており、認証済みの買い手と売り手が特定された物件でマッチングするのを助けます。",
   "header-4": "詳しく知りたい",
@@ -496,8 +498,10 @@
   "blog-desc": "Lombard Standard の企業発表、PR、技術開発、クライアントとの関わり、製品リリースに関する最新情報を入手してください。",
   "blog-desc-1": "ブログ",
   "yearly-price": "393,250円",
-  "monthly-price": "35,750円"
-
-
-
+  "monthly-price": "35,750円",
+  "searchCaseSensitive": "検索では大文字と小文字が区別されます",
+  "searchAlphabet": "検索はアルファベットのみで可能です",
+  "japan": "日本",
+  "america": "北米",
+  "global": "グローバル"
 }

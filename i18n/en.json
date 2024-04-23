@@ -8,6 +8,7 @@
   "terms-page-title": "Terms | Lombard Standard",
   "companies-title": "Companies | Lombard Standard",
   "commercial-title": "Commercial Disclosure | Lombard Standard",
+  "news-title": "News | Lombard Standard",
   "hero-header-1": "AI-POWERED LEAD GENERATION",
   "hero-header-2": "Use AI to find commercial real estate buyers",
   "hero-header-3": "Our algorithm searches, profiles and ranks corporate investors in all asset classes across global markets.",
@@ -239,6 +240,7 @@
   "menu-8": "Sign up for free",
   "menu-9": "Pricing",
   "menu-10": "Companies",
+  "menu-11": "News",
   "header-1": "<span class='text-blue-700'>AI-powered Market Network</span> for Commercial Real Estate companies",
   "header-3": "Our predictive Artificial Intelligence algorithm is trained on CRE companies' data points and helps verified buyers and sellers to match against a specific property.",
   "header-4": "Learn more",
@@ -495,5 +497,10 @@
   "blog-desc": "Stay up to date with Lombard Standard's corporate announcements, PRs, tech development, clients enegagement and product release.",
   "blog-desc-1": "News and updates",
   "yearly-price": "$2,640",
-  "monthly-price": "$240"
+  "monthly-price": "$240",
+  "searchCaseSensitive": "Search is case sensitive",
+  "searchAlphabet": "The search can be done only with alphabet",
+  "japan": "Japan",
+  "america": "North America",
+  "global": "Global"
 }

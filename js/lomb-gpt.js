@@ -17,7 +17,7 @@ const detectionOptions = {
   ],
 
   // keys or params to lookup language from
-  lookupQuerystring: 'lng',
+  lookupQuerystring: 'lang',
   lookupCookie: 'i18next',
   lookupLocalStorage: 'i18nextLng',
   lookupSessionStorage: 'i18nextLng',
