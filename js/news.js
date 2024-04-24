@@ -211,12 +211,12 @@ window.addEventListener('load', async () => {
     listingContainer.innerHTML = ''
 
     const containerDiv = document.createElement('div')
-    containerDiv.className = 'flex w-full flex-col gap-6 text-gray-900'
+    containerDiv.className = 'flex flex-wrap w-full items-stretch justify-between text-gray-900'
 
     if (news.length) {
       news.forEach(article => {
         const parentDiv = document.createElement('div')
-        parentDiv.className = 'flex w-full items-center gap-2 rounded-md border border-gray-300 px-4 py-2'
+        parentDiv.className = 'flex w-[49%] items-center gap-2 rounded-md border border-gray-300 px-4 py-2 my-3'
 
         const dataDiv = document.createElement('div')
         dataDiv.className = 'flex w-full flex-col'
@@ -248,8 +248,8 @@ window.addEventListener('load', async () => {
 
         const logo = document.createElement('img')
         logo.className = 'rounded'
-        logo.setAttribute('width', '70')
-        logo.setAttribute('height', '70')
+        logo.setAttribute('width', '60')
+        logo.setAttribute('height', '60')
         logo.setAttribute('src', logoURL(article.source))
         logo.setAttribute('alt', article.source)
 
@@ -286,11 +286,12 @@ window.addEventListener('load', async () => {
     regionNewsHeader.className = 'font-bold'
     regionNewsHeader.innerText = translations[lang][region]
 
-    regionNewsContainer.appendChild(regionNewsHeader)
+    const containerDiv = document.createElement('div')
+    containerDiv.className = 'flex flex-wrap w-full items-stretch justify-between text-gray-900'
 
     news[region].forEach(article => {
       const parentDiv = document.createElement('div')
-      parentDiv.className = 'flex w-full items-center gap-2 rounded-md border border-gray-300 px-4 py-2'
+      parentDiv.className = 'flex w-[49%] items-center gap-2 rounded-md border border-gray-300 px-4 py-2 my-3'
 
       const dataDiv = document.createElement('div')
       dataDiv.className = 'flex w-full flex-col'
@@ -322,8 +323,8 @@ window.addEventListener('load', async () => {
 
       const logo = document.createElement('img')
       logo.className = 'rounded'
-      logo.setAttribute('width', '70')
-      logo.setAttribute('height', '70')
+      logo.setAttribute('width', '60')
+      logo.setAttribute('height', '60')
       logo.setAttribute('src', logoURL(article.source))
       logo.setAttribute('alt', article.source)
 
@@ -338,8 +339,11 @@ window.addEventListener('load', async () => {
       parentDiv.appendChild(dataDiv)
       parentDiv.appendChild(logo)
 
-      regionNewsContainer.appendChild(parentDiv)
+      containerDiv.appendChild(parentDiv)
     })
+
+    regionNewsContainer.appendChild(regionNewsHeader)
+    regionNewsContainer.appendChild(containerDiv)
 
     return regionNewsContainer
   }
