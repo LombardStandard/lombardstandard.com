@@ -204,7 +204,7 @@ window.addEventListener('load', async () => {
     }
   }
 
-  const renderNews = () => {
+  const renderNews = (lang, region) => {
     const lang = getCurrentLang()
     const news = newsData?.[lang]?.[region] || []
 
@@ -348,8 +348,7 @@ window.addEventListener('load', async () => {
     return regionNewsContainer
   }
 
-  const renderSearchNews = () => {
-    const lang = getCurrentLang()
+  const renderSearchNews = (lang, search) => {
     const news = searchNewsData?.[lang]?.[search] || {}
 
     listingContainer.innerHTML = ''
@@ -369,16 +368,18 @@ window.addEventListener('load', async () => {
       listingContainer.innerHTML = loader
 
       const lang = getCurrentLang()
+      const currentRegion = region
+      const currentSearch = search
 
-      if (search) {
-        if (searchNewsData?.[lang]?.[search]) renderSearchNews()
+      if (currentSearch) {
+        if (searchNewsData?.[lang]?.[currentSearch]) renderSearchNews(lang, currentSearch)
 
         const { success, news, message } = await fetch(NEWS_SEARCH_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             lang,
-            query: search
+            query: currentSearch
           })
         }).then(res => res.json())
 
@@ -387,8 +388,8 @@ window.addEventListener('load', async () => {
             searchNewsData[lang] = {}
           }
   
-          searchNewsData[lang][search] = getSortedArrays(news)
-          renderSearchNews()
+          searchNewsData[lang][currentSearch] = getSortedArrays(news)
+          renderSearchNews(lang, currentSearch)
         } else {
           console.log('Error occurred while searching news:', message);
   
@@ -404,14 +405,14 @@ window.addEventListener('load', async () => {
         return
       }
 
-      if (newsData?.[lang]?.[region]) renderNews()
+      if (newsData?.[lang]?.[currentRegion]) renderNews(lang, currentRegion)
 
       const { success, news, message } = await fetch(NEWS_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          region,
-          lang
+          lang,
+          region: currentRegion
         })
       }).then(res => res.json())
 
@@ -420,8 +421,8 @@ window.addEventListener('load', async () => {
           newsData[lang] = {}
         }
 
-        newsData[lang][region] = news.sort((a, b) => dayjs(b.ts).diff(dayjs(a.ts)))
-        renderNews()
+        newsData[lang][currentRegion] = news.sort((a, b) => dayjs(b.ts).diff(dayjs(a.ts)))
+        renderNews(lang, currentRegion)
       } else {
         console.log('Error occurred while fetching news:', message);
 
