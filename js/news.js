@@ -205,7 +205,6 @@ window.addEventListener('load', async () => {
   }
 
   const renderNews = (lang, region) => {
-    const lang = getCurrentLang()
     const news = newsData?.[lang]?.[region] || []
 
     listingContainer.innerHTML = ''
