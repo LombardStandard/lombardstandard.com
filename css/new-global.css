@@ -12,7 +12,7 @@ body {
 }
 
 button {
-  border: none;
+  /* border: none; */
   outline: none !important;
 }
 
