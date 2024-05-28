@@ -503,44 +503,44 @@ window.addEventListener('load', async () => {
       createChart('sectors', sectorsData);
 
       // populating countries
-      const { ref_country_codes } = await getCountriesLatLong();
-      const features = [];
+      // const { ref_country_codes } = await getCountriesLatLong();
+      // const features = [];
 
-      const countriesCount = document.getElementById('countries-count')
-      if (countriesCount) {
-        countriesCount.innerHTML = Object.keys(stats.countries).length
-      }
+      // const countriesCount = document.getElementById('countries-count')
+      // if (countriesCount) {
+      //   countriesCount.innerHTML = Object.keys(stats.countries).length
+      // }
 
-      for (let [country, count] of Object.entries(stats.countries)) {
-        let finalCountry = COUNTRY_MAP[country] || country;
+      // for (let [country, count] of Object.entries(stats.countries)) {
+      //   let finalCountry = COUNTRY_MAP[country] || country;
 
-        const data = ref_country_codes.find(
-          (coord) => coord.country === finalCountry
-        );
+      //   const data = ref_country_codes.find(
+      //     (coord) => coord.country === finalCountry
+      //   );
 
-        if (data) {
-          const arrayOfFeatures = Array.from(
-            {
-              length: count,
-            },
-            (_, i) => ({
-              id: `${country}-${i}`,
-              type: 'feature',
-              geometry: {
-                coordinates: [data.longitude, data.latitude],
-                type: 'Point',
-              },
-            })
-          );
+      //   if (data) {
+      //     const arrayOfFeatures = Array.from(
+      //       {
+      //         length: count,
+      //       },
+      //       (_, i) => ({
+      //         id: `${country}-${i}`,
+      //         type: 'feature',
+      //         geometry: {
+      //           coordinates: [data.longitude, data.latitude],
+      //           type: 'Point',
+      //         },
+      //       })
+      //     );
 
-          features.push(...arrayOfFeatures);
-        }
-      }
+      //     features.push(...arrayOfFeatures);
+      //   }
+      // }
 
-      renderDealsMap('map-container', {
-        type: 'FeatureCollection',
-        features,
-      });
+      // renderDealsMap('map-container', {
+      //   type: 'FeatureCollection',
+      //   features,
+      // });
     } catch (err) {
       console.log('Error occurred while fetching stats:', err.message);
     }
