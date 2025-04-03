@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /404/
+Disallow: /privacy-policy/
+Sitemap: https://lombardstandard.com/sitemap.xml
+
+
