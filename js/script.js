@@ -167,17 +167,17 @@ function updateImages() {
  // }
 }
 
-function updateVideo() {
-  const video = document.getElementById('video')
-  const videoSrc = document.getElementById("videoSrc")
+ // function updateVideo() {
+ // const video = document.getElementById('video')
+ // const videoSrc = document.getElementById("videoSrc")
 
-  if (video && videoSrc) {
-    const lang = i18next.language.includes('en') ? 'en' : i18next.language;
-    const videoURL = lang === 'ja' ? 'https://lombst.s3.amazonaws.com/website/AI+Matching+JA+(Captions).mp4' : 'https://lombst.s3.amazonaws.com/website/AI+Matching+(Captions).mp4'
-    videoSrc.setAttribute('src', videoURL);
-    video.load();
-  }
-}
+ // if (video && videoSrc) {
+ //   const lang = i18next.language.includes('en') ? 'en' : i18next.language;
+ //   const videoURL = lang === 'ja' ? 'https://lombst.s3.amazonaws.com/website/AI+Matching+JA+(Captions).mp4' : 'https://lombst.s3.amazonaws.com/website/AI+Matching+(Captions).mp4'
+ //   videoSrc.setAttribute('src', videoURL);
+ //   video.load();
+ // }
+ // }
 
 async function i18Loader() {
   const langs = ['en', 'ja'];
