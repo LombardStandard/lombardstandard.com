@@ -345,7 +345,7 @@ window.addEventListener('load', async () => {
     const finalLang = ['de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'].includes(lang) ? 'en' : lang
   
     if (imageHead) {
-      imageHead.src = `https://lombst.s3.amazonaws.com/website/VectorDB-${finalLang}-min.png`
+      imageHead.src = `img/VectorDB-${finalLang}-min.png`
     }
     if (imageBody) {
       imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${finalLang}.png`
@@ -434,8 +434,7 @@ window.addEventListener('load', async () => {
 
   // api
   const API_URL = 'https://api.beta.lombardgpt.com/stats';
-  const MAPBOX_ACCESS_KEY =
-    'pk.eyJ1IjoiYW1nMjIwNzUiLCJhIjoiY2swajRlMno5MDZjMjNvbTF2MnRpNmd1biJ9.ADtpGBcPTJhWfSn2vWk07w';
+  const MAPBOX_ACCESS_KEY = 3
   const COUNTRY_MAP = {
     'United States of America': 'United States',
     "People's Republic of China": 'China',
