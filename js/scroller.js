@@ -1,18 +1,18 @@
 const scrollers = document.querySelectorAll(".scroller");
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) addAnimation()
-
-function addAnimation() {
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   scrollers.forEach((scroller) => {
-    scroller.setAttribute("data-animated", true);
+    if (scroller.dataset.animated === "true") return;
 
-    const scrollerInner = scroller.querySelector(".scroller__inner");
-    const scrollerContent = Array.from(scrollerInner.children);
+    const inner = scroller.querySelector(".scroller__inner");
+    if (!inner) return;
 
-    scrollerContent.forEach((item) => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicatedItem);
+    scroller.dataset.animated = "true";
+
+    Array.from(inner.children).forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      inner.appendChild(clone);
     });
   });
 }
