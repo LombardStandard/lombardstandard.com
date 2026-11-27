@@ -159,12 +159,6 @@ function updateImages() {
   if (imageHead) {
     imageHead.src = `img/VectorDB-${finalLang}-min.png`
   }
- if (imageBody) {
- imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${finalLang}.png`
- }
- if (videoHead) {
- videoHead.src = `https://lombst.s3.amazonaws.com/website/video-${finalLang}.mp4`
- }
 }
 
  function updateVideo() {
