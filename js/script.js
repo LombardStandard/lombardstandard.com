@@ -154,7 +154,7 @@ function updateImages() {
   const imageBody = document.getElementById('body-image')
   const videoHead = document.getElementById('videoAd')
   const lang = i18next.language.includes('en') ? 'en' : i18next.language;
-  const finalLang = lang.startsWith('ja') ? 'ja' : 'en';
+  const finalLang = ['de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'].includes(lang) ? 'en' : lang
 
   if (imageHead) {
     imageHead.src = `img/VectorDB-${finalLang}-min.png`
