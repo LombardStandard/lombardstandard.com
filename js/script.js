@@ -157,7 +157,7 @@ function updateImages() {
   const finalLang = ['de', 'zh-CN', 'zh-Hant', 'fr', 'it', 'es', 'pt'].includes(lang) ? 'en' : lang
 
   if (imageHead) {
-    imageHead.src = `img/VectorDB-${finalLang}-min.png`
+    imageHead.src = `https://raw.githubusercontent.com/LombardStandard/lombardstandard.com/refs/heads/main/img/VectorDB-${finalLang}-min.png`
   }
   if (imageBody) {
     imageBody.src = `https://lombst.s3.amazonaws.com/website/Features-${finalLang}.png`
